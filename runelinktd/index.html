@@ -1,40 +1,172 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RuneLinkTD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .container {
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            color: #333;
-            margin: 0;
-        }
-        p {
-            color: #666;
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>룬링크 TD (RuneLink TD)</title>
+<meta name="description" content="룬링크 TD — 원소 룬을 배치하고 링크(공명)로 조합해 몰려오는 적을 막아내는 모바일 웨이브 디펜스 게임.">
+<style>
+  :root{
+    --bg:#0c0f1a; --bg2:#141a2e; --card:#1a2138; --line:#2a3354;
+    --txt:#e8ecf8; --muted:#9aa6c8; --accent:#7c9cff;
+    --fire:#ff6b4a; --water:#46b6ff; --wind:#7af0c0; --earth:#d8a24a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  header{
+    position:relative; overflow:hidden;
+    background:radial-gradient(1200px 500px at 50% -10%, #243056 0%, var(--bg) 60%);
+    padding:72px 0 56px; text-align:center;
+  }
+  .runes{display:flex; gap:14px; justify-content:center; margin-bottom:22px}
+  .rune{
+    width:44px; height:44px; border-radius:50%;
+    display:grid; place-items:center; font-weight:700; font-size:20px;
+    box-shadow:0 0 24px rgba(124,156,255,.25);
+  }
+  .rune.f{background:rgba(255,107,74,.18); color:var(--fire); border:1px solid var(--fire)}
+  .rune.w{background:rgba(70,182,255,.18); color:var(--water); border:1px solid var(--water)}
+  .rune.n{background:rgba(122,240,192,.18); color:var(--wind); border:1px solid var(--wind)}
+  .rune.e{background:rgba(216,162,74,.18); color:var(--earth); border:1px solid var(--earth)}
+  h1{font-size:clamp(32px,6vw,52px); letter-spacing:-.5px; margin-bottom:6px}
+  .sub{color:var(--muted); font-size:18px}
+  .badge{
+    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px;
+  }
+  .cta{margin-top:30px}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
+    background:linear-gradient(135deg,#5b7bff,#7c9cff); color:#fff;
+    box-shadow:0 8px 24px rgba(91,123,255,.35);
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+
+  /* Sections */
+  section{padding:54px 0}
+  h2{font-size:26px; margin-bottom:8px}
+  .lead{color:var(--muted); margin-bottom:28px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+  .feat{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+  }
+  .feat .ico{font-size:26px; margin-bottom:10px}
+  .feat h3{font-size:17px; margin-bottom:6px}
+  .feat p{color:var(--muted); font-size:14.5px}
+
+  .chart{
+    background:var(--bg2); border:1px solid var(--line); border-radius:16px;
+    padding:24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; align-items:center;
+  }
+  .chart .pair{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:14px}
+  .dot{width:16px;height:16px;border-radius:50%}
+  .dot.f{background:var(--fire)} .dot.w{background:var(--water)}
+  .dot.n{background:var(--wind)} .dot.e{background:var(--earth)}
+
+  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 10px}
+  .divider{height:1px;background:var(--line);max-width:880px;margin:0 auto}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎮 RuneLinkTD</h1>
-        <p>타워 디펜스 게임에 오신 것을 환영합니다!</p>
+
+<header>
+  <div class="wrap">
+    <div class="runes">
+      <span class="rune f">🔥</span>
+      <span class="rune w">💧</span>
+      <span class="rune n">💨</span>
+      <span class="rune e">🌍</span>
     </div>
+    <h1>룬링크 TD</h1>
+    <p class="sub">RuneLink TD — 원소 룬으로 막아내는 웨이브 디펜스</p>
+    <div class="badge">모바일 · Android · 싱글플레이</div>
+    <div class="cta">
+      <!-- 출시 후 실제 스토어 URL 로 교체하세요 -->
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.runelinktd">Google Play 에서 보기</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>게임 소개</h2>
+    <p class="lead">
+      불·물·바람·땅 네 가지 원소 룬을 격자에 배치하고, 인접한 룬을
+      <strong>링크(공명)</strong>로 조합해 강력한 광역 효과를 터뜨리세요.
+      속성 상성을 읽고 룬을 합성·강화하며 100개 스테이지를 돌파하는
+      전략 웨이브 디펜스 게임입니다.
+    </p>
+
+    <div class="grid">
+      <div class="feat">
+        <div class="ico">🧩</div>
+        <h3>원소 링크 시스템</h3>
+        <p>인접한 룬을 연결해 폭풍화염·대지균열·빙결 등 다채로운 공명 효과를 발동.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⚔️</div>
+        <h3>속성 상성</h3>
+        <p>강점은 ×2.0, 약점은 ×0.3. 적 구성을 읽고 룬 조합을 바꿔 대응하세요.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🏰</div>
+        <h3>100 스테이지 · 10개 장</h3>
+        <p>장마다 새로운 적과 보스가 등장. 자폭·잠수·부활·분신 등 특수 메커니즘.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⭐</div>
+        <h3>영구 강화 & 도전과제</h3>
+        <p>메타 강화 트리와 500개 도전과제 보상으로 점진적으로 성장합니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🔀</div>
+        <h3>룬 합성</h3>
+        <p>같은 룬을 겹쳐 등급을 올리고 제한된 배치 공간을 효율적으로 활용.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📴</div>
+        <h3>오프라인 플레이</h3>
+        <p>계정 가입 없이 즉시 플레이. 진행 상황은 기기에 안전하게 저장됩니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>속성 상성</h2>
+    <p class="lead">네 원소가 가위바위보처럼 맞물립니다.</p>
+    <div class="chart">
+      <div class="pair"><span class="dot f"></span>불 &nbsp;→ 강함 →&nbsp; <span class="dot e"></span>땅</div>
+      <div class="pair"><span class="dot e"></span>땅 &nbsp;→ 강함 →&nbsp; <span class="dot n"></span>바람</div>
+      <div class="pair"><span class="dot n"></span>바람 &nbsp;→ 강함 →&nbsp; <span class="dot w"></span>물</div>
+      <div class="pair"><span class="dot w"></span>물 &nbsp;→ 강함 →&nbsp; <span class="dot f"></span>불</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
+      <a href="mailto:metabuild.dev06@gmail.com">문의하기</a>
+    </div>
+    <p style="margin-top:14px">© 2026 HappyLucky · 룬링크 TD (RuneLink TD)</p>
+  </div>
+</footer>
+
 </body>
 </html>
