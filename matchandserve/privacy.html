@@ -36,6 +36,10 @@
     background:var(--card); border:1px solid var(--line); border-radius:12px;
     padding:16px 18px; margin:14px 0; color:var(--muted); font-size:14.5px;
   }
+  code{
+    font-family:"Consolas","SFMono-Regular",monospace; font-size:14px;
+    background:#fff2e4; border:1px solid var(--line); border-radius:5px; padding:1px 6px;
+  }
   .sep{height:2px; background:var(--line); margin:54px 0}
   footer{color:var(--muted); font-size:13.5px; margin-top:40px; text-align:center}
   strong{color:#3a2410}
@@ -49,7 +53,7 @@
   <!-- ════════════════ 한국어 ════════════════ -->
   <h1 id="ko">개인정보처리방침</h1>
   <p class="meta">앱: 매치엔서브 (Match &amp; Serve) · 패키지: com.happylucky.matchandserve</p>
-  <p class="meta">시행일: 2026년 6월 13일 · 최종 수정일: 2026년 6월 13일</p>
+  <p class="meta">시행일: 2026년 6월 13일 · 최종 수정일: 2026년 7월 26일</p>
 
   <div class="lang">
     <a href="#ko">한국어</a><a href="#en">English</a>
@@ -70,12 +74,20 @@
   <p>다음 게임 데이터는 오직 사용자 <strong>기기 내부에만</strong> 저장되며 외부로 전송되지 않습니다.</p>
   <ul>
     <li>카페·스테이지 클리어 진행도 및 해금 기록</li>
-    <li>효과음·배경음악 등 게임 설정값</li>
+    <li>스테이지별 별점 기록</li>
+    <li>게임 내 재화(팁 코인)와 보유 아이템 수량</li>
+    <li>효과음·배경음악·언어 등 게임 설정값</li>
     <li>광고 노출 빈도 관리를 위한 내부 카운터</li>
   </ul>
   <div class="box">
     이 데이터는 앱을 삭제하면 함께 삭제됩니다. 개발자는 해당 데이터에 접근할 수 없습니다.
+    클라우드 저장·계정 연동·기기 간 동기화 기능은 제공하지 않습니다.
   </div>
+  <h3>게임 내 재화 안내</h3>
+  <p>
+    본 앱의 <strong>팁 코인</strong>과 상점은 전적으로 게임 내 재화이며, 실제 금전 결제(인앱 구매)는
+    제공하지 않습니다. 따라서 결제·청구 정보를 수집하지 않습니다.
+  </p>
 
   <h2>2. 광고 및 제3자 서비스</h2>
   <p>
@@ -100,30 +112,42 @@
     맞춤 광고를 끌 수 있습니다.
   </div>
 
-  <h2>3. 권한(Permissions)</h2>
-  <p>본 앱은 광고 표시를 위해 <strong>인터넷 접근 권한</strong>을 사용합니다.
-     연락처·사진·정밀 위치·마이크 등 민감한 권한은 요청하지 않습니다.</p>
+  <h2>3. 버전 확인 요청</h2>
+  <p>
+    본 앱은 실행 시 최신 버전 여부를 확인하기 위해 개발자가 호스팅하는
+    정적 파일(<code>version.json</code>) 하나를 내려받습니다. 이 요청에는
+    <strong>개인정보나 기기 식별자가 포함되지 않으며</strong>, 개발자는 별도의 서버나
+    로그 저장소를 운영하지 않습니다. 새 버전이 있으면 스토어 이동을 안내할 뿐,
+    강제 업데이트는 하지 않습니다.
+  </p>
 
-  <h2>4. 아동 개인정보</h2>
+  <h2>4. 권한(Permissions)</h2>
+  <p>본 앱은 광고 표시와 버전 확인을 위해 <strong>인터넷 접근</strong>,
+     <strong>네트워크 상태 확인</strong>, <strong>광고 ID(AD_ID)</strong> 권한을 사용합니다.
+     이 권한들은 Google AdMob SDK가 함께 선언합니다.
+     연락처·사진·정밀 위치·마이크·저장소 등 민감한 권한은 요청하지 않습니다.</p>
+
+  <h2>5. 아동 개인정보</h2>
   <p>
     본 앱은 만 13세 미만 아동을 주 대상으로 하지 않으며, 개발자는 아동의
     개인정보를 고의로 수집하지 않습니다. 보호자께서 자녀가 개인정보를 제공했다고
     판단되는 경우 아래 이메일로 연락 주시면 조치하겠습니다.
   </p>
 
-  <h2>5. 데이터 보관 및 삭제</h2>
+  <h2>6. 데이터 보관 및 삭제</h2>
   <p>
     기기 내 게임 데이터는 사용자가 앱을 삭제하면 즉시 함께 삭제됩니다.
+    개발자가 보관하는 사용자 데이터가 없으므로 별도의 삭제 요청 절차는 필요하지 않습니다.
     AdMob이 처리하는 데이터의 보관 및 삭제는 Google의 정책을 따릅니다.
   </p>
 
-  <h2>6. 방침 변경</h2>
+  <h2>7. 방침 변경</h2>
   <p>
     본 방침은 법령 또는 서비스 변경에 따라 수정될 수 있으며, 변경 시 본 페이지에
     게시하고 상단의 "최종 수정일"을 갱신합니다.
   </p>
 
-  <h2>7. 문의처</h2>
+  <h2>8. 문의처</h2>
   <p>개인정보 관련 문의는 아래로 연락 주시기 바랍니다.</p>
   <ul>
     <li>개발자: HappyLucky</li>
@@ -135,7 +159,7 @@
   <!-- ════════════════ English ════════════════ -->
   <h1 id="en">Privacy Policy</h1>
   <p class="meta">App: Match &amp; Serve · Package: com.happylucky.matchandserve</p>
-  <p class="meta">Effective date: June 13, 2026 · Last updated: June 13, 2026</p>
+  <p class="meta">Effective date: June 13, 2026 · Last updated: July 26, 2026</p>
 
   <div class="lang">
     <a href="#ko">한국어</a><a href="#en">English</a>
@@ -156,12 +180,20 @@
   <p>The following game data is stored <strong>only on your device</strong> and is never sent to us:</p>
   <ul>
     <li>Cafe and stage progress and unlock records</li>
-    <li>Game settings such as sound effects and background music</li>
+    <li>Per-stage star ratings</li>
+    <li>In-game currency (tip coins) and item counts</li>
+    <li>Game settings such as sound effects, background music, and language</li>
     <li>Internal counters used to manage ad frequency</li>
   </ul>
   <div class="box">
     This data is removed when you uninstall the App. The developer has no access to it.
+    There is no cloud save, account linking, or cross-device sync.
   </div>
+  <h3>In-game currency</h3>
+  <p>
+    <strong>Tip coins</strong> and the in-game shop are purely virtual. The App offers no
+    real-money purchases (no in-app purchases), so no payment or billing information is collected.
+  </p>
 
   <h2>2. Advertising &amp; Third-Party Services</h2>
   <p>
@@ -183,32 +215,44 @@
     Android Settings &gt; Privacy &gt; Ads.
   </div>
 
-  <h2>3. Permissions</h2>
+  <h2>3. Version Check Request</h2>
   <p>
-    The App uses the <strong>Internet permission</strong> to display ads. It does not request
-    sensitive permissions such as contacts, photos, precise location, or microphone.
+    On launch, the App downloads a single static file (<code>version.json</code>) hosted by the
+    developer to check whether a newer version is available. This request contains
+    <strong>no personal information and no device identifiers</strong>, and the developer operates
+    no server or log storage. If a newer version exists, the App simply points you to the store;
+    updates are never forced.
   </p>
 
-  <h2>4. Children's Privacy</h2>
+  <h2>4. Permissions</h2>
+  <p>
+    The App uses <strong>Internet access</strong>, <strong>network state</strong>, and the
+    <strong>Advertising ID (AD_ID)</strong> permission to display ads and check for updates.
+    These permissions are declared together with the Google AdMob SDK. It does not request
+    sensitive permissions such as contacts, photos, precise location, microphone, or storage.
+  </p>
+
+  <h2>5. Children's Privacy</h2>
   <p>
     The App is not primarily directed to children under 13, and we do not knowingly collect
     personal information from children. If you believe a child has provided personal
     information, please contact us and we will take appropriate action.
   </p>
 
-  <h2>5. Data Retention &amp; Deletion</h2>
+  <h2>6. Data Retention &amp; Deletion</h2>
   <p>
-    On-device game data is deleted as soon as you uninstall the App. Data processed by
-    AdMob is retained and deleted according to Google's policies.
+    On-device game data is deleted as soon as you uninstall the App. Because the developer stores
+    no user data, no separate deletion request process is needed. Data processed by AdMob is
+    retained and deleted according to Google's policies.
   </p>
 
-  <h2>6. Changes to This Policy</h2>
+  <h2>7. Changes to This Policy</h2>
   <p>
     We may update this policy to reflect legal or service changes. Updates will be posted on
     this page with a revised "Last updated" date.
   </p>
 
-  <h2>7. Contact</h2>
+  <h2>8. Contact</h2>
   <ul>
     <li>Developer: HappyLucky</li>
     <li>Email: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></li>
