@@ -72,6 +72,20 @@
   }
   .cafe .e{font-size:18px}
 
+  .items{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .item{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:18px 20px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .item .e{font-size:26px; line-height:1.2}
+  .item h3{font-size:16px; margin-bottom:4px}
+  .item p{color:var(--muted); font-size:14px; margin-bottom:8px}
+  .pill{
+    display:inline-block; padding:3px 10px; border-radius:999px; font-size:12.5px;
+    background:#eaf7ee; color:#3f8b57; border:1px solid #c9e8d4; font-weight:600;
+  }
+  .pill.auto{background:#fff1e2; color:#b96a1e; border-color:#ffd9b8; margin-left:6px}
+
   footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
   footer a{margin:0 10px}
   .divider{height:1px;background:var(--line);max-width:880px;margin:0 auto}
@@ -89,9 +103,8 @@
     </div>
     <h1>매치엔서브</h1>
     <p class="sub">Match &amp; Serve — 매치-3로 즐기는 카페 경영</p>
-    <div class="badge">모바일 · Android · 싱글플레이</div>
+    <div class="badge">모바일 · Android · 싱글플레이 · 무료</div>
     <div class="cta">
-      <!-- 출시 후 실제 스토어 URL 로 교체하세요 -->
       <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.matchandserve">Google Play 에서 보기</a>
     </div>
   </div>
@@ -103,8 +116,9 @@
     <p class="lead">
       보드에서 과일·재료 타일을 <strong>매치</strong>해 재료를 모으고, 줄 선 손님의 주문을
       <strong>인내심이 떨어지기 전에</strong> 완성해 서빙하세요. 매치-3 퍼즐의 손맛에
-      아기자기한 카페 경영을 더한 캐주얼 게임입니다. 과일 주스 가게부터 베이커리,
-      찻집, 커피 전문점까지 하나씩 해금하며 나만의 가게를 키워보세요.
+      아기자기한 카페 경영을 더한 캐주얼 게임입니다. 과일 주스 가게부터 베이커리, 찻집,
+      커피 전문점, 떡 카페까지 <strong>11개 가게 · 총 330 스테이지</strong>를 하나씩 해금하며
+      나만의 가게를 키워보세요.
     </p>
 
     <div class="grid">
@@ -116,7 +130,7 @@
       <div class="feat">
         <div class="ico">🧃</div>
         <h3>주문 &amp; 서빙</h3>
-        <p>손님이 원하는 메뉴의 재료가 모이면 자동으로 완성되어 서빙. 보상이 들어옵니다.</p>
+        <p>손님이 원하는 메뉴의 재료가 모이면 자동으로 완성되어 서빙. 팁이 들어옵니다.</p>
       </div>
       <div class="feat">
         <div class="ico">⏳</div>
@@ -125,18 +139,33 @@
       </div>
       <div class="feat">
         <div class="ico">🏪</div>
-        <h3>8개 테마 카페</h3>
-        <p>주스 · 베이커리 · 찻집 · 아이스크림 · 커피 · 도넛 · 팬케이크 · 초콜릿을 차례로 해금.</p>
+        <h3>11개 테마 카페</h3>
+        <p>가게마다 재료 7종 · 메뉴 8종이 전부 다릅니다. 가게당 30 스테이지씩 차례로 해금.</p>
       </div>
       <div class="feat">
-        <div class="ico">💣</div>
-        <h3>특수 아이템</h3>
-        <p>콤보로 얻는 🤝 협상권, 큰 매치로 얻는 💣 폭탄, 퍼펙트 클리어 ❤️ 하트 회복.</p>
+        <div class="ico">⭐</div>
+        <h3>별점 &amp; 클리어 보상</h3>
+        <p>남은 하트로 최대 ⭐⭐⭐. 최고 기록을 갱신할 때마다 아이템을 보상으로 받습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🪙</div>
+        <h3>팁 코인 &amp; 상점</h3>
+        <p>손님에게 받은 팁을 모아 상점에서 아이템 구매. <strong>현금 결제는 없습니다.</strong></p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎒</div>
+        <h3>장사 준비 (아이템 반입)</h3>
+        <p>스테이지 진입 전 가방에 아이템을 담아 반입. 어려운 판일수록 준비가 승부처.</p>
       </div>
       <div class="feat">
         <div class="ico">📴</div>
         <h3>오프라인 플레이</h3>
         <p>계정 가입 없이 즉시 플레이. 진행 상황은 기기에 안전하게 저장됩니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🌐</div>
+        <h3>6개 언어 지원</h3>
+        <p>한국어 · English · Español · 中文 · 日本語 · Tiếng Việt</p>
       </div>
     </div>
   </div>
@@ -147,9 +176,9 @@
 <section>
   <div class="wrap">
     <h2>해금되는 카페들</h2>
-    <p class="lead">스테이지를 클리어하며 새로운 가게를 하나씩 열어보세요.</p>
+    <p class="lead">앞 가게의 30 스테이지를 모두 클리어하면 다음 가게가 열립니다.</p>
     <div class="cafes">
-      <span class="cafe"><span class="e">🧃</span> 과일 주스 가게</span>
+      <span class="cafe"><span class="e">🧃</span> 과일 쥬스 가게</span>
       <span class="cafe"><span class="e">🍞</span> 베이커리</span>
       <span class="cafe"><span class="e">🍵</span> 찻집</span>
       <span class="cafe"><span class="e">🍨</span> 아이스크림 가게</span>
@@ -157,6 +186,52 @@
       <span class="cafe"><span class="e">🍩</span> 도넛 가게</span>
       <span class="cafe"><span class="e">🥞</span> 팬케이크 가게</span>
       <span class="cafe"><span class="e">🍫</span> 초콜릿 가게</span>
+      <span class="cafe"><span class="e">🧋</span> 버블티 가게</span>
+      <span class="cafe"><span class="e">🍬</span> 캔디 가게</span>
+      <span class="cafe"><span class="e">🍡</span> 떡 카페</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>아이템</h2>
+    <p class="lead">플레이 중 조건을 달성하면 그 판에서 쓸 아이템이 생깁니다. 별점 보상이나 상점으로 얻은 아이템은 가방에 모아 두었다가 원하는 스테이지에 반입할 수 있어요.</p>
+    <div class="items">
+      <div class="item">
+        <span class="e">🤝</span>
+        <div>
+          <h3>달래기 <span class="pill auto">자동</span></h3>
+          <p>인내심이 10% 이하로 떨어진 손님을 자동으로 달래서 인내심을 가득 회복시킵니다.</p>
+          <span class="pill">획득 · 콤보 2+</span>
+        </div>
+      </div>
+      <div class="item">
+        <span class="e">💣</span>
+        <div>
+          <h3>폭탄</h3>
+          <p>타일 하나를 골라 주변 3×3 영역을 한 번에 제거하고 재료로 담습니다.</p>
+          <span class="pill">획득 · 매치4 2회</span>
+        </div>
+      </div>
+      <div class="item">
+        <span class="e">⏱️</span>
+        <div>
+          <h3>타임프리즈</h3>
+          <p>대기 중인 모든 손님의 인내심을 5초간 정지시킵니다.</p>
+          <span class="pill">획득 · 매치 5+</span>
+        </div>
+      </div>
+      <div class="item">
+        <span class="e">🌀</span>
+        <div>
+          <h3>섞기</h3>
+          <p>보드를 통째로 다시 섞어 새로운 매치 기회를 만듭니다.</p>
+          <span class="pill">획득 · 콤보 3+</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
