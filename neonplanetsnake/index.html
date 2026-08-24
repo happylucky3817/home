@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Planet: Snake</title>
+<meta name="description" content="Neon Planet: Snake — 행성 표면을 기어 다니며 먹이를 삼켜 몸을 늘리고, 남을 가둬 잡아먹는 구면 slither. 10분을 버티고 1위로 마치면 클리어.">
+<style>
+  :root{
+    --bg:#05050c; --bg2:#0b0b18; --card:#0f1020; --line:#1e2140;
+    --txt:#dfe6f5; --muted:#8891b3; --accent:#4de8ff;
+    --lime:#7fff9e; --gold:#ffd86b; --rose:#ff5ab8; --violet:#c07bff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  header{
+    position:relative; overflow:hidden; text-align:center;
+    background:
+      radial-gradient(900px 460px at 50% -8%, rgba(77,232,255,.16) 0%, rgba(5,5,12,0) 64%),
+      radial-gradient(700px 380px at 78% 12%, rgba(255,90,184,.12) 0%, rgba(5,5,12,0) 60%);
+    padding:76px 0 58px;
+  }
+  .orb{
+    width:104px; height:104px; margin:0 auto 24px; border-radius:50%;
+    background:radial-gradient(circle at 34% 30%, #7ef0ff 0%, #2aa6e8 42%, #123a80 78%, #08122c 100%);
+    box-shadow:0 0 34px rgba(77,232,255,.42), inset -10px -12px 26px rgba(0,0,0,.55);
+    position:relative;
+  }
+  .orb::after{
+    content:""; position:absolute; inset:-19px -30px; border-radius:50%;
+    border:2px solid rgba(255,90,184,.55); transform:rotate(-24deg);
+  }
+  h1{
+    font-size:clamp(34px,7vw,58px); letter-spacing:2px; margin-bottom:4px;
+    color:#8ef2ff; text-shadow:0 0 22px rgba(77,232,255,.5);
+  }
+  h1 .b{color:var(--lime); text-shadow:0 0 22px rgba(127,255,158,.45)}
+  .sub{color:var(--muted); font-size:18px}
+  .badge{
+    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:rgba(15,16,32,.7);
+  }
+  .cta{margin-top:30px}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
+    background:linear-gradient(135deg,#22d3ee,#7fff9e); color:#06121a;
+    box-shadow:0 8px 26px rgba(77,232,255,.28);
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .note{margin-top:12px; color:var(--muted); font-size:13px}
+
+  /* Sections */
+  section{padding:54px 0}
+  h2{font-size:26px; margin-bottom:8px; color:#cfeaff}
+  .lead{color:var(--muted); margin-bottom:28px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+  .feat{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+  }
+  .feat .ico{font-size:26px; margin-bottom:10px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:#e8f2ff}
+  .feat p{color:var(--muted); font-size:14.5px}
+
+  .rules{
+    background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:8px 4px;
+  }
+  .rule{display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid rgba(30,33,64,.7)}
+  .rule:last-child{border-bottom:none}
+  .rule .k{flex:0 0 96px; color:var(--accent); font-weight:600; font-size:14.5px}
+  .rule .v{color:var(--muted); font-size:14.5px}
+  .rule .v strong{color:var(--txt)}
+
+  .chips{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+  .chip{
+    padding:9px 15px; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; font-size:14px; color:var(--txt);
+  }
+
+  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 10px}
+  .divider{height:1px; background:var(--line); max-width:880px; margin:0 auto}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="orb"></div>
+    <h1>NEON PLANET<br><span class="b">S N A K E</span></h1>
+    <p class="sub">행성을 휘감아 삼켜라 — 10분을 버티고 1위로</p>
+    <div class="badge">모바일 · Android · 싱글플레이 · 무료</div>
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsnake">Google Play 에서 보기</a>
+      <p class="note">출시 준비 중입니다 — 스토어 등록이 끝나면 링크가 열립니다.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>게임 소개</h2>
+    <p class="lead">
+      공 모양 행성 표면을 기어 다니며 먹이를 삼켜 몸을 늘리고, 남을 가둬 잡아먹는
+      <strong>구면 slither</strong> 입니다. 사각 맵과 달리 <strong>끝이 없고, 지평선 너머가
+      물리적으로 안 보입니다.</strong> 반대편에서 누가 자라고 있는지 모르는 것이 그대로
+      긴장이 되고, 그래서 레이더가 장식이 아니라 필수 장치가 됩니다.
+      <strong>10분을 버티고 그 시점에 1위</strong>면 스테이지 클리어 — 순위표가 곧 목표판입니다.
+    </p>
+
+    <div class="grid">
+      <div class="feat">
+        <div class="ico">🪐</div>
+        <h3>구면 행성 40개</h3>
+        <p>난이도는 공격성 · 사냥 사거리 · 보충 속도 · 먹이 · 장애물 다섯 축으로 갈립니다. 색도 이름도 행성마다 다릅니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🕹️</div>
+        <h3>가상 조이스틱</h3>
+        <p>화면 아무 데나 짚은 자리가 중심입니다 — 손이 판을 안 가립니다. 터치 조준으로 바꿀 수도 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⚡</div>
+        <h3>두 번 두드려 달리기</h3>
+        <p>길이를 소모하고 꼬리에 먹이를 흘립니다. 쫓을 때도 도망칠 때도 대가가 붙습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🐍</div>
+        <h3>언제나 20마리</h3>
+        <p>자리가 비면 신출내기가 채웁니다. 총 투입량에 상한이 없어 판은 끝까지 붐빕니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎯</div>
+        <h3>사냥하는 AI</h3>
+        <p>먹이만 줍지 않습니다. 자기보다 크지 않은 놈의 앞을 자르고, 붙을 때 달리고, 큰 놈이 붙으면 도망칩니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">💀</div>
+        <h3>죽어도 판이 안 끝난다</h3>
+        <p>5초 뒤 신출내기 크기로 다시 들어옵니다. 잃는 것은 시간이 아니라 그때까지 키운 몸입니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎨</div>
+        <h3>색 16 · 무늬 10</h3>
+        <p>이름까지 정합니다. 색도 무늬도 나만 쓰기 때문에, 몸이 길어져도 어느 줄이 내 몸인지 갈립니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎵</div>
+        <h3>외부 음원 0</h3>
+        <p>배경음악 7곡과 효과음 10종을 전부 코드로 합성했습니다. 곡은 스테이지가 정합니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📴</div>
+        <h3>오프라인 · 계정 없음</h3>
+        <p>가입 없이 바로 시작합니다. 진행 상황은 기기 안에만 저장됩니다. 인앱 결제도 없습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>규칙</h2>
+    <p class="lead">배울 것이 적습니다. 다섯 줄이면 끝납니다.</p>
+    <div class="rules">
+      <div class="rule">
+        <div class="k">죽음</div>
+        <div class="v"><strong>내 머리가 남의 몸이나 장애물에 닿을 때만.</strong> 몸통끼리는 서로 통과합니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">정면 충돌</div>
+        <div class="v">머리 대 머리는 <strong>큰 쪽이 삽니다.</strong> 크기 차가 6% 이내면 둘 다 죽습니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">끼어들기</div>
+        <div class="v">나란히 달리다 <strong>한쪽만 꺾어서 붙으면 꺾은 쪽이 죽습니다.</strong> 둘 다 직진이었으면 아무도 안 죽습니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">성장</div>
+        <div class="v">질량이 굵기가 아니라 <strong>길이로</strong> 갑니다. 몸이 곧 벽이라 길이가 무기입니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">먹이</div>
+        <div class="v">알갱이는 곁가지입니다. 크게 자라려면 <strong>싸움에서 이겨 남의 몸을 먹어야</strong> 합니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">클리어</div>
+        <div class="v"><strong>10분을 버티고, 그 시점에 1위.</strong> 둘 다여야 합니다 — 버티기만 하면 숨어 다니는 것이 최적이 되고, 1위만 보면 스쳐 가는 1위로 클리어가 떨어집니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>편의 기능</h2>
+    <p class="lead">한 판이 10분입니다. 그 10분을 통째로 비워 두지 않아도 되게 만들었습니다.</p>
+    <div class="chips">
+      <span class="chip">↻ 이어하기 — 앱을 내리기만 해도 판이 저장됩니다</span>
+      <span class="chip">★ 스테이지별 최고 길이 기록</span>
+      <span class="chip">↩ 뒤로 가기는 한 단계 위로 — 앱이 안 꺼집니다</span>
+      <span class="chip">🌐 한국어 · English</span>
+      <span class="chip">🔊 배경음악 · 효과음 따로 4단</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
+      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
+    </div>
+    <p style="margin-top:14px">© 2026 HappyLucky · Neon Planet: Snake</p>
+  </div>
+</footer>
+
+</body>
+</html>
