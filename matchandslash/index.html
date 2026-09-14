@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>매치앤슬래시 · Match &amp; Slash</title>
+<meta name="description" content="매치앤슬래시 — 심볼이 곧 직업이다. 7×7 판에서 룬을 이어 전사·마법사·힐러·궁수의 스킬을 채우고, 상성으로 적을 쓰러뜨리는 3매치 파티 RPG. 카드 100장 · 적 60종 · 챕터 30.">
+<style>
+  /* 색은 게임 안(UiKit)에서 그대로 가져왔다 — 스토어에서 넘어온 사람이 같은
+     물건으로 알아보게 하려면 판 색과 금테가 같아야 한다. */
+  :root{
+    --bg:#12101a; --bg2:#191625; --card:#211f2e; --line:#756347;
+    --txt:#f0edfa; --muted:#a39eb8; --gold:#ffdb6b; --gold-dim:#b89952;
+    --warrior:#e2705a; --mage:#6f8ff0; --healer:#69c68a; --archer:#d7a94f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  header{
+    position:relative; overflow:hidden; text-align:center;
+    background:
+      radial-gradient(900px 460px at 50% -10%, rgba(255,219,107,.13) 0%, rgba(18,16,26,0) 66%),
+      radial-gradient(680px 360px at 80% 14%, rgba(111,143,240,.10) 0%, rgba(18,16,26,0) 60%);
+    padding:72px 0 56px;
+  }
+  /* 룬 넷 — 판에서 이어 붙이는 그 심볼이 곧 직업이라는 것이 이 게임의 전부다.
+     히어로에 그림 한 장을 넣는 대신 그 규칙을 그린다. */
+  .runes{display:flex; gap:10px; justify-content:center; margin-bottom:24px}
+  .rune{
+    width:52px; height:52px; border-radius:12px; display:grid; place-items:center;
+    font-size:24px; border:2px solid rgba(255,219,107,.30);
+    box-shadow:inset 0 -6px 14px rgba(0,0,0,.45), 0 4px 14px rgba(0,0,0,.35);
+  }
+  .r1{background:linear-gradient(160deg,#7a3a2e,#3a1d18)}
+  .r2{background:linear-gradient(160deg,#2f3f86,#171d3e)}
+  .r3{background:linear-gradient(160deg,#2c6b45,#152e1f)}
+  .r4{background:linear-gradient(160deg,#7a5a1f,#3a2c10)}
+  h1{
+    font-size:clamp(32px,6.6vw,54px); letter-spacing:3px; margin-bottom:2px;
+    color:var(--gold); text-shadow:0 0 24px rgba(255,219,107,.35), 0 3px 0 rgba(0,0,0,.5);
+  }
+  h1 .en{
+    display:block; font-size:clamp(14px,2.6vw,19px); letter-spacing:6px;
+    color:var(--gold-dim); text-shadow:none; margin-top:6px; font-weight:600;
+  }
+  .sub{color:var(--muted); font-size:18px; margin-top:14px}
+  .badge{
+    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:rgba(33,31,46,.7);
+  }
+  .cta{margin-top:30px}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:700;
+    background:linear-gradient(135deg,#dc8022,#ffdb6b); color:#2a1c06;
+    box-shadow:0 8px 26px rgba(255,219,107,.22);
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
+  .note{margin-top:12px; color:var(--muted); font-size:13px}
+
+  /* Sections */
+  section{padding:54px 0}
+  h2{font-size:26px; margin-bottom:8px; color:var(--gold)}
+  .lead{color:var(--muted); margin-bottom:28px}
+  .lead strong{color:var(--txt)}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px}
+  .feat .ico{font-size:26px; margin-bottom:10px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--txt)}
+  .feat p{color:var(--muted); font-size:14.5px}
+
+  .rules{background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:8px 4px}
+  .rule{display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid rgba(117,99,71,.35)}
+  .rule:last-child{border-bottom:none}
+  .rule .k{flex:0 0 104px; color:var(--gold); font-weight:700; font-size:14.5px}
+  .rule .v{color:var(--muted); font-size:14.5px}
+  .rule .v strong{color:var(--txt)}
+
+  /* 상성표 — 글로 다섯 줄 쓰는 것보다 표가 짧고, 무엇보다 한눈에 읽힌다. */
+  .aff{width:100%; border-collapse:collapse; margin-top:10px; font-size:14.5px}
+  .aff th,.aff td{padding:11px 12px; border-bottom:1px solid rgba(117,99,71,.35); text-align:left}
+  .aff th{color:var(--gold-dim); font-weight:600; font-size:13px; letter-spacing:.5px}
+  .aff td{color:var(--muted)}
+  .aff tr:last-child td{border-bottom:none}
+  .w{color:var(--warrior);font-weight:700} .m{color:var(--mage);font-weight:700}
+  .h{color:var(--healer);font-weight:700} .a{color:var(--archer);font-weight:700}
+  .tblwrap{background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:6px 14px; overflow-x:auto}
+
+  .chips{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+  .chip{
+    padding:9px 15px; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; font-size:14px; color:var(--txt);
+  }
+
+  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 10px}
+  .divider{height:1px; background:var(--line); max-width:880px; margin:0 auto; opacity:.55}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="runes">
+      <div class="rune r1">🗡</div>
+      <div class="rune r2">✦</div>
+      <div class="rune r3">✚</div>
+      <div class="rune r4">🏹</div>
+    </div>
+    <h1>매치앤슬래시<span class="en">MATCH &amp; SLASH</span></h1>
+    <p class="sub">룬을 이어 적을 쓰러뜨려라</p>
+    <div class="badge">모바일 · Android · 싱글플레이 · 무료</div>
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.matchandslash">Google Play 에서 보기</a>
+      <p class="note">출시 준비 중입니다 — 스토어 등록이 끝나면 링크가 열립니다.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>게임 소개</h2>
+    <p class="lead">
+      <strong>심볼이 곧 직업입니다.</strong> 7×7 판에서 이어 붙인 룬이 전사 · 마법사 · 힐러 · 궁수
+      네 장의 게이지를 채우고, 게이지가 차면 그 카드가 스킬을 씁니다. 그래서 이 게임의
+      3매치는 점수를 쌓는 일이 아니라 <strong>누구에게 언제 차례를 줄지 고르는 일</strong>입니다.
+      적에게는 다섯 타입이 있고 직업마다 약점과 저항이 갈리므로, 같은 판에서도
+      <strong>무엇을 이어 붙였는지에 따라 결과가 달라집니다.</strong>
+    </p>
+
+    <div class="grid">
+      <div class="feat">
+        <div class="ico">🎴</div>
+        <h3>심볼 ↔ 직업</h3>
+        <p>룬 네 종이 편성한 카드 넷과 하나씩 짝입니다. 다섯 번째 집결 룬은 넷 모두를 조금씩 채웁니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⏱</div>
+        <h3>두 페이즈로 갈린다</h3>
+        <p>19초 동안 조작 제한 없이 마음껏 매치하고, 시간이 끝나면 전투가 한꺼번에 해결됩니다. 손이 급할 때와 판을 읽을 때가 나뉩니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⚔️</div>
+        <h3>상성이 판을 바꾼다</h3>
+        <p>약점 ×1.6 · 저항 ×0.6. 극단적으로 잡지 않은 이유는 아래 표에 적어 뒀습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🃏</div>
+        <h3>카드 100장</h3>
+        <p>직업마다 스물다섯 장. 등급이 오를수록 스킬이 세지고, 카드마다 짧은 이야기가 붙습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">👹</div>
+        <h3>적 60종</h3>
+        <p>중갑 · 마법생물 · 비행 · 언데드 · 야수 다섯 타입. 정예와 보스는 한 턴에 두 번 움직입니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🗺</div>
+        <h3>챕터 30 · 300판</h3>
+        <p>적 스탯은 손으로 적지 않고 챕터 예산에서 나옵니다. 그래서 뒤쪽 판도 난이도 곡선이 무너지지 않습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⭐</div>
+        <h3>별점은 다시 올 이유</h3>
+        <p>판마다 별 셋. 보상은 <strong>직전 최고 별점과의 차액만</strong> 주므로 같은 판을 반복해 파밍할 수 없습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🔋</div>
+        <h3>기력 다섯 칸</h3>
+        <p>20분에 한 칸. 가득 차면 회복이 멈추므로 「하루 한 번 들어와 스무 판」이 되지 않습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📴</div>
+        <h3>오프라인 · 계정 없음</h3>
+        <p>가입도 로그인도 없습니다. 진행 상황은 기기 안에만 저장되고, 게임이 서버로 보내는 것은 아무것도 없습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>규칙</h2>
+    <p class="lead">배울 것이 적습니다. 여섯 줄이면 끝납니다.</p>
+    <div class="rules">
+      <div class="rule">
+        <div class="k">매치</div>
+        <div class="v">같은 룬 셋 이상을 이어 붙입니다. 모인 개수가 <strong>그 직업 카드의 게이지</strong>로 들어갑니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">평타와 스킬</div>
+        <div class="v">평타는 매치와 무관하게 매 턴 나갑니다. <strong>매치가 정하는 것은 스킬</strong>이고, 게이지가 다 차야 터집니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">집결 룬</div>
+        <div class="v">직업이 없는 중립 룬입니다. <strong>넷 모두를 조금씩</strong> 채우므로 특정 직업이 급하지 않을 때의 답이 됩니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">상성</div>
+        <div class="v">약점이면 <strong>×1.6</strong>, 저항이면 <strong>×0.6</strong>. 다만 <strong>게이지 충전은 상성과 무관하게 100%</strong>라, 지금은 손해인 룬을 다음 적을 위해 미리 채워 두는 선택이 성립합니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">쓰러진 카드</div>
+        <div class="v">판에서 빠지지 않습니다. 그 직업 룬을 매치해 다시 세우거나, 세 턴이 지나면 스스로 일어납니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">클리어</div>
+        <div class="v">웨이브를 전부 넘기면 끝입니다. <strong>몇 턴에 끝냈는지가 별점</strong>이 되므로, 이기는 것과 잘 이기는 것이 다릅니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>상성표</h2>
+    <p class="lead">
+      ×2.0 / ×0.5 처럼 극단적으로 잡으면 <strong>약점 직업 하나만 찾는 게임</strong>이 되어 나머지 셋이
+      노이즈가 됩니다. 상성을 넣었는데 판단이 오히려 단순해지는 역설이라, 넷 다 쓸 만한
+      폭으로 잡았습니다. <strong>네 직업이 모두 어딘가에서 에이스</strong>입니다.
+    </p>
+    <div class="tblwrap">
+      <table class="aff">
+        <tr><th>적 타입</th><th>약점 ×1.6</th><th>저항 ×0.6</th><th>왜</th></tr>
+        <tr><td>중갑</td><td class="m">마법사</td><td class="w">전사</td><td>갑옷은 칼이 안 먹고 마법에 뚫립니다</td></tr>
+        <tr><td>마법생물</td><td class="a">궁수</td><td class="m">마법사</td><td>마법 저항이 높아 물리 원거리에 취약합니다</td></tr>
+        <tr><td>비행</td><td class="w">전사</td><td class="a">궁수</td><td>회피형이라 근접 광역에 잡힙니다</td></tr>
+        <tr><td>언데드</td><td class="h">힐러</td><td class="w">전사</td><td>신성 특효 — <strong>힐러가 최고 딜러로 바뀌는 지점</strong>입니다</td></tr>
+        <tr><td>야수</td><td class="a">궁수</td><td class="h">힐러</td><td>신성이 의미가 없습니다</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>편의 기능</h2>
+    <p class="lead">한 판이 짧지 않습니다. 그 시간을 통째로 비워 두지 않아도 되게 만들었습니다.</p>
+    <div class="chips">
+      <span class="chip">⭐ 스테이지별 별점 기록</span>
+      <span class="chip">📅 출석은 연속 — 끊기면 끊겼다고 먼저 말합니다</span>
+      <span class="chip">📋 일일 임무</span>
+      <span class="chip">↩ 뒤로 가기는 한 단계 위로 — 앱이 안 꺼집니다</span>
+      <span class="chip">📖 게임 규칙을 글자로 — 설정 안 도움말</span>
+      <span class="chip">🎲 뽑기 확률 공시</span>
+      <span class="chip">🌐 한국어 · English</span>
+      <span class="chip">🔊 배경음 · 효과음 따로 4단</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
+      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
+    </div>
+    <p style="margin-top:14px">© 2026 HappyLucky · 매치앤슬래시</p>
+  </div>
+</footer>
+
+</body>
+</html>
