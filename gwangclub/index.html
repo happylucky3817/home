@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>광클럽 — 셋이 앉는 고스톱</title>
+<meta name="description" content="광클럽 — 화투 48장을 새로 그려 올린 3인 고스톱. 뻑·쪽·따닥·폭탄·흔들기까지 풀 룰, 여섯 단계로 벌어지는 상대, 같은 WiFi 로 셋이 마주 앉는 판.">
+<style>
+  :root{
+    --bg:#071410; --bg2:#0b1f18; --card:#11241d; --line:#1e4536;
+    --txt:#e6efe9; --muted:#8aa396; --accent:#e3c36a;
+    --hong:#d1564f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  header{
+    position:relative; overflow:hidden; text-align:center;
+    background:
+      radial-gradient(900px 460px at 50% -8%, rgba(227,195,106,.14) 0%, rgba(7,20,16,0) 64%),
+      radial-gradient(700px 380px at 22% 10%, rgba(209,86,79,.10) 0%, rgba(7,20,16,0) 60%);
+    padding:76px 0 58px;
+  }
+  /* 광(光) 딱지 — 붉은 프레임에 금 글자. 카드 앞면과 같은 배색이다 */
+  .gwang{
+    width:92px; height:132px; margin:0 auto 26px; border-radius:9px;
+    background:linear-gradient(168deg,#17322a 0%,#0d2119 100%);
+    border:3px solid var(--hong);
+    box-shadow:0 10px 30px rgba(0,0,0,.5), inset 0 0 22px rgba(227,195,106,.10);
+    display:flex; align-items:center; justify-content:center;
+    font-size:46px; color:var(--accent); font-weight:700;
+    text-shadow:0 0 16px rgba(227,195,106,.45);
+  }
+  h1{
+    font-size:clamp(36px,8vw,62px); letter-spacing:6px; margin-bottom:6px;
+    color:var(--accent); text-shadow:0 0 20px rgba(227,195,106,.35);
+  }
+  .sub{color:var(--muted); font-size:18px}
+  .badge{
+    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:rgba(17,36,29,.75);
+  }
+  .cta{margin-top:30px}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
+    background:linear-gradient(135deg,#e3c36a,#c79a3c); color:#1a1208;
+    box-shadow:0 8px 26px rgba(227,195,106,.22);
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .note{margin-top:12px; color:var(--muted); font-size:13px}
+
+  /* Sections */
+  section{padding:54px 0}
+  h2{font-size:26px; margin-bottom:8px; color:#f0e4c0}
+  .lead{color:var(--muted); margin-bottom:28px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+  .feat{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+  }
+  .feat .ico{font-size:26px; margin-bottom:10px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:#f0e4c0}
+  .feat p{color:var(--muted); font-size:14.5px}
+
+  .rules{
+    background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:8px 4px;
+  }
+  .rule{display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid rgba(30,69,54,.7)}
+  .rule:last-child{border-bottom:none}
+  .rule .k{flex:0 0 104px; color:var(--accent); font-weight:600; font-size:14.5px}
+  .rule .v{color:var(--muted); font-size:14.5px}
+  .rule .v strong{color:var(--txt)}
+
+  /* 상대 여섯 칸 */
+  .tiers{display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:12px}
+  .tier{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px 14px; text-align:center;
+  }
+  .tier .g{
+    display:inline-block; width:30px; height:30px; line-height:30px; border-radius:50%;
+    background:rgba(227,195,106,.12); border:1px solid var(--line);
+    color:var(--accent); font-weight:700; font-size:15px; margin-bottom:8px;
+  }
+  .tier .n{font-size:14.5px; color:var(--txt)}
+  .tier .p{font-size:13px; color:var(--muted); margin-top:3px}
+
+  .chips{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+  .chip{
+    padding:9px 15px; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; font-size:14px; color:var(--txt);
+  }
+
+  .box{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px 18px; margin:18px 0 0; color:var(--muted); font-size:14.5px;
+  }
+  .box strong{color:var(--txt)}
+
+  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 10px}
+  .divider{height:1px; background:var(--line); max-width:880px; margin:0 auto}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="gwang">光</div>
+    <h1>광클럽</h1>
+    <p class="sub">셋이 앉는 고스톱 — 뻑도 폭탄도 흔들기도 그대로</p>
+    <div class="badge">모바일 · Android · 3인 고스톱 · 무료</div>
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.gwangclub">Google Play 에서 보기</a>
+      <p class="note">출시 준비 중입니다 — 스토어 등록이 끝나면 링크가 열립니다.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>게임 소개</h2>
+    <p class="lead">
+      화투 48장으로 <strong>셋이 앉아 치는 고스톱</strong>입니다. 둘이 아니라 셋이라
+      피박·광박이 실제로 자주 걸리고, 남의 뻑을 먹는 자리도 살아 있습니다.
+      <strong>뻑 · 쪽 · 따닥 · 싹쓸이 · 폭탄 · 흔들기 · 나가리 · 국진</strong>까지
+      빼놓지 않았고, 애매한 지역 룰은 설정에서 켜고 끕니다.
+      혼자서도 치고, <strong>같은 WiFi 에 있으면 셋이 마주 앉아</strong>서도 칩니다.
+    </p>
+
+    <div class="grid">
+      <div class="feat">
+        <div class="ico">🎴</div>
+        <h3>새로 그린 화투 48장</h3>
+        <p>도상은 원래 화투 그대로 두고 마감만 새로 올렸습니다. 붉은 프레임과 光·홍단·청단 글자까지 그림 안에 들어 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">👥</div>
+        <h3>3인 판</h3>
+        <p>둘이 치면 안 나오는 것들이 나옵니다 — 남의 뻑을 먹고, 광을 못 산 사람이 광박을 쓰고, 두 사람에게서 한꺼번에 받습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📶</div>
+        <h3>WiFi 로 셋이</h3>
+        <p>같은 공유기에 있으면 방을 열고 부릅니다. 빈자리는 AI 가 채웁니다. 서버를 거치지 않고 기기끼리 직접 주고받습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎯</div>
+        <h3>여섯 단계 상대</h3>
+        <p>판돈을 올리면 상대도 세집니다. 각 단계를 24,000판씩 돌려 <strong>칸마다 0.5~0.95점씩</strong> 벌어지도록 맞췄습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🧮</div>
+        <h3>계산서를 그림으로</h3>
+        <p>족보마다 그 패를 깔아 보여 줍니다. 무엇으로 몇 점이 났고 거기에 무엇이 곱해졌는지가 한 장에 다 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🙂</div>
+        <h3>아바타 30종</h3>
+        <p>얼굴과 이름을 따로 뽑습니다. 같은 얼굴이 다른 이름으로도 앉아서 서른 장이 훨씬 많은 사람이 됩니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⏱</div>
+        <h3>차례에 시계가 돈다</h3>
+        <p>남이 폰을 내려놔도 판이 멈추지 않습니다. 남은 시간은 큰 숫자로 보이고, 다섯 자리 아래로 내려가면 붉어집니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎫</div>
+        <h3>출전권 다섯 장</h3>
+        <p>한 판에 한 장, 20분에 한 장씩 찹니다. 다섯은 천장이 아니라 시계가 도는 선이라, 광고로 받은 장은 그 위로 쌓입니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📴</div>
+        <h3>계정 없음 · 기기 안에만</h3>
+        <p>가입도 로그인도 없습니다. 소지금과 기록은 기기 안에만 있고 어디로도 보내지 않습니다.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <strong>실제 돈이 오가지 않습니다.</strong> 판돈과 소지금은 게임 안에서만 쓰는 숫자이며,
+      현금이나 경품으로 바꿀 수 없고 사용자끼리 주고받을 수도 없습니다.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>규칙</h2>
+    <p class="lead">아는 고스톱 그대로입니다. 헷갈리는 자리만 적어 둡니다.</p>
+    <div class="rules">
+      <div class="rule">
+        <div class="k">나는 점수</div>
+        <div class="v">3인 기본은 <strong>3점부터</strong> 납니다. 나면 스톱으로 끝내거나 고를 불러 판을 이어 갑니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">고 · 고박</div>
+        <div class="v">1·2고는 더하기, <strong>3고부터는 곱하기</strong>입니다. 고를 부르고 남이 나면 그 판값을 <strong>부른 사람이 혼자 뭅니다.</strong></div>
+      </div>
+      <div class="rule">
+        <div class="k">박</div>
+        <div class="v">피박(피 다섯 장 이하) · 광박(광 없음) · 멍박 · 고박이 <strong>겹쳐서 곱해집니다.</strong> 3인이라 실제로 자주 걸립니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">뻑 · 쪽 · 따닥</div>
+        <div class="v">남의 뻑을 먹으면 한 장을 받고, <strong>자뻑</strong>이면 두 장을 받습니다. 쪽과 따닥도 각각 한 장씩입니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">폭탄 · 흔들기</div>
+        <div class="v">같은 월 석 장을 들었으면 <strong>한꺼번에 내고 한 번 더 칩니다.</strong> 흔들어 두면 그 판값이 두 배가 되고, 나가리가 나도 이월할지는 설정에서 고릅니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">국진</div>
+        <div class="v">9월 국진을 <strong>열끗으로 셀지 쌍피로 쓸지</strong> 그 자리에서 고릅니다. 유리한 쪽으로 자동으로 세게 할 수도 있습니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">나가리</div>
+        <div class="v">아무도 못 나면 다음 판이 <strong>두 배</strong>입니다. 거듭 나면 계속 곱해집니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>상대는 여섯 칸으로 벌어집니다</h2>
+    <p class="lead">
+      판돈을 올리면 그 자리 상대가 세집니다. 패를 틀리는 빈도와 <strong>고·스톱을 잘못 부르는
+      빈도</strong>를 따로 잡았습니다 — 고스톱에서 돈이 크게 오가는 자리는 고박이고,
+      그건 잘못 부른 고에서 나오기 때문입니다.
+    </p>
+    <div class="tiers">
+      <div class="tier"><div class="g">E</div><div class="n">쉬움</div><div class="p">점당 100원</div></div>
+      <div class="tier"><div class="g">D</div><div class="n">보통</div><div class="p">점당 300원</div></div>
+      <div class="tier"><div class="g">C</div><div class="n">제법 치는 상대</div><div class="p">점당 500원</div></div>
+      <div class="tier"><div class="g">B</div><div class="n">만만찮은 상대</div><div class="p">점당 1,000원</div></div>
+      <div class="tier"><div class="g">A</div><div class="n">독한 상대</div><div class="p">점당 3,000원</div></div>
+      <div class="tier"><div class="g">S</div><div class="n">타짜</div><div class="p">점당 5,000원</div></div>
+    </div>
+    <div class="box">
+      윗자리는 <strong>소지금이 있어야 열립니다.</strong> 크게 잃으면 자동으로 아랫자리로
+      내려오기 때문에, 거덜난 사람에게 타짜가 계속 붙는 일은 없습니다.
+      돈이 있어도 100원 자리에 눌러앉아 편하게 칠 수 있습니다.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>편의 기능</h2>
+    <p class="lead">한 판이 길지 않습니다. 그 사이를 방해하지 않게 만들었습니다.</p>
+    <div class="chips">
+      <span class="chip">↻ 이어하기 — 앱을 내려도 치던 판이 남습니다</span>
+      <span class="chip">🚫 배너도 전면 광고도 없음</span>
+      <span class="chip">🎬 광고는 출전권을 채울 때만, 직접 누를 때만</span>
+      <span class="chip">🔊 소리 · 음악 · 진동 따로 끄기</span>
+      <span class="chip">🤖 나간 자리는 AI 가 이어 칩니다</span>
+      <span class="chip">📴 계정 없음 · 오프라인</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
+      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
+    </div>
+    <p style="margin-top:14px">© 2026 HappyLucky · 광클럽</p>
+  </div>
+</footer>
+
+</body>
+</html>
