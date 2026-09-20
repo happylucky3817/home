@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프론티어 킹덤 — 길을 놓아 물자를 나른다</title>
+<meta name="description" content="프론티어 킹덤 — 길을 놓아야 물자가 움직이는 건설·물류 시뮬레이션. 스물여섯 채가 사슬로 이어지고, 길이 멀면 그만큼 늦게 닿는다. 광고 없음 · 결제 없음 · 완전 오프라인.">
+<style>
+  :root{
+    --bg:#0d1410; --bg2:#12201a; --card:#16271e; --line:#2a4a35;
+    --txt:#e8efe8; --muted:#94a897; --accent:#c8a45c;
+    --road:#a8794a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+
+  /* Hero */
+  header{
+    position:relative; overflow:hidden; text-align:center;
+    background:
+      radial-gradient(900px 460px at 50% -8%, rgba(111,158,78,.16) 0%, rgba(13,20,16,0) 64%),
+      radial-gradient(700px 380px at 24% 12%, rgba(200,164,92,.09) 0%, rgba(13,20,16,0) 60%);
+    padding:76px 0 58px;
+  }
+  /* 네거리 — 잔디 위로 길 둘이 엇갈리고 그 귀퉁이에 깃발이 선다.
+     이 판에서 제일 먼저 하는 일이 «길 놓기» 라 그것을 그대로 표로 썼다.
+     ★ 그림 파일을 하나도 안 쓴다 — 전부 CSS 다. */
+  .crest{
+    width:112px; height:112px; margin:0 auto 26px; border-radius:20px;
+    position:relative; overflow:hidden;
+    background:linear-gradient(168deg,#3c6b3a 0%,#22482a 100%);
+    border:3px solid var(--line);
+    box-shadow:0 10px 30px rgba(0,0,0,.5), inset 0 0 22px rgba(200,164,92,.08);
+  }
+  .crest::before,.crest::after{
+    content:""; position:absolute; background:linear-gradient(var(--road),#8a6038);
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.18);
+  }
+  .crest::before{left:0; right:0; top:50%; height:20px; transform:translateY(-50%)}
+  .crest::after{top:0; bottom:0; left:50%; width:20px; transform:translateX(-50%)}
+  .crest i{
+    position:absolute; right:18px; top:15px; width:3px; height:34px;
+    background:#d8cbb0; border-radius:2px; z-index:2;
+  }
+  .crest i::after{
+    content:""; position:absolute; left:3px; top:2px;
+    border-top:7px solid transparent; border-bottom:7px solid transparent;
+    border-left:13px solid var(--accent);
+  }
+  h1{
+    font-size:clamp(34px,7.5vw,58px); letter-spacing:3px; margin-bottom:6px;
+    color:var(--accent); text-shadow:0 0 20px rgba(200,164,92,.32);
+  }
+  .sub{color:var(--muted); font-size:18px}
+  .badge{
+    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:rgba(22,39,30,.75);
+  }
+  .cta{margin-top:30px}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
+    background:linear-gradient(135deg,#c8a45c,#a07f36); color:#1a1408;
+    box-shadow:0 8px 26px rgba(200,164,92,.20);
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .note{margin-top:12px; color:var(--muted); font-size:13px}
+
+  /* Sections */
+  section{padding:54px 0}
+  h2{font-size:26px; margin-bottom:8px; color:#f0e6cc}
+  .lead{color:var(--muted); margin-bottom:28px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+  .feat{
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+  }
+  .feat .ico{font-size:26px; margin-bottom:10px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:#f0e6cc}
+  .feat p{color:var(--muted); font-size:14.5px}
+
+  .rules{
+    background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:8px 4px;
+  }
+  .rule{display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid rgba(42,74,53,.7)}
+  .rule:last-child{border-bottom:none}
+  .rule .k{flex:0 0 104px; color:var(--accent); font-weight:600; font-size:14.5px}
+  .rule .v{color:var(--muted); font-size:14.5px}
+  .rule .v strong{color:var(--txt)}
+
+  /* 병종 넉 칸 */
+  .tiers{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px}
+  .tier{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px 14px; text-align:center;
+  }
+  .tier .g{
+    display:inline-block; width:32px; height:32px; line-height:30px; border-radius:50%;
+    background:rgba(200,164,92,.12); border:1px solid var(--line);
+    font-size:16px; margin-bottom:8px;
+  }
+  .tier .n{font-size:14.5px; color:var(--txt)}
+  .tier .p{font-size:13px; color:var(--muted); margin-top:3px}
+
+  .chips{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+  .chip{
+    padding:9px 15px; background:var(--card); border:1px solid var(--line);
+    border-radius:999px; font-size:14px; color:var(--txt);
+  }
+
+  .box{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:16px 18px; margin:18px 0 0; color:var(--muted); font-size:14.5px;
+  }
+  .box strong{color:var(--txt)}
+
+  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 10px}
+  .divider{height:1px; background:var(--line); max-width:880px; margin:0 auto}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="crest"><i></i></div>
+    <h1>프론티어 킹덤</h1>
+    <p class="sub">길을 놓아 물자를 나른다 — 천막 하나에서 왕국까지</p>
+    <div class="badge">모바일 · Android · 건설·물류 시뮬레이션 · 무료</div>
+    <div class="cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.frontierkingdom">Google Play 에서 보기</a>
+      <p class="note">출시 준비 중입니다 — 스토어 등록이 끝나면 링크가 열립니다.</p>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>게임 소개</h2>
+    <p class="lead">
+      천막 하나와 목수 한 사람으로 시작합니다. 나무를 베면 통나무가
+      <strong>벌목장 앞에 그대로 쌓입니다.</strong> 제재소까지 길이 놓여 있어야
+      짐꾼이 그것을 짊어지고 걸어갑니다. 길이 없으면 아무것도 움직이지 않고,
+      길이 멀면 그만큼 늦게 닿습니다. <strong>거리와 운송</strong>이 이 게임의 알맹이입니다.
+      사람에게 직접 명령하지 않습니다 — <strong>길과 건물을 놓으면 마을이 알아서 돕니다.</strong>
+    </p>
+
+    <div class="grid">
+      <div class="feat">
+        <div class="ico">🛣</div>
+        <h3>두 번 두드려 길을 놓는다</h3>
+        <p>시작점을 두드리고 끝점을 두드리면 사이가 이어집니다. 나무·바위·물은 알아서 돌아갑니다. 손가락으로 긋지 않으니 흔들려서 길이 꺾일 일이 없습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📦</div>
+        <h3>짐꾼이 구간마다 이어 나른다</h3>
+        <p>깃발과 깃발 사이를 한 사람이 맡습니다. 짐은 순간이동하지 않습니다 — 누군가 짊어지고 걸어가고, 그 사이 물건은 길 위에 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🏭</div>
+        <h3>스물여섯 채가 사슬로 이어진다</h3>
+        <p>통나무가 널빤지가 되고, 밀이 밀가루를 거쳐 빵이 됩니다. 그 빵을 먹어야 광부가 곡괭이를 듭니다. 한 칸이 막히면 그 뒤가 전부 멈춥니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🗼</div>
+        <h3>망루를 세워 장막을 걷는다</h3>
+        <p>망루가 서면 안개가 걷히고 영역이 그만큼 넓어집니다. 넓힌 땅에만 지을 수 있으니, 어디로 뻗을지가 곧 판단입니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">⚔</div>
+        <h3>군대는 곧 경제다</h3>
+        <p>민병소·위병소·사궁장·기사관이 각각 한 병종을 기릅니다. 기사 한 사람에게 검·방패·갑옷·고기가 들어갑니다. 병사를 뽑으려면 사슬이 먼저 돌아야 합니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">🏰</div>
+        <h3>본거지를 부수면 터가 무너진다</h3>
+        <p>적 진영의 심장을 깨면 그 터의 건물이 한꺼번에 무너집니다. 전초에서 마을로, 마을에서 도시로 — 뒤로 갈수록 수비가 두꺼워집니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">👆</div>
+        <h3>세로 화면 · 한 손 조작</h3>
+        <p>병사를 한 번 두드리면 하나, 두 번 두드리면 화면에 보이는 병사가 다 묶입니다. 「이동」과 「공격」이 따로 있어 <strong>물러설 수 있습니다.</strong></p>
+      </div>
+      <div class="feat">
+        <div class="ico">🎞</div>
+        <h3>직접 그린 픽셀아트</h3>
+        <p>사람도 건물도 짐승도 전부 새로 만들었습니다. 직업마다 옷이 다르고, 여덟 방향으로 걷고, 일하는 동작이 따로 있습니다.</p>
+      </div>
+      <div class="feat">
+        <div class="ico">📴</div>
+        <h3>계정 없음 · 완전 오프라인</h3>
+        <p>가입도 로그인도 없습니다. <strong>인터넷 권한조차 요청하지 않습니다</strong> — 보낼 수가 없는 구조입니다. 진행 상황은 기기 안에만 남습니다.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <strong>광고가 없고 인앱 결제가 없습니다.</strong> 받은 그대로 끝까지 하실 수 있고,
+      기다리게 만들어 무엇을 파는 자리가 없습니다.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>규칙</h2>
+    <p class="lead">헷갈리는 자리만 적어 둡니다.</p>
+    <div class="rules">
+      <div class="rule">
+        <div class="k">길</div>
+        <div class="v">길 없이는 <strong>아무것도 옮겨지지 않습니다.</strong> 길은 두 칸 단위로 놓이고, 건물 한 채가 딱 그 눈금에 앉습니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">깃발</div>
+        <div class="v">깃발은 짐을 <strong>내려놓는 자리</strong>입니다. 짐꾼은 제 구간만 오갑니다 — 멀면 깃발을 더 꽂아 사람을 늘립니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">마지막 한 칸</div>
+        <div class="v">재료는 <strong>짐꾼이 건물 안으로 넣고</strong>, 완성품은 <strong>건물 주인이 깃발까지 들고 나옵니다.</strong> 이 비대칭이 재료 둘을 쓰는 집에서 차이를 만듭니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">사람</div>
+        <div class="v">주택을 지어야 일꾼이 늘어납니다. 일꾼은 <strong>연장·옷·신발</strong>을 받아야 제 일을 시작합니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">본부 레벨</div>
+        <div class="v">본부를 올릴 때마다 <strong>지을 수 있는 건물이 한 단씩</strong> 열립니다. 올리는 데 목재와 돌이 듭니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">병사</div>
+        <div class="v">집마다 <strong>예약한 만큼만</strong> 납니다. 단추를 한 번 더 누르면 예약이 하나 쌓입니다 — 놔두면 인구를 다 먹는 일이 없습니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">점령</div>
+        <div class="v">적 진영을 밀어야 그 땅에 지을 수 있습니다. <strong>도시가 왕국 터 위에 앉아 있어</strong>, 그곳을 빼앗는 것이 이 판의 끝입니다.</div>
+      </div>
+      <div class="rule">
+        <div class="k">저장</div>
+        <div class="v">자리 여러 개에 <strong>손으로 저장</strong>합니다. 앱을 내려도 그대로 있고, 어디로도 올라가지 않습니다.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>병사는 네 갈래, 드는 물자가 다릅니다</h2>
+    <p class="lead">
+      싼 병사를 많이 뽑을지, 비싼 병사를 적게 뽑을지가 곧 경제 선택입니다.
+      <strong>궁수는 멀리서 치지만 성벽은 거의 못 깹니다</strong> — 벽 앞에서는 기사가 필요합니다.
+    </p>
+    <div class="tiers">
+      <div class="tier"><div class="g">🪓</div><div class="n">민병</div><div class="p">빵 — 가장 싸다</div></div>
+      <div class="tier"><div class="g">🏹</div><div class="n">궁수</div><div class="p">빵 · 활 · 화살</div></div>
+      <div class="tier"><div class="g">🛡</div><div class="n">위병</div><div class="p">빵 · 검 · 방패 · 투구</div></div>
+      <div class="tier"><div class="g">⚔</div><div class="n">기사</div><div class="p">빵 · 고기 · 검 · 방패 · 갑옷</div></div>
+    </div>
+    <div class="box">
+      병사 하나가 곧 <strong>사슬 하나가 끝까지 돈 결과</strong>입니다. 기사를 뽑으려면
+      광산과 제련소와 대장간과 목장이 다 돌아가고 있어야 합니다.
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2>편의 기능</h2>
+    <p class="lead">판단하는 데 쓸 시간을 조작에 쓰지 않게 만들었습니다.</p>
+    <div class="chips">
+      <span class="chip">🗺 공사 현황표 — 멎은 까닭이 한 표에</span>
+      <span class="chip">🔍 두 손가락으로 배율 조절 · 작은 지도</span>
+      <span class="chip">👥 두 번 두드려 화면 안의 병사 전부 묶기</span>
+      <span class="chip">🚫 배너도 전면 광고도 없음</span>
+      <span class="chip">💰 인앱 결제 없음</span>
+      <span class="chip">🔊 소리 · 음악 따로 끄기</span>
+      <span class="chip">💾 저장 자리 여러 개</span>
+      <span class="chip">📴 계정 없음 · 오프라인</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a href="privacy.html">개인정보처리방침</a> ·
+      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
+      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
+    </div>
+    <p style="margin-top:14px">© 2026 HappyLucky · 프론티어 킹덤</p>
+  </div>
+</footer>
+
+</body>
+</html>
