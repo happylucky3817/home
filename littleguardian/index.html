@@ -4,136 +4,96 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>리틀 가디언 (Little Guardian)</title>
-<meta name="description" content="리틀 가디언 — 칼과 방패로 모험하는 아이들을 위한 귀여운 횡스크롤 액션 플랫포머. 간단한 터치 조작, 픽셀 아트, 여러 스테이지와 보스.">
+<meta name="description" content="리틀 가디언 — 견습 기사를 키워 심연을 닫는 픽셀 방치형 성장 RPG. 70장 1,050스테이지, 스킬, 장비, 요정, 환생.">
+<meta property="og:title" content="리틀 가디언 (Little Guardian)">
+<meta property="og:description" content="견습 기사를 키워 심연을 닫으세요. 70장 1,050스테이지의 픽셀 방치형 성장 RPG">
+<meta property="og:image" content="img/feature_ko.png">
+<link rel="icon" href="img/icon.png">
 <style>
   :root{
-    --bg:#0e1410; --bg2:#13201a; --card:#18241a; --line:#2a3c2e;
-    --txt:#eaf3ea; --muted:#a3b6a6; --accent:#7ad08a;
-    --sky:#5cc0ff; --grass:#7ad08a; --sun:#ffd35c; --steel:#cfe0ff;
+    --bg:#0c1020; --bg2:#121833; --card:#161d3a; --line:#2b3561;
+    --txt:#eef1fb; --muted:#a6afcf; --gold:#f0b44a; --gold2:#e6902a; --outline:#381c12;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.65;
+    background:var(--bg); color:var(--txt); line-height:1.7;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--accent); text-decoration:none}
+  a{color:var(--gold); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  /* Hero */
-  header{
-    position:relative; overflow:hidden;
-    background:radial-gradient(1200px 520px at 50% -10%, #1f3b52 0%, var(--bg) 62%);
-    padding:72px 0 56px; text-align:center;
+  .lang{display:flex; justify-content:flex-end; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .badges{display:flex; gap:14px; justify-content:center; margin-bottom:22px}
-  .ic{
-    width:46px; height:46px; border-radius:14px;
-    display:grid; place-items:center; font-size:22px;
-    box-shadow:0 0 24px rgba(122,208,138,.22);
-  }
-  .ic.a{background:rgba(92,192,255,.16); border:1px solid var(--sky)}
-  .ic.b{background:rgba(122,208,138,.16); border:1px solid var(--grass)}
-  .ic.c{background:rgba(255,211,92,.16); border:1px solid var(--sun)}
-  .ic.d{background:rgba(207,224,255,.16); border:1px solid var(--steel)}
-  h1{font-size:clamp(32px,6vw,52px); letter-spacing:-.5px; margin-bottom:6px}
-  .sub{color:var(--muted); font-size:18px}
-  .badge{
-    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
-    color:var(--muted); border:1px solid var(--line); border-radius:999px;
-  }
-  .cta{margin-top:30px}
+  .lang button.on{color:var(--txt); border-color:var(--gold)}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
-    background:linear-gradient(135deg,#4aa86a,#7ad08a); color:#06140b;
-    box-shadow:0 8px 24px rgba(74,168,106,.35);
+    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    background:var(--gold2); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.06)}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
 
-  /* Sections */
-  section{padding:54px 0}
-  h2{font-size:26px; margin-bottom:8px}
-  .lead{color:var(--muted); margin-bottom:28px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-  .feat{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{
+    background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px;
+    color:var(--txt); font-size:16.5px;
   }
-  .feat .ico{font-size:26px; margin-bottom:10px}
-  .feat h3{font-size:17px; margin-bottom:6px}
-  .feat p{color:var(--muted); font-size:14.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--gold)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  .chart{
-    background:var(--bg2); border:1px solid var(--line); border-radius:16px;
-    padding:24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; align-items:center;
-  }
-  .chart .pair{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:14px}
-
-  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
-  footer a{margin:0 10px}
-  .divider{height:1px;background:var(--line);max-width:880px;margin:0 auto}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
+
+<div class="lang">
+  <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+  <button id="b-en" onclick="setLang('en')">English</button>
+</div>
 
 <header>
   <div class="wrap">
-    <div class="badges">
-      <span class="ic a">🛡️</span>
-      <span class="ic b">⚔️</span>
-      <span class="ic c">⭐</span>
-      <span class="ic d">🗺️</span>
-    </div>
-    <h1>리틀 가디언</h1>
-    <p class="sub">Little Guardian — 칼과 방패로 떠나는 작은 모험</p>
-    <div class="badge">모바일 · Android · 아이 친화 · 싱글플레이</div>
-    <div class="cta">
-      <!-- 출시 후 실제 스토어 URL 로 교체하세요 -->
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.littleguardian">Google Play 에서 보기</a>
-    </div>
+    <img class="feature pixel ko" src="img/feature_ko.png" alt="리틀 가디언">
+    <img class="feature pixel en" src="img/feature_en.png" alt="Little Guardian">
+    <p class="tagline ko">견습 기사를 키워 심연을 닫으세요. 70장 1,050스테이지의 픽셀 방치형 성장 RPG</p>
+    <p class="tagline en">Raise a little squire and seal the Abyss in a pixel idle RPG of 70 chapters.</p>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.littleguardian">Google Play에서 보기</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.littleguardian">Get it on Google Play</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>게임 소개</h2>
-    <p class="lead">
-      <strong>리틀 가디언</strong>은 어린이도 쉽게 즐길 수 있는 귀여운 픽셀 아트
-      횡스크롤 액션 플랫포머입니다. 화면 위 버튼으로 달리고 점프하고, 칼을 휘두르고
-      방패로 막으며, 들판·숲·동굴을 모험해 몰려오는 몬스터를 물리치세요.
-    </p>
-
-    <div class="grid">
-      <div class="feat">
-        <div class="ico">🎮</div>
-        <h3>쉬운 터치 조작</h3>
-        <p>이동·점프·칼·방패 버튼만으로 즐기는 단순하고 직관적인 조작.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⚔️</div>
-        <h3>칼과 방패 전투</h3>
-        <p>칼로 베고, 스태미너로 자동 방어. 다양한 행동의 몬스터에 맞서 싸웁니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🗺️</div>
-        <h3>여러 장 · 월드맵</h3>
-        <p>들판·깊은 숲·동굴 등 장마다 새로운 적과 분위기. 월드맵에서 스테이지 선택.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🦸</div>
-        <h3>주인공 선택</h3>
-        <p>두 명의 주인공 중 골라 이름을 지어주고 함께 모험을 떠나세요.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎵</div>
-        <h3>귀여운 픽셀 & 칩튠</h3>
-        <p>아기자기한 픽셀 아트와 레트로 칩튠 배경음·효과음으로 가득.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">📴</div>
-        <h3>오프라인 플레이</h3>
-        <p>계정 가입 없이 즉시 플레이. 진행 상황은 기기에 안전하게 저장됩니다.</p>
-      </div>
+    <h2 class="ko">이야기</h2>
+    <h2 class="en">Story</h2>
+    <div class="story ko">
+      세상 끝의 심연이 열리고, 사나워진 몬스터들이 왕국을 덮쳤습니다.<br>
+      기사단은 돌아오지 못했고, 남은 것은 칼과 방패를 든 견습 기사 한 명뿐입니다.<br>
+      작은 요정과 함께, 리틀 가디언의 여정을 시작하세요.
+    </div>
+    <div class="story en">
+      At the edge of the world, the Abyss has opened, and its darkness has driven the monsters wild.<br>
+      The knights of the kingdom never returned. All that remains is a single squire with a sword and shield.<br>
+      With a tiny fairy at your side, begin the journey of the Little Guardian.
     </div>
   </div>
 </section>
@@ -142,14 +102,50 @@
 
 <section>
   <div class="wrap">
-    <h2>이렇게 즐겨요</h2>
-    <p class="lead">간단한 규칙으로 누구나 쉽게.</p>
-    <div class="chart">
-      <div class="pair">🏃 달리고 점프해 발판을 오르고</div>
-      <div class="pair">⚔️ 칼로 몬스터를 물리치고</div>
-      <div class="pair">🛡️ 방패로 공격을 막고</div>
-      <div class="pair">⭐ 스테이지를 클리어하세요</div>
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img src="img/ko_01_battle.png" alt="들판 전투와 피버">
+      <img src="img/ko_02_boss.png" alt="화산 장 보스">
+      <img src="img/ko_04_skills.png" alt="얼음 성채 스킬">
+      <img src="img/ko_06_shop.png" alt="별빛 평원 상점">
     </div>
+    <div class="shots en">
+      <img src="img/en_01_battle.png" alt="Meadow battle with Fever">
+      <img src="img/en_02_boss.png" alt="Volcano chapter boss">
+      <img src="img/en_04_skills.png" alt="Frost Fortress skills">
+      <img src="img/en_06_shop.png" alt="Starlight Plains shop">
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">주인공이 스스로 싸우며 앞으로 나아가는 방치형 성장 RPG입니다. 골드를 모아 강화하고, 스킬과 장비를 갖추고, 보스에 도전할 때를 고르세요.</p>
+    <p class="lead en">An idle growth RPG where your hero fights and advances on their own. Collect gold, upgrade, gear up with skills and equipment, and choose the right moment to challenge each boss.</p>
+
+    <div class="grid ko">
+      <div class="feat"><h3>자동 전투와 손맛</h3><p>주인공이 알아서 달리고 베며 사냥합니다. 화면을 누르면 추가 공격, 피버 게이지가 차면 골드가 쏟아집니다.</p></div>
+      <div class="feat"><h3>70장 1,050스테이지</h3><p>들판에서 화산, 하늘섬, 마왕성, 수정 동굴, 해저, 별빛 평원을 지나 심연까지. 23개 테마마다 배경과 몬스터가 다릅니다.</p></div>
+      <div class="feat"><h3>80종이 넘는 몬스터</h3><p>픽셀 몬스터와 얼음, 용암, 유령, 황금 등 색 변형 몬스터. 도감을 채우면 능력치가 오릅니다.</p></div>
+      <div class="feat"><h3>스킬과 장비</h3><p>불꽃, 번개, 얼음, 회오리, 보호막 등 11가지 스킬. 무기, 갑옷, 반지는 일반부터 전설까지 5등급.</p></div>
+      <div class="feat"><h3>요정과 환생</h3><p>함께 싸우는 동료 요정. 벽에 막히면 환생해 환생석으로 공격력, 체력, 골드를 영구히 올리세요.</p></div>
+      <div class="feat"><h3>매일 할 거리</h3><p>일일 임무와 업적, 황금 사냥터, 몬스터 무리 습격, 하늘을 날아가는 보물 상자.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>Auto battle with a punch</h3><p>Your hero runs, slashes, and hunts automatically. Tap for extra strikes and fill the Fever gauge to rain down gold.</p></div>
+      <div class="feat"><h3>70 chapters, 1,050 stages</h3><p>From the meadows through volcanoes, sky isles, the Demon Castle, crystal caves, the deep sea, and starlight plains, down to the Abyss. 23 themes, each with its own scenery and monsters.</p></div>
+      <div class="feat"><h3>Over 80 monsters</h3><p>Pixel monsters plus frost, lava, ghost, golden, and more variants. Fill the Monster Book to boost your stats.</p></div>
+      <div class="feat"><h3>Skills and gear</h3><p>11 skills including Fire, Bolt, Ice, Wind, and Barrier. Weapons, armor, and rings in 5 grades from Common to Legendary.</p></div>
+      <div class="feat"><h3>Fairy and rebirth</h3><p>A fairy companion fights by your side. Hit a wall? Rebirth for stones that permanently boost Attack, HP, and gold.</p></div>
+      <div class="feat"><h3>Something every day</h3><p>Daily missions and achievements, Golden Hunt, monster hordes, and treasure chests flying across the sky.</p></div>
+    </div>
+    <p class="note ko">한국어와 영어를 지원합니다. 무료이며 광고가 포함되어 있습니다. 광고 보상은 선택 사항이며, 광고를 보지 않아도 끝까지 플레이할 수 있습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.</p>
+    <p class="note en">Available in English and Korean. Free to play with ads. Ad rewards are optional, and you can play to the end without watching any. No account needed; progress is saved on your device.</p>
   </div>
 </section>
 
@@ -157,12 +153,28 @@
   <div class="wrap">
     <div>
       <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
-      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
+      <a href="privacy.html#en">Privacy Policy</a> ·
+      <a href="mailto:happylucky3817@gmail.com"><span class="ko">문의하기</span><span class="en">Contact</span></a>
     </div>
     <p style="margin-top:14px">© 2026 HappyLucky · 리틀 가디언 (Little Guardian)</p>
   </div>
 </footer>
 
+<script>
+function setLang(l){
+  document.body.dataset.lang = l;
+  document.documentElement.lang = l;
+  document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+  document.getElementById('b-en').classList.toggle('on', l === 'en');
+  try { localStorage.setItem('lg-lang', l); } catch (e) {}
+}
+(function(){
+  var l = null;
+  try { l = localStorage.getItem('lg-lang'); } catch (e) {}
+  if (!l) l = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+  if (location.hash === '#en') l = 'en';
+  setLang(l);
+})();
+</script>
 </body>
 </html>
