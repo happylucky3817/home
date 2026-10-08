@@ -3,261 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>개인정보처리방침 · 프론티어 킹덤</title>
-<meta name="description" content="프론티어 킹덤 개인정보처리방침 / Privacy Policy">
+<title>개인정보처리방침 - 프론티어 킹덤 / Privacy Policy - Frontier Kingdom</title>
+<link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_privacy.ps1 이 privacy.json 으로 만든다. 직접 고치지 말고 privacy.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#0d1410; --card:#16271e; --line:#2a4a35;
-    --txt:#e8efe8; --muted:#94a897; --accent:#c8a45c;
-  }
+  :root{ --bg:#0d1410; --bg2:#12201a; --card:#16271e; --line:#2c4d37; --txt:#eef1fb; --muted:#b4bcd6; --accent:#e8c66e; }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.75;
-  }
+  body{font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif; background:var(--bg); color:var(--txt); line-height:1.75; -webkit-font-smoothing:antialiased}
   a{color:var(--accent)}
-  .wrap{max-width:760px; margin:0 auto; padding:48px 22px 80px}
-  .top{margin-bottom:8px}
-  .top a{font-size:14px}
-  h1{font-size:30px; margin:18px 0 4px; color:#f0e6cc}
-  .meta{color:var(--muted); font-size:14px; margin-bottom:8px}
-  .lang{margin:18px 0 30px}
-  .lang a{
-    display:inline-block; padding:6px 14px; border:1px solid var(--line);
-    border-radius:999px; font-size:13px; margin-right:8px; background:var(--card);
-  }
-  h2{font-size:21px; margin:34px 0 10px; padding-top:16px; border-top:1px solid var(--line); color:#f0e6cc}
-  h2:first-of-type{border-top:none}
-  h3{font-size:16px; margin:18px 0 6px; color:#e9f1ea}
-  p,li{color:#bdcdc3; font-size:15.5px}
+  .wrap{max-width:780px; margin:0 auto; padding:14px 20px 70px}
+  .top{display:flex; justify-content:space-between; align-items:center; gap:8px}
+  .top a{font-size:14px; text-decoration:none}
+  .lang{display:flex; gap:6px}
+  .lang button{background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px; padding:6px 12px; font-size:14px; cursor:pointer}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+  h1{font-size:28px; margin:28px 0 6px}
+  .meta{color:var(--muted); font-size:14px}
+  .intro{margin-top:18px}
+  h2{font-size:20px; margin:34px 0 10px; padding-top:18px; border-top:1px solid var(--line); color:var(--accent)}
+  h3{font-size:16px; margin:16px 0 6px}
+  p, li{color:var(--muted); font-size:15.5px}
+  p + p{margin-top:8px}
   ul{margin:8px 0 8px 22px}
-  li{margin-bottom:5px}
-  .box{
-    background:var(--card); border:1px solid var(--line); border-radius:12px;
-    padding:16px 18px; margin:14px 0; color:var(--muted); font-size:14.5px;
-  }
-  .box strong{color:#f2f7f3}
-  code{
-    font-family:"Consolas","SFMono-Regular",monospace; font-size:14px;
-    background:#12201a; border:1px solid var(--line); border-radius:5px; padding:1px 6px;
-    color:#c8a45c;
-  }
-  .sep{height:2px; background:var(--line); margin:54px 0}
-  footer{color:var(--muted); font-size:13.5px; margin-top:40px; text-align:center}
-  strong{color:#f2f7f3}
+  li{margin-bottom:4px}
+  .box{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin:12px 0; font-size:15px; color:var(--muted)}
+  strong{color:var(--txt)}
+  code{font-family:Consolas,monospace; font-size:13.5px; background:var(--bg2); border:1px solid var(--line); border-radius:4px; padding:0 5px; word-break:break-all}
+  footer{border-top:1px solid var(--line); margin-top:44px; padding-top:24px; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
 <div class="wrap">
-
-  <div class="top"><a href="index.html">← 프론티어 킹덤 홈으로</a></div>
-
-  <!-- ════════════════ 한국어 ════════════════ -->
-  <h1 id="ko">개인정보처리방침</h1>
-  <p class="meta">앱: 프론티어 킹덤 · 패키지: com.happylucky.frontierkingdom</p>
-  <p class="meta">시행일: 2026년 9월 20일 · 최종 수정일: 2026년 9월 20일</p>
-
-  <div class="lang">
-    <a href="#ko">한국어</a><a href="#en">English</a>
-  </div>
-
-  <p>
-    HappyLucky(이하 "개발자")는 <strong>프론티어 킹덤</strong>(이하 "본 앱")을 이용하는
-    사용자의 개인정보를 소중히 여기며, 관련 법령을 준수합니다. 본 방침은 본 앱이 어떤
-    정보를 수집·이용하는지, 그리고 사용자의 권리를 설명합니다.
-  </p>
-
-  <div class="box">
-    <strong>요약:</strong> 본 앱은 개인정보를 <strong>일절 수집하지 않습니다.</strong>
-    인터넷 권한조차 요청하지 않으므로 어떤 서버와도 통신할 수 없고, 따라서 기기 밖으로
-    나가는 데이터가 존재하지 않습니다.
-  </div>
-
-  <h2>1. 개발자가 직접 수집하는 정보</h2>
-  <p>
-    <strong>없습니다.</strong> 본 앱은 아래 어느 것도 수집·저장·전송하지 않습니다.
-  </p>
-  <ul>
-    <li>이름 · 이메일 주소 · 전화번호 등 신원 정보</li>
-    <li>위치 정보 (대략적 위치, 정확한 위치 모두)</li>
-    <li>연락처 · 사진 · 파일 · 통화 기록</li>
-    <li>기기 식별자(광고 ID, IMEI, 기기 고유번호 등)</li>
-    <li>앱 사용 기록 · 진단 정보 · 충돌 보고</li>
-  </ul>
-  <p>
-    회원가입과 로그인 절차가 없으며, 계정이라는 개념 자체가 없습니다.
-  </p>
-
-  <h2>2. 네트워크 통신</h2>
-  <p>
-    본 앱은 안드로이드 인터넷 권한(<code>android.permission.INTERNET</code>)을
-    <strong>요청하지 않습니다.</strong> 이는 선택의 문제가 아니라 구조의 문제입니다 —
-    권한이 없으므로 본 앱은 어떤 서버에도 접속할 수 없고, 데이터를 내보낼 수단이
-    존재하지 않습니다.
-  </p>
-  <p>
-    온라인 기능(순위표, 클라우드 저장, 친구, 실시간 대전 등)이 없습니다.
-  </p>
-
-  <h2>3. 광고 및 제3자 서비스</h2>
-  <p>
-    본 앱은 <strong>광고를 표시하지 않습니다.</strong> 배너 광고도, 전면 광고도,
-    보상형 광고도 없습니다. 광고 SDK(AdMob 등)를 포함하고 있지 않습니다.
-  </p>
-  <p>
-    분석 도구(Google Analytics, Firebase 등)를 포함하지 않으며,
-    <strong>인앱 결제가 없습니다.</strong> 따라서 결제 정보를 다루지 않습니다.
-  </p>
-  <p>
-    제3자에게 제공하거나 공유하는 정보가 <strong>일절 없습니다.</strong>
-  </p>
-
-  <h2>4. 기기에 저장되는 정보</h2>
-  <p>
-    게임 진행 상황(저장 자리), 소리·음악 설정 등은 <strong>기기 내부 저장소에만</strong>
-    기록됩니다. 이 자료는 다음과 같습니다.
-  </p>
-  <ul>
-    <li>다른 앱이나 외부로 전송되지 않습니다.</li>
-    <li>개발자를 포함한 누구도 열람할 수 없습니다.</li>
-    <li>앱을 삭제하면 함께 삭제됩니다.</li>
-  </ul>
-
-  <h2>5. 권한(Permissions)</h2>
-  <p>
-    본 앱이 요구하는 안드로이드 권한은 <strong>없습니다.</strong>
-    인터넷 · 위치 · 저장소 · 카메라 · 마이크 · 연락처 권한을 모두 요청하지 않습니다.
-  </p>
-
-  <h2>6. 아동 개인정보</h2>
-  <p>
-    본 앱은 수집하는 정보가 없으므로, 만 13세 미만 아동을 포함한 어떤 사용자의
-    개인정보도 수집하지 않습니다. 아동으로부터 수집된 정보가 존재하지 않으므로
-    별도의 삭제 요청 절차가 필요하지 않습니다.
-  </p>
-
-  <h2>7. 데이터 보관 및 삭제</h2>
-  <p>
-    개발자가 보관하는 사용자 데이터가 없으므로 보관 기간이라는 개념이 적용되지
-    않습니다. 기기에 저장된 게임 기록을 지우고자 하시면 <strong>앱을 삭제하거나</strong>
-    안드로이드 설정에서 <strong>앱 데이터 지우기</strong>를 실행하시면 됩니다.
-  </p>
-
-  <h2>8. 방침 변경</h2>
-  <p>
-    본 방침이 변경되면 이 페이지에 변경된 내용과 최종 수정일을 게시합니다.
-    앱에 광고나 온라인 기능이 추가되는 경우, <strong>해당 기능이 출시되기 전에</strong>
-    본 방침을 먼저 갱신합니다.
-  </p>
-
-  <h2>9. 문의처</h2>
-  <p>
-    개발자: HappyLucky<br>
-    이메일: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a>
-  </p>
-
-  <div class="sep"></div>
-
-  <!-- ════════════════ English ════════════════ -->
-  <h1 id="en">Privacy Policy</h1>
-  <p class="meta">App: Frontier Kingdom · Package: com.happylucky.frontierkingdom</p>
-  <p class="meta">Effective: 20 September 2026 · Last updated: 20 September 2026</p>
-
-  <div class="lang">
-    <a href="#ko">한국어</a><a href="#en">English</a>
-  </div>
-
-  <p>
-    HappyLucky ("the developer") respects the privacy of everyone who plays
-    <strong>Frontier Kingdom</strong> ("the app"). This policy explains what information
-    the app collects and uses, and what rights you have.
-  </p>
-
-  <div class="box">
-    <strong>Summary:</strong> the app collects <strong>no personal information at all.</strong>
-    It does not even request internet permission, so it cannot contact any server, and no
-    data ever leaves your device.
-  </div>
-
-  <h2>1. Information the developer collects directly</h2>
-  <p><strong>None.</strong> The app does not collect, store or transmit any of the following:</p>
-  <ul>
-    <li>Identity information such as name, email address or phone number</li>
-    <li>Location (neither approximate nor precise)</li>
-    <li>Contacts, photos, files or call history</li>
-    <li>Device identifiers (advertising ID, IMEI, device serial and the like)</li>
-    <li>Usage history, diagnostics or crash reports</li>
-  </ul>
-  <p>There is no sign-up and no sign-in; the app has no concept of an account.</p>
-
-  <h2>2. Network access</h2>
-  <p>
-    The app does <strong>not request</strong> the Android internet permission
-    (<code>android.permission.INTERNET</code>). This is structural rather than a matter of
-    policy — without that permission the app cannot reach any server, and has no means of
-    sending data anywhere.
-  </p>
-  <p>
-    There are no online features: no leaderboards, no cloud saves, no friends list and no
-    real-time multiplayer.
-  </p>
-
-  <h2>3. Advertising and third-party services</h2>
-  <p>
-    The app shows <strong>no advertisements</strong> — no banners, no interstitials and no
-    rewarded ads. It contains no advertising SDK such as AdMob.
-  </p>
-  <p>
-    It contains no analytics SDK (Google Analytics, Firebase or similar), and it offers
-    <strong>no in-app purchases</strong>, so no payment information is handled.
-  </p>
-  <p>Nothing is shared with or provided to any third party.</p>
-
-  <h2>4. Data stored on your device</h2>
-  <p>
-    Game progress (save slots) and settings such as sound and music are written
-    <strong>only to your device's internal storage</strong>. That data:
-  </p>
-  <ul>
-    <li>is never transmitted to other apps or anywhere outside the device;</li>
-    <li>cannot be read by anyone, including the developer;</li>
-    <li>is removed when the app is uninstalled.</li>
-  </ul>
-
-  <h2>5. Permissions</h2>
-  <p>
-    The app requests <strong>no Android permissions</strong>. It asks for neither internet,
-    location, storage, camera, microphone nor contacts.
-  </p>
-
-  <h2>6. Children's privacy</h2>
-  <p>
-    Because the app collects nothing, it collects nothing from children under 13 either.
-    As no such data exists, no separate deletion procedure is required.
-  </p>
-
-  <h2>7. Data retention and deletion</h2>
-  <p>
-    The developer holds no user data, so retention periods do not apply. To erase the game
-    records stored on your device, <strong>uninstall the app</strong> or use
-    <strong>Clear app data</strong> in Android settings.
-  </p>
-
-  <h2>8. Changes to this policy</h2>
-  <p>
-    Any change to this policy will be posted on this page together with a new revision
-    date. Should advertising or online features ever be added, this policy will be updated
-    <strong>before</strong> those features ship.
-  </p>
-
-  <h2>9. Contact</h2>
-  <p>
-    Developer: HappyLucky<br>
-    Email: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a>
-  </p>
-
-  <footer>© 2026 HappyLucky · 프론티어 킹덤 / Frontier Kingdom</footer>
-
+<div class="top">
+  <a href="./"><span class="ko">&larr; 프론티어 킹덤 소개</span><span class="en">&larr; About Frontier Kingdom</span></a>
+  <div class="lang"><button id="b-ko" class="on" onclick="setLang('ko')">한국어</button><button id="b-en" onclick="setLang('en')">English</button></div>
 </div>
+<div class="ko">
+<h1>개인정보처리방침</h1>
+<p class="meta">앱: 프론티어 킹덤 &middot; 패키지: com.happylucky.frontierkingdom<br>시행일: 2026년 10월 8일 &middot; 최종 수정일: 2026년 10월 8일</p>
+<p class="intro">Happy &amp; Lucky Studio(이하 개발자)는 프론티어 킹덤(이하 본 앱)을 이용하는 사용자의 개인정보를 소중히 여기며 관련 법령을 지킵니다. 이 방침은 본 앱이 어떤 정보를 다루는지와 사용자의 권리를 설명합니다.</p>
+<h2>1. 개발자가 직접 수집하는 정보</h2>
+<p>본 앱에는 회원가입이 없습니다. 개발자는 이름, 이메일, 전화번호처럼 개인을 식별할 수 있는 정보를 수집하지 않으며, 별도의 서버나 로그 저장소를 운영하지 않습니다.</p>
+<h3>기기에만 저장되는 데이터</h3><p>다음 게임 데이터는 사용자 기기 안에만 저장됩니다.</p>
+<ul>
+  <li>게임 진행 기록(저장 슬롯 3개)</li>
+  <li>음악과 효과음 음량, 켜짐 여부</li>
+  <li>언어 설정</li>
+  <li>남은 플레이 시간, 그날 본 광고 수와 마지막 시청 시각(플레이 시간 연장 관리용)</li>
+</ul>
+<p>이 데이터는 개발자에게 전송되지 않고 개발자가 열람할 수도 없습니다. 앱을 삭제하면 함께 삭제됩니다. 클라우드 저장, 계정 연동, 기기 간 동기화 기능은 없습니다.</p>
+<h2>2. 광고와 제3자 서비스</h2>
+<p>본 앱은 무료로 제공되며 운영을 위해 Google AdMob 광고를 사용합니다. 사용하는 광고 형식은 배너 광고, 보상형 광고입니다.</p>
+<div class="box">배너 광고는 화면 아래에 표시됩니다. 보상형 광고는 플레이 시간을 연장할 때 사용자가 직접 선택한 경우에만 재생됩니다. 전면 광고는 사용하지 않습니다.</div>
+<p>AdMob 은 광고 제공과 측정을 위해 다음 정보를 수집하고 처리할 수 있습니다.</p>
+<ul>
+  <li>광고 식별자(Advertising ID)와 기기 정보</li>
+  <li>IP 주소에 기반한 대략적인 위치</li>
+  <li>광고 상호작용과 앱 사용에 관한 일부 정보</li>
+</ul>
+<p>이 정보는 Google 이 독립적으로 처리합니다. 자세한 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>과 <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트 데이터 사용</a>을 참고하십시오. Android 설정의 개인정보 보호 &gt; 광고에서 광고 ID 를 재설정하거나 삭제할 수 있습니다.</p>
+<h2>3. 유럽(EEA, 영국, 스위스) 사용자의 동의</h2>
+<p>유럽경제지역, 영국, 스위스에서 사용하는 경우 본 앱은 광고를 처음 요청하기 전에 Google User Messaging Platform(UMP)의 동의 창을 표시합니다. 맞춤 광고 동의 여부는 사용자가 직접 선택합니다. 선택은 환경설정의 [광고 개인정보 설정] 버튼(동의 창이 적용되는 지역에서만 보입니다)에서 언제든지 다시 바꿀 수 있습니다.</p>
+<h2>4. 앱이 하는 통신</h2>
+<p>본 앱은 실행할 때 새 버전이 있는지 확인하기 위해 <code>https://happylucky3017.github.io/home/frontierkingdom/version.json</code> 파일을 한 번 요청합니다. 이 요청에는 사용자 정보가 담기지 않습니다. 파일을 제공하는 GitHub Pages 가 일반적인 웹 요청처럼 IP 주소 등 접속 기록을 남길 수 있으며, 이는 <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보 처리방침</a>을 따릅니다. 개발자는 이 기록을 받지 않습니다.</p>
+<h2>5. 권한</h2>
+<p>본 앱이 요청하는 Android 권한과 이유는 다음과 같습니다. 위치, 연락처, 카메라, 마이크, 저장소 권한은 요청하지 않습니다.</p>
+<ul>
+  <li><strong>INTERNET</strong>: 광고를 불러오고 새 버전이 있는지 확인합니다.</li>
+  <li><strong>ACCESS_NETWORK_STATE</strong>: 광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).</li>
+  <li><strong>AD_ID</strong>: 광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).</li>
+  <li><strong>ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS</strong>: Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).</li>
+  <li><strong>WAKE_LOCK, FOREGROUND_SERVICE</strong>: 광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).</li>
+</ul>
+<h2>6. 아동의 개인정보</h2>
+<p>본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.</p>
+<h2>7. 보관과 삭제</h2>
+<p>개발자는 사용자 데이터를 보관하지 않습니다. 기기에 저장된 게임 데이터는 앱을 삭제하거나 Android 설정에서 앱 데이터를 지우면 삭제됩니다. 광고와 관련해 Google 이 처리하는 데이터는 Google 의 정책에 따라 관리됩니다.</p>
+<h2>8. 방침의 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 새 내용과 최종 수정일을 게시합니다.</p>
+<h2>9. 문의</h2>
+<p>개인정보와 관련한 문의는 아래 이메일로 보내 주십시오.<br><a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+</div>
+<div class="en">
+<h1>Privacy Policy</h1>
+<p class="meta">App: Frontier Kingdom &middot; Package: com.happylucky.frontierkingdom<br>Effective: October 8, 2026 &middot; Last updated: October 8, 2026</p>
+<p class="intro">Happy &amp; Lucky Studio (the developer) respects the privacy of everyone who uses Frontier Kingdom (the app) and complies with applicable laws. This policy explains what information the app handles and what rights you have.</p>
+<h2>1. Information the developer collects</h2>
+<p>The app has no sign-up. The developer does not collect personally identifiable information such as your name, email address, or phone number, and does not run any server or log storage of its own.</p>
+<h3>Data stored only on your device</h3><p>The following game data is stored only on your device.</p>
+<ul>
+  <li>Game progress (3 save slots)</li>
+  <li>Music and sound effect volume and on/off settings</li>
+  <li>Language setting</li>
+  <li>Remaining play time, the number of ads watched that day, and the time of the last one (to manage play time extensions)</li>
+</ul>
+<p>This data is never sent to the developer, and the developer cannot access it. It is deleted when you uninstall the app. There is no cloud save, account linking, or sync between devices.</p>
+<h2>2. Advertising and third-party services</h2>
+<p>The app is free and uses Google AdMob to show ads. The ad formats used are: banner ads, rewarded ads.</p>
+<div class="box">A banner ad is shown at the bottom of the screen. A rewarded ad plays only when you choose to watch one to extend your play time. The app does not use interstitial (full-screen) ads.</div>
+<p>AdMob may collect and process the following information to serve and measure ads.</p>
+<ul>
+  <li>Advertising ID and device information</li>
+  <li>Approximate location based on IP address</li>
+  <li>Some information about ad interactions and app usage</li>
+</ul>
+<p>Google processes this information independently. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>. You can reset or delete your advertising ID in Android Settings &gt; Privacy &gt; Ads.</p>
+<h2>3. Consent for users in the EEA, UK, and Switzerland</h2>
+<p>If you are in the European Economic Area, the UK, or Switzerland, the app shows a consent form from Google's User Messaging Platform (UMP) before requesting any ads. You choose whether to allow personalized ads. You can change your choice at any time in Ad Privacy Settings in the app&#39;s Settings (shown only in regions where the consent form applies).</p>
+<h2>4. Network requests made by the app</h2>
+<p>When the app starts, it requests <code>https://happylucky3017.github.io/home/frontierkingdom/version.json</code> once to check whether a newer version is available. The request contains no user information. GitHub Pages, which serves the file, may keep standard access logs such as your IP address under the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. The developer does not receive these logs.</p>
+<h2>5. Permissions</h2>
+<p>The app requests the following Android permissions. It does not request location, contacts, camera, microphone, or storage permissions.</p>
+<ul>
+  <li><strong>INTERNET</strong>: To load ads and check for a newer version.</li>
+  <li><strong>ACCESS_NETWORK_STATE</strong>: To check the network connection before requesting ads (Google AdMob).</li>
+  <li><strong>AD_ID</strong>: To use the advertising ID to serve and measure ads (Google AdMob).</li>
+  <li><strong>ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS</strong>: To use Android&#39;s privacy-preserving advertising features (Privacy Sandbox) (Google AdMob).</li>
+  <li><strong>WAKE_LOCK, FOREGROUND_SERVICE</strong>: Used by the advertising SDK for its internal background work (Google AdMob).</li>
+</ul>
+<h2>6. Children&#39;s privacy</h2>
+<p>The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child&#39;s information has been processed, please contact us at the email below.</p>
+<h2>7. Data retention and deletion</h2>
+<p>The developer does not retain any user data. Game data stored on your device is deleted when you uninstall the app or clear its data in Android Settings. Data processed by Google for ads is handled under Google's policies.</p>
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes, the updated version and its date will be posted on this page.</p>
+<h2>9. Contact</h2>
+<p>For any privacy questions, please email<br><a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+</div>
+<footer>
+  <p><a href="./" class="ko">게임 소개</a><a href="./" class="en">About the game</a> &middot; <a href="../" class="ko">다른 게임</a><a href="../" class="en">More games</a></p>
+  <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
+</footer>
+</div>
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    if (location.hash === '#en' || location.hash === '#ko') l = location.hash.slice(1);
+    if (!l) { try { l = localStorage.getItem('lang'); } catch(e){} }
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
 </body>
 </html>

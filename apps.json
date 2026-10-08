@@ -158,6 +158,18 @@
         "ko": "만 6~8세를 위한 수학 학습. 수 세기부터 덧셈, 뺄셈, 시계, 곱셈 기초까지",
         "en": "Math for ages 6 to 8. From counting to addition, subtraction, clocks, and early multiplication."
       }
+    },
+    {
+      "id": "ppiyakart",
+      "package": "com.happylucky.ppiyakart",
+      "type": "education",
+      "status": "dev",
+      "name": { "ko": "삐약 미술", "en": "Ppiyak Art" },
+      "genre": { "ko": "어린이 미술", "en": "Kids Art" },
+      "summary": {
+        "ko": "만 6~8세를 위한 미술 놀이. 색 이름과 색 섞기부터 따라 그리기, 색칠하기, 대칭 그리기까지",
+        "en": "Art play for ages 6 to 8. Color names and mixing, tracing, coloring, and symmetry drawing."
+      }
     }
   ]
 }

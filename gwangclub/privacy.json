@@ -1,0 +1,107 @@
+{
+    "effective":  "2026-10-08",
+    "updated":  "2026-10-08",
+    "local_data":  {
+                       "ko":  [
+                                  "게임 안 소지금과 누적 점수",
+                                  "게임 안 표시 이름과 아바타",
+                                  "판돈 단계, 상대 난이도, 규칙 설정",
+                                  "출전권 수와 다음 충전 시각",
+                                  "보상형 광고 시청 횟수, 날짜, 다음 시청 가능 시각",
+                                  "사용한 쿠폰 코드",
+                                  "이어하기 위한 진행 중인 게임",
+                                  "언어, 효과음, 음악, 진동 설정"
+                              ],
+                       "en":  [
+                                  "In-game money and total score",
+                                  "Your in-game display name and avatar",
+                                  "Stake level, opponent difficulty, and rule settings",
+                                  "Number of play tickets and the next refill time",
+                                  "Rewarded ad watch counts, dates, and the next available time",
+                                  "Coupon codes you have used",
+                                  "An in-progress game so you can resume it",
+                                  "Language, sound effect, music, and vibration settings"
+                              ]
+                   },
+    "currency":  {
+                     "ko":  "본 앱의 소지금과 출전권은 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 같은 WiFi 에서 함께 할 때 게임 결과에 따라 소지금이 바뀔 뿐 직접 주고받는 기능은 없습니다. 개발자는 결제 정보를 수집하지 않습니다.",
+                     "en":  "Money and play tickets in the app are numbers used only inside the game. They cannot be bought or exchanged for cash or prizes. When playing together on the same WiFi, your money changes only as a result of the game; there is no way to transfer it directly. The developer does not collect any payment information."
+                 },
+    "lan":  {
+                "ko":  {
+                           "intro":  "본 앱은 같은 WiFi 공유기에 연결된 기기끼리 직접 통신하여 최대 3명이 함께 할 수 있습니다. 한 사람의 기기가 방을 만들고 다른 기기가 접속하며, 개발자의 서버를 거치지 않습니다. 주고받는 데이터는 개발자에게 전송되지 않습니다.",
+                           "visible":  [
+                                           "게임 안 표시 이름과 아바타 번호",
+                                           "게임 안 소지금과 출전권 수",
+                                           "광고를 보는 중인지, 준비되었는지 등 방 안의 상태",
+                                           "게임 진행 상태와 결과(자기 패는 본인에게만 보입니다)"
+                                       ],
+                           "detail":  "WiFi 화면에 있는 동안 상대를 찾기 위해 같은 네트워크 안으로 약 1초마다 신호를 보내며, 여기에 표시 이름, 아바타 번호, 소지금이 담깁니다. 기기끼리 연결하기 위해 앱이 내부적으로 상대 기기의 사설 IP 주소(같은 공유기 안에서만 쓰는 주소)를 사용하지만, 이 주소는 화면에 표시하지 않습니다. 통신은 가정이나 사무실 공유기 안의 사설 네트워크에서만 이루어지고 인터넷으로 나가지 않습니다. 채팅, 온라인 매칭, 순위표는 없고 기기 ID 나 광고 ID 는 보내지 않습니다. 이름을 보이고 싶지 않다면 WiFi 대전을 시작하기 전에 게임 안에서 표시 이름을 바꾸십시오. 혼자 하는 동안에는 이 신호를 보내지 않습니다."
+                       },
+                "en":  {
+                           "intro":  "The app lets up to 3 devices connected to the same WiFi router play together by talking to each other directly. One device hosts the room and the others join; no developer server is involved, and none of this data is sent to the developer.",
+                           "visible":  [
+                                           "Your in-game display name and avatar number",
+                                           "Your in-game money and number of play tickets",
+                                           "Your status in the room, such as whether you are watching an ad or ready",
+                                           "Game state and results (your own hand is visible only to you)"
+                                       ],
+                           "detail":  "While you are on the WiFi screen, the app sends a signal into the local network about once per second to find other players; it includes your display name, avatar number, and money. To connect the devices, the app uses the other device's private IP address (an address used only inside your router's network) internally, but never shows it on screen. All communication stays inside your home or office private network and never goes out to the internet. There is no chat, online matchmaking, or leaderboard, and no device ID or advertising ID is sent. If you do not want your name to be seen, change your display name in the game before starting WiFi play. Nothing is sent while you play alone."
+                       }
+            },
+    "ads":  {
+                "banner":  false,
+                "interstitial":  false,
+                "rewarded":  true,
+                "detail":  {
+                               "ko":  "본 앱의 광고는 출전권을 채우는 보상형 광고 하나뿐이며, 사용자가 광고 버튼을 직접 눌렀을 때만 재생되고 하루 횟수 제한이 있습니다. 배너 광고와 전면 광고는 사용하지 않습니다.",
+                               "en":  "The only ad in the app is a rewarded ad that refills play tickets. It plays only when you tap the ad button yourself, with a daily limit. The app does not use banner or interstitial (full-screen) ads."
+                           }
+            },
+    "ump":  {
+                "ko":  "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+                "en":  "the ad privacy settings button in the app\u0027s Settings (shown only in regions where the consent form applies)"
+            },
+    "version_check":  true,
+    "permissions":  [
+                        {
+                            "name":  "INTERNET",
+                            "ko":  "광고를 불러오고, 새 버전을 확인하고, 같은 WiFi 의 기기와 게임 데이터를 주고받습니다.",
+                            "en":  "To load ads, check for a newer version, and exchange game data with devices on the same WiFi."
+                        },
+                        {
+                            "name":  "CHANGE_WIFI_MULTICAST_STATE",
+                            "ko":  "같은 WiFi 에서 함께 할 상대를 찾는 신호를 주고받습니다.",
+                            "en":  "To send and receive the signals used to find players on the same WiFi."
+                        },
+                        {
+                            "name":  "VIBRATE",
+                            "ko":  "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.",
+                            "en":  "For vibration feedback during play. You can turn it off in Settings."
+                        },
+                        {
+                            "name":  "ACCESS_NETWORK_STATE",
+                            "ko":  "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+                            "en":  "To check the network connection before requesting ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "AD_ID",
+                            "ko":  "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+                            "en":  "To use the advertising ID to serve and measure ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+                            "ko":  "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+                            "en":  "To use Android\u0027s privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+                        },
+                        {
+                            "name":  "WAKE_LOCK, FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED",
+                            "ko":  "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+                            "en":  "Used by the advertising SDK for its internal background work (Google AdMob)."
+                        }
+                    ],
+    "children":  {
+                     "ko":  "본 앱은 실제 돈을 걸지 않는 모의 도박 요소(고스톱)가 있어 18세 이상 성인을 대상으로 하며, 아동과 18세 미만 청소년을 대상으로 하지 않습니다. 개발자는 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+                     "en":  "The app contains simulated gambling (the card game Go-Stop, with no real money) and is intended for adults aged 18 and over. It is not directed at children or anyone under 18. The developer does not knowingly collect personal information from children, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child\u0027s information has been processed, please contact us at the email below."
+                 }
+}

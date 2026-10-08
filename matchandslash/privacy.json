@@ -1,0 +1,67 @@
+{
+    "effective":  "2026-10-08",
+    "updated":  "2026-10-08",
+    "local_data":  {
+                       "ko":  [
+                                  "보유 카드, 파티 편성, 잠금 설정",
+                                  "골드, 재료, 소모품",
+                                  "스테이지 별점, 기력과 회복 시각",
+                                  "출석, 일일 임무, 소환 횟수 기록",
+                                  "보상형 광고 시청 횟수와 다음 시청 가능 시각",
+                                  "언어와 음량 설정"
+                              ],
+                       "en":  [
+                                  "Cards owned, party lineup, and locks",
+                                  "Gold, materials, and consumables",
+                                  "Stage star ratings, energy, and refill times",
+                                  "Attendance, daily missions, and summon counts",
+                                  "Rewarded ad watch counts and the next available time",
+                                  "Language and volume settings"
+                              ]
+                   },
+    "ads":  {
+                "banner":  true,
+                "interstitial":  false,
+                "rewarded":  true,
+                "detail":  {
+                               "ko":  "배너 광고는 화면 아래에 표시됩니다. 보상형 광고는 기력 충전과 상점 보상을 사용자가 직접 선택했을 때만 재생되며 하루 횟수 제한이 있습니다. 전면 광고는 사용하지 않습니다.",
+                               "en":  "A banner ad is shown at the bottom of the screen. Rewarded ads play only when you choose them to refill energy or claim a shop reward, with a daily limit. The app does not use interstitial (full-screen) ads."
+                           }
+            },
+    "ump":  {
+                "ko":  "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+                "en":  "the ad privacy settings button in the app\u0027s Settings (shown only in regions where the consent form applies)"
+            },
+    "version_check":  true,
+    "permissions":  [
+                        {
+                            "name":  "INTERNET",
+                            "ko":  "광고를 불러오고 새 버전이 있는지 확인합니다.",
+                            "en":  "To load ads and check for a newer version."
+                        },
+                        {
+                            "name":  "ACCESS_NETWORK_STATE",
+                            "ko":  "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+                            "en":  "To check the network connection before requesting ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "AD_ID",
+                            "ko":  "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+                            "en":  "To use the advertising ID to serve and measure ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+                            "ko":  "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+                            "en":  "To use Android\u0027s privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+                        },
+                        {
+                            "name":  "WAKE_LOCK, FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED",
+                            "ko":  "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+                            "en":  "Used by the advertising SDK for its internal background work (Google AdMob)."
+                        }
+                    ],
+    "children":  {
+                     "ko":  "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+                     "en":  "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child\u0027s information has been processed, please contact us at the email below."
+                 }
+}

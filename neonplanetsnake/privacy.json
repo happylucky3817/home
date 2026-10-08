@@ -1,0 +1,67 @@
+{
+    "effective":  "2026-10-08",
+    "updated":  "2026-10-08",
+    "local_data":  {
+                       "ko":  [
+                                  "최고 점수, 스테이지별 기록, 클리어 진행",
+                                  "코어(게임 안 재화)",
+                                  "게임 안 표시 이름과 뱀의 색, 무늬, 표면",
+                                  "조작 방식, 음량, 언어 설정",
+                                  "저장하고 나간 게임의 이어하기 데이터",
+                                  "전면 광고 빈도를 맞추기 위한 횟수와 시각"
+                              ],
+                       "en":  [
+                                  "Best scores, per-stage records, and clear progress",
+                                  "Cores (in-game currency)",
+                                  "Your in-game display name and snake color, pattern, and texture",
+                                  "Control scheme, volume, and language settings",
+                                  "Data to resume a game you saved and left",
+                                  "Counters and times used to pace interstitial ads"
+                              ]
+                   },
+    "ads":  {
+                "banner":  true,
+                "interstitial":  true,
+                "rewarded":  true,
+                "detail":  {
+                               "ko":  "배너 광고는 화면 아래에 표시됩니다. 전면 광고는 새 게임을 시작할 때 가끔 표시되며 설치 후 첫 게임은 제외하고 긴 간격을 둡니다. 보상형 광고는 사용자가 부활을 직접 선택했을 때만 재생됩니다. 게임 안 표시 이름은 기기에만 저장되며 다른 사람에게 전송되지 않습니다.",
+                               "en":  "A banner ad is shown at the bottom of the screen. An interstitial ad appears occasionally when you start a new game, never on your first game after installing and with a long interval between them. A rewarded ad plays only when you choose to revive. Your display name is stored only on your device and is never sent to anyone."
+                           }
+            },
+    "ump":  {
+                "ko":  "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+                "en":  "the ad privacy settings button in the app\u0027s Settings (shown only in regions where the consent form applies)"
+            },
+    "version_check":  true,
+    "permissions":  [
+                        {
+                            "name":  "INTERNET",
+                            "ko":  "광고를 불러오고 새 버전이 있는지 확인합니다.",
+                            "en":  "To load ads and check for a newer version."
+                        },
+                        {
+                            "name":  "ACCESS_NETWORK_STATE",
+                            "ko":  "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+                            "en":  "To check the network connection before requesting ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "AD_ID",
+                            "ko":  "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+                            "en":  "To use the advertising ID to serve and measure ads (Google AdMob)."
+                        },
+                        {
+                            "name":  "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+                            "ko":  "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+                            "en":  "To use Android\u0027s privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+                        },
+                        {
+                            "name":  "WAKE_LOCK, FOREGROUND_SERVICE, RECEIVE_BOOT_COMPLETED",
+                            "ko":  "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+                            "en":  "Used by the advertising SDK for its internal background work (Google AdMob)."
+                        }
+                    ],
+    "children":  {
+                     "ko":  "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+                     "en":  "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child\u0027s information has been processed, please contact us at the email below."
+                 }
+}
