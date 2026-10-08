@@ -27,19 +27,6 @@
       }
     },
     {
-      "id": "gwangclub",
-      "package": "com.happylucky.gwangclub",
-      "type": "game",
-      "status": "live",
-      "badge": { "ko": "국내 미출시", "en": "" },
-      "name": { "ko": "광클럽", "en": "Kwang Club" },
-      "genre": { "ko": "카드", "en": "Card" },
-      "summary": {
-        "ko": "셋이 앉는 고스톱. 풀 룰 그대로, 여섯 단계 상대, 같은 WiFi로 함께",
-        "en": "Korean Go-Stop for three. Full rules, six AI tiers, and local Wi-Fi matches."
-      }
-    },
-    {
       "id": "matchandslash",
       "package": "com.happylucky.matchandslash",
       "type": "game",
@@ -133,6 +120,20 @@
       "summary": {
         "ko": "원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이",
         "en": "Place elemental runes, link them together, hold the line. 100 stages, offline."
+      }
+    },
+    {
+      "id": "gwangclub",
+      "package": "com.happylucky.gwangclub",
+      "type": "game",
+      "status": "live",
+      "badge": { "ko": "국내 미출시", "en": "" },
+      "store_off": ["ko"],
+      "name": { "ko": "광클럽", "en": "Kwang Club" },
+      "genre": { "ko": "카드", "en": "Card" },
+      "summary": {
+        "ko": "셋이 앉는 고스톱. 풀 룰 그대로, 여섯 단계 상대, 같은 WiFi로 함께",
+        "en": "Korean Go-Stop for three. Full rules, six AI tiers, and local Wi-Fi matches."
       }
     },
     {

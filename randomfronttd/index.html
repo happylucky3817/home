@@ -38,11 +38,14 @@
   .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
   .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    display:inline-flex; align-items:center; gap:10px; margin-top:24px; padding:13px 28px; border-radius:6px; font-weight:700; font-size:18px;
     background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
     text-shadow:0 2px 0 var(--outline);
   }
   .btn:hover{text-decoration:none; filter:brightness(1.07)}
+  .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+  .btn.off{cursor:not-allowed; opacity:.4; filter:grayscale(1)}
+  .btn.off:hover{filter:grayscale(1)}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -80,8 +83,8 @@
     <img class="feature en" src="img/feature_en.jpg" alt="RandomFront TD">
     <p class="tagline ko">무작위로 모집한 병사를 합성해 방어선을 지키는 타워 디펜스. 다양한 지형과 적, 상성 전투.</p>
     <p class="tagline en">Merge a randomly recruited squad and hold the line across varied terrain.</p>
-    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.randomfronttd">Google Play에서 보기</a>
-    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.randomfronttd">Get it on Google Play</a>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.randomfronttd"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#34A853" d="M1.2 .6 13.6 13l4-4L3.3.8C2.5.3 1.7.3 1.2.6z"/><path fill="#4285F4" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4L13.6 13z"/><path fill="#EA4335" d="M1.2 25.4 13.6 13l4 4-14.3 8.2c-.8.5-1.6.5-2.1.2z"/><path fill="#FBBC04" d="m17.6 9-4 4 4 4 4.6-2.6c1.1-.6 1.1-2.2 0-2.8z"/></svg>Google Play</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.randomfronttd"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#34A853" d="M1.2 .6 13.6 13l4-4L3.3.8C2.5.3 1.7.3 1.2.6z"/><path fill="#4285F4" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4L13.6 13z"/><path fill="#EA4335" d="M1.2 25.4 13.6 13l4 4-14.3 8.2c-.8.5-1.6.5-2.1.2z"/><path fill="#FBBC04" d="m17.6 9-4 4 4 4 4.6-2.6c1.1-.6 1.1-2.2 0-2.8z"/></svg>Google Play</a>
   </div>
 </header>
 
