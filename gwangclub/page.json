@@ -1,0 +1,57 @@
+{
+  "name": { "ko": "광클럽", "en": "Kwang Club" },
+  "description": {
+    "ko": "광클럽. 화투 48장으로 셋이 치는 3인 고스톱. 규칙 그대로, 여섯 단계 상대, 같은 WiFi에서 함께.",
+    "en": "Kwang Club. Korean Go-Stop for three with the 48-card hwatu deck. Full rules, six AI tiers, and local Wi-Fi matches."
+  },
+  "theme": { "bg": "#06130e", "bg2": "#0b1f17", "card": "#10291f", "line": "#1f4a39", "accent": "#e3c36a", "button": "#c8372e", "outline": "#3a0e0b" },
+  "notice": { "ko": "광클럽은 한국에서는 출시되지 않았습니다. 한국 Google Play 계정에서는 설치할 수 없습니다.", "en": "" },
+  "tagline": {
+    "ko": "셋이 앉는 고스톱. 풀 룰 그대로, 여섯 단계 상대, 같은 WiFi로 함께.",
+    "en": "Korean Go-Stop for three. Full rules, six AI tiers, and local Wi-Fi matches."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면" },
+      { "file": "img/ss_ko_02.jpg", "alt": "3인 게임 시작" },
+      { "file": "img/ss_ko_03.jpg", "alt": "게임 진행 중" },
+      { "file": "img/ss_ko_04.jpg", "alt": "결과 계산서" },
+      { "file": "img/ss_ko_05.jpg", "alt": "난이도 선택" },
+      { "file": "img/ss_ko_06.jpg", "alt": "WiFi 모드 멤버 찾기" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Main screen" },
+      { "file": "img/ss_en_02.jpg", "alt": "Three-player table" },
+      { "file": "img/ss_en_03.jpg", "alt": "Game in progress" },
+      { "file": "img/ss_en_04.jpg", "alt": "Score sheet" },
+      { "file": "img/ss_en_05.jpg", "alt": "Difficulty select" },
+      { "file": "img/ss_en_06.jpg", "alt": "Finding players in WiFi mode" }
+    ]
+  },
+  "lead": {
+    "ko": "광클럽은 화투 48장으로 치는 3인 고스톱입니다. 둘이 아니라 셋이라서 피박과 광박이 실제로 걸리고, 남의 뻑을 먹을 수 있고, 두 사람에게서 한꺼번에 받습니다.",
+    "en": "Kwang Club is Korean Go-Stop played with the 48-card hwatu deck. Three players, not two, which is what makes the game what it is: pi-bak and gwang-bak actually land, you can eat someone else's ppeok, and you collect from two people at once."
+  },
+  "features": {
+    "ko": [
+      { "title": "규칙을 빼지 않았습니다", "text": "뻑, 쪽, 따닥, 싹쓸이, 폭탄, 흔들기, 나가리, 국진까지 모두 들어 있습니다. 1고와 2고는 더하고, 3고부터는 곱합니다. 피박, 광박, 멍박, 고박은 겹쳐서 곱해집니다." },
+      { "title": "3인 기준 3점부터", "text": "3점이 나면 고를 불러 이어 가거나 스톱으로 끝냅니다. 고를 불렀는데 다른 사람이 나면 고박으로 혼자 모두 냅니다." },
+      { "title": "여섯 단계 상대", "text": "패를 잘못 내는 빈도와 고, 스톱을 잘못 부르는 빈도를 따로 맞췄습니다. 각 단계를 24,000게임씩 시험해 한 단계 올릴 때마다 차이가 느껴지도록 했습니다." },
+      { "title": "WiFi로 함께", "text": "같은 공유기에 연결되어 있으면 방을 열고 초대합니다. 최대 3인이며 빈자리와 나간 자리는 AI가 이어서 칩니다. 서버를 거치지 않고 기기끼리 직접 통신합니다." },
+      { "title": "한눈에 보는 계산서", "text": "게임이 끝나면 어떤 패로 어떤 족보가 났는지, 고, 흔들기, 나가리로 얼마나 곱해졌는지, 각자 얼마를 주고받는지 한 화면에 보여 줍니다." },
+      { "title": "편의 기능", "text": "앱을 닫아도 진행 중인 게임이 남습니다. 차례마다 제한 시간이 있고, 소리, 음악, 진동을 따로 끌 수 있습니다. 아바타 30종." }
+    ],
+    "en": [
+      { "title": "The full rule set", "text": "Ppeok, jjok, ttadak, ssakssuri, bomb, shake, nagari, gukjin. Nothing left out. 1 and 2 go add; from 3 go the hand multiplies. Pi-bak, gwang-bak, mung-bak, and go-bak stack and multiply." },
+      { "title": "Three-player scoring", "text": "Go out from 3 points, then call go to keep the hand alive or stop and bank it. Call go and let someone else go out, and go-bak makes you pay the whole hand yourself." },
+      { "title": "Six difficulty levels", "text": "How often an opponent plays the wrong card and how often it misjudges a go call are tuned separately. Each tier was measured over 24,000 hands so every step up is one you can feel." },
+      { "title": "Play together over Wi-Fi", "text": "On the same router, open a room and invite others. Up to three players; AI fills any empty seat and covers for anyone who leaves. Devices talk to each other directly, with no server." },
+      { "title": "A score sheet that shows its work", "text": "Every hand ends with a full breakdown: which cards made which combination, what multiplied it (go, shake, nagari), and what each player pays or collects." },
+      { "title": "Small things that help", "text": "A hand in progress survives closing the app. A clock runs on each turn, and sound, music, and vibration switch off separately. 30 avatars." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 배너 광고와 전면 광고는 없고, 출전권을 채우는 보상형 광고만 직접 누를 때 재생됩니다. 인앱 결제는 없습니다. 소지금은 게임 안에서만 쓰는 숫자이며 현금이나 경품으로 바꿀 수 없고, 사거나 사용자끼리 주고받을 수 없습니다. 계정 가입 없이 바로 시작하고, 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. No banner or interstitial ads; the only ad is a rewarded one you press yourself to refill play tickets. No in-app purchases. Balances are numbers inside the game. They cannot be exchanged for cash or prizes, bought, or transferred between players. No account needed; your balance and records are saved on your device."
+  }
+}

@@ -31,7 +31,7 @@
       "package": "com.happylucky.gwangclub",
       "type": "game",
       "status": "live",
-      "badge": { "ko": "해외 출시", "en": "" },
+      "badge": { "ko": "국내 미출시", "en": "" },
       "name": { "ko": "광클럽", "en": "Kwang Club" },
       "genre": { "ko": "카드", "en": "Card" },
       "summary": {
@@ -133,6 +133,30 @@
       "summary": {
         "ko": "원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이",
         "en": "Place elemental runes, link them together, hold the line. 100 stages, offline."
+      }
+    },
+    {
+      "id": "ppiyakenglish",
+      "package": "com.happylucky.ppiyakenglish",
+      "type": "education",
+      "status": "dev",
+      "name": { "ko": "삐약 잉글리시", "en": "Ppiyak English" },
+      "genre": { "ko": "어린이 영어", "en": "Kids English" },
+      "summary": {
+        "ko": "만 6~8세를 위한 영어 학습. 듣고, 고르고, 따라 말하며 단어에서 회화까지",
+        "en": "English for ages 6 to 8. Listen, choose, and speak, from first words to simple conversation."
+      }
+    },
+    {
+      "id": "ppiyakmath",
+      "package": "com.happylucky.ppiyakmath",
+      "type": "education",
+      "status": "dev",
+      "name": { "ko": "삐약 수학", "en": "Ppiyak Math" },
+      "genre": { "ko": "어린이 수학", "en": "Kids Math" },
+      "summary": {
+        "ko": "만 6~8세를 위한 수학 학습. 수 세기부터 덧셈, 뺄셈, 시계, 곱셈 기초까지",
+        "en": "Math for ages 6 to 8. From counting to addition, subtraction, clocks, and early multiplication."
       }
     }
   ]

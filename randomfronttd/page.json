@@ -1,0 +1,71 @@
+{
+  "name": { "ko": "랜덤전선 TD", "en": "RandomFront TD" },
+  "description": {
+    "ko": "랜덤전선 TD. 무작위로 모집한 병사를 합성해 방어선을 지키는 타워 디펜스. 9장 108스테이지, 상성 전투, 연구소 영구 강화.",
+    "en": "RandomFront TD is a tower defense where you merge a randomly recruited squad and hold the line across 9 chapters and 108 stages."
+  },
+  "theme": { "bg": "#0e1118", "bg2": "#161a24", "card": "#1b202c", "line": "#343b4c", "accent": "#e8c45a", "button": "#c98f2e", "outline": "#2b1d0c" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "무작위로 모집한 병사를 합성해 방어선을 지키는 타워 디펜스. 다양한 지형과 적, 상성 전투.",
+    "en": "Merge a randomly recruited squad and hold the line across varied terrain."
+  },
+  "story": {
+    "ko": [
+      "경보가 울렸습니다. 적이 예고 없이 외곽 방어선으로 밀려옵니다.",
+      "이름도 계급도 제각각인 분대가 급히 방어선에 섰습니다.",
+      "외곽 방어선에서 적 사령부까지, 9개 장의 전쟁을 끝까지 이끄세요."
+    ],
+    "en": [
+      "The alarm sounds. The enemy hits the outer line without warning.",
+      "A squad of mismatched ranks and names scrambles to the perimeter.",
+      "From the outer line to the enemy command, lead them through nine chapters of war."
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면" },
+      { "file": "img/ss_ko_02.jpg", "alt": "장 선택" },
+      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택" },
+      { "file": "img/ss_ko_04.jpg", "alt": "방어선 전투" },
+      { "file": "img/ss_ko_05.jpg", "alt": "합성과 전직 메뉴" },
+      { "file": "img/ss_ko_06.jpg", "alt": "소환 구역 이동" },
+      { "file": "img/ss_ko_07.jpg", "alt": "연구소 영구 강화" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Main menu" },
+      { "file": "img/ss_en_02.jpg", "alt": "Chapter select" },
+      { "file": "img/ss_en_03.jpg", "alt": "Stage select" },
+      { "file": "img/ss_en_04.jpg", "alt": "Holding the line" },
+      { "file": "img/ss_en_05.jpg", "alt": "Level up and promotion" },
+      { "file": "img/ss_en_06.jpg", "alt": "Moving the summon zone" },
+      { "file": "img/ss_en_07.jpg", "alt": "Research upgrades" }
+    ]
+  },
+  "lead": {
+    "ko": "무작위로 주어지는 병사를 합성해 나만의 방어선을 만드는 타워 디펜스입니다. 어떤 병사가 나올지는 고를 수 없습니다. 주어진 병사를 어떻게 합치고 어디에 배치하는지가 실력입니다.",
+    "en": "A tower defense where your line is built from whatever soldiers you are dealt. You can't choose who shows up. You only choose how to merge them and where they stand."
+  },
+  "features": {
+    "ko": [
+      { "title": "무작위 모집과 합성", "text": "버튼 하나로 병사를 무작위로 배치합니다. 같은 병사를 겹치면 레벨이 오르고, 정해진 조합을 겹치면 상위 직업으로 전직합니다." },
+      { "title": "상성 전투", "text": "적은 경장갑, 중장갑, 방어형으로 나뉩니다. 공격 타입에 따라 받는 피해가 0.65배에서 1.5배까지 달라지고, 체력바 옆 배지와 피해량 색으로 바로 확인할 수 있습니다." },
+      { "title": "방어선을 흔드는 교란병", "text": "주변 적을 회복시키는 군의병, 방어막을 두르는 방패병, 아군을 침묵시키는 전파방해병, 조준을 피하는 은폐병이 등장합니다. 화력만으로는 막을 수 없습니다." },
+      { "title": "9장 108스테이지", "text": "외곽 방어선부터 사령부 함락까지 9개 장, 장마다 12스테이지입니다. 장을 클리어하면 다음 장이 열립니다." },
+      { "title": "연구소 영구 강화", "text": "클리어하면 연구 포인트를 얻습니다. 화력, 체력, 시작 자금, 배치 비용, 정예 모집 확률을 영구히 강화하세요." },
+      { "title": "편의 기능", "text": "첫 웨이브는 준비를 마친 뒤 직접 시작합니다. 자동 합성 버튼으로 유닛을 한 번에 정리하고, 최대 3배속까지 지원합니다." }
+    ],
+    "en": [
+      { "title": "Random recruits, merged", "text": "Deploy a random soldier with one button. Stack two of the same unit to level it up, or stack the right pair to promote it to an advanced class." },
+      { "title": "Matchups matter", "text": "Enemies come in Light, Heavy and Fortified armor, and your attack type swings damage from 0.65x to 1.5x. Armor badges and color-coded damage numbers show it at a glance." },
+      { "title": "Disruptors", "text": "Wardens heal nearby enemies, shielders absorb damage, jammers silence your units, and cloakers can't be targeted. Firepower alone won't get you through." },
+      { "title": "9 chapters, 108 stages", "text": "From the Outer Line to Command Fall, nine chapters of 12 stages each. Clear a chapter to unlock the next." },
+      { "title": "Permanent research", "text": "Clear stages to earn Research Points. Permanently boost damage, HP, starting gold, deploy cost and elite recruit chance." },
+      { "title": "Quality of life", "text": "Start the first wave when you're ready, merge your whole squad with one button, and speed the game up to 3x." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 무료이며 광고가 포함되어 있습니다. 보상형 광고는 원할 때만 직접 선택해 볼 수 있습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Free to play with ads. Rewarded ads play only when you choose to watch them. No account needed; progress is saved on your device."
+  }
+}

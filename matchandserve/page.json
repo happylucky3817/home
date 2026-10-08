@@ -1,0 +1,61 @@
+{
+  "name": { "ko": "매치엔서브", "en": "Match & Serve" },
+  "description": {
+    "ko": "매치엔서브. 재료를 맞추고 음료를 만들어 손님을 대접하는 매치-3 카페 게임. 가게 12곳, 360스테이지, 인앱 결제 없음.",
+    "en": "Match & Serve. A cozy match-3 cafe game. Match ingredients, serve customers and unlock 12 cafes across 360 stages, with no in-app purchases."
+  },
+  "theme": { "bg": "#1a110b", "bg2": "#241810", "card": "#2c1e14", "line": "#4d3423", "accent": "#ffab66", "button": "#ef8a3c", "outline": "#3a1d0b" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "재료를 맞추고 음료를 만들어, 카페 12곳의 손님을 대접하세요.",
+    "en": "Match fruit, mix drinks, serve happy customers across 12 cozy cafes."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 메뉴" },
+      { "file": "img/ss_ko_02.jpg", "alt": "가게 선택" },
+      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택" },
+      { "file": "img/ss_ko_04.jpg", "alt": "캔디 가게 플레이" },
+      { "file": "img/ss_ko_05.jpg", "alt": "과일 쥬스 가게 플레이" },
+      { "file": "img/ss_ko_06.jpg", "alt": "베이커리 손님 주문" },
+      { "file": "img/ss_ko_07.jpg", "alt": "스테이지 클리어" },
+      { "file": "img/ss_ko_08.jpg", "alt": "아이템 상점" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Main menu" },
+      { "file": "img/ss_en_02.jpg", "alt": "Shop select" },
+      { "file": "img/ss_en_03.jpg", "alt": "Stage select" },
+      { "file": "img/ss_en_04.jpg", "alt": "Candy Shop gameplay" },
+      { "file": "img/ss_en_05.jpg", "alt": "Juice Bar gameplay" },
+      { "file": "img/ss_en_06.jpg", "alt": "Bakery customer orders" },
+      { "file": "img/ss_en_07.jpg", "alt": "Stage clear" },
+      { "file": "img/ss_en_08.jpg", "alt": "Item shop" }
+    ]
+  },
+  "lead": {
+    "ko": "매치-3 퍼즐과 카페 경영을 합친 게임입니다. 보드에서 같은 재료를 맞춰 저장고를 채우고, 손님의 인내심이 다 떨어지기 전에 주문을 완성해 내어 드리세요.",
+    "en": "A cozy blend of match-3 puzzle and cafe management. Swipe to match ingredients on the board, fill your pantry, and serve every customer before their patience runs out."
+  },
+  "features": {
+    "ko": [
+      { "title": "맞추고 대접하기", "text": "같은 재료 3개 이상을 맞추면 저장고에 쌓입니다. 필요한 재료가 모이면 주문이 자동으로 완성되어 나갑니다." },
+      { "title": "인내심과 하트", "text": "손님마다 인내심 타이머가 있습니다. 시간이 다 되면 손님이 떠나고 하트가 하나 줄어듭니다. 하트가 남아 있는 동안 목표 손님 수를 채우면 클리어입니다." },
+      { "title": "가게 12곳, 360스테이지", "text": "과일 쥬스 가게에서 시작해 베이커리, 찻집, 커피 전문점, 떡 카페, 겨울 간식점까지 차례로 엽니다. 가게마다 재료 7종, 메뉴 8종, 30스테이지가 있습니다." },
+      { "title": "아이템 4종", "text": "콤보와 큰 매치로 아이템을 얻습니다. 달래기, 폭탄, 타임프리즈, 섞기로 위기를 넘기세요." },
+      { "title": "별점, 팁, 상점", "text": "하트를 남기고 클리어하면 별을 1~3개 받습니다. 손님이 준 팁은 코인이 되어 상점에서 쓰고, 스테이지 전에 가방에서 아이템을 챙길 수 있습니다." },
+      { "title": "공정한 설계", "text": "기다려야 하는 목숨도, 에너지 타이머도 없습니다. 맞출 것이 없으면 보드가 알아서 섞이고, 세 번 연속 지면 도움 아이템을 하나 받습니다." }
+    ],
+    "en": [
+      { "title": "Match and serve", "text": "Match 3 or more tiles to collect ingredients into your pantry. When you have what an order needs, it is prepared and served automatically." },
+      { "title": "Patience and hearts", "text": "Every customer has a patience timer. Let it run out and they leave, costing you a heart. Serve the target number of customers while you still have hearts to clear the stage." },
+      { "title": "12 cafes, 360 stages", "text": "Start at the Juice Bar and unlock the Bakery, Tea House, Coffee Shop, Tteok Cafe and more, all the way to the Winter Snack Stand. Each cafe has 7 ingredients, 8 menu items and 30 stages." },
+      { "title": "Four items", "text": "Earn items by chaining combos and big matches. Soothe, Bomb, Freeze and Shuffle help you out of a tight spot." },
+      { "title": "Stars, tips and the shop", "text": "Clear stages with hearts to spare to earn 1 to 3 stars. Tips from customers become coins for the shop, and you can pack items from your bag before each stage." },
+      { "title": "Designed to be fair", "text": "No lives to wait for and no energy timers. Run out of matches and the board reshuffles itself. Lose three times in a row and the game hands you a helping item." }
+    ]
+  },
+  "note": {
+    "ko": "한국어, 영어, 스페인어, 중국어, 일본어, 베트남어를 지원합니다. 무료이며 광고가 포함되어 있고, 인앱 결제는 없습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장되며 앱을 삭제하면 함께 삭제됩니다.",
+    "en": "Available in English, Korean, Spanish, Chinese, Japanese and Vietnamese. Free to play with ads and no in-app purchases. No account needed; progress is saved on your device and removed when you uninstall."
+  }
+}

@@ -3,143 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Planet: Survivor</title>
-<meta name="description" content="Neon Planet: Survivor — 우주선을 몰고 네온 행성의 구면 위를 누비며, 사방에서 몰려오는 적을 자동 사격으로 막아내는 모바일 서바이버라이크.">
+<title>네온 플래닛: 서바이버 (Neon Planet: Survivor)</title>
+<meta name="description" content="네온 플래닛: 서바이버. 둥근 행성 위를 누비며 살아남는 서바이버라이크. 행성 40개와 심연 모드, 기체 8종, 강화 카드, 보조무기 진화.">
+<meta property="og:title" content="네온 플래닛: 서바이버 (Neon Planet: Survivor)">
+<meta property="og:description" content="행성의 구면 위를 누비며 살아남는 서바이버라이크. 사격은 자동이고, 피할 방향만 고르면 됩니다.">
+<meta property="og:image" content="img/feature_ko.jpg">
+<link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#05060d; --card:#111729; --line:#243154;
-    --txt:#e8ecf8; --muted:#93a2c6; --accent:#4ae8ff;
-    --magenta:#ff5cc0; --gold:#ffd85c; --lime:#9dff5c; --violet:#b98bff;
-  }
+  :root{ --bg:#0a0718; --bg2:#120d2a; --card:#171134; --line:#382a68; --txt:#eef1fb; --muted:#a6afcf; --accent:#5ee6ff; --btn:#c03ad4; --outline:#2a0a34; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.65;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  /* Hero */
-  header{
-    position:relative; overflow:hidden;
-    background:radial-gradient(1100px 520px at 50% -12%, #12224a 0%, var(--bg) 62%);
-    padding:76px 0 58px; text-align:center;
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .orbit{
-    width:96px; height:96px; margin:0 auto 22px; border-radius:50%;
-    background:radial-gradient(circle at 34% 30%, #6fe6ff 0%, #2c7fd8 46%, #12245a 100%);
-    box-shadow:0 0 46px rgba(74,232,255,.45), inset -10px -12px 26px rgba(0,0,0,.55);
-    position:relative;
-  }
-  .orbit::after{
-    content:""; position:absolute; left:-26px; right:-26px; top:50%;
-    height:26px; margin-top:-13px; border-radius:50%;
-    border:1px solid rgba(255,92,192,.55); transform:rotate(-16deg);
-  }
-  h1{font-size:clamp(30px,5.6vw,50px); letter-spacing:-.5px; margin-bottom:8px}
-  h1 .b{color:var(--accent)}
-  h1 .c{color:var(--gold)}
-  .sub{color:var(--muted); font-size:18px}
-  .badge{
-    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
-    color:var(--muted); border:1px solid var(--line); border-radius:999px;
-  }
-  .cta{margin-top:30px}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
-    background:linear-gradient(135deg,#2aa8ff,#4ae8ff); color:#04121c;
-    box-shadow:0 8px 24px rgba(74,232,255,.32);
+    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
 
-  /* Sections */
-  section{padding:54px 0}
-  h2{font-size:26px; margin-bottom:8px}
-  .lead{color:var(--muted); margin-bottom:28px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-  .feat{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
-  }
-  .feat .ico{font-size:24px; margin-bottom:10px}
-  .feat h3{font-size:17px; margin-bottom:6px}
-  .feat p{color:var(--muted); font-size:14.5px}
-  .divider{height:1px; background:var(--line)}
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  /* 속성 칩 */
-  .chips{display:flex; flex-wrap:wrap; gap:10px}
-  .chip{
-    padding:7px 14px; border-radius:999px; font-size:14px;
-    border:1px solid var(--line); background:rgba(255,255,255,.03);
-  }
-  .chip b{font-weight:600}
-  .c1{color:#ff7a2e} .c2{color:#ffb84d} .c3{color:#b3ff40} .c4{color:#73e6ff}
-  .c5{color:#c0d9ff} .c6{color:#a666ff} .c7{color:#ff5a73} .c8{color:#d98cff}
-
-  footer{
-    border-top:1px solid var(--line); padding:34px 0 56px;
-    color:var(--muted); font-size:14px; text-align:center;
-  }
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
 
 <header>
   <div class="wrap">
-    <div class="orbit"></div>
-    <h1><span class="b">NEON PLANET</span> <span class="c">SURVIVOR</span></h1>
-    <p class="sub">우주선을 몰고 네온 행성을 누비며 살아남아라</p>
-    <div class="badge">모바일 · Android · 싱글플레이 · 한국어 / English</div>
-    <div class="cta">
-      <!-- 출시 후 실제 스토어 URL 로 교체하세요 -->
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsurvivor">Google Play 에서 보기</a>
-    </div>
+    <img class="feature ko" src="img/feature_ko.jpg" alt="네온 플래닛: 서바이버">
+    <img class="feature en" src="img/feature_en.jpg" alt="Neon Planet: Survivor">
+    <p class="tagline ko">행성의 구면 위를 누비며 살아남는 서바이버라이크. 사격은 자동이고, 피할 방향만 고르면 됩니다.</p>
+    <p class="tagline en">A survivor-like on a round planet. Aiming is automatic, you pick where to run.</p>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsurvivor">Google Play에서 보기</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsurvivor">Get it on Google Play</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>게임 소개</h2>
-    <p class="lead">
-      평평한 맵이 아니라 <strong>행성의 구면 위</strong>를 실제로 돌아다니는 서바이버라이크입니다.
-      사격은 자동, 당신이 하는 일은 <strong>어디로 도망칠지</strong>와
-      <strong>레벨업마다 무엇을 고를지</strong> 둘뿐입니다.
-      한 판은 <strong>10분</strong> — 목표 시간을 버텨내면 그 행성을 정복하고,
-      원한다면 그대로 무한 모드로 계속 갈 수 있습니다.
-    </p>
-
-    <div class="grid">
-      <div class="feat">
-        <div class="ico">🪐</div>
-        <h3>구면 행성 40개</h3>
-        <p>지평선 너머로 도망치면 반대편에서 다시 나타납니다. 행성마다 색과 지형, 난이도 배율이 다릅니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🛸</div>
-        <h3>기체 8종 · 도색 11색</h3>
-        <p>체력·속도·공격력·연사·사거리가 서로 다르고, 기체마다 고유 속성을 하나씩 지니고 있습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">✦</div>
-        <h3>강화 카드와 등급</h3>
-        <p>레벨업마다 카드 세 장. 커먼부터 전설까지 등급이 붙고, 등급이 높을수록 한 번에 여러 단계가 오릅니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⚡</div>
-        <h3>보조무기와 진화</h3>
-        <p>프리즘 레이저 · 회귀 톱날 · 궤도 포드 · 전격 방출기. 조건을 갖추면 판당 한 번 최종 형태로 진화합니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">◈</div>
-        <h3>네온 상점</h3>
-        <p>판에서 모은 코어로 모듈 8종을 영구 강화합니다. 산 모듈은 장착 없이 다음 판부터 항상 켜집니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">📴</div>
-        <h3>계정 없이, 기기에 저장</h3>
-        <p>가입도 로그인도 없습니다. 진행 중이던 판은 저장해 두었다가 나중에 이어서 할 수 있습니다.</p>
-      </div>
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img class="" src="img/ss_ko_01.jpg" alt="타이틀 화면" loading="lazy">
+      <img class="" src="img/ss_ko_02.jpg" alt="우주선 선택" loading="lazy">
+      <img class="" src="img/ss_ko_03.jpg" alt="네온 상점" loading="lazy">
+      <img class="" src="img/ss_ko_04.jpg" alt="행성 선택" loading="lazy">
+      <img class="" src="img/ss_ko_05.jpg" alt="행성 위 전투" loading="lazy">
+      <img class="" src="img/ss_ko_06.jpg" alt="주무기 선택" loading="lazy">
+    </div>
+    <div class="shots en">
+      <img class="" src="img/ss_en_01.jpg" alt="Title screen" loading="lazy">
+      <img class="" src="img/ss_en_02.jpg" alt="Ship select" loading="lazy">
+      <img class="" src="img/ss_en_03.jpg" alt="Neon Shop" loading="lazy">
+      <img class="" src="img/ss_en_04.jpg" alt="Planet select" loading="lazy">
+      <img class="" src="img/ss_en_05.jpg" alt="Battle on a planet" loading="lazy">
+      <img class="" src="img/ss_en_06.jpg" alt="Main weapon choice" loading="lazy">
     </div>
   </div>
 </section>
@@ -148,31 +112,53 @@
 
 <section>
   <div class="wrap">
-    <h2>기체 속성 8종</h2>
-    <p class="lead">고른 기체에 따라 탄이 적에게 남기는 효과가 달라집니다.</p>
-    <div class="chips">
-      <span class="chip c1"><b>화염</b> · 지속 피해</span>
-      <span class="chip c2"><b>충격</b> · 밀어내기</span>
-      <span class="chip c3"><b>산성</b> · 받는 피해 증가</span>
-      <span class="chip c4"><b>냉기</b> · 둔화</span>
-      <span class="chip c5"><b>전격</b> · 경직</span>
-      <span class="chip c6"><b>맹독</b> · 중첩 중독</span>
-      <span class="chip c7"><b>작열</b> · 사망 시 폭발</span>
-      <span class="chip c8"><b>인력</b> · 적을 끌어모음</span>
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">우주선을 몰고 네온 행성을 누비며 살아남는 서바이버라이크입니다. 사격은 자동이고, 할 일은 어디로 피할지와 레벨업마다 무엇을 고를지 두 가지입니다. 한 게임은 10분이며, 목표 시간을 버티면 그 행성을 정복합니다. 원하면 그대로 무한 모드로 이어서 플레이할 수 있습니다.</p>
+    <p class="lead en">Fly your ship across neon planets and survive. Your ship fires on its own, so you only decide where to run and what to take every time you level up. Outlast the ten-minute clock and the planet is yours, or keep going in endless mode.</p>
+    <div class="grid ko">
+      <div class="feat"><h3>둥근 행성 위의 생존</h3><p>평평한 맵이 아닙니다. 지평선 너머로 도망치면 반대편에서 다시 나타나고, 쫓아오던 무리도 그대로 따라옵니다.</p></div>
+      <div class="feat"><h3>행성 40개와 심연 모드</h3><p>행성마다 색과 지형, 난이도 배율이 다릅니다. 40개를 모두 정복하면 같은 행성을 더 높은 난이도로 다시 진행하는 심연 모드가 열립니다.</p></div>
+      <div class="feat"><h3>기체 8종, 도색 11색</h3><p>체력, 이동 속도, 공격력, 공격 속도, 사거리가 서로 다르고 기체마다 고유 속성이 있습니다. 화염은 태우고, 냉기는 늦추고, 인력은 적을 한데 끌어모읍니다.</p></div>
+      <div class="feat"><h3>강화 카드와 등급</h3><p>레벨업마다 카드 세 장 중 하나를 고릅니다. 커먼, 레어, 에픽, 전설 등급이 붙고, 등급이 높을수록 한 번에 여러 단계가 오릅니다. 마음에 들지 않으면 리롤하세요.</p></div>
+      <div class="feat"><h3>보조무기와 진화</h3><p>프리즘 레이저, 회귀 톱날, 궤도 포드, 전격 방출기. 한 게임에 두 종류까지 장착할 수 있고, 조건을 갖추면 한 번 최종 형태로 진화합니다.</p></div>
+      <div class="feat"><h3>네온 상점</h3><p>플레이하며 모은 코어로 모듈 8종을 영구 강화합니다. 구매한 모듈은 장착할 필요 없이 다음 게임부터 항상 적용됩니다.</p></div>
     </div>
+    <div class="grid en">
+      <div class="feat"><h3>Survive on a round world</h3><p>This is not a flat map. Run past the horizon and you come back around the other side, with the swarm still on your tail.</p></div>
+      <div class="feat"><h3>40 planets and Abyss Mode</h3><p>Every planet has its own colors, terrain and difficulty multiplier. Conquer all 40 to unlock Abyss Mode, where you take on the same planets at a higher difficulty.</p></div>
+      <div class="feat"><h3>8 ships, 11 paints</h3><p>Each ship has its own HP, speed, damage, fire rate and range, plus a signature element. Flame burns, Frost slows, Gravity drags a whole crowd into one spot.</p></div>
+      <div class="feat"><h3>Upgrade cards with rarities</h3><p>Pick one of three cards at every level-up. Common, Rare, Epic and Legendary, and the higher the rarity, the more steps you gain at once. Don&#39;t like the draw? Reroll.</p></div>
+      <div class="feat"><h3>Aux weapons and evolutions</h3><p>Prism Laser, Returning Saw, Orbital Pod, Arc Emitter. Carry two per run, and once the conditions line up, one of them evolves into its final form.</p></div>
+      <div class="feat"><h3>Neon Shop</h3><p>Spend the cores you earn on eight permanent modules. Nothing to equip, anything you buy is active from the next run.</p></div>
+    </div>
+    <p class="note ko">한국어와 영어를 지원합니다. 무료이며 광고가 포함되어 있습니다. 부활이나 코어 2배 같은 보상형 광고는 원할 때만 직접 선택해 볼 수 있습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다. 진행 중인 게임은 저장해 두었다가 이어서 할 수 있고, 광고를 제외한 플레이는 인터넷 연결 없이도 가능합니다.</p>
+    <p class="note en">Available in English and Korean. Free to play with ads. Rewarded ads, such as a revive or double cores, play only when you choose to watch them. No account needed; progress is saved on your device. A run in progress can be saved and resumed later, and apart from ads the game plays fine offline.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>
-      <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
-      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
-    </div>
-    <p style="margin-top:14px">© 2026 HappyLucky · Neon Planet: Survivor</p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
 </body>
 </html>

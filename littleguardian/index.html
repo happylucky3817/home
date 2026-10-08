@@ -4,40 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>리틀 가디언 (Little Guardian)</title>
-<meta name="description" content="리틀 가디언 — 견습 기사를 키워 심연을 닫는 픽셀 방치형 성장 RPG. 70장 1,050스테이지, 스킬, 장비, 요정, 환생.">
+<meta name="description" content="리틀 가디언. 견습 기사를 키워 심연을 닫는 픽셀 방치형 성장 RPG. 70장 1,050스테이지, 스킬, 장비, 요정, 환생.">
 <meta property="og:title" content="리틀 가디언 (Little Guardian)">
 <meta property="og:description" content="견습 기사를 키워 심연을 닫으세요. 70장 1,050스테이지의 픽셀 방치형 성장 RPG">
 <meta property="og:image" content="img/feature_ko.png">
 <link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#0c1020; --bg2:#121833; --card:#161d3a; --line:#2b3561;
-    --txt:#eef1fb; --muted:#a6afcf; --gold:#f0b44a; --gold2:#e6902a; --outline:#381c12;
-  }
+  :root{ --bg:#0c1020; --bg2:#121833; --card:#161d3a; --line:#2b3561; --txt:#eef1fb; --muted:#a6afcf; --accent:#f0b44a; --btn:#e6902a; --outline:#381c12; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.7;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--gold); text-decoration:none}
+  a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:960px; margin:0 auto; padding:0 20px}
   img.pixel{image-rendering:pixelated}
 
-  .lang{display:flex; justify-content:flex-end; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
   .lang button{
     background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
     padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .lang button.on{color:var(--txt); border-color:var(--gold)}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
 
   header{text-align:center; padding:18px 0 40px}
   .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
   .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
     display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
-    background:var(--gold2); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
     text-shadow:0 2px 0 var(--outline);
   }
   .btn:hover{text-decoration:none; filter:brightness(1.07)}
@@ -45,29 +47,31 @@
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
   .lead{color:var(--muted); margin-bottom:26px}
-  .story{
-    background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px;
-    color:var(--txt); font-size:16.5px;
-  }
-  .shots{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
   .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
   .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
-  .feat h3{font-size:17px; margin-bottom:6px; color:var(--gold)}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
   .feat p{color:var(--muted); font-size:15px}
   .note{color:var(--muted); font-size:14px; margin-top:24px}
 
   footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
-  footer a{margin:0 8px}
+  footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
   .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
   [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
 <body data-lang="ko">
 
-<div class="lang">
-  <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
-  <button id="b-en" onclick="setLang('en')">English</button>
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
 </div>
 
 <header>
@@ -85,16 +89,8 @@
   <div class="wrap">
     <h2 class="ko">이야기</h2>
     <h2 class="en">Story</h2>
-    <div class="story ko">
-      세상 끝의 심연이 열리고, 사나워진 몬스터들이 왕국을 덮쳤습니다.<br>
-      기사단은 돌아오지 못했고, 남은 것은 칼과 방패를 든 견습 기사 한 명뿐입니다.<br>
-      작은 요정과 함께, 리틀 가디언의 여정을 시작하세요.
-    </div>
-    <div class="story en">
-      At the edge of the world, the Abyss has opened, and its darkness has driven the monsters wild.<br>
-      The knights of the kingdom never returned. All that remains is a single squire with a sword and shield.<br>
-      With a tiny fairy at your side, begin the journey of the Little Guardian.
-    </div>
+    <div class="story ko">세상 끝의 심연이 열리고, 사나워진 몬스터들이 왕국을 덮쳤습니다.<br>기사단은 돌아오지 못했고, 남은 것은 칼과 방패를 든 견습 기사 한 명뿐입니다.<br>작은 요정과 함께, 리틀 가디언의 여정을 시작하세요.</div>
+    <div class="story en">At the edge of the world, the Abyss has opened, and its darkness has driven the monsters wild.<br>The knights of the kingdom never returned. All that remains is a single squire with a sword and shield.<br>With a tiny fairy at your side, begin the journey of the Little Guardian.</div>
   </div>
 </section>
 
@@ -105,16 +101,16 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img src="img/ko_01_battle.png" alt="들판 전투와 피버">
-      <img src="img/ko_02_boss.png" alt="화산 장 보스">
-      <img src="img/ko_04_skills.png" alt="얼음 성채 스킬">
-      <img src="img/ko_06_shop.png" alt="별빛 평원 상점">
+      <img class="pixel" src="img/ko_01_battle.png" alt="들판 전투와 피버" loading="lazy">
+      <img class="pixel" src="img/ko_02_boss.png" alt="화산 장 보스" loading="lazy">
+      <img class="pixel" src="img/ko_04_skills.png" alt="얼음 성채 스킬" loading="lazy">
+      <img class="pixel" src="img/ko_06_shop.png" alt="별빛 평원 상점" loading="lazy">
     </div>
     <div class="shots en">
-      <img src="img/en_01_battle.png" alt="Meadow battle with Fever">
-      <img src="img/en_02_boss.png" alt="Volcano chapter boss">
-      <img src="img/en_04_skills.png" alt="Frost Fortress skills">
-      <img src="img/en_06_shop.png" alt="Starlight Plains shop">
+      <img class="pixel" src="img/en_01_battle.png" alt="Meadow battle with Fever" loading="lazy">
+      <img class="pixel" src="img/en_02_boss.png" alt="Volcano chapter boss" loading="lazy">
+      <img class="pixel" src="img/en_04_skills.png" alt="Frost Fortress skills" loading="lazy">
+      <img class="pixel" src="img/en_06_shop.png" alt="Starlight Plains shop" loading="lazy">
     </div>
   </div>
 </section>
@@ -127,9 +123,8 @@
     <h2 class="en">Features</h2>
     <p class="lead ko">주인공이 스스로 싸우며 앞으로 나아가는 방치형 성장 RPG입니다. 골드를 모아 강화하고, 스킬과 장비를 갖추고, 보스에 도전할 때를 고르세요.</p>
     <p class="lead en">An idle growth RPG where your hero fights and advances on their own. Collect gold, upgrade, gear up with skills and equipment, and choose the right moment to challenge each boss.</p>
-
     <div class="grid ko">
-      <div class="feat"><h3>자동 전투와 손맛</h3><p>주인공이 알아서 달리고 베며 사냥합니다. 화면을 누르면 추가 공격, 피버 게이지가 차면 골드가 쏟아집니다.</p></div>
+      <div class="feat"><h3>자동 전투와 추가 공격</h3><p>주인공이 알아서 달리고 베며 사냥합니다. 화면을 누르면 추가 공격, 피버 게이지가 차면 골드가 쏟아집니다.</p></div>
       <div class="feat"><h3>70장 1,050스테이지</h3><p>들판에서 화산, 하늘섬, 마왕성, 수정 동굴, 해저, 별빛 평원을 지나 심연까지. 23개 테마마다 배경과 몬스터가 다릅니다.</p></div>
       <div class="feat"><h3>80종이 넘는 몬스터</h3><p>픽셀 몬스터와 얼음, 용암, 유령, 황금 등 색 변형 몬스터. 도감을 채우면 능력치가 오릅니다.</p></div>
       <div class="feat"><h3>스킬과 장비</h3><p>불꽃, 번개, 얼음, 회오리, 보호막 등 11가지 스킬. 무기, 갑옷, 반지는 일반부터 전설까지 5등급.</p></div>
@@ -151,30 +146,26 @@
 
 <footer>
   <div class="wrap">
-    <div>
-      <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy</a> ·
-      <a href="mailto:happylucky3817@gmail.com"><span class="ko">문의하기</span><span class="en">Contact</span></a>
-    </div>
-    <p style="margin-top:14px">© 2026 HappyLucky · 리틀 가디언 (Little Guardian)</p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
 <script>
-function setLang(l){
-  document.body.dataset.lang = l;
-  document.documentElement.lang = l;
-  document.getElementById('b-ko').classList.toggle('on', l === 'ko');
-  document.getElementById('b-en').classList.toggle('on', l === 'en');
-  try { localStorage.setItem('lg-lang', l); } catch (e) {}
-}
-(function(){
-  var l = null;
-  try { l = localStorage.getItem('lg-lang'); } catch (e) {}
-  if (!l) l = (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
-  if (location.hash === '#en') l = 'en';
-  setLang(l);
-})();
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
 </script>
 </body>
 </html>

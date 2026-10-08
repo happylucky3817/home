@@ -1,0 +1,57 @@
+{
+  "name": { "ko": "네온 플래닛: 서바이버", "en": "Neon Planet: Survivor" },
+  "description": {
+    "ko": "네온 플래닛: 서바이버. 둥근 행성 위를 누비며 살아남는 서바이버라이크. 행성 40개와 심연 모드, 기체 8종, 강화 카드, 보조무기 진화.",
+    "en": "Neon Planet: Survivor is a survivor-like on a round planet. 40 planets plus Abyss Mode, 8 ships, upgrade cards and evolving aux weapons."
+  },
+  "theme": { "bg": "#0a0718", "bg2": "#120d2a", "card": "#171134", "line": "#382a68", "accent": "#5ee6ff", "button": "#c03ad4", "outline": "#2a0a34" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "행성의 구면 위를 누비며 살아남는 서바이버라이크. 사격은 자동이고, 피할 방향만 고르면 됩니다.",
+    "en": "A survivor-like on a round planet. Aiming is automatic, you pick where to run."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "타이틀 화면" },
+      { "file": "img/ss_ko_02.jpg", "alt": "우주선 선택" },
+      { "file": "img/ss_ko_03.jpg", "alt": "네온 상점" },
+      { "file": "img/ss_ko_04.jpg", "alt": "행성 선택" },
+      { "file": "img/ss_ko_05.jpg", "alt": "행성 위 전투" },
+      { "file": "img/ss_ko_06.jpg", "alt": "주무기 선택" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Title screen" },
+      { "file": "img/ss_en_02.jpg", "alt": "Ship select" },
+      { "file": "img/ss_en_03.jpg", "alt": "Neon Shop" },
+      { "file": "img/ss_en_04.jpg", "alt": "Planet select" },
+      { "file": "img/ss_en_05.jpg", "alt": "Battle on a planet" },
+      { "file": "img/ss_en_06.jpg", "alt": "Main weapon choice" }
+    ]
+  },
+  "lead": {
+    "ko": "우주선을 몰고 네온 행성을 누비며 살아남는 서바이버라이크입니다. 사격은 자동이고, 할 일은 어디로 피할지와 레벨업마다 무엇을 고를지 두 가지입니다. 한 게임은 10분이며, 목표 시간을 버티면 그 행성을 정복합니다. 원하면 그대로 무한 모드로 이어서 플레이할 수 있습니다.",
+    "en": "Fly your ship across neon planets and survive. Your ship fires on its own, so you only decide where to run and what to take every time you level up. Outlast the ten-minute clock and the planet is yours, or keep going in endless mode."
+  },
+  "features": {
+    "ko": [
+      { "title": "둥근 행성 위의 생존", "text": "평평한 맵이 아닙니다. 지평선 너머로 도망치면 반대편에서 다시 나타나고, 쫓아오던 무리도 그대로 따라옵니다." },
+      { "title": "행성 40개와 심연 모드", "text": "행성마다 색과 지형, 난이도 배율이 다릅니다. 40개를 모두 정복하면 같은 행성을 더 높은 난이도로 다시 진행하는 심연 모드가 열립니다." },
+      { "title": "기체 8종, 도색 11색", "text": "체력, 이동 속도, 공격력, 공격 속도, 사거리가 서로 다르고 기체마다 고유 속성이 있습니다. 화염은 태우고, 냉기는 늦추고, 인력은 적을 한데 끌어모읍니다." },
+      { "title": "강화 카드와 등급", "text": "레벨업마다 카드 세 장 중 하나를 고릅니다. 커먼, 레어, 에픽, 전설 등급이 붙고, 등급이 높을수록 한 번에 여러 단계가 오릅니다. 마음에 들지 않으면 리롤하세요." },
+      { "title": "보조무기와 진화", "text": "프리즘 레이저, 회귀 톱날, 궤도 포드, 전격 방출기. 한 게임에 두 종류까지 장착할 수 있고, 조건을 갖추면 한 번 최종 형태로 진화합니다." },
+      { "title": "네온 상점", "text": "플레이하며 모은 코어로 모듈 8종을 영구 강화합니다. 구매한 모듈은 장착할 필요 없이 다음 게임부터 항상 적용됩니다." }
+    ],
+    "en": [
+      { "title": "Survive on a round world", "text": "This is not a flat map. Run past the horizon and you come back around the other side, with the swarm still on your tail." },
+      { "title": "40 planets and Abyss Mode", "text": "Every planet has its own colors, terrain and difficulty multiplier. Conquer all 40 to unlock Abyss Mode, where you take on the same planets at a higher difficulty." },
+      { "title": "8 ships, 11 paints", "text": "Each ship has its own HP, speed, damage, fire rate and range, plus a signature element. Flame burns, Frost slows, Gravity drags a whole crowd into one spot." },
+      { "title": "Upgrade cards with rarities", "text": "Pick one of three cards at every level-up. Common, Rare, Epic and Legendary, and the higher the rarity, the more steps you gain at once. Don't like the draw? Reroll." },
+      { "title": "Aux weapons and evolutions", "text": "Prism Laser, Returning Saw, Orbital Pod, Arc Emitter. Carry two per run, and once the conditions line up, one of them evolves into its final form." },
+      { "title": "Neon Shop", "text": "Spend the cores you earn on eight permanent modules. Nothing to equip, anything you buy is active from the next run." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 무료이며 광고가 포함되어 있습니다. 부활이나 코어 2배 같은 보상형 광고는 원할 때만 직접 선택해 볼 수 있습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다. 진행 중인 게임은 저장해 두었다가 이어서 할 수 있고, 광고를 제외한 플레이는 인터넷 연결 없이도 가능합니다.",
+    "en": "Available in English and Korean. Free to play with ads. Rewarded ads, such as a revive or double cores, play only when you choose to watch them. No account needed; progress is saved on your device. A run in progress can be saved and resumed later, and apart from ads the game plays fine offline."
+  }
+}

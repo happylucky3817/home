@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삐약 잉글리시 (Ppiyak English) - Coming Soon</title>
+<meta name="description" content="삐약 잉글리시 — 만 6~8세를 위한 영어 학습 앱. 듣고, 고르고, 따라 말하며 단어에서 회화까지. 출시 준비 중입니다.">
+<meta property="og:title" content="삐약 잉글리시 (Ppiyak English)">
+<meta property="og:description" content="만 6~8세를 위한 영어 학습 앱. Coming Soon">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root{
+    --bg:#fffaf0; --bg2:#fff3d6; --card:#ffffff; --line:#f1dfb4;
+    --txt:#3a2e1f; --muted:#7a6a55; --accent:#1e7be0; --sun:#ffc93c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+
+  .hero{background:linear-gradient(180deg, #2b8cf0 0%, #5aa9f5 70%, var(--bg) 100%)}
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:900px; margin:0 auto}
+  .home{font-size:14px; color:#fff}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:rgba(255,255,255,.85); color:var(--muted); border:1px solid transparent; border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
+  }
+  .lang button.on{color:var(--txt); border-color:var(--sun); background:#fff}
+
+  header{text-align:center; padding:40px 0 60px}
+  .icon{width:140px; height:140px; border-radius:30px; box-shadow:0 10px 30px rgba(0,40,90,.3)}
+  h1{font-size:48px; font-weight:800; margin-top:16px; color:#fff; text-shadow:0 3px 12px rgba(0,40,90,.35)}
+  .soon{
+    display:inline-block; margin-top:20px; padding:10px 28px; border-radius:40px;
+    font-size:22px; font-weight:800; letter-spacing:4px; color:var(--txt); background:var(--sun);
+    box-shadow:0 4px 0 #d9a21a;
+  }
+  .tagline{color:var(--txt); font-size:18px; margin-top:22px}
+
+  section{padding:10px 0 50px}
+  h2{font-size:24px; margin-bottom:16px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .feat{background:var(--card); border:2px solid var(--line); border-radius:16px; padding:20px 22px}
+  .feat h3{font-size:18px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:22px}
+
+  footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  @media (max-width:420px){ h1{font-size:38px} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="hero">
+  <div class="top">
+    <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+    <div class="lang">
+      <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+      <button id="b-en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+  <header>
+    <div class="wrap">
+      <img class="icon" src="img/icon.png" alt="">
+      <h1 class="ko">삐약 잉글리시</h1>
+      <h1 class="en">Ppiyak English</h1>
+      <div class="soon">COMING SOON</div>
+      <p class="tagline ko">만 6~8세를 위한 영어 학습 앱. 듣고, 고르고, 따라 말하며 단어에서 회화까지 배웁니다.</p>
+      <p class="tagline en">An English learning app for ages 6 to 8. Listen, choose, and speak your way from first words to simple conversation.</p>
+    </div>
+  </header>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">이렇게 배워요</h2>
+    <h2 class="en">How it works</h2>
+    <div class="grid ko">
+      <div class="feat"><h3>12개 단원</h3><p>인사, 동물, 색깔, 숫자, 음식, 가족, 몸, 기분, 날씨, 학교, 탈것, 나라.</p></div>
+      <div class="feat"><h3>단어, 문장, 회화</h3><p>단원마다 레벨 1 단어, 레벨 2 문장, 레벨 3 회화. 앞 레벨을 마치면 다음 레벨이 열립니다.</p></div>
+      <div class="feat"><h3>듣고 따라 말하기</h3><p>모든 영어 글자는 누르면 소리가 납니다. 마이크로 따라 말하면 맞은 단어를 표시해 줍니다.</p></div>
+      <div class="feat"><h3>짧고 즐겁게</h3><p>한 번에 5분 안팎, 문제 5~6개. 실패 화면과 제한 시간이 없고, 마치면 스티커를 받습니다.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>12 topics</h3><p>Greetings, animals, colors, numbers, food, family, body, feelings, weather, school, vehicles, and countries.</p></div>
+      <div class="feat"><h3>Words, sentences, talk</h3><p>Each topic has three levels: words, sentences, and conversation. Finish one level to open the next.</p></div>
+      <div class="feat"><h3>Listen and speak</h3><p>Every English word plays its sound when tapped. Speak into the microphone and the words you got right light up.</p></div>
+      <div class="feat"><h3>Short and fun</h3><p>About five minutes and five or six questions per lesson. No fail screens, no timers, and a sticker at the end.</p></div>
+    </div>
+    <p class="note ko">광고 없이, 계정 가입 없이 사용합니다. 휴대폰과 태블릿을 지원합니다. 개발 중인 앱이라 내용은 출시 전에 바뀔 수 있습니다.</p>
+    <p class="note en">No ads and no sign-up. Works on phones and tablets. This app is in development, and details may change before release.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
+</body>
+</html>

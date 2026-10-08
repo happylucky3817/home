@@ -4,169 +4,110 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>매치엔서브 (Match &amp; Serve)</title>
-<meta name="description" content="매치엔서브 — 과일을 매치해 재료를 모으고, 줄 선 손님의 주문을 인내심이 떨어지기 전에 완성해 서빙하는 매치-3 카페 경영 게임.">
+<meta name="description" content="매치엔서브. 재료를 맞추고 음료를 만들어 손님을 대접하는 매치-3 카페 게임. 가게 12곳, 360스테이지, 인앱 결제 없음.">
+<meta property="og:title" content="매치엔서브 (Match &amp; Serve)">
+<meta property="og:description" content="재료를 맞추고 음료를 만들어, 카페 12곳의 손님을 대접하세요.">
+<meta property="og:image" content="img/feature_ko.jpg">
+<link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#fff5ec; --bg2:#ffe9d6; --card:#ffffff; --line:#ffd9b8;
-    --txt:#4a2f1a; --muted:#9a7c63; --accent:#ff8a3d;
-    --pink:#ff6fa3; --peach:#ffb27a; --grape:#a06bd6; --green:#74c98a;
-  }
+  :root{ --bg:#1a110b; --bg2:#241810; --card:#2c1e14; --line:#4d3423; --txt:#eef1fb; --muted:#a6afcf; --accent:#ffab66; --btn:#ef8a3c; --outline:#3a1d0b; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.65;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  /* Hero */
-  header{
-    position:relative; overflow:hidden;
-    background:radial-gradient(1200px 520px at 50% -10%, #ffd7b0 0%, var(--bg) 62%);
-    padding:72px 0 56px; text-align:center;
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .fruits{display:flex; gap:14px; justify-content:center; margin-bottom:22px}
-  .fruit{
-    width:46px; height:46px; border-radius:50%;
-    display:grid; place-items:center; font-size:24px;
-    box-shadow:0 6px 20px rgba(255,138,61,.22);
-    background:#fff; border:1px solid var(--line);
-  }
-  h1{font-size:clamp(32px,6vw,52px); letter-spacing:-.5px; margin-bottom:6px}
-  .sub{color:var(--muted); font-size:18px}
-  .badge{
-    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
-    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:#fff;
-  }
-  .cta{margin-top:30px}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
-    background:linear-gradient(135deg,#ff8a3d,#ff6fa3); color:#fff;
-    box-shadow:0 8px 24px rgba(255,111,163,.32);
+    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.06)}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
 
-  /* Sections */
-  section{padding:54px 0}
-  h2{font-size:26px; margin-bottom:8px}
-  .lead{color:var(--muted); margin-bottom:28px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-  .feat{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
-    box-shadow:0 4px 16px rgba(255,138,61,.06);
-  }
-  .feat .ico{font-size:26px; margin-bottom:10px}
-  .feat h3{font-size:17px; margin-bottom:6px}
-  .feat p{color:var(--muted); font-size:14.5px}
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  .cafes{
-    background:var(--bg2); border:1px solid var(--line); border-radius:16px;
-    padding:24px; display:flex; flex-wrap:wrap; gap:12px; justify-content:center;
-  }
-  .cafe{
-    display:flex; align-items:center; gap:8px; padding:10px 16px;
-    background:#fff; border:1px solid var(--line); border-radius:999px;
-    color:var(--txt); font-size:14.5px; font-weight:600;
-  }
-  .cafe .e{font-size:18px}
-
-  .items{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
-  .item{
-    background:var(--card); border:1px solid var(--line); border-radius:14px;
-    padding:18px 20px; display:flex; gap:14px; align-items:flex-start;
-  }
-  .item .e{font-size:26px; line-height:1.2}
-  .item h3{font-size:16px; margin-bottom:4px}
-  .item p{color:var(--muted); font-size:14px; margin-bottom:8px}
-  .pill{
-    display:inline-block; padding:3px 10px; border-radius:999px; font-size:12.5px;
-    background:#eaf7ee; color:#3f8b57; border:1px solid #c9e8d4; font-weight:600;
-  }
-  .pill.auto{background:#fff1e2; color:#b96a1e; border-color:#ffd9b8; margin-left:6px}
-
-  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
-  footer a{margin:0 10px}
-  .divider{height:1px;background:var(--line);max-width:880px;margin:0 auto}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
 
 <header>
   <div class="wrap">
-    <div class="fruits">
-      <span class="fruit">🍓</span>
-      <span class="fruit">🍊</span>
-      <span class="fruit">🧃</span>
-      <span class="fruit">🍇</span>
-    </div>
-    <h1>매치엔서브</h1>
-    <p class="sub">Match &amp; Serve — 매치-3로 즐기는 카페 경영</p>
-    <div class="badge">모바일 · Android · 싱글플레이 · 무료</div>
-    <div class="cta">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.matchandserve">Google Play 에서 보기</a>
-    </div>
+    <img class="feature ko" src="img/feature_ko.jpg" alt="매치엔서브">
+    <img class="feature en" src="img/feature_en.jpg" alt="Match &amp; Serve">
+    <p class="tagline ko">재료를 맞추고 음료를 만들어, 카페 12곳의 손님을 대접하세요.</p>
+    <p class="tagline en">Match fruit, mix drinks, serve happy customers across 12 cozy cafes.</p>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.matchandserve">Google Play에서 보기</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.matchandserve">Get it on Google Play</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>게임 소개</h2>
-    <p class="lead">
-      보드에서 과일·재료 타일을 <strong>매치</strong>해 재료를 모으고, 줄 선 손님의 주문을
-      <strong>인내심이 떨어지기 전에</strong> 완성해 서빙하세요. 매치-3 퍼즐의 손맛에
-      아기자기한 카페 경영을 더한 캐주얼 게임입니다. 과일 주스 가게부터 베이커리, 찻집,
-      커피 전문점, 떡 카페까지 <strong>11개 가게 · 총 330 스테이지</strong>를 하나씩 해금하며
-      나만의 가게를 키워보세요.
-    </p>
-
-    <div class="grid">
-      <div class="feat">
-        <div class="ico">🍓</div>
-        <h3>매치-3 재료 수집</h3>
-        <p>같은 재료를 3개 이상 일렬로 맞춰 펑! 모인 재료가 그대로 인벤토리에 쌓입니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🧃</div>
-        <h3>주문 &amp; 서빙</h3>
-        <p>손님이 원하는 메뉴의 재료가 모이면 자동으로 완성되어 서빙. 팁이 들어옵니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⏳</div>
-        <h3>인내심 타이머</h3>
-        <p>손님마다 기다리는 시간이 있어요. 화내며 떠나기 전에 빠르게 주문을 맞추세요.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🏪</div>
-        <h3>11개 테마 카페</h3>
-        <p>가게마다 재료 7종 · 메뉴 8종이 전부 다릅니다. 가게당 30 스테이지씩 차례로 해금.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⭐</div>
-        <h3>별점 &amp; 클리어 보상</h3>
-        <p>남은 하트로 최대 ⭐⭐⭐. 최고 기록을 갱신할 때마다 아이템을 보상으로 받습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🪙</div>
-        <h3>팁 코인 &amp; 상점</h3>
-        <p>손님에게 받은 팁을 모아 상점에서 아이템 구매. <strong>현금 결제는 없습니다.</strong></p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎒</div>
-        <h3>장사 준비 (아이템 반입)</h3>
-        <p>스테이지 진입 전 가방에 아이템을 담아 반입. 어려운 판일수록 준비가 승부처.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">📴</div>
-        <h3>오프라인 플레이</h3>
-        <p>계정 가입 없이 즉시 플레이. 진행 상황은 기기에 안전하게 저장됩니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🌐</div>
-        <h3>6개 언어 지원</h3>
-        <p>한국어 · English · Español · 中文 · 日本語 · Tiếng Việt</p>
-      </div>
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img class="" src="img/ss_ko_01.jpg" alt="메인 메뉴" loading="lazy">
+      <img class="" src="img/ss_ko_02.jpg" alt="가게 선택" loading="lazy">
+      <img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" loading="lazy">
+      <img class="" src="img/ss_ko_04.jpg" alt="캔디 가게 플레이" loading="lazy">
+      <img class="" src="img/ss_ko_05.jpg" alt="과일 쥬스 가게 플레이" loading="lazy">
+      <img class="" src="img/ss_ko_06.jpg" alt="베이커리 손님 주문" loading="lazy">
+      <img class="" src="img/ss_ko_07.jpg" alt="스테이지 클리어" loading="lazy">
+      <img class="" src="img/ss_ko_08.jpg" alt="아이템 상점" loading="lazy">
+    </div>
+    <div class="shots en">
+      <img class="" src="img/ss_en_01.jpg" alt="Main menu" loading="lazy">
+      <img class="" src="img/ss_en_02.jpg" alt="Shop select" loading="lazy">
+      <img class="" src="img/ss_en_03.jpg" alt="Stage select" loading="lazy">
+      <img class="" src="img/ss_en_04.jpg" alt="Candy Shop gameplay" loading="lazy">
+      <img class="" src="img/ss_en_05.jpg" alt="Juice Bar gameplay" loading="lazy">
+      <img class="" src="img/ss_en_06.jpg" alt="Bakery customer orders" loading="lazy">
+      <img class="" src="img/ss_en_07.jpg" alt="Stage clear" loading="lazy">
+      <img class="" src="img/ss_en_08.jpg" alt="Item shop" loading="lazy">
     </div>
   </div>
 </section>
@@ -175,77 +116,53 @@
 
 <section>
   <div class="wrap">
-    <h2>해금되는 카페들</h2>
-    <p class="lead">앞 가게의 30 스테이지를 모두 클리어하면 다음 가게가 열립니다.</p>
-    <div class="cafes">
-      <span class="cafe"><span class="e">🧃</span> 과일 쥬스 가게</span>
-      <span class="cafe"><span class="e">🍞</span> 베이커리</span>
-      <span class="cafe"><span class="e">🍵</span> 찻집</span>
-      <span class="cafe"><span class="e">🍨</span> 아이스크림 가게</span>
-      <span class="cafe"><span class="e">☕</span> 커피 전문점</span>
-      <span class="cafe"><span class="e">🍩</span> 도넛 가게</span>
-      <span class="cafe"><span class="e">🥞</span> 팬케이크 가게</span>
-      <span class="cafe"><span class="e">🍫</span> 초콜릿 가게</span>
-      <span class="cafe"><span class="e">🧋</span> 버블티 가게</span>
-      <span class="cafe"><span class="e">🍬</span> 캔디 가게</span>
-      <span class="cafe"><span class="e">🍡</span> 떡 카페</span>
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">매치-3 퍼즐과 카페 경영을 합친 게임입니다. 보드에서 같은 재료를 맞춰 저장고를 채우고, 손님의 인내심이 다 떨어지기 전에 주문을 완성해 내어 드리세요.</p>
+    <p class="lead en">A cozy blend of match-3 puzzle and cafe management. Swipe to match ingredients on the board, fill your pantry, and serve every customer before their patience runs out.</p>
+    <div class="grid ko">
+      <div class="feat"><h3>맞추고 대접하기</h3><p>같은 재료 3개 이상을 맞추면 저장고에 쌓입니다. 필요한 재료가 모이면 주문이 자동으로 완성되어 나갑니다.</p></div>
+      <div class="feat"><h3>인내심과 하트</h3><p>손님마다 인내심 타이머가 있습니다. 시간이 다 되면 손님이 떠나고 하트가 하나 줄어듭니다. 하트가 남아 있는 동안 목표 손님 수를 채우면 클리어입니다.</p></div>
+      <div class="feat"><h3>가게 12곳, 360스테이지</h3><p>과일 쥬스 가게에서 시작해 베이커리, 찻집, 커피 전문점, 떡 카페, 겨울 간식점까지 차례로 엽니다. 가게마다 재료 7종, 메뉴 8종, 30스테이지가 있습니다.</p></div>
+      <div class="feat"><h3>아이템 4종</h3><p>콤보와 큰 매치로 아이템을 얻습니다. 달래기, 폭탄, 타임프리즈, 섞기로 위기를 넘기세요.</p></div>
+      <div class="feat"><h3>별점, 팁, 상점</h3><p>하트를 남기고 클리어하면 별을 1~3개 받습니다. 손님이 준 팁은 코인이 되어 상점에서 쓰고, 스테이지 전에 가방에서 아이템을 챙길 수 있습니다.</p></div>
+      <div class="feat"><h3>공정한 설계</h3><p>기다려야 하는 목숨도, 에너지 타이머도 없습니다. 맞출 것이 없으면 보드가 알아서 섞이고, 세 번 연속 지면 도움 아이템을 하나 받습니다.</p></div>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <div class="wrap">
-    <h2>아이템</h2>
-    <p class="lead">플레이 중 조건을 달성하면 그 판에서 쓸 아이템이 생깁니다. 별점 보상이나 상점으로 얻은 아이템은 가방에 모아 두었다가 원하는 스테이지에 반입할 수 있어요.</p>
-    <div class="items">
-      <div class="item">
-        <span class="e">🤝</span>
-        <div>
-          <h3>달래기 <span class="pill auto">자동</span></h3>
-          <p>인내심이 10% 이하로 떨어진 손님을 자동으로 달래서 인내심을 가득 회복시킵니다.</p>
-          <span class="pill">획득 · 콤보 2+</span>
-        </div>
-      </div>
-      <div class="item">
-        <span class="e">💣</span>
-        <div>
-          <h3>폭탄</h3>
-          <p>타일 하나를 골라 주변 3×3 영역을 한 번에 제거하고 재료로 담습니다.</p>
-          <span class="pill">획득 · 매치4 2회</span>
-        </div>
-      </div>
-      <div class="item">
-        <span class="e">⏱️</span>
-        <div>
-          <h3>타임프리즈</h3>
-          <p>대기 중인 모든 손님의 인내심을 5초간 정지시킵니다.</p>
-          <span class="pill">획득 · 매치 5+</span>
-        </div>
-      </div>
-      <div class="item">
-        <span class="e">🌀</span>
-        <div>
-          <h3>섞기</h3>
-          <p>보드를 통째로 다시 섞어 새로운 매치 기회를 만듭니다.</p>
-          <span class="pill">획득 · 콤보 3+</span>
-        </div>
-      </div>
+    <div class="grid en">
+      <div class="feat"><h3>Match and serve</h3><p>Match 3 or more tiles to collect ingredients into your pantry. When you have what an order needs, it is prepared and served automatically.</p></div>
+      <div class="feat"><h3>Patience and hearts</h3><p>Every customer has a patience timer. Let it run out and they leave, costing you a heart. Serve the target number of customers while you still have hearts to clear the stage.</p></div>
+      <div class="feat"><h3>12 cafes, 360 stages</h3><p>Start at the Juice Bar and unlock the Bakery, Tea House, Coffee Shop, Tteok Cafe and more, all the way to the Winter Snack Stand. Each cafe has 7 ingredients, 8 menu items and 30 stages.</p></div>
+      <div class="feat"><h3>Four items</h3><p>Earn items by chaining combos and big matches. Soothe, Bomb, Freeze and Shuffle help you out of a tight spot.</p></div>
+      <div class="feat"><h3>Stars, tips and the shop</h3><p>Clear stages with hearts to spare to earn 1 to 3 stars. Tips from customers become coins for the shop, and you can pack items from your bag before each stage.</p></div>
+      <div class="feat"><h3>Designed to be fair</h3><p>No lives to wait for and no energy timers. Run out of matches and the board reshuffles itself. Lose three times in a row and the game hands you a helping item.</p></div>
     </div>
+    <p class="note ko">한국어, 영어, 스페인어, 중국어, 일본어, 베트남어를 지원합니다. 무료이며 광고가 포함되어 있고, 인앱 결제는 없습니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장되며 앱을 삭제하면 함께 삭제됩니다.</p>
+    <p class="note en">Available in English, Korean, Spanish, Chinese, Japanese and Vietnamese. Free to play with ads and no in-app purchases. No account needed; progress is saved on your device and removed when you uninstall.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>
-      <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
-      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
-    </div>
-    <p style="margin-top:14px">© 2026 HappyLucky · 매치엔서브 (Match &amp; Serve)</p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
 </body>
 </html>

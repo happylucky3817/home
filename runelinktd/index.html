@@ -4,154 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>룬링크 TD (RuneLink TD)</title>
-<meta name="description" content="룬링크 TD — 원소 룬을 배치하고 링크(공명)로 조합해 몰려오는 적을 막아내는 모바일 웨이브 디펜스 게임.">
+<meta name="description" content="룬링크 TD. 불, 물, 바람, 땅 원소 룬을 배치하고 링크로 이어 막아내는 전략 타워 디펜스. 10개 장 100스테이지, 오프라인 플레이.">
+<meta property="og:title" content="룬링크 TD (RuneLink TD)">
+<meta property="og:description" content="원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이.">
+<meta property="og:image" content="img/feature_ko.jpg">
+<link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#0c0f1a; --bg2:#141a2e; --card:#1a2138; --line:#2a3354;
-    --txt:#e8ecf8; --muted:#9aa6c8; --accent:#7c9cff;
-    --fire:#ff6b4a; --water:#46b6ff; --wind:#7af0c0; --earth:#d8a24a;
-  }
+  :root{ --bg:#0d0a1c; --bg2:#151030; --card:#1b1538; --line:#352a5e; --txt:#eef1fb; --muted:#a6afcf; --accent:#c8a8ff; --btn:#7a4fd8; --outline:#1c0f3a; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.65;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  /* Hero */
-  header{
-    position:relative; overflow:hidden;
-    background:radial-gradient(1200px 500px at 50% -10%, #243056 0%, var(--bg) 60%);
-    padding:72px 0 56px; text-align:center;
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .runes{display:flex; gap:14px; justify-content:center; margin-bottom:22px}
-  .rune{
-    width:44px; height:44px; border-radius:50%;
-    display:grid; place-items:center; font-weight:700; font-size:20px;
-    box-shadow:0 0 24px rgba(124,156,255,.25);
-  }
-  .rune.f{background:rgba(255,107,74,.18); color:var(--fire); border:1px solid var(--fire)}
-  .rune.w{background:rgba(70,182,255,.18); color:var(--water); border:1px solid var(--water)}
-  .rune.n{background:rgba(122,240,192,.18); color:var(--wind); border:1px solid var(--wind)}
-  .rune.e{background:rgba(216,162,74,.18); color:var(--earth); border:1px solid var(--earth)}
-  h1{font-size:clamp(32px,6vw,52px); letter-spacing:-.5px; margin-bottom:6px}
-  .sub{color:var(--muted); font-size:18px}
-  .badge{
-    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
-    color:var(--muted); border:1px solid var(--line); border-radius:999px;
-  }
-  .cta{margin-top:30px}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
-    background:linear-gradient(135deg,#5b7bff,#7c9cff); color:#fff;
-    box-shadow:0 8px 24px rgba(91,123,255,.35);
+    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
 
-  /* Sections */
-  section{padding:54px 0}
-  h2{font-size:26px; margin-bottom:8px}
-  .lead{color:var(--muted); margin-bottom:28px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-  .feat{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
-  }
-  .feat .ico{font-size:26px; margin-bottom:10px}
-  .feat h3{font-size:17px; margin-bottom:6px}
-  .feat p{color:var(--muted); font-size:14.5px}
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  .chart{
-    background:var(--bg2); border:1px solid var(--line); border-radius:16px;
-    padding:24px; display:flex; flex-wrap:wrap; gap:18px; justify-content:center; align-items:center;
-  }
-  .chart .pair{display:flex; align-items:center; gap:8px; color:var(--muted); font-size:14px}
-  .dot{width:16px;height:16px;border-radius:50%}
-  .dot.f{background:var(--fire)} .dot.w{background:var(--water)}
-  .dot.n{background:var(--wind)} .dot.e{background:var(--earth)}
-
-  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
-  footer a{margin:0 10px}
-  .divider{height:1px;background:var(--line);max-width:880px;margin:0 auto}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
 
 <header>
   <div class="wrap">
-    <div class="runes">
-      <span class="rune f">🔥</span>
-      <span class="rune w">💧</span>
-      <span class="rune n">💨</span>
-      <span class="rune e">🌍</span>
-    </div>
-    <h1>룬링크 TD</h1>
-    <p class="sub">RuneLink TD — 원소 룬으로 막아내는 웨이브 디펜스</p>
-    <div class="badge">Android · 싱글플레이 · 무료 · 오프라인 플레이</div>
-    <div class="cta">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.runelinktd">Google Play 에서 받기</a>
-    </div>
+    <img class="feature ko" src="img/feature_ko.jpg" alt="룬링크 TD">
+    <img class="feature en" src="img/feature_en.jpg" alt="RuneLink TD">
+    <p class="tagline ko">원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이.</p>
+    <p class="tagline en">Place elemental runes, link them together, hold the line. 100 stages, offline.</p>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.runelinktd">Google Play에서 보기</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.runelinktd">Get it on Google Play</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>게임 소개</h2>
-    <p class="lead">
-      불·물·바람·땅 네 가지 원소 룬을 격자에 배치하고, 인접한 룬을
-      <strong>링크(공명)</strong>로 조합해 강력한 광역 효과를 터뜨리세요.
-      속성 상성을 읽고 룬을 합성·강화하며 100개 스테이지를 돌파하는
-      전략 웨이브 디펜스 게임입니다.
-    </p>
-
-    <div class="grid">
-      <div class="feat">
-        <div class="ico">🧩</div>
-        <h3>원소 링크 시스템</h3>
-        <p>인접한 룬 2~4개를 연결해 폭풍화염·대지균열·빙결 등 광역 공명을 발동. 같은 속성 링크는 사거리, 혼합 링크는 빠른 회전으로 갈립니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⚔️</div>
-        <h3>속성 상성</h3>
-        <p>강점은 ×2.0, 약점은 ×0.3. 스테이지마다 등장 속성이 치우쳐 있어 적 구성을 읽고 빌드를 바꿔야 합니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🔮</div>
-        <h3>비전룬 (컨트롤)</h3>
-        <p>룬을 길게 눌러 무장해제·감속·약화·기절 중 하나로 전환. 피해는 0이지만 무적·면역까지 뚫는 광역 제어 수단입니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🏰</div>
-        <h3>100 스테이지 · 10개 장</h3>
-        <p>장마다 새로운 적과 보스가 등장. 자폭·잠수·부활·분신·결계 등 20종 이상의 특수 메커니즘.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⭐</div>
-        <h3>영구 강화 &amp; 도전과제</h3>
-        <p>코어로 8개 강화 트리에 자유 투자. 40개 도전과제는 각각 최대 40단계까지 이어집니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🔀</div>
-        <h3>룬 합성 · 구매 레벨</h3>
-        <p>같은 룬을 겹쳐 최대 5단계까지 합성. 구매 레벨을 올리면 높은 등급 룬을 곧바로 배치할 수 있습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎚️</div>
-        <h3>난이도 3종</h3>
-        <p>쉬움·보통·어려움을 설정에서 언제든 전환. 난이도별로 진행·강화가 따로 저장돼 각각 새 게임처럼 즐길 수 있습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎓</div>
-        <h3>따라하기 튜토리얼</h3>
-        <p>실제 맵에서 배치·상성·합성·링크·비전룬을 직접 따라 해보며 익히는 10웨이브 입문 코스.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">📴</div>
-        <h3>오프라인 · 8개 언어</h3>
-        <p>계정 가입 없이 즉시 플레이. 한국어·영어·일본어·중국어·스페인어·독일어·프랑스어·베트남어를 지원합니다.</p>
-      </div>
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img class="" src="img/ss_ko_01.jpg" alt="정령의 길 마지막 웨이브" loading="lazy">
+      <img class="" src="img/ss_ko_02.jpg" alt="링크 공명 발동" loading="lazy">
+      <img class="" src="img/ss_ko_03.jpg" alt="적 분열과 비전룬" loading="lazy">
+      <img class="" src="img/ss_ko_04.jpg" alt="용암 협곡 보스전" loading="lazy">
+      <img class="" src="img/ss_ko_05.jpg" alt="룬 강화" loading="lazy">
+      <img class="" src="img/ss_ko_06.jpg" alt="스테이지 선택" loading="lazy">
+      <img class="" src="img/ss_ko_07.jpg" alt="메인 메뉴" loading="lazy">
+    </div>
+    <div class="shots en">
+      <img class="" src="img/ss_en_01.jpg" alt="Last waves on Spirit Path" loading="lazy">
+      <img class="" src="img/ss_en_02.jpg" alt="Enemy split and resonance" loading="lazy">
+      <img class="" src="img/ss_en_03.jpg" alt="Battle with an Arcane Rune" loading="lazy">
+      <img class="" src="img/ss_en_04.jpg" alt="Lava Canyon boss wave" loading="lazy">
+      <img class="" src="img/ss_en_05.jpg" alt="Rune upgrades" loading="lazy">
+      <img class="" src="img/ss_en_06.jpg" alt="Stage select" loading="lazy">
+      <img class="" src="img/ss_en_07.jpg" alt="Main menu" loading="lazy">
     </div>
   </div>
 </section>
@@ -160,27 +114,53 @@
 
 <section>
   <div class="wrap">
-    <h2>속성 상성</h2>
-    <p class="lead">네 원소가 가위바위보처럼 맞물립니다.</p>
-    <div class="chart">
-      <div class="pair"><span class="dot f"></span>불 &nbsp;→ 강함 →&nbsp; <span class="dot e"></span>땅</div>
-      <div class="pair"><span class="dot e"></span>땅 &nbsp;→ 강함 →&nbsp; <span class="dot n"></span>바람</div>
-      <div class="pair"><span class="dot n"></span>바람 &nbsp;→ 강함 →&nbsp; <span class="dot w"></span>물</div>
-      <div class="pair"><span class="dot w"></span>물 &nbsp;→ 강함 →&nbsp; <span class="dot f"></span>불</div>
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">불, 물, 바람, 땅. 네 원소의 룬을 격자에 놓고 이웃한 룬끼리 링크로 이어 붙이세요. 룬 하나의 성능보다 옆에 무엇을 놓아 어떤 링크를 만드느냐가 승패를 가르는 웨이브 디펜스입니다.</p>
+    <p class="lead en">Fire, Water, Wind, Earth. Place runes of the four elements on the grid and link neighbours together. In this wave defense, what wins is not how strong one rune is, but what you put next to it and which link it forms.</p>
+    <div class="grid ko">
+      <div class="feat"><h3>링크(공명) 시스템</h3><p>인접한 룬 2~4개가 이어지면 링크가 발동합니다. 같은 속성끼리는 사거리가 늘고, 다른 속성끼리는 폭풍화염, 대지균열, 빙결, 용암 같은 광역 공명이 터집니다.</p></div>
+      <div class="feat"><h3>속성 상성</h3><p>강점 속성에는 2배, 약점 속성에는 0.3배 피해. 스테이지마다 적 속성이 치우쳐 있어 그에 맞는 조합을 새로 짜야 합니다.</p></div>
+      <div class="feat"><h3>비전룬</h3><p>룬을 길게 누르면 비전룬으로 바뀝니다. 피해는 없지만 무장해제, 감속, 약화, 기절을 광역으로 걸고 무적과 상태이상 면역까지 뚫습니다.</p></div>
+      <div class="feat"><h3>10개 장 100스테이지</h3><p>장마다 경로와 적이 다릅니다. 분열, 소환, 자폭, 잠수, 부활, 결계 등 20종이 넘는 특수 능력과 스테이지마다 다른 100종의 보스가 등장합니다.</p></div>
+      <div class="feat"><h3>합성과 영구 강화</h3><p>같은 룬을 겹쳐 최대 5단계까지 합성합니다. 클리어로 얻은 코어는 8개 강화 트리에 투자하고, 40개 도전과제는 각각 40단계까지 이어집니다.</p></div>
+      <div class="feat"><h3>난이도 3종과 튜토리얼</h3><p>쉬움, 보통, 어려움은 진행도와 강화가 따로 저장됩니다. 처음이라면 실제 맵에서 따라 하는 10웨이브 튜토리얼로 시작하세요.</p></div>
     </div>
+    <div class="grid en">
+      <div class="feat"><h3>Link (Resonance) system</h3><p>Connect 2 to 4 adjacent runes to trigger a link. Same-element links extend range, while mixed-element links unleash area blasts like Storm Flame, Earth Crack, Freeze and Lava.</p></div>
+      <div class="feat"><h3>Elemental matchups</h3><p>Deal twice the damage to a weak element and a third of it to a strong one. Each stage leans toward certain enemy elements, so you rebuild for every stage.</p></div>
+      <div class="feat"><h3>Arcane Rune</h3><p>Long-press a rune to turn it into an Arcane Rune. It deals no damage, but applies Disarm, Slow, Weaken or Stun over an area and breaks through invulnerability and status immunity.</p></div>
+      <div class="feat"><h3>100 stages, 10 chapters</h3><p>Every chapter brings new paths and enemies. Splitters, summoners, bombers, divers, revivers, wards and more, over 20 special abilities, plus 100 unique bosses.</p></div>
+      <div class="feat"><h3>Merging and upgrades</h3><p>Stack identical runes to merge them up to level 5. Invest cores from clears across 8 upgrade trees, and work through 40 achievements with 40 tiers each.</p></div>
+      <div class="feat"><h3>Three difficulties and a tutorial</h3><p>Easy, Normal and Hard each keep their own progress and upgrades. New to the genre? A hands-on 10-wave tutorial on a real map shows you the ropes.</p></div>
+    </div>
+    <p class="note ko">한국어, 영어, 일본어, 중국어, 스페인어, 독일어, 프랑스어, 베트남어를 지원합니다. 무료이며 광고가 포함되어 있고, 인앱 결제는 없습니다. 코어를 더 받는 보상형 광고는 직접 눌렀을 때만 재생됩니다. 계정 가입 없이 바로 시작하고 인터넷 없이도 플레이할 수 있으며, 진행 기록은 기기에 저장됩니다.</p>
+    <p class="note en">Available in Korean, English, Japanese, Chinese, Spanish, German, French and Vietnamese. Free to play with ads and no in-app purchases. The rewarded ad for extra cores only plays when you tap it. No account needed, playable offline, and progress is saved on your device.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>
-      <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
-      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
-    </div>
-    <p style="margin-top:14px">© 2026 HappyLucky · 룬링크 TD (RuneLink TD)</p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
 </body>
 </html>

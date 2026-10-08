@@ -1,0 +1,59 @@
+{
+  "name": { "ko": "룬링크 TD", "en": "RuneLink TD" },
+  "description": {
+    "ko": "룬링크 TD. 불, 물, 바람, 땅 원소 룬을 배치하고 링크로 이어 막아내는 전략 타워 디펜스. 10개 장 100스테이지, 오프라인 플레이.",
+    "en": "RuneLink TD. Place Fire, Water, Wind and Earth runes and link them together in a strategy tower defense with 100 stages across 10 chapters. Playable offline."
+  },
+  "theme": { "bg": "#0d0a1c", "bg2": "#151030", "card": "#1b1538", "line": "#352a5e", "accent": "#c8a8ff", "button": "#7a4fd8", "outline": "#1c0f3a" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이.",
+    "en": "Place elemental runes, link them together, hold the line. 100 stages, offline."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "정령의 길 마지막 웨이브" },
+      { "file": "img/ss_ko_02.jpg", "alt": "링크 공명 발동" },
+      { "file": "img/ss_ko_03.jpg", "alt": "적 분열과 비전룬" },
+      { "file": "img/ss_ko_04.jpg", "alt": "용암 협곡 보스전" },
+      { "file": "img/ss_ko_05.jpg", "alt": "룬 강화" },
+      { "file": "img/ss_ko_06.jpg", "alt": "스테이지 선택" },
+      { "file": "img/ss_ko_07.jpg", "alt": "메인 메뉴" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Last waves on Spirit Path" },
+      { "file": "img/ss_en_02.jpg", "alt": "Enemy split and resonance" },
+      { "file": "img/ss_en_03.jpg", "alt": "Battle with an Arcane Rune" },
+      { "file": "img/ss_en_04.jpg", "alt": "Lava Canyon boss wave" },
+      { "file": "img/ss_en_05.jpg", "alt": "Rune upgrades" },
+      { "file": "img/ss_en_06.jpg", "alt": "Stage select" },
+      { "file": "img/ss_en_07.jpg", "alt": "Main menu" }
+    ]
+  },
+  "lead": {
+    "ko": "불, 물, 바람, 땅. 네 원소의 룬을 격자에 놓고 이웃한 룬끼리 링크로 이어 붙이세요. 룬 하나의 성능보다 옆에 무엇을 놓아 어떤 링크를 만드느냐가 승패를 가르는 웨이브 디펜스입니다.",
+    "en": "Fire, Water, Wind, Earth. Place runes of the four elements on the grid and link neighbours together. In this wave defense, what wins is not how strong one rune is, but what you put next to it and which link it forms."
+  },
+  "features": {
+    "ko": [
+      { "title": "링크(공명) 시스템", "text": "인접한 룬 2~4개가 이어지면 링크가 발동합니다. 같은 속성끼리는 사거리가 늘고, 다른 속성끼리는 폭풍화염, 대지균열, 빙결, 용암 같은 광역 공명이 터집니다." },
+      { "title": "속성 상성", "text": "강점 속성에는 2배, 약점 속성에는 0.3배 피해. 스테이지마다 적 속성이 치우쳐 있어 그에 맞는 조합을 새로 짜야 합니다." },
+      { "title": "비전룬", "text": "룬을 길게 누르면 비전룬으로 바뀝니다. 피해는 없지만 무장해제, 감속, 약화, 기절을 광역으로 걸고 무적과 상태이상 면역까지 뚫습니다." },
+      { "title": "10개 장 100스테이지", "text": "장마다 경로와 적이 다릅니다. 분열, 소환, 자폭, 잠수, 부활, 결계 등 20종이 넘는 특수 능력과 스테이지마다 다른 100종의 보스가 등장합니다." },
+      { "title": "합성과 영구 강화", "text": "같은 룬을 겹쳐 최대 5단계까지 합성합니다. 클리어로 얻은 코어는 8개 강화 트리에 투자하고, 40개 도전과제는 각각 40단계까지 이어집니다." },
+      { "title": "난이도 3종과 튜토리얼", "text": "쉬움, 보통, 어려움은 진행도와 강화가 따로 저장됩니다. 처음이라면 실제 맵에서 따라 하는 10웨이브 튜토리얼로 시작하세요." }
+    ],
+    "en": [
+      { "title": "Link (Resonance) system", "text": "Connect 2 to 4 adjacent runes to trigger a link. Same-element links extend range, while mixed-element links unleash area blasts like Storm Flame, Earth Crack, Freeze and Lava." },
+      { "title": "Elemental matchups", "text": "Deal twice the damage to a weak element and a third of it to a strong one. Each stage leans toward certain enemy elements, so you rebuild for every stage." },
+      { "title": "Arcane Rune", "text": "Long-press a rune to turn it into an Arcane Rune. It deals no damage, but applies Disarm, Slow, Weaken or Stun over an area and breaks through invulnerability and status immunity." },
+      { "title": "100 stages, 10 chapters", "text": "Every chapter brings new paths and enemies. Splitters, summoners, bombers, divers, revivers, wards and more, over 20 special abilities, plus 100 unique bosses." },
+      { "title": "Merging and upgrades", "text": "Stack identical runes to merge them up to level 5. Invest cores from clears across 8 upgrade trees, and work through 40 achievements with 40 tiers each." },
+      { "title": "Three difficulties and a tutorial", "text": "Easy, Normal and Hard each keep their own progress and upgrades. New to the genre? A hands-on 10-wave tutorial on a real map shows you the ropes." }
+    ]
+  },
+  "note": {
+    "ko": "한국어, 영어, 일본어, 중국어, 스페인어, 독일어, 프랑스어, 베트남어를 지원합니다. 무료이며 광고가 포함되어 있고, 인앱 결제는 없습니다. 코어를 더 받는 보상형 광고는 직접 눌렀을 때만 재생됩니다. 계정 가입 없이 바로 시작하고 인터넷 없이도 플레이할 수 있으며, 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in Korean, English, Japanese, Chinese, Spanish, German, French and Vietnamese. Free to play with ads and no in-app purchases. The rewarded ad for extra cores only plays when you tap it. No account needed, playable offline, and progress is saved on your device."
+  }
+}

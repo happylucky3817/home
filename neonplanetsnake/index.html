@@ -3,165 +3,107 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neon Planet: Snake</title>
-<meta name="description" content="Neon Planet: Snake — 행성 표면을 기어 다니며 먹이를 삼켜 몸을 늘리고, 남을 가둬 잡아먹는 구면 slither. 10분을 버티고 1위로 마치면 클리어.">
+<title>네온 플래닛: 스네이크 (Neon Planet: Snake)</title>
+<meta name="description" content="네온 플래닛: 스네이크. 끝이 없는 공 모양 행성에서 벌어지는 뱀 서바이벌입니다. 10분을 버티고 1위면 클리어, 행성 40개.">
+<meta property="og:title" content="네온 플래닛: 스네이크 (Neon Planet: Snake)">
+<meta property="og:description" content="끝이 없는 행성에서 벌어지는 뱀 서바이벌. 10분 버텨 1등이면 클리어!">
+<meta property="og:image" content="img/feature_ko.jpg">
+<link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#05050c; --bg2:#0b0b18; --card:#0f1020; --line:#1e2140;
-    --txt:#dfe6f5; --muted:#8891b3; --accent:#4de8ff;
-    --lime:#7fff9e; --gold:#ffd86b; --rose:#ff5ab8; --violet:#c07bff;
-  }
+  :root{ --bg:#07061a; --bg2:#0d0b26; --card:#131132; --line:#2a2760; --txt:#eef1fb; --muted:#a6afcf; --accent:#5ce8ff; --btn:#d6338f; --outline:#2a0838; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.65;
-    -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
   a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:880px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  /* Hero */
-  header{
-    position:relative; overflow:hidden; text-align:center;
-    background:
-      radial-gradient(900px 460px at 50% -8%, rgba(77,232,255,.16) 0%, rgba(5,5,12,0) 64%),
-      radial-gradient(700px 380px at 78% 12%, rgba(255,90,184,.12) 0%, rgba(5,5,12,0) 60%);
-    padding:76px 0 58px;
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .orb{
-    width:104px; height:104px; margin:0 auto 24px; border-radius:50%;
-    background:radial-gradient(circle at 34% 30%, #7ef0ff 0%, #2aa6e8 42%, #123a80 78%, #08122c 100%);
-    box-shadow:0 0 34px rgba(77,232,255,.42), inset -10px -12px 26px rgba(0,0,0,.55);
-    position:relative;
-  }
-  .orb::after{
-    content:""; position:absolute; inset:-19px -30px; border-radius:50%;
-    border:2px solid rgba(255,90,184,.55); transform:rotate(-24deg);
-  }
-  h1{
-    font-size:clamp(34px,7vw,58px); letter-spacing:2px; margin-bottom:4px;
-    color:#8ef2ff; text-shadow:0 0 22px rgba(77,232,255,.5);
-  }
-  h1 .b{color:var(--lime); text-shadow:0 0 22px rgba(127,255,158,.45)}
-  .sub{color:var(--muted); font-size:18px}
-  .badge{
-    display:inline-block; margin-top:18px; padding:6px 14px; font-size:13px;
-    color:var(--muted); border:1px solid var(--line); border-radius:999px; background:rgba(15,16,32,.7);
-  }
-  .cta{margin-top:30px}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
+
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
   .btn{
-    display:inline-block; padding:13px 26px; border-radius:12px; font-weight:600;
-    background:linear-gradient(135deg,#22d3ee,#7fff9e); color:#06121a;
-    box-shadow:0 8px 26px rgba(77,232,255,.28);
+    display:inline-block; margin-top:24px; padding:14px 30px; border-radius:6px; font-weight:700;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.08)}
-  .note{margin-top:12px; color:var(--muted); font-size:13px}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
 
-  /* Sections */
-  section{padding:54px 0}
-  h2{font-size:26px; margin-bottom:8px; color:#cfeaff}
-  .lead{color:var(--muted); margin-bottom:28px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
-  .feat{
-    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px;
-  }
-  .feat .ico{font-size:26px; margin-bottom:10px}
-  .feat h3{font-size:17px; margin-bottom:6px; color:#e8f2ff}
-  .feat p{color:var(--muted); font-size:14.5px}
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  .rules{
-    background:var(--bg2); border:1px solid var(--line); border-radius:16px; padding:8px 4px;
-  }
-  .rule{display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid rgba(30,33,64,.7)}
-  .rule:last-child{border-bottom:none}
-  .rule .k{flex:0 0 96px; color:var(--accent); font-weight:600; font-size:14.5px}
-  .rule .v{color:var(--muted); font-size:14.5px}
-  .rule .v strong{color:var(--txt)}
-
-  .chips{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
-  .chip{
-    padding:9px 15px; background:var(--card); border:1px solid var(--line);
-    border-radius:999px; font-size:14px; color:var(--txt);
-  }
-
-  footer{border-top:1px solid var(--line); padding:36px 0; color:var(--muted); font-size:14px; text-align:center}
-  footer a{margin:0 10px}
-  .divider{height:1px; background:var(--line); max-width:880px; margin:0 auto}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
-<body>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
 
 <header>
   <div class="wrap">
-    <div class="orb"></div>
-    <h1>NEON PLANET<br><span class="b">S N A K E</span></h1>
-    <p class="sub">행성을 휘감아 삼켜라 — 10분을 버티고 1위로</p>
-    <div class="badge">모바일 · Android · 싱글플레이 · 무료</div>
-    <div class="cta">
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsnake">Google Play 에서 보기</a>
-      <p class="note">출시 준비 중입니다 — 스토어 등록이 끝나면 링크가 열립니다.</p>
-    </div>
+    <img class="feature ko" src="img/feature_ko.jpg" alt="네온 플래닛: 스네이크">
+    <img class="feature en" src="img/feature_en.jpg" alt="Neon Planet: Snake">
+    <p class="tagline ko">끝이 없는 행성에서 벌어지는 뱀 서바이벌. 10분 버텨 1등이면 클리어!</p>
+    <p class="tagline en">Coil the planet and devour. Survive 10 minutes in 1st place to clear the stage.</p>
+    <a class="btn ko" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsnake">Google Play에서 보기</a>
+    <a class="btn en" href="https://play.google.com/store/apps/details?id=com.happylucky.neonplanetsnake">Get it on Google Play</a>
   </div>
 </header>
 
 <section>
   <div class="wrap">
-    <h2>게임 소개</h2>
-    <p class="lead">
-      공 모양 행성 표면을 기어 다니며 먹이를 삼켜 몸을 늘리고, 남을 가둬 잡아먹는
-      <strong>구면 slither</strong> 입니다. 사각 맵과 달리 <strong>끝이 없고, 지평선 너머가
-      물리적으로 안 보입니다.</strong> 반대편에서 누가 자라고 있는지 모르는 것이 그대로
-      긴장이 되고, 그래서 레이더가 장식이 아니라 필수 장치가 됩니다.
-      <strong>10분을 버티고 그 시점에 1위</strong>면 스테이지 클리어 — 순위표가 곧 목표판입니다.
-    </p>
-
-    <div class="grid">
-      <div class="feat">
-        <div class="ico">🪐</div>
-        <h3>구면 행성 40개</h3>
-        <p>난이도는 공격성 · 사냥 사거리 · 보충 속도 · 먹이 · 장애물 다섯 축으로 갈립니다. 색도 이름도 행성마다 다릅니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🕹️</div>
-        <h3>가상 조이스틱</h3>
-        <p>화면 아무 데나 짚은 자리가 중심입니다 — 손이 판을 안 가립니다. 터치 조준으로 바꿀 수도 있습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">⚡</div>
-        <h3>두 번 두드려 달리기</h3>
-        <p>길이를 소모하고 꼬리에 먹이를 흘립니다. 쫓을 때도 도망칠 때도 대가가 붙습니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🐍</div>
-        <h3>언제나 20마리</h3>
-        <p>자리가 비면 신출내기가 채웁니다. 총 투입량에 상한이 없어 판은 끝까지 붐빕니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎯</div>
-        <h3>사냥하는 AI</h3>
-        <p>먹이만 줍지 않습니다. 자기보다 크지 않은 놈의 앞을 자르고, 붙을 때 달리고, 큰 놈이 붙으면 도망칩니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">💀</div>
-        <h3>죽어도 판이 안 끝난다</h3>
-        <p>5초 뒤 신출내기 크기로 다시 들어옵니다. 잃는 것은 시간이 아니라 그때까지 키운 몸입니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎨</div>
-        <h3>색 16 · 무늬 10</h3>
-        <p>이름까지 정합니다. 색도 무늬도 나만 쓰기 때문에, 몸이 길어져도 어느 줄이 내 몸인지 갈립니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">🎵</div>
-        <h3>외부 음원 0</h3>
-        <p>배경음악 7곡과 효과음 10종을 전부 코드로 합성했습니다. 곡은 스테이지가 정합니다.</p>
-      </div>
-      <div class="feat">
-        <div class="ico">📴</div>
-        <h3>오프라인 · 계정 없음</h3>
-        <p>가입 없이 바로 시작합니다. 진행 상황은 기기 안에만 저장됩니다. 인앱 결제도 없습니다.</p>
-      </div>
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img class="" src="img/ss_ko_01.jpg" alt="붐비는 행성 전투" loading="lazy">
+      <img class="" src="img/ss_ko_02.jpg" alt="1위를 유지하는 긴 몸" loading="lazy">
+      <img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" loading="lazy">
+      <img class="" src="img/ss_ko_04.jpg" alt="외형 꾸미기" loading="lazy">
+      <img class="" src="img/ss_ko_05.jpg" alt="설정" loading="lazy">
+      <img class="" src="img/ss_ko_06.jpg" alt="타이틀 화면" loading="lazy">
+    </div>
+    <div class="shots en">
+      <img class="" src="img/ss_en_01.jpg" alt="Crowded planet battle" loading="lazy">
+      <img class="" src="img/ss_en_02.jpg" alt="Holding 1st place with a long body" loading="lazy">
+      <img class="" src="img/ss_en_03.jpg" alt="Stage select" loading="lazy">
+      <img class="" src="img/ss_en_04.jpg" alt="Snake customization" loading="lazy">
+      <img class="" src="img/ss_en_05.jpg" alt="Settings" loading="lazy">
+      <img class="" src="img/ss_en_06.jpg" alt="Title screen" loading="lazy">
     </div>
   </div>
 </section>
@@ -170,63 +112,53 @@
 
 <section>
   <div class="wrap">
-    <h2>규칙</h2>
-    <p class="lead">배울 것이 적습니다. 다섯 줄이면 끝납니다.</p>
-    <div class="rules">
-      <div class="rule">
-        <div class="k">죽음</div>
-        <div class="v"><strong>내 머리가 남의 몸이나 장애물에 닿을 때만.</strong> 몸통끼리는 서로 통과합니다.</div>
-      </div>
-      <div class="rule">
-        <div class="k">정면 충돌</div>
-        <div class="v">머리 대 머리는 <strong>큰 쪽이 삽니다.</strong> 크기 차가 6% 이내면 둘 다 죽습니다.</div>
-      </div>
-      <div class="rule">
-        <div class="k">끼어들기</div>
-        <div class="v">나란히 달리다 <strong>한쪽만 꺾어서 붙으면 꺾은 쪽이 죽습니다.</strong> 둘 다 직진이었으면 아무도 안 죽습니다.</div>
-      </div>
-      <div class="rule">
-        <div class="k">성장</div>
-        <div class="v">질량이 굵기가 아니라 <strong>길이로</strong> 갑니다. 몸이 곧 벽이라 길이가 무기입니다.</div>
-      </div>
-      <div class="rule">
-        <div class="k">먹이</div>
-        <div class="v">알갱이는 곁가지입니다. 크게 자라려면 <strong>싸움에서 이겨 남의 몸을 먹어야</strong> 합니다.</div>
-      </div>
-      <div class="rule">
-        <div class="k">클리어</div>
-        <div class="v"><strong>10분을 버티고, 그 시점에 1위.</strong> 둘 다여야 합니다 — 버티기만 하면 숨어 다니는 것이 최적이 되고, 1위만 보면 스쳐 가는 1위로 클리어가 떨어집니다.</div>
-      </div>
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">공 모양 행성 표면을 기어 다니며 먹이를 삼켜 몸을 늘리고, 다른 뱀을 가둬 잡아먹는 뱀 서바이벌입니다. 행성에는 끝이 없고 지평선 너머가 보이지 않아, 반대편에서 누가 자라고 있는지 레이더로 살펴야 합니다. 10분을 버티고 그 시점에 1위면 클리어입니다.</p>
+    <p class="lead en">Crawl across the surface of a spherical planet, swallow food to grow longer, and trap other snakes to eat them. The planet has no edge and the far side is hidden past the horizon, so the radar is how you find out who is growing out of sight. Survive 10 minutes and be in 1st place at that moment to clear the stage.</p>
+    <div class="grid ko">
+      <div class="feat"><h3>행성 40개</h3><p>난이도는 공격성, 사냥 사거리, 보충 속도, 먹이, 장애물 다섯 가지로 달라집니다. 행성마다 색과 이름이 다르고, 지형은 스테이지마다 고정입니다.</p></div>
+      <div class="feat"><h3>간단한 규칙</h3><p>내 머리가 다른 뱀의 몸이나 장애물에 닿을 때만 죽고, 몸통끼리는 서로 통과합니다. 머리끼리 부딪히면 큰 쪽이 살아남습니다. 몸이 길수록 강해집니다.</p></div>
+      <div class="feat"><h3>사냥하는 AI</h3><p>행성에는 언제나 20마리가 있습니다. AI는 먹이만 줍지 않고, 작은 뱀의 앞을 막고, 큰 뱀이 다가오면 도망칩니다.</p></div>
+      <div class="feat"><h3>죽어도 게임은 계속</h3><p>5초 뒤 작은 크기로 다시 들어옵니다. 광고를 보면 크기를 유지한 채 부활할 수도 있습니다. 한 게임에 한 번, 직접 선택할 때만입니다.</p></div>
+      <div class="feat"><h3>조작과 달리기</h3><p>가상 조이스틱이 기본이며, 화면을 누른 곳이 중심이 됩니다. 설정에서 터치 조준으로 바꿀 수 있습니다. 두 번 누르면 달리고, 달리는 동안 길이가 줄어듭니다.</p></div>
+      <div class="feat"><h3>내 뱀 꾸미기</h3><p>이름, 색 24종, 무늬 16종을 고릅니다. 고른 색과 무늬는 나만 쓰기 때문에 화면이 붐벼도 내 뱀을 바로 찾을 수 있습니다.</p></div>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section>
-  <div class="wrap">
-    <h2>편의 기능</h2>
-    <p class="lead">한 판이 10분입니다. 그 10분을 통째로 비워 두지 않아도 되게 만들었습니다.</p>
-    <div class="chips">
-      <span class="chip">↻ 이어하기 — 앱을 내리기만 해도 판이 저장됩니다</span>
-      <span class="chip">★ 스테이지별 최고 길이 기록</span>
-      <span class="chip">↩ 뒤로 가기는 한 단계 위로 — 앱이 안 꺼집니다</span>
-      <span class="chip">🌐 한국어 · English</span>
-      <span class="chip">🔊 배경음악 · 효과음 따로 4단</span>
+    <div class="grid en">
+      <div class="feat"><h3>40 planets</h3><p>Difficulty varies across five axes: aggression, hunting range, respawn pace, food, and obstacles. Every planet has its own color and name, and terrain is fixed per stage.</p></div>
+      <div class="feat"><h3>Simple rules</h3><p>You die only when your head touches another body or an obstacle, and bodies pass through each other. Head to head, the bigger one lives. The longer you are, the stronger you get.</p></div>
+      <div class="feat"><h3>AI that hunts</h3><p>Twenty snakes are always on the planet. They don&#39;t just pick up food. They cut off smaller snakes and flee when something bigger comes.</p></div>
+      <div class="feat"><h3>Dying doesn&#39;t end the run</h3><p>You come back five seconds later at rookie size. You can also watch an ad to revive at your current size, once per run and only if you choose to.</p></div>
+      <div class="feat"><h3>Controls and dashing</h3><p>A floating virtual stick is the default, centered wherever you touch. Switch to touch aiming in settings. Double tap to dash, which burns length as you go.</p></div>
+      <div class="feat"><h3>Make the snake yours</h3><p>Pick a name, one of 24 colors, and one of 16 patterns. Your color and pattern are yours alone, so you can spot your snake even on a crowded screen.</p></div>
     </div>
+    <p class="note ko">한국어와 영어를 지원합니다. 무료이며 광고가 포함되어 있고, 인앱 결제는 없습니다. 부활 광고는 직접 선택할 때만 재생됩니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다. 게임 도중 앱을 나가도 진행 중인 게임이 저장되어 이어서 할 수 있습니다.</p>
+    <p class="note en">Available in English and Korean. Free to play with ads, and no in-app purchases. The revive ad plays only when you choose it. No account needed; progress is saved on your device. Leave mid-run and the game is saved so you can pick up where you left off.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>
-      <a href="privacy.html">개인정보처리방침</a> ·
-      <a href="privacy.html#en">Privacy Policy (EN)</a> ·
-      <a href="mailto:happylucky3817@gmail.com">문의하기</a>
-    </div>
-    <p style="margin-top:14px">© 2026 HappyLucky · Neon Planet: Snake</p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
 </body>
 </html>

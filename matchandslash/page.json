@@ -1,0 +1,57 @@
+{
+  "name": { "ko": "매치앤슬래시", "en": "Match & Slash" },
+  "description": {
+    "ko": "매치앤슬래시. 내가 구성한 파티로 퍼즐을 맞춰 싸우는 퍼즐 RPG. 전사, 마법사, 힐러, 궁수 카드 100장과 적 60종.",
+    "en": "Match & Slash. A puzzle RPG where matching tiles sends your own party into battle. 100 Warrior, Mage, Healer, and Archer cards and 60 enemies."
+  },
+  "theme": { "bg": "#0e0f17", "bg2": "#151722", "card": "#1b1e2c", "line": "#4a4334", "accent": "#f2c94c", "button": "#dc8022", "outline": "#3a2408" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "내가 구성한 파티로 퍼즐을 맞춰 싸우는 퍼즐 RPG",
+    "en": "A puzzle RPG. Match tiles and the party you built does the fighting."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면과 출전 파티" },
+      { "file": "img/ss_ko_02.jpg", "alt": "7x7 퍼즐 전투" },
+      { "file": "img/ss_ko_03.jpg", "alt": "챕터 1 스테이지 선택" },
+      { "file": "img/ss_ko_04.jpg", "alt": "파티 편성" },
+      { "file": "img/ss_ko_05.jpg", "alt": "카드 소환" },
+      { "file": "img/ss_ko_06.jpg", "alt": "상점" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Main screen and party" },
+      { "file": "img/ss_en_02.jpg", "alt": "7x7 puzzle battle" },
+      { "file": "img/ss_en_03.jpg", "alt": "Chapter 1 stage select" },
+      { "file": "img/ss_en_04.jpg", "alt": "Party setup" },
+      { "file": "img/ss_en_05.jpg", "alt": "Card summoning" },
+      { "file": "img/ss_en_06.jpg", "alt": "Shop" }
+    ]
+  },
+  "lead": {
+    "ko": "전사, 마법사, 힐러, 궁수. 내가 뽑고 키운 넷이 함께 싸웁니다. 검을 맞추면 전사가 달려들고, 구슬을 맞추면 마법사가 주문을 씁니다. 퍼즐을 맞추는 대로 파티가 움직입니다.",
+    "en": "Warrior, Mage, Healer, Archer. The four you pulled and raised fight together. Match swords and the Warrior charges in. Match orbs and the Mage casts. Your party moves the way you match."
+  },
+  "features": {
+    "ko": [
+      { "title": "퍼즐로 움직이는 파티", "text": "7x7 보드에서 같은 무늬를 셋 이상 맞추면 그 직업 카드의 스킬 게이지가 찹니다. 게이지가 다 차면 스킬을 씁니다." },
+      { "title": "19초 퍼즐, 이어지는 전투", "text": "19초 동안 자유롭게 퍼즐을 맞추고, 시간이 끝나면 전투가 한꺼번에 진행됩니다." },
+      { "title": "약점을 노리세요", "text": "중갑에는 마법사, 언데드에는 힐러. 적 타입마다 잘 드는 직업이 다릅니다. 회복만 하던 힐러가 언데드 앞에서는 가장 강한 딜러가 됩니다." },
+      { "title": "카드 100장", "text": "직업마다 25장, 모두 100장. 뽑고, 키우고, 넷을 골라 내보냅니다. 카드마다 짧은 이야기가 하나씩 붙어 있습니다." },
+      { "title": "적 60종", "text": "중갑, 마법생물, 비행, 언데드, 야수 다섯 타입. 정예와 보스는 한 턴에 두 번 움직입니다." },
+      { "title": "매일 할 거리", "text": "스테이지마다 별 세 개, 출석 보상과 일일 임무. 챕터는 계속 늘어납니다." }
+    ],
+    "en": [
+      { "title": "A party driven by puzzles", "text": "Match three or more of a kind on the 7x7 board to fill that class's skill gauge. When the gauge is full, the card unleashes its skill." },
+      { "title": "19 seconds to match", "text": "Match freely for 19 seconds, then the battle plays out all at once." },
+      { "title": "Hit them where it hurts", "text": "Mages against Armored. Healers against Undead. Every enemy type has a class that cuts through it, and the Healer who only ever mends becomes your hardest hitter against the Undead." },
+      { "title": "100 cards", "text": "Twenty-five per class, one hundred in all. Pull them, raise them, and pick four to send out." },
+      { "title": "60 enemies", "text": "Five types: Armored, Magical, Flying, Undead, and Beast. Elites and bosses act twice a turn." },
+      { "title": "Something every day", "text": "Three stars to earn on every stage, daily check-in rewards, and daily missions. More chapters keep coming." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 광고가 포함되어 있으며 인앱 구매는 없습니다. 전면 광고는 없고, 보상형 광고는 직접 버튼을 누를 때만 재생됩니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Contains ads, with no in-app purchases. There are no interstitial ads, and rewarded ads play only when you tap the button yourself. No account needed; progress is saved on your device."
+  }
+}

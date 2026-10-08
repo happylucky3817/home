@@ -1,0 +1,67 @@
+{
+  "name": { "ko": "프론티어 킹덤", "en": "Frontier Kingdom" },
+  "description": {
+    "ko": "프론티어 킹덤. 길을 놓아 물자를 나르고, 개척지를 왕국으로 키우는 픽셀 건설·물류 시뮬레이션입니다.",
+    "en": "Frontier Kingdom. Lay roads, haul goods, and grow a frontier settlement into a kingdom in this pixel art build and supply sim."
+  },
+  "theme": { "bg": "#0d1410", "bg2": "#12201a", "card": "#16271e", "line": "#2c4d37", "accent": "#e8c66e", "button": "#b8452f", "outline": "#3a160e" },
+  "notice": { "ko": "", "en": "" },
+  "tagline": {
+    "ko": "길을 놓아 물자를 나른다. 개척지를 왕국으로 키우는 건설·물류 시뮬레이션.",
+    "en": "Lay roads, haul goods, grow a frontier camp into a kingdom. Build & supply sim."
+  },
+  "story": {
+    "ko": [
+      "북쪽 끝 얼어붙은 땅에서 서리 부족이 내려와 왕국을 무너뜨렸습니다. 살아남은 사람들은 배를 타고 바다 건너로 피했습니다.",
+      "몇 해가 지나 사람들은 왕국을 되찾기 위해 다시 배에 올랐습니다. 폭풍에 몇 척을 잃고, 남은 배가 옛 왕국 남쪽 끝 해변에 닿았습니다.",
+      "서리 부족은 북쪽 옛 성터 일대를 차지하고 있습니다. 마을을 세우고 힘을 길러 북쪽으로 올라가, 무너진 옛 성터에 성을 다시 세우세요."
+    ],
+    "en": [
+      "The Frost Tribe came down from the frozen far north and destroyed the kingdom. The survivors fled across the sea by ship.",
+      "Years later, the people set sail again to reclaim the kingdom. Some ships were lost in a storm, and the rest reached a beach at the southern tip of the old kingdom.",
+      "The Frost Tribe holds the lands around the old castle site in the north. Build a settlement, grow your strength, march north, and rebuild the castle on the ruins."
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "본부와 길이 이어진 마을" },
+      { "file": "img/ss_ko_02.jpg", "alt": "해변 근처 길 놓기" },
+      { "file": "img/ss_ko_03.jpg", "alt": "건축 트리" },
+      { "file": "img/ss_ko_04.jpg", "alt": "병영의 보병 양성" },
+      { "file": "img/ss_ko_05.jpg", "alt": "보병 부대 선택" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Village connected by roads" },
+      { "file": "img/ss_en_02.jpg", "alt": "Building a road near the beach" },
+      { "file": "img/ss_en_03.jpg", "alt": "Build tree" },
+      { "file": "img/ss_en_04.jpg", "alt": "Training infantry at the barracks" },
+      { "file": "img/ss_en_05.jpg", "alt": "Selecting an infantry squad" }
+    ]
+  },
+  "lead": {
+    "ko": "물자는 저절로 오지 않습니다. 나무를 베면 통나무가 벌목장 앞에 그대로 쌓이고, 제재소까지 길이 놓여 있어야 짐꾼이 짊어지고 걸어갑니다. 길이 없으면 아무것도 움직이지 않고, 길이 멀면 그만큼 늦게 닿습니다. 거리와 운송이 이 게임의 핵심입니다.",
+    "en": "Goods do not teleport. Fell a tree and the log sits in front of the woodcutter's hut until a road reaches the sawmill and a carrier walks it there on foot. No road, nothing moves. A long road means a slow delivery. Distance and haulage are the whole game."
+  },
+  "features": {
+    "ko": [
+      { "title": "두 번 눌러 길 놓기", "text": "시작점과 끝점을 누르면 그 사이가 이어집니다. 나무, 바위, 물은 알아서 돌아갑니다. 원하는 곳으로 지나가게 하려면 중간 지점을 한 번 더 누르세요." },
+      { "title": "이어지는 생산 단계", "text": "통나무가 널빤지가 되고, 밀이 밀가루를 거쳐 빵이 됩니다. 그 빵이 있어야 광부가 일합니다. 한 단계가 막히면 그 뒤가 전부 멈춥니다." },
+      { "title": "망루로 영역 넓히기", "text": "망루를 지으면 안개가 걷히고 영역이 넓어집니다. 넓힌 땅에만 지을 수 있으니 어느 쪽으로 넓힐지가 중요합니다." },
+      { "title": "군대도 물자로 만든다", "text": "병영, 사궁장, 기사관에서 병사를 양성합니다. 병사마다 필요한 물자가 다르고, 기사에게는 빵과 검과 갑옷이 들어갑니다." },
+      { "title": "서리 부족을 몰아내고 성 재건", "text": "북쪽의 서리 부족 거점을 점령하며 올라가세요. 무너진 옛 성터에 성을 다시 세우면 왕국을 되찾습니다." },
+      { "title": "세로 화면, 한 손 조작", "text": "세로 화면에서 한 손으로 플레이합니다. 결제로 앞서 나가는 방법이 없고, 모두가 같은 속도로 짓습니다." }
+    ],
+    "en": [
+      { "title": "Two taps lay a road", "text": "Tap the start, tap the end, and the stretch between them is joined. Trees, rocks, and water are routed around automatically. Tap a point in the middle to make it pass where you want." },
+      { "title": "Chained production lines", "text": "Logs become planks, and wheat becomes flour and then bread. The miner will not work until that bread reaches him. Choke one link and everything behind it stops." },
+      { "title": "Watchtowers push back the fog", "text": "Build a watchtower and the fog lifts as your territory grows. You can only build on your own land, so where you expand matters." },
+      { "title": "An army made of goods", "text": "Train soldiers at the barracks, archery range, and knight hall. Each kind needs different goods. A single knight takes bread, a sword, and armor." },
+      { "title": "Drive out the Frost Tribe", "text": "Capture Frost Tribe strongholds as you push north. Rebuild the castle on the ruined old castle site to reclaim the kingdom." },
+      { "title": "Portrait, one-handed", "text": "Play in portrait mode with one hand. Nothing can be bought to get ahead, and everyone builds at the same pace." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 광고가 포함되어 있으며 인앱 결제는 없습니다. 한 번에 20분을 플레이할 수 있고, 시간이 다 되면 광고를 보고 30분을 연장할 수 있습니다. 시간은 기다리면 조금씩 회복됩니다. 광고 시청은 언제나 직접 선택하며, 게임 도중에 끼어드는 광고는 없습니다. 화면 아래에 배너 광고가 표시됩니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Contains ads, with no in-app purchases. Each session gives you 20 minutes of play. When it runs out, you can watch a rewarded ad for 30 more minutes, and the timer also refills slowly on its own. Watching is always your choice, and no ad interrupts play. A banner is shown at the bottom of the screen. No account needed; progress is saved on your device."
+  }
+}

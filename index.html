@@ -114,7 +114,7 @@
   }
 
   // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
-  // badge: 언어별 추가 표시(예: 광클럽 한국어 화면 "해외 출시"). 빈 문자열이면 안 보인다.
+  // badge: 언어별 추가 표시(예: 광클럽 한국어 화면 "국내 미출시"). 빈 문자열이면 안 보인다.
   function card(a){
     var live = a.status === 'live';
     var store = 'https://play.google.com/store/apps/details?id=' + encodeURIComponent(a.package);
