@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy &amp; Lucky Studio</title>
+<meta name="description" content="Happy &amp; Lucky Studio에서 만든 모바일 게임과 앱 목록입니다.">
+<meta property="og:title" content="Happy &amp; Lucky Studio">
+<meta property="og:description" content="Happy &amp; Lucky Studio에서 만든 모바일 게임과 앱">
+<style>
+  :root{
+    --bg:#0c1020; --bg2:#121833; --card:#161d3a; --card2:#1b2346; --line:#2b3561;
+    --txt:#eef1fb; --muted:#a6afcf; --gold:#f0b44a; --gold2:#e6902a; --outline:#381c12;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold); text-decoration:none}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 20px}
+
+  .lang{display:flex; justify-content:flex-end; gap:6px; padding:14px 20px 0; max-width:1040px; margin:0 auto}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
+  }
+  .lang button.on{color:var(--txt); border-color:var(--gold)}
+
+  header{text-align:center; padding:36px 0 44px}
+  .logo{font-size:42px; font-weight:800; letter-spacing:-0.5px}
+  .logo .amp{color:var(--gold)}
+  .tagline{color:var(--muted); font-size:18px; margin-top:10px}
+
+  section{padding:8px 0 48px}
+  h2{font-size:24px; margin-bottom:18px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px}
+
+  .app{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    display:flex; flex-direction:column; overflow:hidden; transition:border-color .15s, transform .15s;
+  }
+  .app:hover{border-color:var(--gold); transform:translateY(-2px)}
+  .app .main{display:flex; gap:16px; padding:18px 18px 14px; color:var(--txt); flex:1}
+  .app .main:hover{text-decoration:none}
+  .app img{width:84px; height:84px; border-radius:18px; flex:none; background:var(--bg2)}
+  .app h3{font-size:18px; line-height:1.3}
+  .app .genre{
+    display:inline-block; margin:6px 0 8px; padding:1px 9px; border-radius:20px;
+    font-size:12.5px; color:var(--gold); border:1px solid var(--line); background:var(--bg2);
+  }
+  .app p{color:var(--muted); font-size:14.5px}
+  .app .badge{
+    display:inline-block; margin:6px 0 8px 6px; padding:1px 9px; border-radius:20px;
+    font-size:12.5px; color:#9fd8ff; border:1px solid #2f5a7a; background:#132a3d;
+  }
+  .app .badge.note{color:#f3c9a0; border-color:#6a4426; background:#2e1d12}
+  .app.dev{border-style:dashed}
+  .app.dev:not(:has(a)):hover{border-color:var(--line); transform:none}
+  .app .links{display:flex; border-top:1px solid var(--line)}
+  .app .links a{flex:1; text-align:center; padding:11px 0; font-size:14px; font-weight:600}
+  .app .links a + a{border-left:1px solid var(--line)}
+  .app .links a:hover{background:var(--card2); text-decoration:none}
+
+  .empty{color:var(--muted)}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+
+  @media (max-width:420px){
+    .logo{font-size:32px}
+    .grid{grid-template-columns:1fr}
+    .app img{width:68px; height:68px; border-radius:15px}
+  }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="lang">
+  <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+  <button id="b-en" onclick="setLang('en')">English</button>
+</div>
+
+<header>
+  <div class="wrap">
+    <h1 class="logo">Happy <span class="amp">&amp;</span> Lucky Studio</h1>
+    <p class="tagline ko">누구나 가볍게 즐길 수 있는 모바일 게임과 앱을 만듭니다.</p>
+    <p class="tagline en">Mobile games and apps that anyone can pick up and enjoy.</p>
+  </div>
+</header>
+
+<main class="wrap" id="list">
+  <noscript><p class="empty">이 페이지는 JavaScript가 필요합니다. / This page requires JavaScript.</p></noscript>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 Happy &amp; Lucky Studio</p>
+  </div>
+</footer>
+
+<script>
+  // 목록은 apps.json 에서 읽는다.
+  var SECTIONS = [
+    { type: 'game',      ko: '게임', en: 'Games' },
+    { type: 'education', ko: '교육', en: 'Education' }
+  ];
+
+  function esc(s){
+    return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+  }
+
+  // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
+  // badge: 언어별 추가 표시(예: 광클럽 한국어 화면 "해외 출시"). 빈 문자열이면 안 보인다.
+  function card(a){
+    var live = a.status === 'live';
+    var store = 'https://play.google.com/store/apps/details?id=' + encodeURIComponent(a.package);
+    var page = a.page === false ? '' : a.id + '/';
+    var html = '<article class="app' + (live ? '' : ' dev') + '">' +
+      (page ? '<a class="main" href="' + page + '">' : '<div class="main">') +
+        '<img src="' + a.id + '/img/icon.png" alt="" loading="lazy">' +
+        '<div>';
+    ['ko','en'].forEach(function(l){
+      html += '<div class="' + l + '">' +
+        '<h3>' + esc(a.name[l]) + '</h3>' +
+        '<span class="genre">' + esc(a.genre[l]) + '</span>' +
+        (live ? '' : '<span class="badge">' + (l === 'ko' ? '개발 중' : 'In development') + '</span>') +
+        (a.badge && a.badge[l] ? '<span class="badge note">' + esc(a.badge[l]) + '</span>' : '') +
+        '<p>' + esc(a.summary[l]) + '</p></div>';
+    });
+    html += '</div>' + (page ? '</a>' : '</div>');
+    var links = '';
+    if (page) links += '<a href="' + page + '"><span class="ko">소개 보기</span><span class="en">Details</span></a>';
+    if (live) links += '<a href="' + store + '">Google Play</a>';
+    if (links) html += '<div class="links">' + links + '</div>';
+    return html + '</article>';
+  }
+
+  function render(data){
+    // 출시된 앱을 먼저, 개발 중인 앱을 뒤에. 같은 상태 안에서는 apps.json 순서.
+    var ordered = data.apps.filter(function(a){ return a.status === 'live'; })
+      .concat(data.apps.filter(function(a){ return a.status !== 'live'; }));
+    var html = '';
+    SECTIONS.forEach(function(s){
+      var list = ordered.filter(function(a){ return a.type === s.type; });
+      if (!list.length) return;
+      html += '<section><h2><span class="ko">' + s.ko + '</span><span class="en">' + s.en + '</span></h2>' +
+        '<div class="grid">' + list.map(card).join('') + '</div></section>';
+    });
+    document.getElementById('list').innerHTML = html;
+  }
+
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+
+  fetch('apps.json', { cache: 'no-cache' })
+    .then(function(r){ return r.json(); })
+    .then(render)
+    .catch(function(){
+      document.getElementById('list').innerHTML =
+        '<p class="empty"><span class="ko">목록을 불러오지 못했습니다.</span><span class="en">Could not load the list.</span></p>';
+    });
+</script>
+</body>
+</html>

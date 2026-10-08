@@ -1,0 +1,139 @@
+{
+  "studio": "Happy & Lucky Studio",
+  "contact": "happylucky3817@gmail.com",
+  "apps": [
+    {
+      "id": "knightshift",
+      "package": "com.happylucky.knightshift",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "나이트 시프트", "en": "Knight Shift" },
+      "genre": { "ko": "액션 RPG", "en": "Action RPG" },
+      "summary": {
+        "ko": "기사를 키워 지역마다 몬스터와 보스를 물리치는 액션 RPG",
+        "en": "Train your knight and defeat monsters and bosses across many regions."
+      }
+    },
+    {
+      "id": "dolsori",
+      "package": "com.happylucky.dolsori",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "돌소리", "en": "Dolsori" },
+      "genre": { "ko": "보드", "en": "Board" },
+      "summary": {
+        "ko": "오목, 알까기, 바둑, 장기를 3D 판에서 즐기는 보드게임 모음",
+        "en": "Omok, Alkkagi, Go and Janggi on a 3D board. Korean board games in one app."
+      }
+    },
+    {
+      "id": "gwangclub",
+      "package": "com.happylucky.gwangclub",
+      "type": "game",
+      "status": "live",
+      "badge": { "ko": "해외 출시", "en": "" },
+      "name": { "ko": "광클럽", "en": "Kwang Club" },
+      "genre": { "ko": "카드", "en": "Card" },
+      "summary": {
+        "ko": "셋이 앉는 고스톱. 풀 룰 그대로, 여섯 단계 상대, 같은 WiFi로 함께",
+        "en": "Korean Go-Stop for three. Full rules, six AI tiers, and local Wi-Fi matches."
+      }
+    },
+    {
+      "id": "matchandslash",
+      "package": "com.happylucky.matchandslash",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "매치앤슬래시", "en": "Match & Slash" },
+      "genre": { "ko": "퍼즐 RPG", "en": "Puzzle RPG" },
+      "summary": {
+        "ko": "내가 구성한 파티로 퍼즐을 맞춰 싸우는 퍼즐 RPG",
+        "en": "A puzzle RPG. Match tiles and the party you built does the fighting."
+      }
+    },
+    {
+      "id": "neonplanetsnake",
+      "package": "com.happylucky.neonplanetsnake",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "네온 플래닛: 스네이크", "en": "Neon Planet: Snake" },
+      "genre": { "ko": "아케이드", "en": "Arcade" },
+      "summary": {
+        "ko": "끝이 없는 행성에서 벌어지는 뱀 서바이벌. 10분 버텨 1등이면 클리어",
+        "en": "Coil the planet and devour. Survive 10 minutes in 1st place to clear the stage."
+      }
+    },
+    {
+      "id": "frontierkingdom",
+      "package": "com.happylucky.frontierkingdom",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "프론티어 킹덤", "en": "Frontier Kingdom" },
+      "genre": { "ko": "시뮬레이션", "en": "Simulation" },
+      "summary": {
+        "ko": "길을 놓아 물자를 나른다. 개척지를 왕국으로 키우는 건설, 물류 시뮬레이션",
+        "en": "Lay roads, haul goods, grow a frontier camp into a kingdom. Build & supply sim."
+      }
+    },
+    {
+      "id": "neonplanetsurvivor",
+      "package": "com.happylucky.neonplanetsurvivor",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "네온 플래닛: 서바이버", "en": "Neon Planet: Survivor" },
+      "genre": { "ko": "액션", "en": "Action" },
+      "summary": {
+        "ko": "행성의 구면 위를 누비며 살아남는 서바이버라이크. 사격은 자동, 도망칠 길만 고르면 됩니다",
+        "en": "A survivor-like on a round planet. Aiming is automatic, you pick where to run."
+      }
+    },
+    {
+      "id": "randomfronttd",
+      "package": "com.happylucky.randomfronttd",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "랜덤전선 TD", "en": "RandomFront TD" },
+      "genre": { "ko": "타워 디펜스", "en": "Tower Defense" },
+      "summary": {
+        "ko": "무작위로 모집한 병사를 합성해 방어선을 지키는 타워 디펜스",
+        "en": "Merge a randomly recruited squad and hold the line across varied terrain."
+      }
+    },
+    {
+      "id": "littleguardian",
+      "package": "com.happylucky.littleguardian",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "리틀 가디언", "en": "Little Guardian" },
+      "genre": { "ko": "방치형 RPG", "en": "Idle RPG" },
+      "summary": {
+        "ko": "견습 기사를 키워 심연을 닫으세요. 70장 1,050스테이지의 픽셀 방치형 성장 RPG",
+        "en": "Raise a little squire and seal the Abyss in a pixel idle RPG of 70 chapters."
+      }
+    },
+    {
+      "id": "matchandserve",
+      "package": "com.happylucky.matchandserve",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "매치엔서브", "en": "Match & Serve" },
+      "genre": { "ko": "퍼즐", "en": "Puzzle" },
+      "summary": {
+        "ko": "재료를 맞추고 음료를 만들어, 카페 12곳의 손님을 대접하세요",
+        "en": "Match fruit, mix drinks, serve happy customers across 12 cozy cafes."
+      }
+    },
+    {
+      "id": "runelinktd",
+      "package": "com.happylucky.runelinktd",
+      "type": "game",
+      "status": "live",
+      "name": { "ko": "룬링크 TD", "en": "RuneLink TD" },
+      "genre": { "ko": "타워 디펜스", "en": "Tower Defense" },
+      "summary": {
+        "ko": "원소 룬을 놓고 링크로 이어 막아내는 전략 타워 디펜스. 100 스테이지, 오프라인 플레이",
+        "en": "Place elemental runes, link them together, hold the line. 100 stages, offline."
+      }
+    }
+  ]
+}
