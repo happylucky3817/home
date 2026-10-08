@@ -7,6 +7,7 @@
 <meta name="description" content="Happy &amp; Lucky Studio에서 만든 모바일 게임과 앱 목록입니다.">
 <meta property="og:title" content="Happy &amp; Lucky Studio">
 <meta property="og:description" content="Happy &amp; Lucky Studio에서 만든 모바일 게임과 앱">
+<meta property="og:image" content="img/logo.png">
 <style>
   :root{
     --bg:#0c1020; --bg2:#121833; --card:#161d3a; --card2:#1b2346; --line:#2b3561;
@@ -29,9 +30,9 @@
   .lang button.on{color:var(--txt); border-color:var(--gold)}
 
   header{text-align:center; padding:36px 0 44px}
-  .logo{font-size:42px; font-weight:800; letter-spacing:-0.5px}
-  .logo .amp{color:var(--gold)}
-  .tagline{color:var(--muted); font-size:18px; margin-top:10px}
+  .logo{margin:0}
+  .logo img{display:block; width:100%; max-width:600px; height:auto; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:18px}
 
   section{padding:8px 0 48px}
   h2{font-size:24px; margin-bottom:18px}
@@ -68,7 +69,7 @@
   footer p + p{margin-top:6px}
 
   @media (max-width:420px){
-    .logo{font-size:32px}
+    .logo img{max-width:100%}
     .grid{grid-template-columns:1fr}
     .app img{width:68px; height:68px; border-radius:15px}
   }
@@ -84,7 +85,7 @@
 
 <header>
   <div class="wrap">
-    <h1 class="logo">Happy <span class="amp">&amp;</span> Lucky Studio</h1>
+    <h1 class="logo"><img src="img/logo.png" alt="Happy &amp; Lucky Studio" width="1200" height="300"></h1>
     <p class="tagline ko">누구나 가볍게 즐길 수 있는 모바일 게임과 앱을 만듭니다.</p>
     <p class="tagline en">Mobile games and apps that anyone can pick up and enjoy.</p>
   </div>
