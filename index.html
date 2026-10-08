@@ -32,6 +32,17 @@
   header{text-align:center; padding:36px 0 44px}
   .logo{margin:0}
   .logo img{display:block; width:100%; max-width:600px; height:auto; margin:0 auto}
+  .logo .studio{
+    display:flex; align-items:center; justify-content:center; gap:18px; margin:10px auto 0; max-width:460px;
+    font-size:24px; font-weight:800; letter-spacing:12px; text-indent:12px;
+  }
+  .logo .studio b{
+    background:linear-gradient(90deg,#ff7b96 0%,#f6b73c 50%,#2fd08a 100%); -webkit-background-clip:text; background-clip:text;
+    color:transparent; font-weight:800;
+  }
+  .logo .studio::before, .logo .studio::after{content:""; flex:1; height:3px; border-radius:3px}
+  .logo .studio::before{background:linear-gradient(90deg,transparent,#ff7b96)}
+  .logo .studio::after{background:linear-gradient(90deg,#2fd08a,transparent)}
   .tagline{color:var(--muted); font-size:18px; margin-top:18px}
 
   section{padding:8px 0 48px}
@@ -85,7 +96,7 @@
 
 <header>
   <div class="wrap">
-    <h1 class="logo"><img src="img/logo.png" alt="Happy &amp; Lucky Studio" width="1200" height="300"></h1>
+    <h1 class="logo"><img src="img/logo.png" alt="Happy &amp; Lucky" width="1200" height="328"><span class="studio"><b>STUDIO</b></span></h1>
     <p class="tagline ko">누구나 가볍게 즐길 수 있는 모바일 게임과 앱을 만듭니다.</p>
     <p class="tagline en">Mobile games and apps that anyone can pick up and enjoy.</p>
   </div>
