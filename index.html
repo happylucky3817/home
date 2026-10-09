@@ -71,7 +71,9 @@
     font-size:12.5px; color:#9fd8ff; border:1px solid #2f5a7a; background:#132a3d;
   }
   .app .badge.note{color:#f3c9a0; border-color:#6a4426; background:#2e1d12}
-  .app p.when{font-size:12.5px; margin-top:6px; opacity:.8}
+  .app .side{flex:none; width:84px; text-align:center}
+  .app .when{display:block; margin-top:8px; font-size:12px; color:var(--muted); white-space:nowrap}
+  [data-lang="en"] .app .when.ko, [data-lang="ko"] .app .when.en{display:none}
   .app.dev{border-style:dashed}
   .app.dev:not(:has(a)):hover{border-color:var(--line); transform:none}
   .app .links{display:flex; border-top:1px solid var(--line)}
@@ -134,11 +136,11 @@
     return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
   }
 
-  // released: 출시 연월 "2026-07" → "7월 출시" / "Released in July". 연도는 묶음 제목에 나온다.
-  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  // released: 출시 연월 "2026-07" → "7월 출시" / "Released Jul". 연도는 묶음 제목에 나온다. 아이콘 아래 같은 위치.
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
   function when(ym, l){
     var m = parseInt(ym.slice(5, 7), 10);
-    return l === 'ko' ? m + '월 출시' : 'Released in ' + MONTHS[m - 1];
+    return l === 'ko' ? m + '월 출시' : 'Released ' + MONTHS[m - 1];
   }
 
   // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
@@ -149,7 +151,9 @@
     var page = a.page === false ? '' : a.id + '/';
     var html = '<article class="app' + (live ? '' : ' dev') + '">' +
       (page ? '<a class="main" href="' + page + '">' : '<div class="main">') +
-        '<img src="' + a.id + '/img/icon.png" alt="" loading="lazy">' +
+        '<div class="side"><img src="' + a.id + '/img/icon.png" alt="" loading="lazy">' +
+        (live && a.released ? '<span class="when ko">' + when(a.released, 'ko') + '</span><span class="when en">' + when(a.released, 'en') + '</span>' : '') +
+        '</div>' +
         '<div>';
     ['ko','en'].forEach(function(l){
       html += '<div class="' + l + '">' +
@@ -157,8 +161,7 @@
         '<span class="genre">' + esc(a.genre[l]) + '</span>' +
         (live ? '' : '<span class="badge">' + (l === 'ko' ? '개발 중' : 'In development') + '</span>') +
         (a.badge && a.badge[l] ? '<span class="badge note">' + esc(a.badge[l]) + '</span>' : '') +
-        '<p>' + esc(a.summary[l]) + '</p>' +
-        (live && a.released ? '<p class="when">' + when(a.released, l) + '</p>' : '') + '</div>';
+        '<p>' + esc(a.summary[l]) + '</p></div>';
     });
     html += '</div>' + (page ? '</a>' : '</div>');
     var links = '';
@@ -178,8 +181,10 @@
   }
 
   function render(data){
-    // 오래된 것부터, 가장 최근이 마지막. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 의 역순.
-    function key(a){ return (a.status === 'live' && a.released) || a.date || ''; }
+    // 출시한 앱은 출시 연도별로 묶고, 개발 중인 앱은 맨 뒤에 따로 묶는다.
+    // 묶음 안에서는 오래된 것부터, 가장 최근이 마지막. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 의 역순.
+    function isLive(a){ return a.status === 'live'; }
+    function key(a){ return (isLive(a) && a.released) || a.date || ''; }
     var ordered = data.apps.map(function(a, i){ return { a: a, i: i }; })
       .sort(function(x, y){
         var dx = key(x.a), dy = key(y.a);
@@ -190,16 +195,18 @@
     SECTIONS.forEach(function(s){
       var list = ordered.filter(function(a){ return a.type === s.type; });
       if (!list.length) return;
-      // 연도별로 묶는다. 연도는 정렬 기준(출시 연월 또는 개발 시작일)의 앞 네 자리.
-      var years = [];
-      list.forEach(function(a){
+      var groups = [];
+      list.filter(isLive).forEach(function(a){
         var y = key(a).slice(0, 4);
-        if (!years.length || years[years.length - 1].y !== y) years.push({ y: y, apps: [] });
-        years[years.length - 1].apps.push(a);
+        if (!groups.length || groups[groups.length - 1].ko !== y) groups.push({ ko: y, en: y, apps: [] });
+        groups[groups.length - 1].apps.push(a);
       });
+      var dev = list.filter(function(a){ return !isLive(a); });
+      if (dev.length) groups.push({ ko: '개발 중', en: 'In development', apps: dev });
       html += '<section><h2><span class="ko">' + s.ko + '</span><span class="en">' + s.en + '</span></h2>' +
-        years.map(function(g){
-          return '<h3 class="year">' + esc(g.y) + '</h3><div class="grid">' + g.apps.map(card).join('') + '</div>';
+        groups.map(function(g){
+          return '<h3 class="year"><span class="ko">' + esc(g.ko) + '</span><span class="en">' + esc(g.en) + '</span></h3>' +
+            '<div class="grid">' + g.apps.map(card).join('') + '</div>';
         }).join('') + '</section>';
     });
     document.getElementById('list').innerHTML = html;
