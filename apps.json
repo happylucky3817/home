@@ -4,6 +4,7 @@
   "apps": [
     {
       "id": "novaflight",
+      "date": "2026-10-09",
       "package": "com.happylucky.novaflight",
       "type": "game",
       "status": "dev",
@@ -16,6 +17,7 @@
     },
     {
       "id": "stickertoyboxlab",
+      "date": "2026-10-09",
       "package": "com.happylucky.stickertoyboxlab",
       "type": "game",
       "status": "dev",
@@ -28,6 +30,7 @@
     },
     {
       "id": "knightshift",
+      "date": "2026-10-01",
       "package": "com.happylucky.knightshift",
       "type": "game",
       "status": "dev",
@@ -40,6 +43,7 @@
     },
     {
       "id": "dolsori",
+      "date": "2026-09-29",
       "package": "com.happylucky.dolsori",
       "type": "game",
       "status": "dev",
@@ -52,6 +56,8 @@
     },
     {
       "id": "matchandslash",
+      "released": "2026-10",
+      "date": "2026-08-29",
       "package": "com.happylucky.matchandslash",
       "type": "game",
       "status": "live",
@@ -64,6 +70,8 @@
     },
     {
       "id": "neonplanetsnake",
+      "released": "2026-09",
+      "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsnake",
       "type": "game",
       "status": "live",
@@ -76,6 +84,8 @@
     },
     {
       "id": "frontierkingdom",
+      "released": "2026-10",
+      "date": "2026-08-02",
       "package": "com.happylucky.frontierkingdom",
       "type": "game",
       "status": "live",
@@ -88,6 +98,8 @@
     },
     {
       "id": "neonplanetsurvivor",
+      "released": "2026-09",
+      "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsurvivor",
       "type": "game",
       "status": "live",
@@ -100,6 +112,8 @@
     },
     {
       "id": "randomfronttd",
+      "released": "2026-08",
+      "date": "2026-06-30",
       "package": "com.happylucky.randomfronttd",
       "type": "game",
       "status": "live",
@@ -112,6 +126,8 @@
     },
     {
       "id": "littleguardian",
+      "released": "2026-10",
+      "date": "2026-06-30",
       "package": "com.happylucky.littleguardian",
       "type": "game",
       "status": "live",
@@ -124,6 +140,8 @@
     },
     {
       "id": "matchandserve",
+      "released": "2026-07",
+      "date": "2026-07-18",
       "package": "com.happylucky.matchandserve",
       "type": "game",
       "status": "live",
@@ -136,6 +154,8 @@
     },
     {
       "id": "runelinktd",
+      "released": "2026-07",
+      "date": "2026-06-08",
       "package": "com.happylucky.runelinktd",
       "type": "game",
       "status": "live",
@@ -148,6 +168,8 @@
     },
     {
       "id": "gwangclub",
+      "released": "2026-10",
+      "date": "2026-09-10",
       "package": "com.happylucky.gwangclub",
       "type": "game",
       "status": "live",
@@ -162,6 +184,7 @@
     },
     {
       "id": "ppiyakenglish",
+      "date": "2026-10-07",
       "package": "com.happylucky.ppiyakenglish",
       "type": "education",
       "status": "dev",
@@ -174,6 +197,7 @@
     },
     {
       "id": "ppiyakmath",
+      "date": "2026-10-08",
       "package": "com.happylucky.ppiyakmath",
       "type": "education",
       "status": "dev",
@@ -186,6 +210,7 @@
     },
     {
       "id": "ppiyakart",
+      "date": "2026-10-08",
       "package": "com.happylucky.ppiyakart",
       "type": "education",
       "status": "dev",

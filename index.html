@@ -68,6 +68,7 @@
     font-size:12.5px; color:#9fd8ff; border:1px solid #2f5a7a; background:#132a3d;
   }
   .app .badge.note{color:#f3c9a0; border-color:#6a4426; background:#2e1d12}
+  .app p.when{font-size:12.5px; margin-top:6px; opacity:.8}
   .app.dev{border-style:dashed}
   .app.dev:not(:has(a)):hover{border-color:var(--line); transform:none}
   .app .links{display:flex; border-top:1px solid var(--line)}
@@ -130,6 +131,13 @@
     return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
   }
 
+  // released: 출시 연월 "2026-07" → "2026년 7월 출시" / "Released Jul 2026"
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function when(ym, l){
+    var y = ym.slice(0, 4), m = parseInt(ym.slice(5, 7), 10);
+    return l === 'ko' ? y + '년 ' + m + '월 출시' : 'Released ' + MONTHS[m - 1] + ' ' + y;
+  }
+
   // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
   // badge: 언어별 추가 표시(예: 광클럽 한국어 화면 "국내 미출시"). 빈 문자열이면 안 보인다.
   function card(a){
@@ -146,7 +154,8 @@
         '<span class="genre">' + esc(a.genre[l]) + '</span>' +
         (live ? '' : '<span class="badge">' + (l === 'ko' ? '개발 중' : 'In development') + '</span>') +
         (a.badge && a.badge[l] ? '<span class="badge note">' + esc(a.badge[l]) + '</span>' : '') +
-        '<p>' + esc(a.summary[l]) + '</p></div>';
+        '<p>' + esc(a.summary[l]) + '</p>' +
+        (live && a.released ? '<p class="when">' + when(a.released, l) + '</p>' : '') + '</div>';
     });
     html += '</div>' + (page ? '</a>' : '</div>');
     var links = '';
@@ -166,9 +175,14 @@
   }
 
   function render(data){
-    // 출시된 앱을 먼저, 개발 중인 앱을 뒤에. 같은 상태 안에서는 apps.json 순서.
-    var ordered = data.apps.filter(function(a){ return a.status === 'live'; })
-      .concat(data.apps.filter(function(a){ return a.status !== 'live'; }));
+    // 최신순. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 순서.
+    function key(a){ return (a.status === 'live' && a.released) || a.date || ''; }
+    var ordered = data.apps.map(function(a, i){ return { a: a, i: i }; })
+      .sort(function(x, y){
+        var dx = key(x.a), dy = key(y.a);
+        return dx < dy ? 1 : dx > dy ? -1 : x.i - y.i;
+      })
+      .map(function(x){ return x.a; });
     var html = '';
     SECTIONS.forEach(function(s){
       var list = ordered.filter(function(a){ return a.type === s.type; });
