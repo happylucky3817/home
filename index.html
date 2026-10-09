@@ -134,11 +134,11 @@
     return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
   }
 
-  // released: 출시 연월 "2026-07" → "2026년 7월 출시" / "Released Jul 2026"
-  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  // released: 출시 연월 "2026-07" → "7월 출시" / "Released in July". 연도는 묶음 제목에 나온다.
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   function when(ym, l){
-    var y = ym.slice(0, 4), m = parseInt(ym.slice(5, 7), 10);
-    return l === 'ko' ? y + '년 ' + m + '월 출시' : 'Released ' + MONTHS[m - 1] + ' ' + y;
+    var m = parseInt(ym.slice(5, 7), 10);
+    return l === 'ko' ? m + '월 출시' : 'Released in ' + MONTHS[m - 1];
   }
 
   // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
