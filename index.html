@@ -48,6 +48,9 @@
   section{padding:8px 0 48px}
   h2{font-size:24px; margin-bottom:18px}
   .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px}
+  h3.year{display:flex; align-items:center; gap:12px; margin:6px 0 14px; font-size:17px; color:var(--muted); letter-spacing:1px}
+  h3.year::after{content:""; flex:1; height:1px; background:var(--line)}
+  .grid + h3.year{margin-top:30px}
 
   .app{
     background:var(--card); border:1px solid var(--line); border-radius:14px;
@@ -187,8 +190,17 @@
     SECTIONS.forEach(function(s){
       var list = ordered.filter(function(a){ return a.type === s.type; });
       if (!list.length) return;
+      // 연도별로 묶는다. 연도는 정렬 기준(출시 연월 또는 개발 시작일)의 앞 네 자리.
+      var years = [];
+      list.forEach(function(a){
+        var y = key(a).slice(0, 4);
+        if (!years.length || years[years.length - 1].y !== y) years.push({ y: y, apps: [] });
+        years[years.length - 1].apps.push(a);
+      });
       html += '<section><h2><span class="ko">' + s.ko + '</span><span class="en">' + s.en + '</span></h2>' +
-        '<div class="grid">' + list.map(card).join('') + '</div></section>';
+        years.map(function(g){
+          return '<h3 class="year">' + esc(g.y) + '</h3><div class="grid">' + g.apps.map(card).join('') + '</div>';
+        }).join('') + '</section>';
     });
     document.getElementById('list').innerHTML = html;
   }
