@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>노바 플라이트 (Nova Flight) - Coming Soon</title>
+<meta name="description" content="노바 플라이트 — 전투기 3종으로 편대와 보스를 돌파하는 세로 스크롤 비행 슈팅. 출시 준비 중입니다.">
+<meta property="og:title" content="노바 플라이트 (Nova Flight)">
+<meta property="og:description" content="전투기 3종으로 편대와 보스를 돌파하는 세로 스크롤 비행 슈팅. Coming Soon">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root{
+    --bg:#090b1c; --bg2:#11163a; --card:#141a3c; --line:#2a3470;
+    --txt:#eef1fb; --muted:#a6afcf; --gold:#ffb347; --blue:#4a7dff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:radial-gradient(ellipse at 50% 0%, #2a1f6b 0%, var(--bg) 60%) no-repeat, var(--bg);
+    color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:900px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
+  }
+  .lang button.on{color:var(--txt); border-color:var(--gold)}
+
+  header{text-align:center; padding:40px 0 50px}
+  .icon{width:112px; height:112px; border-radius:24px; box-shadow:0 8px 30px rgba(0,0,0,.6)}
+  .logo{width:100%; max-width:640px; display:block; margin:18px auto 0}
+  .soon{
+    display:inline-block; margin-top:28px; padding:10px 28px; border-radius:40px;
+    font-size:22px; font-weight:800; letter-spacing:4px; color:var(--gold);
+    border:2px solid var(--gold); background:rgba(255,179,71,.08);
+  }
+  .tagline{color:var(--muted); font-size:18px; margin-top:20px}
+
+  section{padding:10px 0 50px}
+  h2{font-size:24px; margin-bottom:16px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--gold)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:22px}
+
+  footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <img class="icon" src="img/icon.png" alt="">
+    <img class="logo" src="img/logo.png" alt="노바 플라이트 Nova Flight">
+    <div class="soon">COMING SOON</div>
+    <p class="tagline ko">전투기 3종으로 편대와 보스를 돌파하는 세로 스크롤 비행 슈팅. 출시 준비 중입니다.</p>
+    <p class="tagline en">A vertical scrolling shooter. Pick one of three fighters and break through waves and bosses. Coming soon.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">About the game</h2>
+    <div class="grid ko">
+      <div class="feat"><h3>스테이지 모드</h3><p>10개 스테이지마다 배경, 적 편대, 보스가 다릅니다. 중간 보스와 최종 보스를 물리치면 다음 스테이지가 열립니다.</p></div>
+      <div class="feat"><h3>전투기 3종</h3><p>펄스 레이저와 유도 미사일의 노바, 화염포의 블레이즈, 전격포와 낙뢰의 스톰. 마음에 드는 기체로 출격하세요.</p></div>
+      <div class="feat"><h3>무한 모드와 강화</h3><p>레벨 업마다 강화를 하나씩 고르고, 모은 골드로 격납고에서 기체를 영구 강화합니다. 무한 모드에서 최고 기록에 도전하세요.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>Stage mode</h3><p>Each of the 10 stages has its own scenery, enemy waves, and bosses. Defeat the mid-boss and the final boss to open the next stage.</p></div>
+      <div class="feat"><h3>Three fighters</h3><p>Nova with pulse lasers and homing missiles, Blaze with flame cannons, Storm with lightning guns and strikes. Fly the one you like.</p></div>
+      <div class="feat"><h3>Endless mode and upgrades</h3><p>Choose an upgrade at every level up, and spend gold in the hangar on permanent upgrades. Chase a new high score in endless mode.</p></div>
+    </div>
+    <p class="note ko">개발 중인 게임입니다. 내용은 출시 전에 바뀔 수 있습니다.</p>
+    <p class="note en">This game is in development. Details may change before release.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
+</body>
+</html>

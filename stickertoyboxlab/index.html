@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스티커 토이박스 연구소 (Sticker Toybox Lab) - Coming Soon</title>
+<meta name="description" content="스티커 토이박스 연구소 — 스티커를 떼어 장난감을 분해하는 3D 퍼즐. 출시 준비 중입니다.">
+<meta property="og:title" content="스티커 토이박스 연구소 (Sticker Toybox Lab)">
+<meta property="og:description" content="스티커를 떼어 장난감을 분해하는 3D 퍼즐. Coming Soon">
+<meta property="og:image" content="img/logo_ko.png">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root{
+    --bg:#101a3a; --bg2:#16224a; --card:#1a2752; --line:#31427e;
+    --txt:#f2f5ff; --muted:#b0bbdf; --gold:#ffd23f; --pink:#ff7aa8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:radial-gradient(ellipse at 50% 0%, #2b5fb0 0%, var(--bg) 60%) no-repeat, var(--bg);
+    color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:900px; margin:0 auto}
+  .home{font-size:14px; color:var(--muted)}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
+  }
+  .lang button.on{color:var(--txt); border-color:var(--gold)}
+
+  header{text-align:center; padding:30px 0 50px}
+  .logo{width:100%; max-width:480px; display:block; margin:0 auto}
+  .soon{
+    display:inline-block; margin-top:28px; padding:10px 28px; border-radius:40px;
+    font-size:22px; font-weight:800; letter-spacing:4px; color:var(--gold);
+    border:2px solid var(--gold); background:rgba(255,210,63,.08);
+  }
+  .tagline{color:var(--muted); font-size:18px; margin-top:20px}
+
+  section{padding:10px 0 50px}
+  h2{font-size:24px; margin-bottom:16px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .feat{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--pink)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:22px}
+
+  footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="top">
+  <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <img class="logo ko" src="img/logo_ko.png" alt="스티커 토이박스 연구소">
+    <img class="logo en" src="img/logo_en.png" alt="Sticker Toybox Lab">
+    <div class="soon">COMING SOON</div>
+    <p class="tagline ko">택배로 도착한 장난감의 스티커를 떼어 분해하는 3D 퍼즐. 출시 준비 중입니다.</p>
+    <p class="tagline en">Peel the stickers and take apart the toys that arrive in the mail. A 3D puzzle, coming soon.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">About the game</h2>
+    <div class="grid ko">
+      <div class="feat"><h3>스티커를 떼면 분해</h3><p>스티커가 부품과 부품을 붙잡고 있습니다. 이음매의 스티커를 모두 떼면 부품이 떨어집니다. 돌리고 확대하며 숨은 스티커를 찾으세요.</p></div>
+      <div class="feat"><h3>떼는 순서가 중요</h3><p>뗀 스티커는 같은 색 상자로 들어가고, 맞는 상자가 없으면 대기 칸으로 갑니다. 대기 칸이 가득 차면 실패입니다.</p></div>
+      <div class="feat"><h3>10개 챕터의 장난감</h3><p>자동차, 로봇, 비행기, 기차, 공룡, 우주선까지. 챕터마다 50스테이지, 뒤로 갈수록 부품이 많아집니다.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>Peel to take apart</h3><p>Stickers hold the parts together. Peel every sticker on a seam and the part comes off. Rotate and zoom to find hidden stickers.</p></div>
+      <div class="feat"><h3>Order matters</h3><p>Peeled stickers go into a box of the same color, or to the waiting slots if there is none. Fill the waiting slots and the stage is lost.</p></div>
+      <div class="feat"><h3>10 chapters of toys</h3><p>Cars, robots, planes, trains, dinosaurs, spaceships and more. 50 stages per chapter, with more parts as you go.</p></div>
+    </div>
+    <p class="note ko">개발 중인 게임입니다. 내용은 출시 전에 바뀔 수 있습니다.</p>
+    <p class="note en">This game is in development. Details may change before release.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
+</body>
+</html>

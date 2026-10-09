@@ -3,6 +3,30 @@
   "contact": "happylucky3817@gmail.com",
   "apps": [
     {
+      "id": "novaflight",
+      "package": "com.happylucky.novaflight",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "노바 플라이트", "en": "Nova Flight" },
+      "genre": { "ko": "슈팅", "en": "Shooter" },
+      "summary": {
+        "ko": "전투기 3종으로 편대와 보스를 돌파하는 세로 스크롤 비행 슈팅",
+        "en": "A vertical scrolling shooter. Three fighters, enemy waves, and big bosses."
+      }
+    },
+    {
+      "id": "stickertoyboxlab",
+      "package": "com.happylucky.stickertoyboxlab",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "스티커 토이박스 연구소", "en": "Sticker Toybox Lab" },
+      "genre": { "ko": "퍼즐", "en": "Puzzle" },
+      "summary": {
+        "ko": "스티커를 떼어 장난감을 분해하는 3D 퍼즐. 떼는 순서를 잘 생각하세요",
+        "en": "A 3D puzzle. Peel the stickers to take toys apart, but mind the order."
+      }
+    },
+    {
       "id": "knightshift",
       "package": "com.happylucky.knightshift",
       "type": "game",
