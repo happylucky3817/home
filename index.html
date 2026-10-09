@@ -175,12 +175,12 @@
   }
 
   function render(data){
-    // 최신순. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 순서.
+    // 오래된 것부터, 가장 최근이 마지막. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 의 역순.
     function key(a){ return (a.status === 'live' && a.released) || a.date || ''; }
     var ordered = data.apps.map(function(a, i){ return { a: a, i: i }; })
       .sort(function(x, y){
         var dx = key(x.a), dy = key(y.a);
-        return dx < dy ? 1 : dx > dy ? -1 : x.i - y.i;
+        return dx < dy ? -1 : dx > dy ? 1 : y.i - x.i;
       })
       .map(function(x){ return x.a; });
     var html = '';
