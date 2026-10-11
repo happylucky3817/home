@@ -1,0 +1,96 @@
+{
+  "effective": "2026-10-11",
+  "updated": "2026-10-11",
+  "local_data": {
+    "ko": [
+      "남은 포인트",
+      "WiFi 대전에서 쓰는 캐릭터 번호와 표시 이름",
+      "게임별 AI 난이도, 바둑 보드 줄 수, 장기 상차림 설정",
+      "언어 설정",
+      "앱 점검용 설정"
+    ],
+    "en": [
+      "Your remaining points",
+      "The character number and display name used in WiFi Match",
+      "AI difficulty for each game, Go board size, and Janggi starting setup",
+      "Language setting",
+      "Settings used for app testing"
+    ]
+  },
+  "currency": {
+    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자입니다. 처음 10포인트를 받고 게임을 시작할 때 1~2포인트를 쓰며, 보상형 광고를 보면 30포인트가 충전됩니다. 포인트는 구매할 수 없고 현금이나 경품으로 바꿀 수 없으며, 다른 사람과 주고받는 기능도 없습니다. 개발자는 결제 정보를 수집하지 않습니다.",
+    "en": "Points in the app are numbers used only inside the game. You start with 10 points, each game uses 1 or 2 points, and watching a rewarded ad adds 30 points. Points cannot be bought or exchanged for cash or prizes, and there is no way to transfer them to other players. The developer does not collect any payment information."
+  },
+  "lan": {
+    "ko": {
+      "intro": "본 앱은 같은 WiFi 공유기에 연결된 두 기기가 직접 통신하여 함께 할 수 있습니다. 한 사람의 기기가 방장이 되고 다른 기기가 접속하며, 개발자의 서버를 거치지 않습니다. 주고받는 데이터는 개발자나 제3자에게 전송되지 않고, 받은 기기는 대전하는 동안 메모리에만 두며 저장하지 않습니다.",
+      "visible": [
+        "게임 안 표시 이름(8자 이하)과 캐릭터 번호",
+        "남은 포인트 수와 광고를 보는 중인지 여부",
+        "고른 게임과 옵션, 게임 진행 상태",
+        "대기실에서 서로를 구분하는 무작위 ID 와 다시 연결할 때 쓰는 무작위 값(기기 ID 가 아닙니다)"
+      ],
+      "detail": "WiFi 대전 대기실에 있는 동안 상대를 찾기 위해 같은 네트워크 안으로 약 1초마다 신호를 보내며, 여기에 표시 이름, 캐릭터 번호, 무작위 ID 가 담깁니다. 기기끼리 연결하기 위해 앱이 내부적으로 상대 기기의 사설 IP 주소(같은 공유기 안에서만 쓰는 주소)를 사용하지만, 이 주소는 화면에 표시하지 않습니다. 통신은 가정이나 사무실 공유기 안의 사설 네트워크에서만 이루어지고 인터넷으로 나가지 않으며, 별도로 암호화하지 않습니다. 채팅, 온라인 매칭, 순위표는 없고 위치, 기기 ID, 광고 ID 는 보내지 않습니다. 이름을 보이고 싶지 않다면 WiFi 대전을 시작하기 전에 게임 안에서 표시 이름을 바꾸십시오. 혼자 하는 동안에는 이 신호를 보내지 않습니다."
+    },
+    "en": {
+      "intro": "The app lets two devices connected to the same WiFi router play together by talking to each other directly. One device hosts the game and the other joins; no developer server is involved. None of this data is sent to the developer or any third party, and the receiving device keeps it only in memory during the match without saving it.",
+      "visible": [
+        "Your in-game display name (up to 8 characters) and character number",
+        "Your remaining points and whether you are watching an ad",
+        "The chosen game and options, and the game state",
+        "A random ID that tells players apart in the lobby and a random value used to reconnect (not a device ID)"
+      ],
+      "detail": "While you are in the WiFi Match lobby, the app sends a signal into the local network about once per second to find other players; it includes your display name, character number, and a random ID. To connect the devices, the app uses the other device's private IP address (an address used only inside your router's network) internally, but never shows it on screen. All communication stays inside your home or office private network, never goes out to the internet, and is not separately encrypted. There is no chat, online matchmaking, or leaderboard, and no location, device ID, or advertising ID is sent. If you do not want your name to be seen, change your display name in the game before starting WiFi Match. Nothing is sent while you play alone."
+    }
+  },
+  "ads": {
+    "banner": false,
+    "interstitial": false,
+    "rewarded": true,
+    "detail": {
+      "ko": "본 앱의 광고는 포인트를 충전하는 보상형 광고 하나뿐이며, 사용자가 광고 버튼을 직접 눌렀을 때만 재생됩니다. 광고 한 번에 30포인트가 충전됩니다. 배너 광고와 전면 광고는 사용하지 않습니다.",
+      "en": "The only ad in the app is a rewarded ad that adds points. It plays only when you tap the ad button yourself, and each ad adds 30 points. The app does not use banner or interstitial (full-screen) ads."
+    }
+  },
+  "ump": {
+    "ko": "앱 [환경설정]의 [광고 개인정보] 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+    "en": "the ad privacy button in the app's Settings (shown only in regions where the consent form applies)"
+  },
+  "version_check": true,
+  "permissions": [
+    {
+      "name": "INTERNET",
+      "ko": "광고를 불러오고, 새 버전을 확인하고, 같은 WiFi 의 기기와 게임 데이터를 주고받습니다.",
+      "en": "To load ads, check for a newer version, and exchange game data with a device on the same WiFi."
+    },
+    {
+      "name": "CHANGE_WIFI_MULTICAST_STATE",
+      "ko": "같은 WiFi 에서 함께 할 상대를 찾는 신호를 주고받습니다.",
+      "en": "To send and receive the signals used to find players on the same WiFi."
+    },
+    {
+      "name": "ACCESS_NETWORK_STATE",
+      "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+      "en": "To check the network connection before requesting ads (Google AdMob)."
+    },
+    {
+      "name": "AD_ID",
+      "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+      "en": "To use the advertising ID to serve and measure ads (Google AdMob)."
+    },
+    {
+      "name": "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+      "ko": "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+      "en": "To use Android's privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+    },
+    {
+      "name": "WAKE_LOCK, FOREGROUND_SERVICE",
+      "ko": "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+      "en": "Used by the advertising SDK for its internal background work (Google AdMob)."
+    }
+  ],
+  "children": {
+    "ko": "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+    "en": "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child's information has been processed, please contact us at the email below."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "effective": "2026-10-11",
+  "updated": "2026-10-11",
+  "local_data": {
+    "ko": [
+      "골드(게임 안 재화)",
+      "스테이지 클리어 진행, 무한 모드 최고 점수와 생존 시간",
+      "격납고 영구 강화 단계",
+      "스테이지별 별 목표, 선택한 전투기와 윙맨",
+      "일일 도전 날짜, 스테이지, 보상 수령 여부",
+      "언어, 배경 음악, 효과음 설정"
+    ],
+    "en": [
+      "Gold (in-game currency)",
+      "Stage clear progress, and your best Endless Mode score and survival time",
+      "Permanent hangar upgrade levels",
+      "Star goals per stage, and your selected fighter and wingman",
+      "Daily Challenge date, stage, and whether the reward was claimed",
+      "Language, music, and sound effect settings"
+    ]
+  },
+  "currency": {
+    "ko": "본 앱의 골드는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 본 앱에는 인앱 결제가 없으며, 개발자는 결제 정보를 수집하지 않습니다.",
+    "en": "Gold in the app is a number used only inside the game. It cannot be bought or exchanged for cash or prizes. The app has no in-app purchases, and the developer does not collect any payment information."
+  },
+  "ads": {
+    "banner": true,
+    "interstitial": false,
+    "rewarded": true,
+    "detail": {
+      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 부활이나 획득 골드 2배를 직접 선택했을 때만 재생되며, 각각 한 게임에 한 번입니다.",
+      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to revive or to double the gold you earned, each at most once per run."
+    }
+  },
+  "ump": {
+    "ko": "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+    "en": "the Ad Privacy Settings button in the app's Settings (shown only in regions where the consent form applies)"
+  },
+  "version_check": true,
+  "network_extra": {
+    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다. 일일 도전은 기기의 날짜만 사용하며 서버와 통신하지 않습니다.",
+    "en": "The app has no features for chatting or exchanging data with other users. The Daily Challenge uses only your device's date and does not contact any server."
+  },
+  "permissions": [
+    {
+      "name": "INTERNET",
+      "ko": "광고를 불러오고 새 버전이 있는지 확인합니다.",
+      "en": "To load ads and check for a newer version."
+    },
+    {
+      "name": "ACCESS_NETWORK_STATE",
+      "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+      "en": "To check the network connection before requesting ads (Google AdMob)."
+    },
+    {
+      "name": "AD_ID",
+      "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+      "en": "To use the advertising ID to serve and measure ads (Google AdMob)."
+    },
+    {
+      "name": "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+      "ko": "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+      "en": "To use Android's privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+    },
+    {
+      "name": "WAKE_LOCK, FOREGROUND_SERVICE",
+      "ko": "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+      "en": "Used by the advertising SDK for its internal background work (Google AdMob)."
+    }
+  ],
+  "children": {
+    "ko": "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+    "en": "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child's information has been processed, please contact us at the email below."
+  }
+}
