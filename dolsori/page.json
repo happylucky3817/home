@@ -1,0 +1,64 @@
+{
+  "name": { "ko": "돌소리", "en": "Dolsori" },
+  "description": {
+    "ko": "돌소리: 오목·바둑·장기·알까기. 네 가지 한국 보드게임을 나무 질감의 3D 보드에서 즐깁니다. AI 5단계와 같은 WiFi 2인 대전.",
+    "en": "Dolsori: Korean Board Games. Omok, Go, Janggi and Alkkagi on a 3D wooden board. Five AI levels and two-player WiFi Match."
+  },
+  "theme": { "bg": "#120d09", "bg2": "#1a130e", "card": "#1f1712", "line": "#3d2e22", "accent": "#e3b26a", "button": "#c98a3a", "outline": "#2a1a0e" },
+  "notice": {
+    "ko": "비공개 테스트 중입니다. 테스터로 등록된 계정만 설치할 수 있습니다.",
+    "en": "Now in closed testing. Only accounts registered as testers can install it."
+  },
+  "tagline": {
+    "ko": "오목, 바둑, 장기, 알까기를 하나의 3D 보드에서. AI 5단계와 WiFi 2인 대전.",
+    "en": "Omok, Go, Janggi and Alkkagi on one 3D wooden board. Five AI levels or a friend on WiFi."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "바둑 대국 중" },
+      { "file": "img/ss_ko_02.jpg", "alt": "알까기 조준과 타격점" },
+      { "file": "img/ss_ko_03.jpg", "alt": "장기 대국" },
+      { "file": "img/ss_ko_04.jpg", "alt": "오목 승리" },
+      { "file": "img/ss_ko_05.jpg", "alt": "바둑 계가" },
+      { "file": "img/ss_ko_06.jpg", "alt": "게임 설정과 AI 5단계" },
+      { "file": "img/ss_ko_07.jpg", "alt": "WiFi 대전 대기실" },
+      { "file": "img/ss_ko_08.jpg", "alt": "메인 메뉴" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Go game in progress" },
+      { "file": "img/ss_en_02.jpg", "alt": "Alkkagi aiming with spin" },
+      { "file": "img/ss_en_03.jpg", "alt": "Janggi game" },
+      { "file": "img/ss_en_04.jpg", "alt": "Omok win" },
+      { "file": "img/ss_en_05.jpg", "alt": "Go scoring" },
+      { "file": "img/ss_en_06.jpg", "alt": "Game setup with five AI levels" },
+      { "file": "img/ss_en_07.jpg", "alt": "WiFi Match lobby" },
+      { "file": "img/ss_en_08.jpg", "alt": "Main menu" }
+    ]
+  },
+  "lead": {
+    "ko": "오목, 바둑, 장기, 알까기 네 가지 보드게임을 나무 질감의 3D 보드에서 즐깁니다. 돌소리는 바둑판에 돌을 놓을 때 나는 소리에서 따온 이름입니다. 네 게임 모두 같은 보드 화면을 쓰기 때문에 한 게임을 익히면 나머지도 바로 시작할 수 있습니다.",
+    "en": "Four classic Korean board games on one lit 3D wooden board: Omok, Go, Janggi and Alkkagi. The name Dolsori means the sound of a stone placed on a Go board. All four games share the same board screen, so once you learn one, you can start the others right away."
+  },
+  "features": {
+    "ko": [
+      { "title": "오목", "text": "19줄 보드에서 다섯 개 이상 이으면 승리합니다. 금수 없는 자유 규칙이며, 한 번 눌러 미리 보고 한 번 더 눌러 착수합니다." },
+      { "title": "바둑", "text": "9줄, 13줄, 19줄 보드. 따냄, 패, 패스, 중국식 계가와 덤 7.5. 계가 단계에서 죽은 돌을 자동으로 추정하고 직접 표시를 바꿀 수 있습니다." },
+      { "title": "장기", "text": "초와 한이 마주 보는 한국 장기입니다. 궁성 대각선 규칙, 장군과 외통, 상차림 4종 선택, 200수가 되면 기물 점수로 판정합니다." },
+      { "title": "알까기", "text": "알을 당겨 놓는 새총 방식입니다. 당구처럼 타격점을 골라 휘어 치기, 밀어치기, 끌어치기를 하고 상대 알을 보드 밖으로 모두 내보내면 승리합니다." },
+      { "title": "AI 대전 5단계", "text": "입문, 초급, 중급, 고급, 고수 5단계. 되돌리기, 기권, 다시 시작을 지원하며 AI가 생각하는 동안에도 화면은 멈추지 않습니다." },
+      { "title": "WiFi 2인 대전", "text": "인터넷 서버를 거치지 않고 같은 WiFi 안의 두 기기가 직접 연결됩니다. 연결이 끊기면 다시 연결하는 동안 AI가 대신 진행합니다." }
+    ],
+    "en": [
+      { "title": "Omok (Gomoku)", "text": "Connect five or more stones on a 19x19 board to win. Freestyle rules with no forbidden moves. Tap once to preview, tap again to place." },
+      { "title": "Go (Baduk)", "text": "9x9, 13x13 and 19x19 boards. Captures, ko, pass, and area scoring with 7.5 komi. Dead stones are estimated automatically at the end, and you can adjust them." },
+      { "title": "Janggi (Korean chess)", "text": "Cho faces Han. Diagonal moves inside the palace, check and checkmate, four starting setups, and a material-point decision after 200 moves." },
+      { "title": "Alkkagi (stone flicking)", "text": "Pull back and release your stone like a slingshot. Pick a spin point, just like billiards, to curve, follow through or draw back, and knock every opposing stone off the board." },
+      { "title": "Five AI levels", "text": "Beginner, Easy, Normal, Hard and Expert. Undo, resign and restart anytime, and the screen never freezes while the AI thinks." },
+      { "title": "Two-player WiFi Match", "text": "Two devices on the same WiFi connect directly, with no internet server in between. If the connection drops, the AI keeps the game going while you reconnect." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 처음 10포인트를 받고 게임을 시작할 때 1~2포인트를 쓰며, 보상형 광고를 보면 30포인트가 충전됩니다. 포인트는 구매하거나 현금으로 바꿀 수 없습니다. 계정 가입 없이 바로 시작하고, 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Contains rewarded ads. You start with 10 points, each game uses 1 or 2 points, and watching a rewarded ad adds 30 points. Points cannot be bought or exchanged for cash. No account needed; your data is saved on your device."
+  }
+}

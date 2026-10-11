@@ -3,60 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나이트 시프트 (Knight Shift) - Coming Soon</title>
-<meta name="description" content="나이트 시프트 — 기사를 키워 지역마다 몬스터와 보스를 물리치는 액션 RPG. 출시 준비 중입니다.">
+<title>나이트 시프트 (Knight Shift)</title>
+<meta name="description" content="나이트 시프트. 기사가 몬스터 무리를 자동으로 베어 나가는 성장형 RPG. 30개 지역, 스킬 12종, 장비 5칸, 능력치 8종.">
 <meta property="og:title" content="나이트 시프트 (Knight Shift)">
-<meta property="og:description" content="기사를 키워 지역마다 몬스터와 보스를 물리치는 액션 RPG. Coming Soon">
-<meta property="og:image" content="img/logo.png">
+<meta property="og:description" content="몰려오는 몬스터를 기사가 자동으로 베어 나갑니다. 장비와 능력치를 키워 30개 지역을 돌파하세요.">
+<meta property="og:image" content="img/feature_ko.jpg">
 <link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <style>
-  :root{
-    --bg:#0c1020; --bg2:#121833; --card:#161d3a; --line:#2b3561;
-    --txt:#eef1fb; --muted:#a6afcf; --gold:#f5c542; --blue:#2f5fb8;
-  }
+  :root{ --bg:#121012; --bg2:#1b1617; --card:#221b1c; --line:#43312c; --txt:#eef1fb; --muted:#a6afcf; --accent:#f4c445; --btn:#d2462c; --outline:#3a1208; }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:radial-gradient(ellipse at 50% 0%, #1d2a5c 0%, var(--bg) 60%) no-repeat, var(--bg);
-    color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--gold); text-decoration:none}
+  a{color:var(--accent); text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:900px; margin:0 auto}
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
   .home{font-size:14px; color:var(--muted)}
   .lang{display:flex; gap:6px}
   .lang button{
     background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
     padding:6px 12px; font-size:14px; cursor:pointer;
   }
-  .lang button.on{color:var(--txt); border-color:var(--gold)}
+  .lang button.on{color:var(--txt); border-color:var(--accent)}
 
-  header{text-align:center; padding:30px 0 50px}
-  .logo{width:100%; max-width:520px; display:block; margin:0 auto}
-  .soon{
-    display:inline-block; margin-top:28px; padding:10px 28px; border-radius:40px;
-    font-size:22px; font-weight:800; letter-spacing:4px; color:var(--gold);
-    border:2px solid var(--gold); background:rgba(245,197,66,.08);
+  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
+  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
+
+  header{text-align:center; padding:18px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; margin-top:24px; padding:13px 28px; border-radius:6px; font-weight:700; font-size:18px;
+    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
+    text-shadow:0 2px 0 var(--outline);
   }
-  .tagline{color:var(--muted); font-size:18px; margin-top:20px}
+  .btn:hover{text-decoration:none; filter:brightness(1.07)}
+  .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+  .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
+  .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
-  section{padding:10px 0 50px}
-  h2{font-size:24px; margin-bottom:16px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  section{padding:46px 0}
+  h2{font-size:26px; margin-bottom:10px}
+  .lead{color:var(--muted); margin-bottom:26px}
+  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
+  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
+  .shots img:hover{border-color:var(--accent)}
+
+  /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
+  .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
+  .viewer.on{display:flex}
+  .viewer img{max-width:calc(100vw - 140px); max-height:calc(100vh - 80px); border-radius:8px; box-shadow:0 10px 50px rgba(0,0,0,.7); user-select:none}
+  .viewer img.pixel{image-rendering:pixelated}
+  .viewer button{position:absolute; background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.18); border-radius:50%; width:48px; height:48px; font-size:24px; line-height:1; cursor:pointer}
+  .viewer button:hover{background:rgba(255,255,255,.18)}
+  .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
+  .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
+  .viewer .close{right:20px; top:20px; font-size:22px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  @media (max-width:600px){
+    .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
+    .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
+    .viewer .close{top:12px; right:12px}
+  }
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
   .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
-  .feat h3{font-size:17px; margin-bottom:6px; color:var(--gold)}
+  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
   .feat p{color:var(--muted); font-size:15px}
-  .note{color:var(--muted); font-size:14px; margin-top:22px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
 
-  footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
   footer p + p{margin-top:6px}
+  footer .links a{margin:0 8px}
+  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
   [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
-  .beta{margin-top:20px}
-  .beta-btn{display:inline-block; padding:12px 28px; border-radius:10px; background:var(--gold); color:var(--bg); font-weight:800; font-size:17px; box-shadow:0 4px 16px rgba(0,0,0,.45)}
-  .beta-btn:hover{text-decoration:none; filter:brightness(1.08)}
-  .beta-note{font-size:13px; color:var(--muted); margin-top:8px; text-shadow:0 1px 6px rgba(0,0,0,.8)}
 </style>
 </head>
 <body data-lang="ko">
@@ -68,49 +95,133 @@
     <button id="b-en" onclick="setLang('en')">English</button>
   </div>
 </div>
+<div class="notice">
+  <p class="ko">비공개 테스트 중입니다. 테스터로 등록된 계정만 설치할 수 있습니다.</p>
+  <p class="en">Now in closed testing. Only accounts registered as testers can install it.</p>
+</div>
 
 <header>
   <div class="wrap">
-    <img class="logo" src="img/logo.png" alt="나이트 시프트 Knight Shift">
-    <div class="soon">COMING SOON</div>
-      <div class="beta">
-        <a class="beta-btn" href="https://play.google.com/apps/testing/com.happylucky.knightshift"><span class="ko">비공개 테스트</span><span class="en">Closed test</span></a>
-        <p class="beta-note ko">테스터로 등록된 Google 계정에서만 열립니다.</p>
-        <p class="beta-note en">Opens only for Google accounts registered as testers.</p>
-      </div>
-    <p class="tagline ko">기사를 키워 지역마다 몬스터와 보스를 물리치는 액션 RPG. 출시 준비 중입니다.</p>
-    <p class="tagline en">Train your knight and defeat monsters and bosses across many regions. Coming soon.</p>
+    <img class="feature ko" src="img/feature_ko.jpg" alt="나이트 시프트">
+    <img class="feature en" src="img/feature_en.jpg" alt="Knight Shift">
+    <p class="tagline ko">몰려오는 몬스터를 기사가 자동으로 베어 나갑니다. 장비와 능력치를 키워 30개 지역을 돌파하세요.</p>
+    <p class="tagline en">Your knight cuts through endless monster hordes. Gear up and conquer 30 areas.</p>
+    <a class="btn ko" href="https://play.google.com/apps/testing/com.happylucky.knightshift"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#34A853" d="M1.2 .6 13.6 13l4-4L3.3.8C2.5.3 1.7.3 1.2.6z"/><path fill="#4285F4" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4L13.6 13z"/><path fill="#EA4335" d="M1.2 25.4 13.6 13l4 4-14.3 8.2c-.8.5-1.6.5-2.1.2z"/><path fill="#FBBC04" d="m17.6 9-4 4 4 4 4.6-2.6c1.1-.6 1.1-2.2 0-2.8z"/></svg>비공개 테스트</a>
+    <a class="btn en" href="https://play.google.com/apps/testing/com.happylucky.knightshift"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#34A853" d="M1.2 .6 13.6 13l4-4L3.3.8C2.5.3 1.7.3 1.2.6z"/><path fill="#4285F4" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4L13.6 13z"/><path fill="#EA4335" d="M1.2 25.4 13.6 13l4 4-14.3 8.2c-.8.5-1.6.5-2.1.2z"/><path fill="#FBBC04" d="m17.6 9-4 4 4 4 4.6-2.6c1.1-.6 1.1-2.2 0-2.8z"/></svg>Closed test</a>
+    <p class="btn-note ko">테스터로 등록된 Google 계정에서만 열립니다.</p>
+    <p class="btn-note en">Opens only for Google accounts registered as testers.</p>
   </div>
 </header>
 
 <section>
   <div class="wrap">
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <img class="" src="img/ss_ko_01.jpg" alt="광폭화 전투" loading="lazy">
+      <img class="" src="img/ss_ko_02.jpg" alt="무리 습격" loading="lazy">
+      <img class="" src="img/ss_ko_03.jpg" alt="장비" loading="lazy">
+      <img class="" src="img/ss_ko_04.jpg" alt="스킬" loading="lazy">
+      <img class="" src="img/ss_ko_05.jpg" alt="능력치" loading="lazy">
+      <img class="" src="img/ss_ko_06.jpg" alt="지역 선택" loading="lazy">
+      <img class="" src="img/ss_ko_07.jpg" alt="수집품" loading="lazy">
+      <img class="" src="img/ss_ko_08.jpg" alt="지역 클리어" loading="lazy">
+    </div>
+    <div class="shots en">
+      <img class="" src="img/ss_en_01.jpg" alt="Frenzy battle" loading="lazy">
+      <img class="" src="img/ss_en_02.jpg" alt="Monster horde" loading="lazy">
+      <img class="" src="img/ss_en_03.jpg" alt="Gear" loading="lazy">
+      <img class="" src="img/ss_en_04.jpg" alt="Skills" loading="lazy">
+      <img class="" src="img/ss_en_05.jpg" alt="Stats" loading="lazy">
+      <img class="" src="img/ss_en_06.jpg" alt="Area select" loading="lazy">
+      <img class="" src="img/ss_en_07.jpg" alt="Relics" loading="lazy">
+      <img class="" src="img/ss_en_08.jpg" alt="Area cleared" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="wrap">
     <h2 class="ko">게임 소개</h2>
-    <h2 class="en">About the game</h2>
+    <h2 class="en">Features</h2>
+    <p class="lead ko">기사 한 명이 몬스터 무리와 싸우는 자동 전투 RPG입니다. 전투는 자동으로 진행되고, 플레이어는 장비를 고르고 능력치와 스킬을 키웁니다. 초원에서 천상의 성까지 30개 지역, 지역마다 기다리는 보스를 넘어서는 것이 목표입니다.</p>
+    <p class="lead en">An auto battle RPG where a lone knight fights through endless waves of monsters. Combat runs on its own while you pick the gear, raise the stats and choose the skills. Thirty areas stand between the meadow and the heavenly castle, each guarded by a boss.</p>
     <div class="grid ko">
-      <div class="feat"><h3>30개 지역</h3><p>초원, 어두운 숲, 유령 묘지에서 시작해 화산, 해저 신전, 용의 둥지, 얼음 성채를 지나 천상의 성까지. 지역마다 몬스터가 다릅니다.</p></div>
-      <div class="feat"><h3>지역 보스</h3><p>지역마다 10스테이지에 보스가 기다립니다. 보스를 물리치면 다음 지역이 열립니다.</p></div>
-      <div class="feat"><h3>장비와 스킬</h3><p>일반부터 전설까지 등급별 장비를 모으고, 능력치와 스킬로 기사를 성장시키세요.</p></div>
+      <div class="feat"><h3>자동 전투</h3><p>화면 가장자리에서 몬스터가 계속 몰려옵니다. 기사는 가까운 적부터 공격하고, 처치할 때마다 광폭화 게이지가 찹니다. 게이지가 가득 차면 10초 동안 공격 속도와 이동 속도가 오릅니다.</p></div>
+      <div class="feat"><h3>무리 습격과 정예 몬스터</h3><p>사방에서 한꺼번에 덤비는 무리 습격, 크고 강한 정예 몬스터, 골드를 가진 채 도망치는 보물 고블린이 나타납니다.</p></div>
+      <div class="feat"><h3>스킬 12종</h3><p>회전 베기, 검기, 돌진 베기, 방패 강타 등 12가지 스킬이 게이지가 차면 자동으로 시전됩니다. 무기 6종에는 각각 전용 무기 스킬이 있습니다.</p></div>
+      <div class="feat"><h3>장비 5칸, 5등급</h3><p>무기, 방패, 상의, 하의, 반지. 일반부터 전설까지 5등급이며 등급이 높을수록 부가옵션이 붙습니다. 강화석으로 강화하고 필요 없는 장비는 일괄 판매합니다.</p></div>
+      <div class="feat"><h3>능력치 8종</h3><p>힘, 활력, 민첩, 지능, 집중, 인내, 신성, 행운을 골드로 올립니다. 무기마다 잘 맞는 능력치가 달라 성장 방향을 직접 정합니다.</p></div>
+      <div class="feat"><h3>30개 지역과 보스</h3><p>초원, 유령 묘지, 화산, 마왕성, 해저 신전, 용의 둥지, 천상의 성까지. 지역마다 10스테이지, 마지막에는 지역 끝 보스가 기다립니다.</p></div>
+      <div class="feat"><h3>수집과 기록</h3><p>지역마다 숨겨진 수집품 5종, 모두 150종. 몬스터 도감 115종, 일일 임무와 업적이 있습니다.</p></div>
+      <div class="feat"><h3>엔딩과 다음 회차</h3><p>마지막 지역을 클리어하면 엔딩을 보고, 다음 회차에서 더 강한 적에게 도전합니다.</p></div>
     </div>
     <div class="grid en">
-      <div class="feat"><h3>30 regions</h3><p>From the Meadow, Dark Forest, and Ghost Graveyard through the Volcano, Sunken Temple, Dragon's Nest, and Ice Fortress to the Heavenly Castle. Each region has its own monsters.</p></div>
-      <div class="feat"><h3>Region bosses</h3><p>A boss waits at stage 10 of every region. Defeat it to open the next one.</p></div>
-      <div class="feat"><h3>Gear and skills</h3><p>Collect gear from Common to Legendary, and grow your knight with stats and skills.</p></div>
+      <div class="feat"><h3>Auto battle</h3><p>Monsters pour in from the edges of the screen. Your knight strikes the nearest enemy, and every kill fills the frenzy gauge. When it is full, attack and move speed rise for 10 seconds.</p></div>
+      <div class="feat"><h3>Hordes and elites</h3><p>Monster hordes rush in from all sides, big elite monsters appear, and a treasure goblin runs off with a bag of gold.</p></div>
+      <div class="feat"><h3>12 skills</h3><p>Spin Slash, Wave, Dash Slash, Shield Bash and more cast automatically when their gauge fills. Each of the 6 weapon types has its own weapon skill.</p></div>
+      <div class="feat"><h3>5 gear slots, 5 grades</h3><p>Weapon, shield, chest, legs and ring. Five grades from Common to Legendary, with bonus options on higher grades. Upgrade with ore and bulk-sell what you don&#39;t need.</p></div>
+      <div class="feat"><h3>8 stats</h3><p>Spend gold on Might, Vigor, Agility, Magic, Focus, Grit, Faith and Luck. Each weapon scales with different stats, so you decide the build.</p></div>
+      <div class="feat"><h3>30 areas and bosses</h3><p>From the meadow through the haunted graveyard, volcano, demon castle, sunken temple and dragon&#39;s nest to the heavenly castle. Each area has 10 stages and a boss at the end.</p></div>
+      <div class="feat"><h3>Collect and record</h3><p>Each area hides 5 relics, 150 in total. A bestiary of 115 monsters, daily quests and achievements.</p></div>
+      <div class="feat"><h3>Ending and new loop</h3><p>Beat the final area to see the ending, then start a new loop against stronger enemies.</p></div>
     </div>
-    <p class="note ko">개발 중인 게임입니다. 내용은 출시 전에 바뀔 수 있습니다.</p>
-    <p class="note en">This game is in development. Details may change before release.</p>
+    <p class="note ko">한국어와 영어를 지원합니다. 세로 화면, 한 손 조작. 광고가 포함되어 있으며, 보상형 광고는 원할 때만 봅니다. 인앱 결제가 없고, 계정 가입 없이 진행 기록은 기기에 저장됩니다.</p>
+    <p class="note en">Available in English and Korean. Portrait mode, one-handed play. Contains ads; rewarded ads play only when you choose. No in-app purchases. No account needed; progress is saved on your device.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
-    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
     <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
   </div>
 </footer>
 
+<div class="viewer" id="viewer" role="dialog" aria-modal="true">
+  <img id="v-img" alt="">
+  <button class="prev" id="v-prev" aria-label="Previous">&lsaquo;</button>
+  <button class="next" id="v-next" aria-label="Next">&rsaquo;</button>
+  <button class="close" id="v-close" aria-label="Close">&times;</button>
+  <div class="count" id="v-count"></div>
+</div>
+
 <script>
+  // 스크린샷 확대 보기. 지금 언어의 스크린샷 묶음 안에서 넘긴다.
+  (function(){
+    var v = document.getElementById('viewer'), img = document.getElementById('v-img'), count = document.getElementById('v-count');
+    var list = [], at = 0, sx = null;
+    function show(i){
+      at = (i + list.length) % list.length;
+      img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
+      count.textContent = (at + 1) + ' / ' + list.length;
+    }
+    function open(el){
+      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
+    }
+    function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }
+    document.querySelectorAll('.shots img').forEach(function(el){ el.addEventListener('click', function(){ open(el); }); });
+    document.getElementById('v-prev').addEventListener('click', function(e){ e.stopPropagation(); show(at - 1); });
+    document.getElementById('v-next').addEventListener('click', function(e){ e.stopPropagation(); show(at + 1); });
+    document.getElementById('v-close').addEventListener('click', close);
+    v.addEventListener('click', function(e){ if (e.target === v) close(); });
+    document.addEventListener('keydown', function(e){
+      if (!v.classList.contains('on')) return;
+      if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(at - 1); else if (e.key === 'ArrowRight') show(at + 1);
+    });
+    v.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, { passive: true });
+    v.addEventListener('touchend', function(e){
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx; sx = null;
+      if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+    });
+  })();
+
+
   function setLang(l){
     document.body.setAttribute('data-lang', l);
     document.documentElement.lang = l;

@@ -1,0 +1,68 @@
+{
+  "name": { "ko": "나이트 시프트", "en": "Knight Shift" },
+  "description": {
+    "ko": "나이트 시프트. 기사가 몬스터 무리를 자동으로 베어 나가는 성장형 RPG. 30개 지역, 스킬 12종, 장비 5칸, 능력치 8종.",
+    "en": "Knight Shift, an auto battle RPG. Your knight cuts through monster hordes across 30 areas. 12 skills, 5 gear slots, 8 stats."
+  },
+  "theme": { "bg": "#121012", "bg2": "#1b1617", "card": "#221b1c", "line": "#43312c", "accent": "#f4c445", "button": "#d2462c", "outline": "#3a1208" },
+  "notice": {
+    "ko": "비공개 테스트 중입니다. 테스터로 등록된 계정만 설치할 수 있습니다.",
+    "en": "Now in closed testing. Only accounts registered as testers can install it."
+  },
+  "tagline": {
+    "ko": "몰려오는 몬스터를 기사가 자동으로 베어 나갑니다. 장비와 능력치를 키워 30개 지역을 돌파하세요.",
+    "en": "Your knight cuts through endless monster hordes. Gear up and conquer 30 areas."
+  },
+  "screenshots": {
+    "ko": [
+      { "file": "img/ss_ko_01.jpg", "alt": "광폭화 전투" },
+      { "file": "img/ss_ko_02.jpg", "alt": "무리 습격" },
+      { "file": "img/ss_ko_03.jpg", "alt": "장비" },
+      { "file": "img/ss_ko_04.jpg", "alt": "스킬" },
+      { "file": "img/ss_ko_05.jpg", "alt": "능력치" },
+      { "file": "img/ss_ko_06.jpg", "alt": "지역 선택" },
+      { "file": "img/ss_ko_07.jpg", "alt": "수집품" },
+      { "file": "img/ss_ko_08.jpg", "alt": "지역 클리어" }
+    ],
+    "en": [
+      { "file": "img/ss_en_01.jpg", "alt": "Frenzy battle" },
+      { "file": "img/ss_en_02.jpg", "alt": "Monster horde" },
+      { "file": "img/ss_en_03.jpg", "alt": "Gear" },
+      { "file": "img/ss_en_04.jpg", "alt": "Skills" },
+      { "file": "img/ss_en_05.jpg", "alt": "Stats" },
+      { "file": "img/ss_en_06.jpg", "alt": "Area select" },
+      { "file": "img/ss_en_07.jpg", "alt": "Relics" },
+      { "file": "img/ss_en_08.jpg", "alt": "Area cleared" }
+    ]
+  },
+  "lead": {
+    "ko": "기사 한 명이 몬스터 무리와 싸우는 자동 전투 RPG입니다. 전투는 자동으로 진행되고, 플레이어는 장비를 고르고 능력치와 스킬을 키웁니다. 초원에서 천상의 성까지 30개 지역, 지역마다 기다리는 보스를 넘어서는 것이 목표입니다.",
+    "en": "An auto battle RPG where a lone knight fights through endless waves of monsters. Combat runs on its own while you pick the gear, raise the stats and choose the skills. Thirty areas stand between the meadow and the heavenly castle, each guarded by a boss."
+  },
+  "features": {
+    "ko": [
+      { "title": "자동 전투", "text": "화면 가장자리에서 몬스터가 계속 몰려옵니다. 기사는 가까운 적부터 공격하고, 처치할 때마다 광폭화 게이지가 찹니다. 게이지가 가득 차면 10초 동안 공격 속도와 이동 속도가 오릅니다." },
+      { "title": "무리 습격과 정예 몬스터", "text": "사방에서 한꺼번에 덤비는 무리 습격, 크고 강한 정예 몬스터, 골드를 가진 채 도망치는 보물 고블린이 나타납니다." },
+      { "title": "스킬 12종", "text": "회전 베기, 검기, 돌진 베기, 방패 강타 등 12가지 스킬이 게이지가 차면 자동으로 시전됩니다. 무기 6종에는 각각 전용 무기 스킬이 있습니다." },
+      { "title": "장비 5칸, 5등급", "text": "무기, 방패, 상의, 하의, 반지. 일반부터 전설까지 5등급이며 등급이 높을수록 부가옵션이 붙습니다. 강화석으로 강화하고 필요 없는 장비는 일괄 판매합니다." },
+      { "title": "능력치 8종", "text": "힘, 활력, 민첩, 지능, 집중, 인내, 신성, 행운을 골드로 올립니다. 무기마다 잘 맞는 능력치가 달라 성장 방향을 직접 정합니다." },
+      { "title": "30개 지역과 보스", "text": "초원, 유령 묘지, 화산, 마왕성, 해저 신전, 용의 둥지, 천상의 성까지. 지역마다 10스테이지, 마지막에는 지역 끝 보스가 기다립니다." },
+      { "title": "수집과 기록", "text": "지역마다 숨겨진 수집품 5종, 모두 150종. 몬스터 도감 115종, 일일 임무와 업적이 있습니다." },
+      { "title": "엔딩과 다음 회차", "text": "마지막 지역을 클리어하면 엔딩을 보고, 다음 회차에서 더 강한 적에게 도전합니다." }
+    ],
+    "en": [
+      { "title": "Auto battle", "text": "Monsters pour in from the edges of the screen. Your knight strikes the nearest enemy, and every kill fills the frenzy gauge. When it is full, attack and move speed rise for 10 seconds." },
+      { "title": "Hordes and elites", "text": "Monster hordes rush in from all sides, big elite monsters appear, and a treasure goblin runs off with a bag of gold." },
+      { "title": "12 skills", "text": "Spin Slash, Wave, Dash Slash, Shield Bash and more cast automatically when their gauge fills. Each of the 6 weapon types has its own weapon skill." },
+      { "title": "5 gear slots, 5 grades", "text": "Weapon, shield, chest, legs and ring. Five grades from Common to Legendary, with bonus options on higher grades. Upgrade with ore and bulk-sell what you don't need." },
+      { "title": "8 stats", "text": "Spend gold on Might, Vigor, Agility, Magic, Focus, Grit, Faith and Luck. Each weapon scales with different stats, so you decide the build." },
+      { "title": "30 areas and bosses", "text": "From the meadow through the haunted graveyard, volcano, demon castle, sunken temple and dragon's nest to the heavenly castle. Each area has 10 stages and a boss at the end." },
+      { "title": "Collect and record", "text": "Each area hides 5 relics, 150 in total. A bestiary of 115 monsters, daily quests and achievements." },
+      { "title": "Ending and new loop", "text": "Beat the final area to see the ending, then start a new loop against stronger enemies." }
+    ]
+  },
+  "note": {
+    "ko": "한국어와 영어를 지원합니다. 세로 화면, 한 손 조작. 광고가 포함되어 있으며, 보상형 광고는 원할 때만 봅니다. 인앱 결제가 없고, 계정 가입 없이 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Portrait mode, one-handed play. Contains ads; rewarded ads play only when you choose. No in-app purchases. No account needed; progress is saved on your device."
+  }
+}
