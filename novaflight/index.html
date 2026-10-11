@@ -54,6 +54,10 @@
   footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
   footer p + p{margin-top:6px}
   [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+  .beta{margin-top:20px}
+  .beta-btn{display:inline-block; padding:12px 28px; border-radius:10px; background:var(--gold); color:var(--bg); font-weight:800; font-size:17px; box-shadow:0 4px 16px rgba(0,0,0,.45)}
+  .beta-btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .beta-note{font-size:13px; color:var(--muted); margin-top:8px; text-shadow:0 1px 6px rgba(0,0,0,.8)}
 </style>
 </head>
 <body data-lang="ko">
@@ -71,6 +75,11 @@
     <img class="icon" src="img/icon.png" alt="">
     <img class="logo" src="img/logo.png" alt="노바 플라이트 Nova Flight">
     <div class="soon">COMING SOON</div>
+      <div class="beta">
+        <a class="beta-btn" href="https://play.google.com/apps/testing/com.happylucky.novaflight"><span class="ko">비공개 테스트 참여</span><span class="en">Join the closed test</span></a>
+        <p class="beta-note ko">테스터로 등록된 Google 계정에서만 참여할 수 있습니다.</p>
+        <p class="beta-note en">Available only to Google accounts registered as testers.</p>
+      </div>
     <p class="tagline ko">전투기 3종으로 편대와 보스를 돌파하는 세로 스크롤 비행 슈팅. 출시 준비 중입니다.</p>
     <p class="tagline en">A vertical scrolling shooter. Pick one of three fighters and break through waves and bosses. Coming soon.</p>
   </div>

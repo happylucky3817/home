@@ -59,6 +59,10 @@
   footer p + p{margin-top:6px}
   @media (max-width:420px){ h1{font-size:42px} header{padding:60px 0 60px} }
   [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+  .beta{margin-top:20px}
+  .beta-btn{display:inline-block; padding:12px 28px; border-radius:10px; background:var(--gold); color:var(--bg); font-weight:800; font-size:17px; box-shadow:0 4px 16px rgba(0,0,0,.45)}
+  .beta-btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .beta-note{font-size:13px; color:var(--muted); margin-top:8px; text-shadow:0 1px 6px rgba(0,0,0,.8)}
 </style>
 </head>
 <body data-lang="ko">
@@ -79,6 +83,11 @@
       <h1 class="en">Dolsori</h1>
       <p class="sub">Korean Board Games</p>
       <div class="soon">COMING SOON</div>
+      <div class="beta">
+        <a class="beta-btn" href="https://play.google.com/apps/testing/com.happylucky.dolsori"><span class="ko">비공개 테스트 참여</span><span class="en">Join the closed test</span></a>
+        <p class="beta-note ko">테스터로 등록된 Google 계정에서만 참여할 수 있습니다.</p>
+        <p class="beta-note en">Available only to Google accounts registered as testers.</p>
+      </div>
       <p class="tagline ko">오목, 알까기, 바둑, 장기를 3D 판에서 즐기는 보드게임 모음. 출시 준비 중입니다.</p>
       <p class="tagline en">Omok, Alkkagi, Go and Janggi on a 3D board. Coming soon.</p>
     </div>
