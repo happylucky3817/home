@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -122,16 +128,16 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="pixel" src="img/ko_01_battle.png" alt="들판 전투와 피버" loading="lazy">
-      <img class="pixel" src="img/ko_02_boss.png" alt="화산 장 보스" loading="lazy">
-      <img class="pixel" src="img/ko_04_skills.png" alt="얼음 성채 스킬" loading="lazy">
-      <img class="pixel" src="img/ko_06_shop.png" alt="별빛 평원 상점" loading="lazy">
+      <figure><img class="pixel" src="img/ko_01_battle.png" alt="들판 전투와 피버" data-desc="콤보가 쌓이면 피버가 발동해 골드가 쏟아집니다." loading="lazy"><figcaption><b>들판 전투와 피버</b><span>콤보가 쌓이면 피버가 발동해 골드가 쏟아집니다.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/ko_02_boss.png" alt="화산 전투와 스킬" data-desc="스킬을 강화하고 스킬 칸에 넣어 사용합니다." loading="lazy"><figcaption><b>화산 전투와 스킬</b><span>스킬을 강화하고 스킬 칸에 넣어 사용합니다.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/ko_04_skills.png" alt="얼음 성채 성장 강화" data-desc="골드로 공격력, 체력, 방패막기, 치명타를 올립니다." loading="lazy"><figcaption><b>얼음 성채 성장 강화</b><span>골드로 공격력, 체력, 방패막기, 치명타를 올립니다.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/ko_06_shop.png" alt="별빛 평원 상점" data-desc="황금 사냥터, 골드 보상, 환생을 고를 수 있습니다." loading="lazy"><figcaption><b>별빛 평원 상점</b><span>황금 사냥터, 골드 보상, 환생을 고를 수 있습니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="pixel" src="img/en_01_battle.png" alt="Meadow battle with Fever" loading="lazy">
-      <img class="pixel" src="img/en_02_boss.png" alt="Volcano chapter boss" loading="lazy">
-      <img class="pixel" src="img/en_04_skills.png" alt="Frost Fortress skills" loading="lazy">
-      <img class="pixel" src="img/en_06_shop.png" alt="Starlight Plains shop" loading="lazy">
+      <figure><img class="pixel" src="img/en_01_battle.png" alt="Meadow battle with Fever" data-desc="Chain combos to trigger Fever and rain down gold." loading="lazy"><figcaption><b>Meadow battle with Fever</b><span>Chain combos to trigger Fever and rain down gold.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/en_02_boss.png" alt="Volcano battle and skills" data-desc="Upgrade skills and choose which ones fill your slots." loading="lazy"><figcaption><b>Volcano battle and skills</b><span>Upgrade skills and choose which ones fill your slots.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/en_04_skills.png" alt="Frost Fortress growth upgrades" data-desc="Spend gold to raise Attack, HP, Block and Critical." loading="lazy"><figcaption><b>Frost Fortress growth upgrades</b><span>Spend gold to raise Attack, HP, Block and Critical.</span></figcaption></figure>
+      <figure><img class="pixel" src="img/en_06_shop.png" alt="Starlight Plains shop" data-desc="Enter the Golden Hunt, collect gold bonuses or rebirth." loading="lazy"><figcaption><b>Starlight Plains shop</b><span>Enter the Golden Hunt, collect gold bonuses or rebirth.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -189,10 +195,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

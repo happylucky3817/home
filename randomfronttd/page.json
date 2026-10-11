@@ -24,22 +24,22 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면" },
-      { "file": "img/ss_ko_02.jpg", "alt": "장 선택" },
-      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택" },
-      { "file": "img/ss_ko_04.jpg", "alt": "방어선 전투" },
-      { "file": "img/ss_ko_05.jpg", "alt": "합성과 전직 메뉴" },
-      { "file": "img/ss_ko_06.jpg", "alt": "소환 구역 이동" },
-      { "file": "img/ss_ko_07.jpg", "alt": "연구소 영구 강화" }
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면", "desc": "게임 시작, 연구소, 도움말로 들어가는 첫 화면입니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "장 선택", "desc": "9개 장을 차례로 클리어하며 다음 장을 엽니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택", "desc": "장마다 12스테이지를 순서대로 진행합니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "방어선 전투", "desc": "배치한 병사들이 길을 따라 오는 적을 막습니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "합성과 전직 메뉴", "desc": "같은 병사는 레벨업, 정해진 조합은 전직합니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "소환 구역 이동", "desc": "보드를 위아래로 끌어 소환 구역을 옮깁니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "연구소 영구 강화", "desc": "연구 포인트로 화력과 체력 등을 영구히 올립니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Main menu" },
-      { "file": "img/ss_en_02.jpg", "alt": "Chapter select" },
-      { "file": "img/ss_en_03.jpg", "alt": "Stage select" },
-      { "file": "img/ss_en_04.jpg", "alt": "Holding the line" },
-      { "file": "img/ss_en_05.jpg", "alt": "Level up and promotion" },
-      { "file": "img/ss_en_06.jpg", "alt": "Moving the summon zone" },
-      { "file": "img/ss_en_07.jpg", "alt": "Research upgrades" }
+      { "file": "img/ss_en_01.jpg", "alt": "Main menu", "desc": "The title screen with Start Game, Research Lab and Help." },
+      { "file": "img/ss_en_02.jpg", "alt": "Chapter select", "desc": "Clear each of the nine chapters to unlock the next." },
+      { "file": "img/ss_en_03.jpg", "alt": "Stage select", "desc": "Play through the 12 stages of each chapter in order." },
+      { "file": "img/ss_en_04.jpg", "alt": "Holding the line", "desc": "Your squad holds the path as enemy waves push in." },
+      { "file": "img/ss_en_05.jpg", "alt": "Level up and promotion", "desc": "Merge to level up a unit or promote it to a new class." },
+      { "file": "img/ss_en_06.jpg", "alt": "Moving the summon zone", "desc": "Drag the board up or down to move the summon zone." },
+      { "file": "img/ss_en_07.jpg", "alt": "Research upgrades", "desc": "Spend Research Points on permanent upgrades." }
     ]
   },
   "lead": {

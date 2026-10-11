@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -122,18 +128,18 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="본부와 길이 이어진 마을" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="해변 근처 길 놓기" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="건축 트리" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="병영의 보병 양성" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="보병 부대 선택" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="본부와 길이 이어진 마을" data-desc="길로 이어진 마을에서 주민과 병사가 움직입니다." loading="lazy"><figcaption><b>본부와 길이 이어진 마을</b><span>길로 이어진 마을에서 주민과 병사가 움직입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="해변 근처 길 놓기" data-desc="본부에서 원하는 지점까지 길을 놓습니다." loading="lazy"><figcaption><b>해변 근처 길 놓기</b><span>본부에서 원하는 지점까지 길을 놓습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="건축 트리" data-desc="단계별 건물과 필요한 물자를 확인합니다." loading="lazy"><figcaption><b>건축 트리</b><span>단계별 건물과 필요한 물자를 확인합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="병영의 보병 양성" data-desc="병영에서 빵과 검으로 보병을 양성합니다." loading="lazy"><figcaption><b>병영의 보병 양성</b><span>병영에서 빵과 검으로 보병을 양성합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="보병 부대 선택" data-desc="보병 부대를 골라 이동과 공격을 지시합니다." loading="lazy"><figcaption><b>보병 부대 선택</b><span>보병 부대를 골라 이동과 공격을 지시합니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Village connected by roads" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Building a road near the beach" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Build tree" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Training infantry at the barracks" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Selecting an infantry squad" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Village connected by roads" data-desc="Villagers and soldiers move around a road-linked village." loading="lazy"><figcaption><b>Village connected by roads</b><span>Villagers and soldiers move around a road-linked village.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Building a road near the beach" data-desc="Lay a road from headquarters to the point you choose." loading="lazy"><figcaption><b>Building a road near the beach</b><span>Lay a road from headquarters to the point you choose.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Build tree" data-desc="Check each stage&#39;s buildings and the goods they need." loading="lazy"><figcaption><b>Build tree</b><span>Check each stage&#39;s buildings and the goods they need.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Training infantry at the barracks" data-desc="The barracks trains infantry with bread and swords." loading="lazy"><figcaption><b>Training infantry at the barracks</b><span>The barracks trains infantry with bread and swords.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Selecting an infantry squad" data-desc="Select an infantry squad and order it to move or attack." loading="lazy"><figcaption><b>Selecting an infantry squad</b><span>Select an infantry squad and order it to move or attack.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -191,10 +197,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

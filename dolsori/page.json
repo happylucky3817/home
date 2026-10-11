@@ -15,24 +15,24 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "바둑 대국 중" },
-      { "file": "img/ss_ko_02.jpg", "alt": "알까기 조준과 타격점" },
-      { "file": "img/ss_ko_03.jpg", "alt": "장기 대국" },
-      { "file": "img/ss_ko_04.jpg", "alt": "오목 승리" },
-      { "file": "img/ss_ko_05.jpg", "alt": "바둑 계가" },
-      { "file": "img/ss_ko_06.jpg", "alt": "게임 설정과 AI 5단계" },
-      { "file": "img/ss_ko_07.jpg", "alt": "WiFi 대전 대기실" },
-      { "file": "img/ss_ko_08.jpg", "alt": "메인 메뉴" }
+      { "file": "img/ss_ko_01.jpg", "alt": "바둑 대국 중", "desc": "19줄 보드에서 바둑을 둡니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "알까기 조준과 타격점", "desc": "알을 당겨 조준하고 타격점을 고릅니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "장기 대국", "desc": "초와 한이 마주 보는 장기 대국입니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "오목 승리", "desc": "다섯 개를 이은 흑이 승리했습니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "바둑 계가", "desc": "죽은 돌을 표시하고 계가를 확인합니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "게임 설정과 AI 5단계", "desc": "보드 크기와 AI 난이도를 고릅니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "WiFi 대전 대기실", "desc": "같은 WiFi의 상대와 할 게임을 고릅니다." },
+      { "file": "img/ss_ko_08.jpg", "alt": "메인 메뉴", "desc": "네 가지 게임과 WiFi 대전을 고릅니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Go game in progress" },
-      { "file": "img/ss_en_02.jpg", "alt": "Alkkagi aiming with spin" },
-      { "file": "img/ss_en_03.jpg", "alt": "Janggi game" },
-      { "file": "img/ss_en_04.jpg", "alt": "Omok win" },
-      { "file": "img/ss_en_05.jpg", "alt": "Go scoring" },
-      { "file": "img/ss_en_06.jpg", "alt": "Game setup with five AI levels" },
-      { "file": "img/ss_en_07.jpg", "alt": "WiFi Match lobby" },
-      { "file": "img/ss_en_08.jpg", "alt": "Main menu" }
+      { "file": "img/ss_en_01.jpg", "alt": "Go game in progress", "desc": "Black to play in a Go game on a 19x19 board." },
+      { "file": "img/ss_en_02.jpg", "alt": "Alkkagi aiming with spin", "desc": "Pull back a stone, aim, and pick a spin point." },
+      { "file": "img/ss_en_03.jpg", "alt": "Janggi game", "desc": "Cho and Han face off in a game of Janggi." },
+      { "file": "img/ss_en_04.jpg", "alt": "Omok win", "desc": "Black wins Omok with five stones in a row." },
+      { "file": "img/ss_en_05.jpg", "alt": "Go scoring", "desc": "Mark dead stones, then confirm the final score." },
+      { "file": "img/ss_en_06.jpg", "alt": "Game setup with five AI levels", "desc": "Choose a board size and one of five AI levels." },
+      { "file": "img/ss_en_07.jpg", "alt": "WiFi Match lobby", "desc": "Pick a game to play with a friend on the same WiFi." },
+      { "file": "img/ss_en_08.jpg", "alt": "Main menu", "desc": "Choose one of four games or start a WiFi Match." }
     ]
   },
   "lead": {

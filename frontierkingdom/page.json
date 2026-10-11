@@ -24,18 +24,18 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "본부와 길이 이어진 마을" },
-      { "file": "img/ss_ko_02.jpg", "alt": "해변 근처 길 놓기" },
-      { "file": "img/ss_ko_03.jpg", "alt": "건축 트리" },
-      { "file": "img/ss_ko_04.jpg", "alt": "병영의 보병 양성" },
-      { "file": "img/ss_ko_05.jpg", "alt": "보병 부대 선택" }
+      { "file": "img/ss_ko_01.jpg", "alt": "본부와 길이 이어진 마을", "desc": "길로 이어진 마을에서 주민과 병사가 움직입니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "해변 근처 길 놓기", "desc": "본부에서 원하는 지점까지 길을 놓습니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "건축 트리", "desc": "단계별 건물과 필요한 물자를 확인합니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "병영의 보병 양성", "desc": "병영에서 빵과 검으로 보병을 양성합니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "보병 부대 선택", "desc": "보병 부대를 골라 이동과 공격을 지시합니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Village connected by roads" },
-      { "file": "img/ss_en_02.jpg", "alt": "Building a road near the beach" },
-      { "file": "img/ss_en_03.jpg", "alt": "Build tree" },
-      { "file": "img/ss_en_04.jpg", "alt": "Training infantry at the barracks" },
-      { "file": "img/ss_en_05.jpg", "alt": "Selecting an infantry squad" }
+      { "file": "img/ss_en_01.jpg", "alt": "Village connected by roads", "desc": "Villagers and soldiers move around a road-linked village." },
+      { "file": "img/ss_en_02.jpg", "alt": "Building a road near the beach", "desc": "Lay a road from headquarters to the point you choose." },
+      { "file": "img/ss_en_03.jpg", "alt": "Build tree", "desc": "Check each stage's buildings and the goods they need." },
+      { "file": "img/ss_en_04.jpg", "alt": "Training infantry at the barracks", "desc": "The barracks trains infantry with bread and swords." },
+      { "file": "img/ss_en_05.jpg", "alt": "Selecting an infantry squad", "desc": "Select an infantry squad and order it to move or attack." }
     ]
   },
   "lead": {

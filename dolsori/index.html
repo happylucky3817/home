@@ -55,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -66,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -118,24 +123,24 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="바둑 대국 중" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="알까기 조준과 타격점" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="장기 대국" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="오목 승리" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="바둑 계가" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="게임 설정과 AI 5단계" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="WiFi 대전 대기실" loading="lazy">
-      <img class="" src="img/ss_ko_08.jpg" alt="메인 메뉴" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="바둑 대국 중" data-desc="19줄 보드에서 바둑을 둡니다." loading="lazy"><figcaption><b>바둑 대국 중</b><span>19줄 보드에서 바둑을 둡니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="알까기 조준과 타격점" data-desc="알을 당겨 조준하고 타격점을 고릅니다." loading="lazy"><figcaption><b>알까기 조준과 타격점</b><span>알을 당겨 조준하고 타격점을 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="장기 대국" data-desc="초와 한이 마주 보는 장기 대국입니다." loading="lazy"><figcaption><b>장기 대국</b><span>초와 한이 마주 보는 장기 대국입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="오목 승리" data-desc="다섯 개를 이은 흑이 승리했습니다." loading="lazy"><figcaption><b>오목 승리</b><span>다섯 개를 이은 흑이 승리했습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="바둑 계가" data-desc="죽은 돌을 표시하고 계가를 확인합니다." loading="lazy"><figcaption><b>바둑 계가</b><span>죽은 돌을 표시하고 계가를 확인합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="게임 설정과 AI 5단계" data-desc="보드 크기와 AI 난이도를 고릅니다." loading="lazy"><figcaption><b>게임 설정과 AI 5단계</b><span>보드 크기와 AI 난이도를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="WiFi 대전 대기실" data-desc="같은 WiFi의 상대와 할 게임을 고릅니다." loading="lazy"><figcaption><b>WiFi 대전 대기실</b><span>같은 WiFi의 상대와 할 게임을 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="메인 메뉴" data-desc="네 가지 게임과 WiFi 대전을 고릅니다." loading="lazy"><figcaption><b>메인 메뉴</b><span>네 가지 게임과 WiFi 대전을 고릅니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Go game in progress" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Alkkagi aiming with spin" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Janggi game" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Omok win" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Go scoring" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Game setup with five AI levels" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="WiFi Match lobby" loading="lazy">
-      <img class="" src="img/ss_en_08.jpg" alt="Main menu" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Go game in progress" data-desc="Black to play in a Go game on a 19x19 board." loading="lazy"><figcaption><b>Go game in progress</b><span>Black to play in a Go game on a 19x19 board.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Alkkagi aiming with spin" data-desc="Pull back a stone, aim, and pick a spin point." loading="lazy"><figcaption><b>Alkkagi aiming with spin</b><span>Pull back a stone, aim, and pick a spin point.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Janggi game" data-desc="Cho and Han face off in a game of Janggi." loading="lazy"><figcaption><b>Janggi game</b><span>Cho and Han face off in a game of Janggi.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Omok win" data-desc="Black wins Omok with five stones in a row." loading="lazy"><figcaption><b>Omok win</b><span>Black wins Omok with five stones in a row.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Go scoring" data-desc="Mark dead stones, then confirm the final score." loading="lazy"><figcaption><b>Go scoring</b><span>Mark dead stones, then confirm the final score.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Game setup with five AI levels" data-desc="Choose a board size and one of five AI levels." loading="lazy"><figcaption><b>Game setup with five AI levels</b><span>Choose a board size and one of five AI levels.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="WiFi Match lobby" data-desc="Pick a game to play with a friend on the same WiFi." loading="lazy"><figcaption><b>WiFi Match lobby</b><span>Pick a game to play with a friend on the same WiFi.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Main menu" data-desc="Choose one of four games or start a WiFi Match." loading="lazy"><figcaption><b>Main menu</b><span>Choose one of four games or start a WiFi Match.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -193,10 +198,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

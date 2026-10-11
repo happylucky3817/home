@@ -55,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -66,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -118,24 +123,24 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="2층 버스 분해" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="드래곤 로봇" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="굴절버스" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="굴착기, 상자와 대기 칸" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="티라노사우루스" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="점보 여객기" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="테마 선택" loading="lazy">
-      <img class="" src="img/ss_ko_08.jpg" alt="스테이지 클리어" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="2층 버스 분해" data-desc="스티커를 떼어 2층 버스를 분해합니다." loading="lazy"><figcaption><b>2층 버스 분해</b><span>스티커를 떼어 2층 버스를 분해합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="용 로봇" data-desc="날개를 편 용 로봇에서 스티커를 뗍니다." loading="lazy"><figcaption><b>용 로봇</b><span>날개를 편 용 로봇에서 스티커를 뗍니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="초대형 굴절버스" data-desc="세 칸으로 이어진 큰 굴절버스 모형입니다." loading="lazy"><figcaption><b>초대형 굴절버스</b><span>세 칸으로 이어진 큰 굴절버스 모형입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="굴착기, 상자와 대기 칸" data-desc="맞는 상자가 없는 스티커는 대기 칸으로 갑니다." loading="lazy"><figcaption><b>굴착기, 상자와 대기 칸</b><span>맞는 상자가 없는 스티커는 대기 칸으로 갑니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="티라노사우루스" data-desc="뗀 스티커가 같은 색 상자로 들어갑니다." loading="lazy"><figcaption><b>티라노사우루스</b><span>뗀 스티커가 같은 색 상자로 들어갑니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="점보 여객기" data-desc="블록이 떨어지며 여객기가 분해됩니다." loading="lazy"><figcaption><b>점보 여객기</b><span>블록이 떨어지며 여객기가 분해됩니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="챕터 선택" data-desc="자동차, 로봇 등 테마별 챕터를 고릅니다." loading="lazy"><figcaption><b>챕터 선택</b><span>자동차, 로봇 등 테마별 챕터를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="스테이지 클리어" data-desc="장난감을 모두 분해하면 스테이지 클리어입니다." loading="lazy"><figcaption><b>스테이지 클리어</b><span>장난감을 모두 분해하면 스테이지 클리어입니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Taking apart a double-decker bus" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Dragon robot" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Articulated bus" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Excavator with boxes and holding slots" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="T-rex" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Jumbo jet" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="Theme select" loading="lazy">
-      <img class="" src="img/ss_en_08.jpg" alt="Stage clear" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Taking apart a double-decker bus" data-desc="Peel stickers to take apart a double-decker bus." loading="lazy"><figcaption><b>Taking apart a double-decker bus</b><span>Peel stickers to take apart a double-decker bus.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Dragon robot" data-desc="Peel stickers off a dragon robot with open wings." loading="lazy"><figcaption><b>Dragon robot</b><span>Peel stickers off a dragon robot with open wings.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Mega articulated bus" data-desc="A large three-section articulated bus model." loading="lazy"><figcaption><b>Mega articulated bus</b><span>A large three-section articulated bus model.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Excavator with boxes and holding slots" data-desc="Stickers with no matching box wait in holding slots." loading="lazy"><figcaption><b>Excavator with boxes and holding slots</b><span>Stickers with no matching box wait in holding slots.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Tyrannosaurus" data-desc="Peeled stickers fly into the box of their color." loading="lazy"><figcaption><b>Tyrannosaurus</b><span>Peeled stickers fly into the box of their color.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Jumbo jet" data-desc="Blocks drop off as the jumbo jet comes apart." loading="lazy"><figcaption><b>Jumbo jet</b><span>Blocks drop off as the jumbo jet comes apart.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Chapter select" data-desc="Choose a chapter such as cars, robots or planes." loading="lazy"><figcaption><b>Chapter select</b><span>Choose a chapter such as cars, robots or planes.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Stage clear" data-desc="Take the whole toy apart to clear the stage." loading="lazy"><figcaption><b>Stage clear</b><span>Take the whole toy apart to clear the stage.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -193,10 +198,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

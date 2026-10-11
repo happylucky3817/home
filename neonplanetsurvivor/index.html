@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -111,20 +117,20 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="타이틀 화면" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="우주선 선택" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="네온 상점" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="행성 선택" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="행성 위 전투" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="주무기 선택" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="타이틀 화면" data-desc="게임 시작, 상점, 우주선 선택이 있는 첫 화면입니다." loading="lazy"><figcaption><b>타이틀 화면</b><span>게임 시작, 상점, 우주선 선택이 있는 첫 화면입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="우주선 선택" data-desc="기체마다 능력치와 고유 속성이 다르고 도색도 고릅니다." loading="lazy"><figcaption><b>우주선 선택</b><span>기체마다 능력치와 고유 속성이 다르고 도색도 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="네온 상점" data-desc="모은 코어로 모듈을 영구 강화합니다." loading="lazy"><figcaption><b>네온 상점</b><span>모은 코어로 모듈을 영구 강화합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="행성 선택" data-desc="행성마다 난이도 배율이 다르고 심연 모드도 있습니다." loading="lazy"><figcaption><b>행성 선택</b><span>행성마다 난이도 배율이 다르고 심연 모드도 있습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="행성 위 전투" data-desc="사격은 자동이고, 둥근 행성 위에서 피할 방향을 고릅니다." loading="lazy"><figcaption><b>행성 위 전투</b><span>사격은 자동이고, 둥근 행성 위에서 피할 방향을 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="주무기 선택" data-desc="직선탄, 확산탄, 유도탄 중 주무기를 고릅니다." loading="lazy"><figcaption><b>주무기 선택</b><span>직선탄, 확산탄, 유도탄 중 주무기를 고릅니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Title screen" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Ship select" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Neon Shop" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Planet select" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Battle on a planet" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Main weapon choice" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Title screen" data-desc="The title screen with Start, Shop and Ships." loading="lazy"><figcaption><b>Title screen</b><span>The title screen with Start, Shop and Ships.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Ship select" data-desc="Each ship has its own stats and element, plus 11 paints." loading="lazy"><figcaption><b>Ship select</b><span>Each ship has its own stats and element, plus 11 paints.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Neon Shop" data-desc="Spend cores on permanent modules, no equipping needed." loading="lazy"><figcaption><b>Neon Shop</b><span>Spend cores on permanent modules, no equipping needed.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Planet select" data-desc="Pick a planet by difficulty, in Normal or Abyss Mode." loading="lazy"><figcaption><b>Planet select</b><span>Pick a planet by difficulty, in Normal or Abyss Mode.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Battle on a planet" data-desc="Your ship fires on its own; you choose where to steer." loading="lazy"><figcaption><b>Battle on a planet</b><span>Your ship fires on its own; you choose where to steer.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Main weapon choice" data-desc="Choose a main weapon: straight, spread or homing shots." loading="lazy"><figcaption><b>Main weapon choice</b><span>Choose a main weapon: straight, spread or homing shots.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -182,10 +188,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

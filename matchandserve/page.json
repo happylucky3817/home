@@ -12,24 +12,24 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "메인 메뉴" },
-      { "file": "img/ss_ko_02.jpg", "alt": "가게 선택" },
-      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택" },
-      { "file": "img/ss_ko_04.jpg", "alt": "캔디 가게 플레이" },
-      { "file": "img/ss_ko_05.jpg", "alt": "과일 쥬스 가게 플레이" },
-      { "file": "img/ss_ko_06.jpg", "alt": "베이커리 손님 주문" },
-      { "file": "img/ss_ko_07.jpg", "alt": "스테이지 클리어" },
-      { "file": "img/ss_ko_08.jpg", "alt": "아이템 상점" }
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 메뉴", "desc": "게임 시작, 도움말, 설정 메뉴입니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "가게 선택", "desc": "단계별로 열리는 가게를 고릅니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택", "desc": "가게마다 30스테이지에서 별을 모읍니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "캔디 가게 플레이", "desc": "사탕 재료를 맞춰 손님 주문을 채웁니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "과일 쥬스 가게 플레이", "desc": "과일을 맞춰 주스 주문을 완성합니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "베이커리 손님 주문", "desc": "베이커리 재료를 모아 주문을 내어 줍니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "스테이지 클리어", "desc": "클리어하면 별과 팁, 아이템을 받습니다." },
+      { "file": "img/ss_ko_08.jpg", "alt": "아이템 상점", "desc": "손님에게 받은 팁으로 아이템을 삽니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Main menu" },
-      { "file": "img/ss_en_02.jpg", "alt": "Shop select" },
-      { "file": "img/ss_en_03.jpg", "alt": "Stage select" },
-      { "file": "img/ss_en_04.jpg", "alt": "Candy Shop gameplay" },
-      { "file": "img/ss_en_05.jpg", "alt": "Juice Bar gameplay" },
-      { "file": "img/ss_en_06.jpg", "alt": "Bakery customer orders" },
-      { "file": "img/ss_en_07.jpg", "alt": "Stage clear" },
-      { "file": "img/ss_en_08.jpg", "alt": "Item shop" }
+      { "file": "img/ss_en_01.jpg", "alt": "Main menu", "desc": "Start a game, read the help or open settings." },
+      { "file": "img/ss_en_02.jpg", "alt": "Shop select", "desc": "Choose a shop as each new one unlocks." },
+      { "file": "img/ss_en_03.jpg", "alt": "Stage select", "desc": "Earn stars across 30 stages in every shop." },
+      { "file": "img/ss_en_04.jpg", "alt": "Candy Shop gameplay", "desc": "Match candy to fill each customer's order." },
+      { "file": "img/ss_en_05.jpg", "alt": "Juice Bar gameplay", "desc": "Match fruit to make juice for each order." },
+      { "file": "img/ss_en_06.jpg", "alt": "Bakery customer orders", "desc": "Collect bakery ingredients and serve the orders." },
+      { "file": "img/ss_en_07.jpg", "alt": "Stage clear", "desc": "Clear a stage to earn stars, tips and items." },
+      { "file": "img/ss_en_08.jpg", "alt": "Item shop", "desc": "Spend tips from customers on helpful items." }
     ]
   },
   "lead": {

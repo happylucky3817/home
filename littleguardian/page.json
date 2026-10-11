@@ -25,16 +25,16 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ko_01_battle.png", "alt": "들판 전투와 피버" },
-      { "file": "img/ko_02_boss.png", "alt": "화산 장 보스" },
-      { "file": "img/ko_04_skills.png", "alt": "얼음 성채 스킬" },
-      { "file": "img/ko_06_shop.png", "alt": "별빛 평원 상점" }
+      { "file": "img/ko_01_battle.png", "alt": "들판 전투와 피버", "desc": "콤보가 쌓이면 피버가 발동해 골드가 쏟아집니다." },
+      { "file": "img/ko_02_boss.png", "alt": "화산 전투와 스킬", "desc": "스킬을 강화하고 스킬 칸에 넣어 사용합니다." },
+      { "file": "img/ko_04_skills.png", "alt": "얼음 성채 성장 강화", "desc": "골드로 공격력, 체력, 방패막기, 치명타를 올립니다." },
+      { "file": "img/ko_06_shop.png", "alt": "별빛 평원 상점", "desc": "황금 사냥터, 골드 보상, 환생을 고를 수 있습니다." }
     ],
     "en": [
-      { "file": "img/en_01_battle.png", "alt": "Meadow battle with Fever" },
-      { "file": "img/en_02_boss.png", "alt": "Volcano chapter boss" },
-      { "file": "img/en_04_skills.png", "alt": "Frost Fortress skills" },
-      { "file": "img/en_06_shop.png", "alt": "Starlight Plains shop" }
+      { "file": "img/en_01_battle.png", "alt": "Meadow battle with Fever", "desc": "Chain combos to trigger Fever and rain down gold." },
+      { "file": "img/en_02_boss.png", "alt": "Volcano battle and skills", "desc": "Upgrade skills and choose which ones fill your slots." },
+      { "file": "img/en_04_skills.png", "alt": "Frost Fortress growth upgrades", "desc": "Spend gold to raise Attack, HP, Block and Critical." },
+      { "file": "img/en_06_shop.png", "alt": "Starlight Plains shop", "desc": "Enter the Golden Hunt, collect gold bonuses or rebirth." }
     ]
   },
   "lead": {

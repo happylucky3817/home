@@ -12,20 +12,20 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면" },
-      { "file": "img/ss_ko_02.jpg", "alt": "3인 게임 시작" },
-      { "file": "img/ss_ko_03.jpg", "alt": "게임 진행 중" },
-      { "file": "img/ss_ko_04.jpg", "alt": "결과 계산서" },
-      { "file": "img/ss_ko_05.jpg", "alt": "난이도 선택" },
-      { "file": "img/ss_ko_06.jpg", "alt": "WiFi 모드 멤버 찾기" }
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면", "desc": "게임 시작과 WiFi 모드를 고르는 첫 화면입니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "3인 게임 시작", "desc": "AI 두 명과 함께 3인 고스톱을 시작합니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "게임 진행 중", "desc": "먹은 패가 광, 열, 띠, 피로 나뉘어 쌓입니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "결과 계산서", "desc": "족보와 고, 흔들기 배수를 한 화면에 보여 줍니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "난이도 선택", "desc": "여섯 단계 상대 중 하나를 고릅니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "WiFi 모드 멤버 찾기", "desc": "같은 WiFi에 연결된 다른 기기를 찾습니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Main screen" },
-      { "file": "img/ss_en_02.jpg", "alt": "Three-player table" },
-      { "file": "img/ss_en_03.jpg", "alt": "Game in progress" },
-      { "file": "img/ss_en_04.jpg", "alt": "Score sheet" },
-      { "file": "img/ss_en_05.jpg", "alt": "Difficulty select" },
-      { "file": "img/ss_en_06.jpg", "alt": "Finding players in WiFi mode" }
+      { "file": "img/ss_en_01.jpg", "alt": "Main screen", "desc": "The title screen, with Start and WiFi Mode." },
+      { "file": "img/ss_en_02.jpg", "alt": "Three-player table", "desc": "A three-player Go-Stop game begins with two AI players." },
+      { "file": "img/ss_en_03.jpg", "alt": "Game in progress", "desc": "Captured cards are sorted into gwang, yeol, tti, and pi." },
+      { "file": "img/ss_en_04.jpg", "alt": "Score sheet", "desc": "Combinations, go, and multipliers shown on one sheet." },
+      { "file": "img/ss_en_05.jpg", "alt": "Difficulty select", "desc": "Choose an opponent from six skill levels." },
+      { "file": "img/ss_en_06.jpg", "alt": "Finding players in WiFi mode", "desc": "Search for other players on the same WiFi." }
     ]
   },
   "lead": {

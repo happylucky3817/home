@@ -15,24 +15,24 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "광폭화 전투" },
-      { "file": "img/ss_ko_02.jpg", "alt": "무리 습격" },
-      { "file": "img/ss_ko_03.jpg", "alt": "장비" },
-      { "file": "img/ss_ko_04.jpg", "alt": "스킬" },
-      { "file": "img/ss_ko_05.jpg", "alt": "능력치" },
-      { "file": "img/ss_ko_06.jpg", "alt": "지역 선택" },
-      { "file": "img/ss_ko_07.jpg", "alt": "수집품" },
-      { "file": "img/ss_ko_08.jpg", "alt": "지역 클리어" }
+      { "file": "img/ss_ko_01.jpg", "alt": "광폭화 전투", "desc": "광폭화 중에는 공격 속도와 이동 속도가 오릅니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "설원 전투", "desc": "눈 덮인 설원에서 몬스터와 자동으로 싸웁니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "장비", "desc": "장비 5칸을 장착하고 소지품을 정리합니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "스킬", "desc": "사냥용과 보스용 스킬을 장착하고 강화합니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "능력치", "desc": "골드로 능력치 8종을 올립니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "지역 선택", "desc": "가 본 지역의 첫 스테이지로 이동합니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "수집품", "desc": "지역마다 수집품 5종을 모아 효과를 얻습니다." },
+      { "file": "img/ss_ko_08.jpg", "alt": "지역 클리어", "desc": "화산을 클리어하고 다음 지역으로 넘어갑니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Frenzy battle" },
-      { "file": "img/ss_en_02.jpg", "alt": "Monster horde" },
-      { "file": "img/ss_en_03.jpg", "alt": "Gear" },
-      { "file": "img/ss_en_04.jpg", "alt": "Skills" },
-      { "file": "img/ss_en_05.jpg", "alt": "Stats" },
-      { "file": "img/ss_en_06.jpg", "alt": "Area select" },
-      { "file": "img/ss_en_07.jpg", "alt": "Relics" },
-      { "file": "img/ss_en_08.jpg", "alt": "Area cleared" }
+      { "file": "img/ss_en_01.jpg", "alt": "Frenzy battle", "desc": "Frenzy boosts attack and move speed in battle." },
+      { "file": "img/ss_en_02.jpg", "alt": "Snowfield battle", "desc": "Your knight fights monsters across the Snowfield." },
+      { "file": "img/ss_en_03.jpg", "alt": "Gear", "desc": "Fill five gear slots and manage your bag." },
+      { "file": "img/ss_en_04.jpg", "alt": "Skills", "desc": "Equip and upgrade skills for hunting and bosses." },
+      { "file": "img/ss_en_05.jpg", "alt": "Stats", "desc": "Spend gold to raise eight different stats." },
+      { "file": "img/ss_en_06.jpg", "alt": "Area select", "desc": "Return to the first stage of any area you reached." },
+      { "file": "img/ss_en_07.jpg", "alt": "Relics", "desc": "Collect five relics per area for lasting effects." },
+      { "file": "img/ss_en_08.jpg", "alt": "Area cleared", "desc": "Volcano cleared, and the Ruined Castle is next." }
     ]
   },
   "lead": {

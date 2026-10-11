@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -114,20 +120,20 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="메인 화면" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="3인 게임 시작" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="게임 진행 중" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="결과 계산서" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="난이도 선택" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="WiFi 모드 멤버 찾기" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="메인 화면" data-desc="게임 시작과 WiFi 모드를 고르는 첫 화면입니다." loading="lazy"><figcaption><b>메인 화면</b><span>게임 시작과 WiFi 모드를 고르는 첫 화면입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="3인 게임 시작" data-desc="AI 두 명과 함께 3인 고스톱을 시작합니다." loading="lazy"><figcaption><b>3인 게임 시작</b><span>AI 두 명과 함께 3인 고스톱을 시작합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="게임 진행 중" data-desc="먹은 패가 광, 열, 띠, 피로 나뉘어 쌓입니다." loading="lazy"><figcaption><b>게임 진행 중</b><span>먹은 패가 광, 열, 띠, 피로 나뉘어 쌓입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="결과 계산서" data-desc="족보와 고, 흔들기 배수를 한 화면에 보여 줍니다." loading="lazy"><figcaption><b>결과 계산서</b><span>족보와 고, 흔들기 배수를 한 화면에 보여 줍니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="난이도 선택" data-desc="여섯 단계 상대 중 하나를 고릅니다." loading="lazy"><figcaption><b>난이도 선택</b><span>여섯 단계 상대 중 하나를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="WiFi 모드 멤버 찾기" data-desc="같은 WiFi에 연결된 다른 기기를 찾습니다." loading="lazy"><figcaption><b>WiFi 모드 멤버 찾기</b><span>같은 WiFi에 연결된 다른 기기를 찾습니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Main screen" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Three-player table" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Game in progress" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Score sheet" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Difficulty select" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Finding players in WiFi mode" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Main screen" data-desc="The title screen, with Start and WiFi Mode." loading="lazy"><figcaption><b>Main screen</b><span>The title screen, with Start and WiFi Mode.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Three-player table" data-desc="A three-player Go-Stop game begins with two AI players." loading="lazy"><figcaption><b>Three-player table</b><span>A three-player Go-Stop game begins with two AI players.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Game in progress" data-desc="Captured cards are sorted into gwang, yeol, tti, and pi." loading="lazy"><figcaption><b>Game in progress</b><span>Captured cards are sorted into gwang, yeol, tti, and pi.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Score sheet" data-desc="Combinations, go, and multipliers shown on one sheet." loading="lazy"><figcaption><b>Score sheet</b><span>Combinations, go, and multipliers shown on one sheet.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Difficulty select" data-desc="Choose an opponent from six skill levels." loading="lazy"><figcaption><b>Difficulty select</b><span>Choose an opponent from six skill levels.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Finding players in WiFi mode" data-desc="Search for other players on the same WiFi." loading="lazy"><figcaption><b>Finding players in WiFi mode</b><span>Search for other players on the same WiFi.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -185,10 +191,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

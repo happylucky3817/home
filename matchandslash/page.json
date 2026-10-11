@@ -12,20 +12,20 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면과 출전 파티" },
-      { "file": "img/ss_ko_02.jpg", "alt": "7x7 퍼즐 전투" },
-      { "file": "img/ss_ko_03.jpg", "alt": "챕터 1 스테이지 선택" },
-      { "file": "img/ss_ko_04.jpg", "alt": "파티 편성" },
-      { "file": "img/ss_ko_05.jpg", "alt": "카드 소환" },
-      { "file": "img/ss_ko_06.jpg", "alt": "상점" }
+      { "file": "img/ss_ko_01.jpg", "alt": "메인 화면과 출전 파티", "desc": "출전 파티 넷을 확인하고 모험을 시작합니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "7x7 퍼즐 전투", "desc": "같은 무늬를 셋 이상 맞춰 스킬 게이지를 채웁니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "챕터 1 스테이지 선택", "desc": "챕터 1의 스테이지 10개에서 별을 모읍니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "파티 편성", "desc": "직업마다 카드 하나씩 골라 파티를 꾸립니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "카드 소환", "desc": "새 카드를 1회 또는 10회씩 소환합니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "상점", "desc": "전투에 쓸 아이템과 강화 재료를 삽니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Main screen and party" },
-      { "file": "img/ss_en_02.jpg", "alt": "7x7 puzzle battle" },
-      { "file": "img/ss_en_03.jpg", "alt": "Chapter 1 stage select" },
-      { "file": "img/ss_en_04.jpg", "alt": "Party setup" },
-      { "file": "img/ss_en_05.jpg", "alt": "Card summoning" },
-      { "file": "img/ss_en_06.jpg", "alt": "Shop" }
+      { "file": "img/ss_en_01.jpg", "alt": "Main screen and party", "desc": "Check your party of four and set out on an adventure." },
+      { "file": "img/ss_en_02.jpg", "alt": "7x7 puzzle battle", "desc": "Match three or more to fill your party's skill gauges." },
+      { "file": "img/ss_en_03.jpg", "alt": "Chapter 1 stage select", "desc": "Earn stars across the ten stages of Chapter 1." },
+      { "file": "img/ss_en_04.jpg", "alt": "Party setup", "desc": "Pick one card per class to build your party." },
+      { "file": "img/ss_en_05.jpg", "alt": "Card summoning", "desc": "Summon new cards one or ten at a time." },
+      { "file": "img/ss_en_06.jpg", "alt": "Shop", "desc": "Buy battle items and upgrade materials." }
     ]
   },
   "lead": {

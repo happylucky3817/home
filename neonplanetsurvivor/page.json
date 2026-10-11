@@ -12,20 +12,20 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "타이틀 화면" },
-      { "file": "img/ss_ko_02.jpg", "alt": "우주선 선택" },
-      { "file": "img/ss_ko_03.jpg", "alt": "네온 상점" },
-      { "file": "img/ss_ko_04.jpg", "alt": "행성 선택" },
-      { "file": "img/ss_ko_05.jpg", "alt": "행성 위 전투" },
-      { "file": "img/ss_ko_06.jpg", "alt": "주무기 선택" }
+      { "file": "img/ss_ko_01.jpg", "alt": "타이틀 화면", "desc": "게임 시작, 상점, 우주선 선택이 있는 첫 화면입니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "우주선 선택", "desc": "기체마다 능력치와 고유 속성이 다르고 도색도 고릅니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "네온 상점", "desc": "모은 코어로 모듈을 영구 강화합니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "행성 선택", "desc": "행성마다 난이도 배율이 다르고 심연 모드도 있습니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "행성 위 전투", "desc": "사격은 자동이고, 둥근 행성 위에서 피할 방향을 고릅니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "주무기 선택", "desc": "직선탄, 확산탄, 유도탄 중 주무기를 고릅니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Title screen" },
-      { "file": "img/ss_en_02.jpg", "alt": "Ship select" },
-      { "file": "img/ss_en_03.jpg", "alt": "Neon Shop" },
-      { "file": "img/ss_en_04.jpg", "alt": "Planet select" },
-      { "file": "img/ss_en_05.jpg", "alt": "Battle on a planet" },
-      { "file": "img/ss_en_06.jpg", "alt": "Main weapon choice" }
+      { "file": "img/ss_en_01.jpg", "alt": "Title screen", "desc": "The title screen with Start, Shop and Ships." },
+      { "file": "img/ss_en_02.jpg", "alt": "Ship select", "desc": "Each ship has its own stats and element, plus 11 paints." },
+      { "file": "img/ss_en_03.jpg", "alt": "Neon Shop", "desc": "Spend cores on permanent modules, no equipping needed." },
+      { "file": "img/ss_en_04.jpg", "alt": "Planet select", "desc": "Pick a planet by difficulty, in Normal or Abyss Mode." },
+      { "file": "img/ss_en_05.jpg", "alt": "Battle on a planet", "desc": "Your ship fires on its own; you choose where to steer." },
+      { "file": "img/ss_en_06.jpg", "alt": "Main weapon choice", "desc": "Choose a main weapon: straight, spread or homing shots." }
     ]
   },
   "lead": {

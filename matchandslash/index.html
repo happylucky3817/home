@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -111,20 +117,20 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="메인 화면과 출전 파티" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="7x7 퍼즐 전투" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="챕터 1 스테이지 선택" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="파티 편성" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="카드 소환" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="상점" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="메인 화면과 출전 파티" data-desc="출전 파티 넷을 확인하고 모험을 시작합니다." loading="lazy"><figcaption><b>메인 화면과 출전 파티</b><span>출전 파티 넷을 확인하고 모험을 시작합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="7x7 퍼즐 전투" data-desc="같은 무늬를 셋 이상 맞춰 스킬 게이지를 채웁니다." loading="lazy"><figcaption><b>7x7 퍼즐 전투</b><span>같은 무늬를 셋 이상 맞춰 스킬 게이지를 채웁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="챕터 1 스테이지 선택" data-desc="챕터 1의 스테이지 10개에서 별을 모읍니다." loading="lazy"><figcaption><b>챕터 1 스테이지 선택</b><span>챕터 1의 스테이지 10개에서 별을 모읍니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="파티 편성" data-desc="직업마다 카드 하나씩 골라 파티를 꾸립니다." loading="lazy"><figcaption><b>파티 편성</b><span>직업마다 카드 하나씩 골라 파티를 꾸립니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="카드 소환" data-desc="새 카드를 1회 또는 10회씩 소환합니다." loading="lazy"><figcaption><b>카드 소환</b><span>새 카드를 1회 또는 10회씩 소환합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="상점" data-desc="전투에 쓸 아이템과 강화 재료를 삽니다." loading="lazy"><figcaption><b>상점</b><span>전투에 쓸 아이템과 강화 재료를 삽니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Main screen and party" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="7x7 puzzle battle" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Chapter 1 stage select" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Party setup" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Card summoning" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Shop" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Main screen and party" data-desc="Check your party of four and set out on an adventure." loading="lazy"><figcaption><b>Main screen and party</b><span>Check your party of four and set out on an adventure.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="7x7 puzzle battle" data-desc="Match three or more to fill your party&#39;s skill gauges." loading="lazy"><figcaption><b>7x7 puzzle battle</b><span>Match three or more to fill your party&#39;s skill gauges.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Chapter 1 stage select" data-desc="Earn stars across the ten stages of Chapter 1." loading="lazy"><figcaption><b>Chapter 1 stage select</b><span>Earn stars across the ten stages of Chapter 1.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Party setup" data-desc="Pick one card per class to build your party." loading="lazy"><figcaption><b>Party setup</b><span>Pick one card per class to build your party.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Card summoning" data-desc="Summon new cards one or ten at a time." loading="lazy"><figcaption><b>Card summoning</b><span>Summon new cards one or ten at a time.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Shop" data-desc="Buy battle items and upgrade materials." loading="lazy"><figcaption><b>Shop</b><span>Buy battle items and upgrade materials.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -182,10 +188,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

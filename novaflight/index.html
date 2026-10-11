@@ -55,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -66,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -118,24 +123,24 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="보스전" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="중간 보스 경고" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="무한 모드 보스" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="탄막 소거" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="윙맨" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="별 목표 클리어" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="일일 도전" loading="lazy">
-      <img class="" src="img/ss_ko_08.jpg" alt="격납고" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="보스전" data-desc="보스의 탄막을 피하며 공격합니다." loading="lazy"><figcaption><b>보스전</b><span>보스의 탄막을 피하며 공격합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="중간 보스 경고" data-desc="중간 보스가 접근하면 경고가 뜹니다." loading="lazy"><figcaption><b>중간 보스 경고</b><span>중간 보스가 접근하면 경고가 뜹니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="무한 모드 보스" data-desc="무한 모드에서 보스와 싸웁니다." loading="lazy"><figcaption><b>무한 모드 보스</b><span>무한 모드에서 보스와 싸웁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="탄막 소거" data-desc="탄막 소거로 화면의 적 탄을 지웁니다." loading="lazy"><figcaption><b>탄막 소거</b><span>탄막 소거로 화면의 적 탄을 지웁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="윙맨" data-desc="모은 별로 윙맨을 열고 장착합니다." loading="lazy"><figcaption><b>윙맨</b><span>모은 별로 윙맨을 열고 장착합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="별 목표 클리어" data-desc="별 목표 3개를 채우고 골드를 받습니다." loading="lazy"><figcaption><b>별 목표 클리어</b><span>별 목표 3개를 채우고 골드를 받습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="일일 도전" data-desc="날마다 바뀌는 스테이지와 규칙에 도전합니다." loading="lazy"><figcaption><b>일일 도전</b><span>날마다 바뀌는 스테이지와 규칙에 도전합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="전투기 선택" data-desc="전투기를 고르고 모드를 선택합니다." loading="lazy"><figcaption><b>전투기 선택</b><span>전투기를 고르고 모드를 선택합니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Boss battle" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Mid-boss warning" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Endless Mode boss" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Clear Shot" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Wingmen" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Star goals cleared" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="Daily Challenge" loading="lazy">
-      <img class="" src="img/ss_en_08.jpg" alt="Hangar" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Boss battle" data-desc="Dodge the boss&#39;s bullets while you fire back." loading="lazy"><figcaption><b>Boss battle</b><span>Dodge the boss&#39;s bullets while you fire back.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Mid-boss warning" data-desc="A warning appears as a mid-boss approaches." loading="lazy"><figcaption><b>Mid-boss warning</b><span>A warning appears as a mid-boss approaches.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Endless Mode boss" data-desc="Take on a boss in Endless Mode." loading="lazy"><figcaption><b>Endless Mode boss</b><span>Take on a boss in Endless Mode.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Clear Shot" data-desc="Clear Shot wipes enemy bullets off the screen." loading="lazy"><figcaption><b>Clear Shot</b><span>Clear Shot wipes enemy bullets off the screen.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Wingmen" data-desc="Unlock and equip wingmen with the stars you collect." loading="lazy"><figcaption><b>Wingmen</b><span>Unlock and equip wingmen with the stars you collect.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Star goals cleared" data-desc="Meet all three star goals and collect your gold." loading="lazy"><figcaption><b>Star goals cleared</b><span>Meet all three star goals and collect your gold.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Daily Challenge" data-desc="Try a new stage and a new rule every day." loading="lazy"><figcaption><b>Daily Challenge</b><span>Try a new stage and a new rule every day.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Fighter select" data-desc="Choose your fighter and pick a game mode." loading="lazy"><figcaption><b>Fighter select</b><span>Choose your fighter and pick a game mode.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -193,10 +198,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

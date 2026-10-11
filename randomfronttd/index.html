@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -122,22 +128,22 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="메인 화면" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="장 선택" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="방어선 전투" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="합성과 전직 메뉴" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="소환 구역 이동" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="연구소 영구 강화" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="메인 화면" data-desc="게임 시작, 연구소, 도움말로 들어가는 첫 화면입니다." loading="lazy"><figcaption><b>메인 화면</b><span>게임 시작, 연구소, 도움말로 들어가는 첫 화면입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="장 선택" data-desc="9개 장을 차례로 클리어하며 다음 장을 엽니다." loading="lazy"><figcaption><b>장 선택</b><span>9개 장을 차례로 클리어하며 다음 장을 엽니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" data-desc="장마다 12스테이지를 순서대로 진행합니다." loading="lazy"><figcaption><b>스테이지 선택</b><span>장마다 12스테이지를 순서대로 진행합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="방어선 전투" data-desc="배치한 병사들이 길을 따라 오는 적을 막습니다." loading="lazy"><figcaption><b>방어선 전투</b><span>배치한 병사들이 길을 따라 오는 적을 막습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="합성과 전직 메뉴" data-desc="같은 병사는 레벨업, 정해진 조합은 전직합니다." loading="lazy"><figcaption><b>합성과 전직 메뉴</b><span>같은 병사는 레벨업, 정해진 조합은 전직합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="소환 구역 이동" data-desc="보드를 위아래로 끌어 소환 구역을 옮깁니다." loading="lazy"><figcaption><b>소환 구역 이동</b><span>보드를 위아래로 끌어 소환 구역을 옮깁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="연구소 영구 강화" data-desc="연구 포인트로 화력과 체력 등을 영구히 올립니다." loading="lazy"><figcaption><b>연구소 영구 강화</b><span>연구 포인트로 화력과 체력 등을 영구히 올립니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Main menu" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Chapter select" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Stage select" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Holding the line" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Level up and promotion" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Moving the summon zone" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="Research upgrades" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Main menu" data-desc="The title screen with Start Game, Research Lab and Help." loading="lazy"><figcaption><b>Main menu</b><span>The title screen with Start Game, Research Lab and Help.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Chapter select" data-desc="Clear each of the nine chapters to unlock the next." loading="lazy"><figcaption><b>Chapter select</b><span>Clear each of the nine chapters to unlock the next.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Stage select" data-desc="Play through the 12 stages of each chapter in order." loading="lazy"><figcaption><b>Stage select</b><span>Play through the 12 stages of each chapter in order.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Holding the line" data-desc="Your squad holds the path as enemy waves push in." loading="lazy"><figcaption><b>Holding the line</b><span>Your squad holds the path as enemy waves push in.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Level up and promotion" data-desc="Merge to level up a unit or promote it to a new class." loading="lazy"><figcaption><b>Level up and promotion</b><span>Merge to level up a unit or promote it to a new class.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Moving the summon zone" data-desc="Drag the board up or down to move the summon zone." loading="lazy"><figcaption><b>Moving the summon zone</b><span>Drag the board up or down to move the summon zone.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Research upgrades" data-desc="Spend Research Points on permanent upgrades." loading="lazy"><figcaption><b>Research upgrades</b><span>Spend Research Points on permanent upgrades.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -195,10 +201,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

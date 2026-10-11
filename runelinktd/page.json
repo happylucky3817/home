@@ -12,22 +12,22 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "정령의 길 마지막 웨이브" },
-      { "file": "img/ss_ko_02.jpg", "alt": "링크 공명 발동" },
-      { "file": "img/ss_ko_03.jpg", "alt": "적 분열과 비전룬" },
-      { "file": "img/ss_ko_04.jpg", "alt": "용암 협곡 보스전" },
-      { "file": "img/ss_ko_05.jpg", "alt": "룬 강화" },
-      { "file": "img/ss_ko_06.jpg", "alt": "스테이지 선택" },
-      { "file": "img/ss_ko_07.jpg", "alt": "메인 메뉴" }
+      { "file": "img/ss_ko_01.jpg", "alt": "정령의 길 마지막 웨이브", "desc": "룬을 배치해 마지막 5웨이브를 막습니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "링크 공명 발동", "desc": "이어진 룬에서 광역 공명이 터집니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "적 분열과 비전룬", "desc": "분열하는 적을 비전룬과 함께 막습니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "용암 협곡 보스전", "desc": "용암 협곡의 마지막 웨이브 보스와 싸웁니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "룬 강화", "desc": "원소 코어로 룬을 영구 강화합니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "스테이지 선택", "desc": "장마다 10개 스테이지를 골라 도전합니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "메인 메뉴", "desc": "게임 시작, 튜토리얼, 룬 강화 메뉴입니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Last waves on Spirit Path" },
-      { "file": "img/ss_en_02.jpg", "alt": "Enemy split and resonance" },
-      { "file": "img/ss_en_03.jpg", "alt": "Battle with an Arcane Rune" },
-      { "file": "img/ss_en_04.jpg", "alt": "Lava Canyon boss wave" },
-      { "file": "img/ss_en_05.jpg", "alt": "Rune upgrades" },
-      { "file": "img/ss_en_06.jpg", "alt": "Stage select" },
-      { "file": "img/ss_en_07.jpg", "alt": "Main menu" }
+      { "file": "img/ss_en_01.jpg", "alt": "Last waves on Spirit Path", "desc": "Place runes to hold back the last five waves." },
+      { "file": "img/ss_en_02.jpg", "alt": "Enemy split and resonance", "desc": "Enemies split while a link resonance blasts them." },
+      { "file": "img/ss_en_03.jpg", "alt": "Battle with an Arcane Rune", "desc": "An Arcane Rune supports your defense at the exit." },
+      { "file": "img/ss_en_04.jpg", "alt": "Lava Canyon boss wave", "desc": "Face the final boss wave in Lava Canyon." },
+      { "file": "img/ss_en_05.jpg", "alt": "Rune upgrades", "desc": "Spend element cores on permanent rune upgrades." },
+      { "file": "img/ss_en_06.jpg", "alt": "Stage select", "desc": "Pick from 10 stages in each chapter." },
+      { "file": "img/ss_en_07.jpg", "alt": "Main menu", "desc": "Start a game, play the tutorial or upgrade runes." }
     ]
   },
   "lead": {

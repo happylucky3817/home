@@ -12,24 +12,24 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "2층 버스 분해" },
-      { "file": "img/ss_ko_02.jpg", "alt": "드래곤 로봇" },
-      { "file": "img/ss_ko_03.jpg", "alt": "굴절버스" },
-      { "file": "img/ss_ko_04.jpg", "alt": "굴착기, 상자와 대기 칸" },
-      { "file": "img/ss_ko_05.jpg", "alt": "티라노사우루스" },
-      { "file": "img/ss_ko_06.jpg", "alt": "점보 여객기" },
-      { "file": "img/ss_ko_07.jpg", "alt": "테마 선택" },
-      { "file": "img/ss_ko_08.jpg", "alt": "스테이지 클리어" }
+      { "file": "img/ss_ko_01.jpg", "alt": "2층 버스 분해", "desc": "스티커를 떼어 2층 버스를 분해합니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "용 로봇", "desc": "날개를 편 용 로봇에서 스티커를 뗍니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "초대형 굴절버스", "desc": "세 칸으로 이어진 큰 굴절버스 모형입니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "굴착기, 상자와 대기 칸", "desc": "맞는 상자가 없는 스티커는 대기 칸으로 갑니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "티라노사우루스", "desc": "뗀 스티커가 같은 색 상자로 들어갑니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "점보 여객기", "desc": "블록이 떨어지며 여객기가 분해됩니다." },
+      { "file": "img/ss_ko_07.jpg", "alt": "챕터 선택", "desc": "자동차, 로봇 등 테마별 챕터를 고릅니다." },
+      { "file": "img/ss_ko_08.jpg", "alt": "스테이지 클리어", "desc": "장난감을 모두 분해하면 스테이지 클리어입니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Taking apart a double-decker bus" },
-      { "file": "img/ss_en_02.jpg", "alt": "Dragon robot" },
-      { "file": "img/ss_en_03.jpg", "alt": "Articulated bus" },
-      { "file": "img/ss_en_04.jpg", "alt": "Excavator with boxes and holding slots" },
-      { "file": "img/ss_en_05.jpg", "alt": "T-rex" },
-      { "file": "img/ss_en_06.jpg", "alt": "Jumbo jet" },
-      { "file": "img/ss_en_07.jpg", "alt": "Theme select" },
-      { "file": "img/ss_en_08.jpg", "alt": "Stage clear" }
+      { "file": "img/ss_en_01.jpg", "alt": "Taking apart a double-decker bus", "desc": "Peel stickers to take apart a double-decker bus." },
+      { "file": "img/ss_en_02.jpg", "alt": "Dragon robot", "desc": "Peel stickers off a dragon robot with open wings." },
+      { "file": "img/ss_en_03.jpg", "alt": "Mega articulated bus", "desc": "A large three-section articulated bus model." },
+      { "file": "img/ss_en_04.jpg", "alt": "Excavator with boxes and holding slots", "desc": "Stickers with no matching box wait in holding slots." },
+      { "file": "img/ss_en_05.jpg", "alt": "Tyrannosaurus", "desc": "Peeled stickers fly into the box of their color." },
+      { "file": "img/ss_en_06.jpg", "alt": "Jumbo jet", "desc": "Blocks drop off as the jumbo jet comes apart." },
+      { "file": "img/ss_en_07.jpg", "alt": "Chapter select", "desc": "Choose a chapter such as cars, robots or planes." },
+      { "file": "img/ss_en_08.jpg", "alt": "Stage clear", "desc": "Take the whole toy apart to clear the stage." }
     ]
   },
   "lead": {

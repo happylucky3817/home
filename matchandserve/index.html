@@ -46,6 +46,7 @@
   .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
   .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
   .btn.off:hover{filter:grayscale(1)}
+  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
 
   section{padding:46px 0}
   h2{font-size:26px; margin-bottom:10px}
@@ -54,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -65,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -111,24 +117,24 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="메인 메뉴" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="가게 선택" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="캔디 가게 플레이" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="과일 쥬스 가게 플레이" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="베이커리 손님 주문" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="스테이지 클리어" loading="lazy">
-      <img class="" src="img/ss_ko_08.jpg" alt="아이템 상점" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="메인 메뉴" data-desc="게임 시작, 도움말, 설정 메뉴입니다." loading="lazy"><figcaption><b>메인 메뉴</b><span>게임 시작, 도움말, 설정 메뉴입니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="가게 선택" data-desc="단계별로 열리는 가게를 고릅니다." loading="lazy"><figcaption><b>가게 선택</b><span>단계별로 열리는 가게를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="스테이지 선택" data-desc="가게마다 30스테이지에서 별을 모읍니다." loading="lazy"><figcaption><b>스테이지 선택</b><span>가게마다 30스테이지에서 별을 모읍니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="캔디 가게 플레이" data-desc="사탕 재료를 맞춰 손님 주문을 채웁니다." loading="lazy"><figcaption><b>캔디 가게 플레이</b><span>사탕 재료를 맞춰 손님 주문을 채웁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="과일 쥬스 가게 플레이" data-desc="과일을 맞춰 주스 주문을 완성합니다." loading="lazy"><figcaption><b>과일 쥬스 가게 플레이</b><span>과일을 맞춰 주스 주문을 완성합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="베이커리 손님 주문" data-desc="베이커리 재료를 모아 주문을 내어 줍니다." loading="lazy"><figcaption><b>베이커리 손님 주문</b><span>베이커리 재료를 모아 주문을 내어 줍니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="스테이지 클리어" data-desc="클리어하면 별과 팁, 아이템을 받습니다." loading="lazy"><figcaption><b>스테이지 클리어</b><span>클리어하면 별과 팁, 아이템을 받습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="아이템 상점" data-desc="손님에게 받은 팁으로 아이템을 삽니다." loading="lazy"><figcaption><b>아이템 상점</b><span>손님에게 받은 팁으로 아이템을 삽니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Main menu" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Shop select" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Stage select" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Candy Shop gameplay" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Juice Bar gameplay" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Bakery customer orders" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="Stage clear" loading="lazy">
-      <img class="" src="img/ss_en_08.jpg" alt="Item shop" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Main menu" data-desc="Start a game, read the help or open settings." loading="lazy"><figcaption><b>Main menu</b><span>Start a game, read the help or open settings.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Shop select" data-desc="Choose a shop as each new one unlocks." loading="lazy"><figcaption><b>Shop select</b><span>Choose a shop as each new one unlocks.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Stage select" data-desc="Earn stars across 30 stages in every shop." loading="lazy"><figcaption><b>Stage select</b><span>Earn stars across 30 stages in every shop.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Candy Shop gameplay" data-desc="Match candy to fill each customer&#39;s order." loading="lazy"><figcaption><b>Candy Shop gameplay</b><span>Match candy to fill each customer&#39;s order.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Juice Bar gameplay" data-desc="Match fruit to make juice for each order." loading="lazy"><figcaption><b>Juice Bar gameplay</b><span>Match fruit to make juice for each order.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Bakery customer orders" data-desc="Collect bakery ingredients and serve the orders." loading="lazy"><figcaption><b>Bakery customer orders</b><span>Collect bakery ingredients and serve the orders.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Stage clear" data-desc="Clear a stage to earn stars, tips and items." loading="lazy"><figcaption><b>Stage clear</b><span>Clear a stage to earn stars, tips and items.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Item shop" data-desc="Spend tips from customers on helpful items." loading="lazy"><figcaption><b>Item shop</b><span>Spend tips from customers on helpful items.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -186,10 +192,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

@@ -55,6 +55,10 @@
   .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
   .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
   .shots img:hover{border-color:var(--accent)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
   .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
@@ -66,7 +70,8 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
@@ -118,24 +123,24 @@
     <h2 class="ko">스크린샷</h2>
     <h2 class="en">Screenshots</h2>
     <div class="shots ko">
-      <img class="" src="img/ss_ko_01.jpg" alt="광폭화 전투" loading="lazy">
-      <img class="" src="img/ss_ko_02.jpg" alt="무리 습격" loading="lazy">
-      <img class="" src="img/ss_ko_03.jpg" alt="장비" loading="lazy">
-      <img class="" src="img/ss_ko_04.jpg" alt="스킬" loading="lazy">
-      <img class="" src="img/ss_ko_05.jpg" alt="능력치" loading="lazy">
-      <img class="" src="img/ss_ko_06.jpg" alt="지역 선택" loading="lazy">
-      <img class="" src="img/ss_ko_07.jpg" alt="수집품" loading="lazy">
-      <img class="" src="img/ss_ko_08.jpg" alt="지역 클리어" loading="lazy">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="광폭화 전투" data-desc="광폭화 중에는 공격 속도와 이동 속도가 오릅니다." loading="lazy"><figcaption><b>광폭화 전투</b><span>광폭화 중에는 공격 속도와 이동 속도가 오릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="설원 전투" data-desc="눈 덮인 설원에서 몬스터와 자동으로 싸웁니다." loading="lazy"><figcaption><b>설원 전투</b><span>눈 덮인 설원에서 몬스터와 자동으로 싸웁니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="장비" data-desc="장비 5칸을 장착하고 소지품을 정리합니다." loading="lazy"><figcaption><b>장비</b><span>장비 5칸을 장착하고 소지품을 정리합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="스킬" data-desc="사냥용과 보스용 스킬을 장착하고 강화합니다." loading="lazy"><figcaption><b>스킬</b><span>사냥용과 보스용 스킬을 장착하고 강화합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="능력치" data-desc="골드로 능력치 8종을 올립니다." loading="lazy"><figcaption><b>능력치</b><span>골드로 능력치 8종을 올립니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="지역 선택" data-desc="가 본 지역의 첫 스테이지로 이동합니다." loading="lazy"><figcaption><b>지역 선택</b><span>가 본 지역의 첫 스테이지로 이동합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="수집품" data-desc="지역마다 수집품 5종을 모아 효과를 얻습니다." loading="lazy"><figcaption><b>수집품</b><span>지역마다 수집품 5종을 모아 효과를 얻습니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="지역 클리어" data-desc="화산을 클리어하고 다음 지역으로 넘어갑니다." loading="lazy"><figcaption><b>지역 클리어</b><span>화산을 클리어하고 다음 지역으로 넘어갑니다.</span></figcaption></figure>
     </div>
     <div class="shots en">
-      <img class="" src="img/ss_en_01.jpg" alt="Frenzy battle" loading="lazy">
-      <img class="" src="img/ss_en_02.jpg" alt="Monster horde" loading="lazy">
-      <img class="" src="img/ss_en_03.jpg" alt="Gear" loading="lazy">
-      <img class="" src="img/ss_en_04.jpg" alt="Skills" loading="lazy">
-      <img class="" src="img/ss_en_05.jpg" alt="Stats" loading="lazy">
-      <img class="" src="img/ss_en_06.jpg" alt="Area select" loading="lazy">
-      <img class="" src="img/ss_en_07.jpg" alt="Relics" loading="lazy">
-      <img class="" src="img/ss_en_08.jpg" alt="Area cleared" loading="lazy">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Frenzy battle" data-desc="Frenzy boosts attack and move speed in battle." loading="lazy"><figcaption><b>Frenzy battle</b><span>Frenzy boosts attack and move speed in battle.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Snowfield battle" data-desc="Your knight fights monsters across the Snowfield." loading="lazy"><figcaption><b>Snowfield battle</b><span>Your knight fights monsters across the Snowfield.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Gear" data-desc="Fill five gear slots and manage your bag." loading="lazy"><figcaption><b>Gear</b><span>Fill five gear slots and manage your bag.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Skills" data-desc="Equip and upgrade skills for hunting and bosses." loading="lazy"><figcaption><b>Skills</b><span>Equip and upgrade skills for hunting and bosses.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Stats" data-desc="Spend gold to raise eight different stats." loading="lazy"><figcaption><b>Stats</b><span>Spend gold to raise eight different stats.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Area select" data-desc="Return to the first stage of any area you reached." loading="lazy"><figcaption><b>Area select</b><span>Return to the first stage of any area you reached.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Relics" data-desc="Collect five relics per area for lasting effects." loading="lazy"><figcaption><b>Relics</b><span>Collect five relics per area for lasting effects.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Area cleared" data-desc="Volcano cleared, and the Ruined Castle is next." loading="lazy"><figcaption><b>Area cleared</b><span>Volcano cleared, and the Ruined Castle is next.</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -197,10 +202,12 @@
     function show(i){
       at = (i + list.length) % list.length;
       img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
-      count.textContent = (at + 1) + ' / ' + list.length;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
     }
     function open(el){
-      list = Array.prototype.slice.call(el.parentNode.querySelectorAll('img'));
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
       show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
     }
     function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }

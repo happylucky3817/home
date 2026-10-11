@@ -12,20 +12,20 @@
   },
   "screenshots": {
     "ko": [
-      { "file": "img/ss_ko_01.jpg", "alt": "붐비는 행성 전투" },
-      { "file": "img/ss_ko_02.jpg", "alt": "1위를 유지하는 긴 몸" },
-      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택" },
-      { "file": "img/ss_ko_04.jpg", "alt": "외형 꾸미기" },
-      { "file": "img/ss_ko_05.jpg", "alt": "설정" },
-      { "file": "img/ss_ko_06.jpg", "alt": "타이틀 화면" }
+      { "file": "img/ss_ko_01.jpg", "alt": "붐비는 행성 전투", "desc": "20마리 뱀이 한 행성에서 순위를 다툽니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "1위를 유지하는 긴 몸", "desc": "1위가 되면 다른 뱀의 표적이 됩니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "스테이지 선택", "desc": "행성 40개를 하나씩 열어 도전합니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "외형 꾸미기", "desc": "이름, 색, 무늬, 질감을 골라 내 뱀을 꾸밉니다." },
+      { "file": "img/ss_ko_05.jpg", "alt": "설정", "desc": "조작 방식, 언어, 소리를 바꿉니다." },
+      { "file": "img/ss_ko_06.jpg", "alt": "타이틀 화면", "desc": "게임 시작, 외형, 설정으로 들어가는 첫 화면입니다." }
     ],
     "en": [
-      { "file": "img/ss_en_01.jpg", "alt": "Crowded planet battle" },
-      { "file": "img/ss_en_02.jpg", "alt": "Holding 1st place with a long body" },
-      { "file": "img/ss_en_03.jpg", "alt": "Stage select" },
-      { "file": "img/ss_en_04.jpg", "alt": "Snake customization" },
-      { "file": "img/ss_en_05.jpg", "alt": "Settings" },
-      { "file": "img/ss_en_06.jpg", "alt": "Title screen" }
+      { "file": "img/ss_en_01.jpg", "alt": "Crowded planet battle", "desc": "Twenty snakes compete for rank on one planet." },
+      { "file": "img/ss_en_02.jpg", "alt": "Holding 1st place with a long body", "desc": "Reach 1st place and you become everyone's target." },
+      { "file": "img/ss_en_03.jpg", "alt": "Stage select", "desc": "Unlock and take on 40 planets one by one." },
+      { "file": "img/ss_en_04.jpg", "alt": "Snake customization", "desc": "Pick a name, color, pattern, and texture for your snake." },
+      { "file": "img/ss_en_05.jpg", "alt": "Settings", "desc": "Change controls, language, music, and sound." },
+      { "file": "img/ss_en_06.jpg", "alt": "Title screen", "desc": "The first screen, with Start, Skin, and Settings." }
     ]
   },
   "lead": {
