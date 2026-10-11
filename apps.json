@@ -7,7 +7,7 @@
       "date": "2026-10-09",
       "package": "com.happylucky.novaflight",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "노바 플라이트", "en": "Nova Flight" },
       "genre": { "ko": "슈팅", "en": "Shooter" },
       "summary": {
@@ -20,7 +20,7 @@
       "date": "2026-10-09",
       "package": "com.happylucky.stickertoyboxlab",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "스티커 토이박스 연구소", "en": "Sticker Toybox Lab" },
       "genre": { "ko": "퍼즐", "en": "Puzzle" },
       "summary": {
@@ -33,7 +33,7 @@
       "date": "2026-10-01",
       "package": "com.happylucky.knightshift",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "나이트 시프트", "en": "Knight Shift" },
       "genre": { "ko": "액션 RPG", "en": "Action RPG" },
       "summary": {
@@ -46,7 +46,7 @@
       "date": "2026-09-29",
       "package": "com.happylucky.dolsori",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "돌소리", "en": "Dolsori" },
       "genre": { "ko": "보드", "en": "Board" },
       "summary": {

@@ -143,10 +143,11 @@
     return l === 'ko' ? m + '월 출시' : 'Released ' + MONTHS[m - 1];
   }
 
-  // status: live = 출시, 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
+  // status: live = 출시, test = 비공개 테스트(배지 "비공개 테스트", Google Play 자리에 비공개 테스트 링크), 그 밖(dev·review)은 "개발 중" 표시. 스토어 링크는 live 만, 소개 링크는 page 가 false 가 아니면.
   // badge: 언어별 추가 표시(예: 광클럽 한국어 화면 "국내 미출시"). 빈 문자열이면 안 보인다.
   function card(a){
     var live = a.status === 'live';
+    var test = a.status === 'test';
     var store = 'https://play.google.com/store/apps/details?id=' + encodeURIComponent(a.package);
     var page = a.page === false ? '' : a.id + '/';
     var html = '<article class="app' + (live ? '' : ' dev') + '">' +
@@ -159,7 +160,7 @@
       html += '<div class="' + l + '">' +
         '<h3>' + esc(a.name[l]) + '</h3>' +
         '<span class="genre">' + esc(a.genre[l]) + '</span>' +
-        (live ? '' : '<span class="badge">' + (l === 'ko' ? '개발 중' : 'In development') + '</span>') +
+        (live ? '' : '<span class="badge">' + (test ? (l === 'ko' ? '비공개 테스트' : 'Closed testing') : (l === 'ko' ? '개발 중' : 'In development')) + '</span>') +
         (a.badge && a.badge[l] ? '<span class="badge note">' + esc(a.badge[l]) + '</span>' : '') +
         '<p>' + esc(a.summary[l]) + '</p></div>';
     });
@@ -176,6 +177,8 @@
           : '<a class="gp ' + l + '" href="' + store + '">' + PLAY_SVG + 'Google Play</a>';
       });
     }
+    // 비공개 테스트: Google Play 자리에 비공개 테스트 링크(테스터로 등록된 계정만 열린다).
+    if (test) links += '<a class="gp" href="https://play.google.com/apps/testing/' + encodeURIComponent(a.package) + '">' + PLAY_SVG + '<span class="ko">비공개 테스트</span><span class="en">Closed test</span></a>';
     if (links) html += '<div class="links">' + links + '</div>';
     return html + '</article>';
   }
