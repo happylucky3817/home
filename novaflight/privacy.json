@@ -48,6 +48,11 @@
       "en": "To load ads and check for a newer version."
     },
     {
+      "name": "VIBRATE",
+      "ko": "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.",
+      "en": "For vibration feedback during play. You can turn it off in Settings."
+    },
+    {
       "name": "ACCESS_NETWORK_STATE",
       "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
       "en": "To check the network connection before requesting ads (Google AdMob)."
