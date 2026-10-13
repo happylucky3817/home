@@ -45,7 +45,7 @@
       { "title": "바둑", "text": "9줄, 13줄, 19줄 보드. 따냄, 패, 패스, 중국식 계가와 덤 7.5. 계가 단계에서 죽은 돌을 자동으로 추정하고 직접 표시를 바꿀 수 있습니다." },
       { "title": "장기", "text": "초와 한이 마주 보는 한국 장기입니다. 궁성 대각선 규칙, 장군과 외통, 상차림 4종 선택, 200수가 되면 기물 점수로 판정합니다." },
       { "title": "알까기", "text": "알을 당겨 놓는 새총 방식입니다. 당구처럼 타격점을 골라 휘어 치기, 밀어치기, 끌어치기를 하고 상대 알을 보드 밖으로 모두 내보내면 승리합니다." },
-      { "title": "AI 대전 5단계", "text": "입문, 초급, 중급, 고급, 고수 5단계. 되돌리기, 기권, 다시 시작을 지원하며 AI가 생각하는 동안에도 화면은 멈추지 않습니다." },
+      { "title": "AI 대전 5단계", "text": "입문, 초급, 중급, 고급, 고수 5단계. 되돌리기, 기권, 다시 시작, 막힐 때 추천 수를 보여 주는 힌트를 지원하고, 게임별·난이도별 전적과 승률을 기록합니다." },
       { "title": "WiFi 2인 대전", "text": "인터넷 서버를 거치지 않고 같은 WiFi 안의 두 기기가 직접 연결됩니다. 연결이 끊기면 다시 연결하는 동안 AI가 대신 진행합니다." }
     ],
     "en": [
@@ -53,12 +53,22 @@
       { "title": "Go (Baduk)", "text": "9x9, 13x13 and 19x19 boards. Captures, ko, pass, and area scoring with 7.5 komi. Dead stones are estimated automatically at the end, and you can adjust them." },
       { "title": "Janggi (Korean chess)", "text": "Cho faces Han. Diagonal moves inside the palace, check and checkmate, four starting setups, and a material-point decision after 200 moves." },
       { "title": "Alkkagi (stone flicking)", "text": "Pull back and release your stone like a slingshot. Pick a spin point, just like billiards, to curve, follow through or draw back, and knock every opposing stone off the board." },
-      { "title": "Five AI levels", "text": "Beginner, Easy, Normal, Hard and Expert. Undo, resign and restart anytime, and the screen never freezes while the AI thinks." },
+      { "title": "Five AI levels", "text": "Beginner, Easy, Normal, Hard and Expert. Undo, resign, restart, and a hint that shows a suggested move when you are stuck. Wins, losses and win rates are recorded for each game and level." },
       { "title": "Two-player WiFi Match", "text": "Two devices on the same WiFi connect directly, with no internet server in between. If the connection drops, the AI keeps the game going while you reconnect." }
     ]
   },
   "note": {
     "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 처음 10포인트를 받고 게임을 시작할 때 1~2포인트를 쓰며, 보상형 광고를 보면 30포인트가 충전됩니다. 포인트는 구매하거나 현금으로 바꿀 수 없습니다. 계정 가입 없이 바로 시작하고, 기록은 기기에 저장됩니다.",
     "en": "Available in English and Korean. Contains rewarded ads. You start with 10 points, each game uses 1 or 2 points, and watching a rewarded ad adds 30 points. Points cannot be bought or exchanged for cash. No account needed; your data is saved on your device."
+  },
+  "credits": {
+    "ko": [
+      { "text": "장기 기물 글자: Yeo123, CC BY-SA 3.0 (Wikimedia Commons \"Janggi.svg\"). 기물 그림에서 글자만 뽑아 색을 바꿔 사용했으며, 바꾼 글자 그림도 CC BY-SA 3.0 입니다.",
+        "links": [ { "label": "원본", "url": "https://commons.wikimedia.org/wiki/File:Janggi.svg" }, { "label": "라이선스", "url": "https://creativecommons.org/licenses/by-sa/3.0/" } ] }
+    ],
+    "en": [
+      { "text": "Janggi piece lettering: Yeo123, CC BY-SA 3.0 (Wikimedia Commons \"Janggi.svg\"). Only the lettering was extracted from the piece images and recolored; the modified lettering is also licensed under CC BY-SA 3.0.",
+        "links": [ { "label": "Original", "url": "https://commons.wikimedia.org/wiki/File:Janggi.svg" }, { "label": "License", "url": "https://creativecommons.org/licenses/by-sa/3.0/" } ] }
+    ]
   }
 }
