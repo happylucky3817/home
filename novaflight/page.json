@@ -16,9 +16,9 @@
   "screenshots": {
     "ko": [
       { "file": "img/ss_ko_01.jpg", "alt": "보스전", "desc": "보스의 탄막을 피하며 공격합니다." },
-      { "file": "img/ss_ko_02.jpg", "alt": "중간 보스 경고", "desc": "중간 보스가 접근하면 경고가 뜹니다." },
-      { "file": "img/ss_ko_03.jpg", "alt": "무한 모드 보스", "desc": "무한 모드에서 보스와 싸웁니다." },
-      { "file": "img/ss_ko_04.jpg", "alt": "탄막 소거", "desc": "탄막 소거로 화면의 적 탄을 지웁니다." },
+      { "file": "img/ss_ko_02.jpg", "alt": "중간 보스전", "desc": "중간 보스의 탄막을 피하며 싸웁니다." },
+      { "file": "img/ss_ko_03.jpg", "alt": "무한 모드", "desc": "무한 모드에서 끝없이 몰려오는 적과 싸웁니다." },
+      { "file": "img/ss_ko_04.jpg", "alt": "중간 보스 경고", "desc": "중간 보스가 접근하면 경고가 뜹니다." },
       { "file": "img/ss_ko_05.jpg", "alt": "윙맨", "desc": "모은 별로 윙맨을 열고 장착합니다." },
       { "file": "img/ss_ko_06.jpg", "alt": "별 목표 클리어", "desc": "별 목표 3개를 채우고 골드를 받습니다." },
       { "file": "img/ss_ko_07.jpg", "alt": "일일 도전", "desc": "날마다 바뀌는 스테이지와 규칙에 도전합니다." },
@@ -26,9 +26,9 @@
     ],
     "en": [
       { "file": "img/ss_en_01.jpg", "alt": "Boss battle", "desc": "Dodge the boss's bullets while you fire back." },
-      { "file": "img/ss_en_02.jpg", "alt": "Mid-boss warning", "desc": "A warning appears as a mid-boss approaches." },
-      { "file": "img/ss_en_03.jpg", "alt": "Endless Mode boss", "desc": "Take on a boss in Endless Mode." },
-      { "file": "img/ss_en_04.jpg", "alt": "Clear Shot", "desc": "Clear Shot wipes enemy bullets off the screen." },
+      { "file": "img/ss_en_02.jpg", "alt": "Mid-boss battle", "desc": "Dodge a mid-boss's bullets while you fight it." },
+      { "file": "img/ss_en_03.jpg", "alt": "Endless Mode", "desc": "Fight endless waves of enemies in Endless Mode." },
+      { "file": "img/ss_en_04.jpg", "alt": "Mid-boss warning", "desc": "A warning appears as a mid-boss approaches." },
       { "file": "img/ss_en_05.jpg", "alt": "Wingmen", "desc": "Unlock and equip wingmen with the stars you collect." },
       { "file": "img/ss_en_06.jpg", "alt": "Star goals cleared", "desc": "Meet all three star goals and collect your gold." },
       { "file": "img/ss_en_07.jpg", "alt": "Daily Challenge", "desc": "Try a new stage and a new rule every day." },

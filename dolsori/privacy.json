@@ -44,12 +44,12 @@
     }
   },
   "ads": {
-    "banner": false,
+    "banner": true,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "본 앱의 광고는 포인트를 충전하는 보상형 광고 하나뿐이며, 사용자가 광고 버튼을 직접 눌렀을 때만 재생됩니다. 광고 한 번에 30포인트가 충전됩니다. 배너 광고와 전면 광고는 사용하지 않습니다.",
-      "en": "The only ad in the app is a rewarded ad that adds points. It plays only when you tap the ad button yourself, and each ad adds 30 points. The app does not use banner or interstitial (full-screen) ads."
+      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 포인트를 충전하는 보상형 광고는 사용자가 광고 버튼을 직접 눌렀을 때만 재생되며, 광고 한 번에 30포인트가 충전됩니다. 전면 광고는 사용하지 않습니다.",
+      "en": "A banner ad is shown at the top of the screen. A rewarded ad that adds points plays only when you tap the ad button yourself, and each ad adds 30 points. The app does not use interstitial (full-screen) ads."
     }
   },
   "ump": {
