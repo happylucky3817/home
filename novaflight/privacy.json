@@ -1,35 +1,39 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-11",
+  "updated": "2026-10-18",
   "local_data": {
     "ko": [
       "골드(게임 안 재화)",
+      "포인트(게임 안 재화), 광고로 포인트를 받은 날짜·횟수·마지막 시각",
       "스테이지 클리어 진행, 무한 모드 최고 점수와 생존 시간",
       "격납고 영구 강화 단계",
       "스테이지별 별 목표, 선택한 전투기와 윙맨",
+      "이미 본 스토리 장면",
       "일일 도전 날짜, 스테이지, 보상 수령 여부",
       "언어, 배경 음악, 효과음 설정"
     ],
     "en": [
       "Gold (in-game currency)",
+      "Points (in-game currency), and the day, count, and last time you earned points from ads",
       "Stage clear progress, and your best Endless Mode score and survival time",
       "Permanent hangar upgrade levels",
       "Star goals per stage, and your selected fighter and wingman",
+      "Story scenes you have already seen",
       "Daily Challenge date, stage, and whether the reward was claimed",
       "Language, music, and sound effect settings"
     ]
   },
   "currency": {
-    "ko": "본 앱의 골드는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 본 앱에는 인앱 결제가 없으며, 개발자는 결제 정보를 수집하지 않습니다.",
-    "en": "Gold in the app is a number used only inside the game. It cannot be bought or exchanged for cash or prizes. The app has no in-app purchases, and the developer does not collect any payment information."
+    "ko": "본 앱의 골드와 포인트는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 본 앱에는 인앱 결제가 없으며, 개발자는 결제 정보를 수집하지 않습니다.",
+    "en": "Gold and points in the app are numbers used only inside the game. They cannot be bought or exchanged for cash or prizes. The app has no in-app purchases, and the developer does not collect any payment information."
   },
   "ads": {
     "banner": true,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 부활이나 획득 골드 2배를 직접 선택했을 때만 재생되며, 각각 한 게임에 한 번입니다.",
-      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to revive or to double the gold you earned, each at most once per run."
+      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 부활이나 획득 골드 2배는 각각 한 게임에 한 번, 포인트 받기(도전 1회에 3포인트, 광고 1회에 20포인트)는 하루 10회까지이며 한 번 본 뒤 3분을 기다립니다.",
+      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to watch it: to revive or to double the gold you earned (each at most once per run), or to earn points (20 points per ad, up to 10 times a day with a 3-minute wait between ads; each play costs 3 points)."
     }
   },
   "ump": {
