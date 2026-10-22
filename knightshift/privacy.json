@@ -1,12 +1,12 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-11",
+  "updated": "2026-10-20",
   "local_data": {
     "ko": [
       "스테이지 진행, 회차, 골드와 강화석",
       "보유 장비와 장착 상태, 능력치, 스킬 배치",
       "일일 임무와 업적 진행, 몬스터 도감, 지역 수집품",
-      "상점 보상의 다음 이용 가능 시각과 골드 2배 남은 시간",
+      "상점 보상의 다음 이용 가능 시각, 광고 효과 남은 시간, 오늘 본 광고 횟수",
       "게임 안 영웅 이름과 외형",
       "명예의 전당 기록(영웅 이름, 외형, 도달한 회차와 스테이지)",
       "배경음악과 효과음 크기, 진동, 언어 설정"
@@ -15,7 +15,7 @@
       "Stage progress, loop, gold, and upgrade ore",
       "Owned and equipped gear, stats, and skill setup",
       "Daily quest and achievement progress, bestiary, and area relics",
-      "Next available times for shop rewards and remaining double gold time",
+      "Next available times for shop rewards, remaining ad boost time, and the number of ads watched today",
       "Your in-game hero name and appearance",
       "Hall of Fame records (hero name, appearance, and the loop and stage reached)",
       "Music and sound effect volume, vibration, and language settings"
@@ -26,8 +26,8 @@
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고는 휴대폰 비율 화면에서만 화면 아래에 표시됩니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다(쓰러졌을 때 이어 하기, 상점의 골드 주머니, 장비 상자, 30분 골드 2배). 전면 광고는 사용하지 않습니다. 게임 안 영웅 이름은 기기에만 저장되며 다른 사람에게 전송되지 않습니다.",
-      "en": "A banner ad is shown at the bottom of the screen, only on phone-shaped screens. Rewarded ads play only when you choose them yourself (reviving after a defeat, and the gold pouch, gear box, and 30-minute double gold in the shop). The app does not use interstitial (full-screen) ads. Your hero name is stored only on your device and is never sent to anyone."
+      "ko": "배너 광고는 휴대폰 비율 화면에서만 화면 아래에 표시됩니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다(쓰러졌을 때 이어 하기, 상점의 골드 주머니, 장비 상자, 30분 동안 골드 1.5배와 공격 속도·이동 1.2배). 광고 보상은 모두 합쳐 하루 15번까지 받을 수 있습니다. 전면 광고는 사용하지 않습니다. 게임 안 영웅 이름은 기기에만 저장되며 다른 사람에게 전송되지 않습니다.",
+      "en": "A banner ad is shown at the bottom of the screen, only on phone-shaped screens. Rewarded ads play only when you choose them yourself (reviving after a defeat, and the gold pouch, gear box, and a 30-minute boost of 1.5x gold and 1.2x attack and move speed in the shop). Ad rewards are limited to 15 per day in total. The app does not use interstitial (full-screen) ads. Your hero name is stored only on your device and is never sent to anyone."
     }
   },
   "ump": {

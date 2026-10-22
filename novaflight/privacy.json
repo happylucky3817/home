@@ -1,6 +1,6 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-18",
+  "updated": "2026-10-20",
   "local_data": {
     "ko": [
       "골드(게임 안 재화)",
@@ -32,8 +32,8 @@
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 부활이나 획득 골드 2배는 각각 한 게임에 한 번, 포인트 받기(도전 1회에 3포인트, 광고 1회에 20포인트)는 하루 10회까지이며 한 번 본 뒤 3분을 기다립니다.",
-      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to watch it: to revive or to double the gold you earned (each at most once per run), or to earn points (20 points per ad, up to 10 times a day with a 3-minute wait between ads; each play costs 3 points)."
+      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 부활이나 획득 골드 2배는 각각 한 게임에 한 번, 포인트 받기(도전 1회에 3포인트, 광고 1회에 20포인트)는 하루 15회까지이며 한 번 본 뒤 3분을 기다립니다.",
+      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to watch it: to revive or to double the gold you earned (each at most once per run), or to earn points (20 points per ad, up to 15 times a day with a 3-minute wait between ads; each play costs 3 points)."
     }
   },
   "ump": {
