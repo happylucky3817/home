@@ -42,20 +42,22 @@
       { "title": "숨은 스티커", "text": "다른 스티커나 블록에 덮인 스티커는 아직 뗄 수 없습니다. 바깥 블록이 떨어지면 그 밑의 스티커가 드러납니다. 뒤로 갈수록 색이 3가지에서 6가지로 늘어납니다." },
       { "title": "테마 10개, 스테이지 500개", "text": "자동차, 로봇, 비행기, 트럭·중장비, 기차, 배, 우주, 동물, 공룡, 놀이공원. 테마마다 50스테이지, 스테이지마다 다른 장난감이 나옵니다." },
       { "title": "170~210조각의 큰 모형", "text": "뒤로 갈수록 장난감이 커지고 블록과 스티커가 늘어납니다. 마지막 스테이지는 굴절버스, 초대형 항공모함, 꿈의 성 같은 큰 모형입니다." },
-      { "title": "직접 돌려 보는 3D", "text": "끌어서 돌리고, 두 손가락으로 확대하고 이동합니다. 뒷면과 아랫면에도 스티커가 있습니다. 쐐기, 반원, 원통 모양 블록도 나옵니다." },
-      { "title": "도움 도구", "text": "꺼내기는 대기 칸의 스티커 3개를 따로 빼 두고, 되돌리기는 바로 앞에 뗀 스티커를 되돌리고, 힌트는 지금 상자에 넣을 수 있는 스티커를 알려 줍니다." }
+      { "title": "직접 돌려 보는 3D", "text": "끌어서 돌리고, 두 손가락으로 확대하고 이동합니다. 빈 곳을 두 번 누르면 전체가 보입니다. 뒷면과 아랫면에도 스티커가 있습니다. 쐐기, 반원, 원통 모양 블록도 나옵니다." },
+      { "title": "도움 도구", "text": "꺼내기는 대기 칸의 스티커 3개를 따로 빼 두고, 되돌리기는 바로 앞에 뗀 스티커를 되돌리고, 힌트는 지금 상자에 넣을 수 있는 스티커를 알려 줍니다. 도구는 한 번 쓸 때마다 1 포인트를 씁니다." },
+      { "title": "장난감 도감", "text": "깬 스테이지의 장난감을 테마별로 모아 보고, 누르면 크게 봅니다. 아직 모으지 못한 장난감은 그림자로 보입니다." }
     ],
     "en": [
       { "title": "Color boxes and holding slots", "text": "Peeled stickers go into the box of the same color. Fill a box with 3 and the next color rolls in. With no matching box, a sticker waits in a holding slot. Fill every slot and the stage is lost." },
       { "title": "Hidden stickers", "text": "A sticker covered by another sticker or a block can't be peeled yet. Remove outer blocks to reveal what is underneath. Later stages use up to 6 colors instead of 3." },
       { "title": "10 themes, 500 stages", "text": "Cars, robots, planes, trucks and machines, trains, ships, space, animals, dinosaurs and an amusement park. 50 stages per theme, with a different toy in every stage." },
       { "title": "Models of 170 to 210 pieces", "text": "Toys grow bigger as you go, with more blocks and more stickers. Final stages bring large models like an articulated bus, a supercarrier and a dream castle." },
-      { "title": "Turn it in 3D", "text": "Drag to rotate, use two fingers to zoom and move. Stickers sit on the back and the bottom too. Wedges, half-rounds and cylinders all come into play." },
-      { "title": "Tools", "text": "Pull Out moves 3 stickers out of the holding slots, Undo brings back the last sticker you peeled, and Hint shows a sticker that fits one of the current boxes." }
+      { "title": "Turn it in 3D", "text": "Drag to rotate, use two fingers to zoom and move, and double-tap an empty spot to see the whole toy. Stickers sit on the back and the bottom too. Wedges, half-rounds and cylinders all come into play." },
+      { "title": "Tools", "text": "Pull Out moves 3 stickers out of the holding slots, Undo brings back the last sticker you peeled, and Hint shows a sticker that fits one of the current boxes. Each use costs 1 point." },
+      { "title": "Toy Collection", "text": "See every toy you have taken apart, theme by theme, and tap one to view it up close. Toys you haven't collected yet appear as silhouettes." }
     ]
   },
   "note": {
-    "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 포인트 충전, 대기 칸 추가, 도구 충전에 광고를 볼 수 있으며, 광고는 버튼을 눌렀을 때만 재생됩니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.",
-    "en": "Available in English and Korean. Contains rewarded ads. You can watch an ad to refill points, open an extra holding slot or refill tools, and ads play only when you tap the button. No account needed; progress is saved on your device."
+    "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 포인트 충전, 잠긴 대기 칸 열기, 대기 칸이 가득 찼을 때 이어하기에 광고를 볼 수 있으며, 광고는 버튼을 눌렀을 때만 재생됩니다. 계정 가입 없이 바로 시작하고, 진행 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Contains rewarded ads. You can watch an ad to refill points, open a locked holding slot or continue when the holding slots are full, and ads play only when you tap the button. No account needed; progress is saved on your device."
   }
 }
