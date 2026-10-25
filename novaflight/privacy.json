@@ -1,6 +1,6 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "local_data": {
     "ko": [
       "골드(게임 안 재화)",
@@ -10,6 +10,11 @@
       "스테이지별 별 목표, 선택한 전투기와 윙맨",
       "이미 본 스토리 장면",
       "일일 도전 날짜, 스테이지, 보상 수령 여부",
+      "출석 보상을 받은 날짜와 횟수",
+      "누적 기록(격추 수 등)과 업적 보상 수령 여부",
+      "산 도색과 기체별 도색 선택",
+      "스테이지별 최고 점수와 최단 클리어 시간",
+      "진동 설정, 조작 안내를 봤는지, 탄막 소거 버튼 위치",
       "언어, 배경 음악, 효과음 설정"
     ],
     "en": [
@@ -20,6 +25,11 @@
       "Star goals per stage, and your selected fighter and wingman",
       "Story scenes you have already seen",
       "Daily Challenge date, stage, and whether the reward was claimed",
+      "The date and count of daily login rewards you claimed",
+      "Lifetime stats (such as enemies destroyed) and which achievement rewards you claimed",
+      "Paint jobs you bought and the paint selected for each fighter",
+      "Best score and fastest clear time per stage",
+      "Vibration setting, whether you have seen the controls guide, and the Clear Shot button position",
       "Language, music, and sound effect settings"
     ]
   },

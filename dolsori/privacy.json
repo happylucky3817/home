@@ -1,25 +1,27 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-11",
+  "updated": "2026-10-25",
   "local_data": {
     "ko": [
       "남은 포인트",
       "WiFi 대전에서 쓰는 캐릭터 번호와 표시 이름",
-      "게임별 AI 난이도, 바둑 보드 줄 수, 장기 상차림 설정",
+      "게임별·난이도별 AI 대전 전적(승, 패, 무)",
+      "게임별 AI 난이도, 바둑 AI 기력과 보드 줄 수, 장기 상차림, 보드 시점(평면/입체) 설정",
       "언어 설정",
       "앱 점검용 설정"
     ],
     "en": [
       "Your remaining points",
       "The character number and display name used in WiFi Match",
-      "AI difficulty for each game, Go board size, and Janggi starting setup",
+      "Your AI match record (wins, losses, draws) for each game and level",
+      "AI difficulty for each game, Go AI strength and board size, Janggi starting setup, and board view (top-down or 3D)",
       "Language setting",
       "Settings used for app testing"
     ]
   },
   "currency": {
-    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자입니다. 처음 10포인트를 받고 게임을 시작할 때 1~2포인트를 쓰며, 보상형 광고를 보면 30포인트가 충전됩니다. 포인트는 구매할 수 없고 현금이나 경품으로 바꿀 수 없으며, 다른 사람과 주고받는 기능도 없습니다. 개발자는 결제 정보를 수집하지 않습니다.",
-    "en": "Points in the app are numbers used only inside the game. You start with 10 points, each game uses 1 or 2 points, and watching a rewarded ad adds 30 points. Points cannot be bought or exchanged for cash or prizes, and there is no way to transfer them to other players. The developer does not collect any payment information."
+    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자입니다. 처음 20포인트를 받고, 게임을 시작할 때 1~3포인트, 힌트를 볼 때 1포인트를 쓰며, 보상형 광고를 보면 20포인트가 충전됩니다. 포인트는 구매할 수 없고 현금이나 경품으로 바꿀 수 없으며, 다른 사람과 주고받는 기능도 없습니다. 개발자는 결제 정보를 수집하지 않습니다.",
+    "en": "Points in the app are numbers used only inside the game. You start with 20 points, each game uses 1 to 3 points and each hint uses 1 point, and watching a rewarded ad adds 20 points. Points cannot be bought or exchanged for cash or prizes, and there is no way to transfer them to other players. The developer does not collect any payment information."
   },
   "lan": {
     "ko": {

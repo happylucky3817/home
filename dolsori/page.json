@@ -1,8 +1,8 @@
 {
   "name": { "ko": "돌소리", "en": "Dolsori" },
   "description": {
-    "ko": "돌소리: 오목·바둑·장기·알까기. 네 가지 한국 보드게임을 나무 질감의 3D 보드에서 즐깁니다. AI 5단계와 같은 WiFi 2인 대전.",
-    "en": "Dolsori: Korean Board Games. Omok, Go, Janggi and Alkkagi on a 3D wooden board. Five AI levels and two-player WiFi Match."
+    "ko": "돌소리: 오목·바둑·장기·알까기. 네 가지 한국 보드게임을 나무 질감의 3D 보드에서 즐깁니다. 난이도를 고르는 AI 대전과 같은 WiFi 2인 대전.",
+    "en": "Dolsori: Korean Board Games. Omok, Go, Janggi and Alkkagi on a 3D wooden board. AI opponents at many levels and two-player WiFi Match."
   },
   "theme": { "bg": "#120d09", "bg2": "#1a130e", "card": "#1f1712", "line": "#3d2e22", "accent": "#e3b26a", "button": "#c98a3a", "outline": "#2a1a0e" },
   "notice": {
@@ -10,8 +10,8 @@
     "en": "Now in closed testing. Only accounts registered as testers can install it."
   },
   "tagline": {
-    "ko": "오목, 바둑, 장기, 알까기를 하나의 3D 보드에서. AI 5단계와 WiFi 2인 대전.",
-    "en": "Omok, Go, Janggi and Alkkagi on one 3D wooden board. Five AI levels or a friend on WiFi."
+    "ko": "오목, 바둑, 장기, 알까기를 하나의 3D 보드에서. AI 대전과 같은 WiFi 2인 대전.",
+    "en": "Omok, Go, Janggi and Alkkagi on one 3D wooden board. Play the AI or a friend on WiFi."
   },
   "screenshots": {
     "ko": [
@@ -42,24 +42,26 @@
   "features": {
     "ko": [
       { "title": "오목", "text": "19줄 보드에서 다섯 개 이상 이으면 승리합니다. 흑·백 모두 3·3 금지이며, 한 번 눌러 미리 보고 한 번 더 눌러 착수합니다." },
-      { "title": "바둑", "text": "9줄, 13줄, 19줄 보드. 따냄, 패, 패스, 중국식 계가와 덤 7.5. 계가 단계에서 죽은 돌을 자동으로 추정하고 직접 표시를 바꿀 수 있습니다." },
+      { "title": "바둑", "text": "9줄, 13줄, 19줄 보드. 따냄, 패, 패스, 중국식 계가와 덤 7.5. AI는 사람의 기보로 학습한 KataGo Human-SL 신경망이며 20급부터 9단까지 기력을 고릅니다. 계가 단계에서 죽은 돌을 자동으로 추정하고, 점수를 돌과 집, 덤으로 나눠 보여 줍니다." },
       { "title": "장기", "text": "초와 한이 마주 보는 한국 장기입니다. 궁성 대각선 규칙, 장군과 외통, 상차림 4종 선택, 200수가 되면 기물 점수로 판정합니다." },
       { "title": "알까기", "text": "알을 당겨 놓는 새총 방식입니다. 당구처럼 타격점을 골라 휘어 치기, 밀어치기, 끌어치기를 하고 상대 알을 보드 밖으로 모두 내보내면 승리합니다." },
-      { "title": "AI 대전 5단계", "text": "입문, 초급, 중급, 고급, 고수 5단계. 되돌리기, 기권, 다시 시작, 막힐 때 추천 수를 보여 주는 힌트를 지원하고, 게임별·난이도별 전적과 승률을 기록합니다." },
-      { "title": "WiFi 2인 대전", "text": "인터넷 서버를 거치지 않고 같은 WiFi 안의 두 기기가 직접 연결됩니다. 연결이 끊기면 다시 연결하는 동안 AI가 대신 진행합니다." }
+      { "title": "AI 대전", "text": "오목, 장기, 알까기는 입문, 초급, 중급, 고급, 고수 5단계, 바둑은 20급부터 9단까지 고릅니다. 되돌리기, 기권, 다시 시작, 막힐 때 추천 수를 보여 주는 힌트(1포인트)를 지원하고, 게임별·난이도별 전적과 승률을 기록합니다." },
+      { "title": "WiFi 2인 대전", "text": "인터넷 서버를 거치지 않고 같은 WiFi 안의 두 기기가 직접 연결됩니다. 연결이 끊기면 다시 연결하는 동안 AI가 대신 진행합니다." },
+      { "title": "보드 보기", "text": "핀치로 확대하고, 버튼 하나로 바로 위에서 보는 평면 시점과 입체 시점을 바꿉니다." }
     ],
     "en": [
       { "title": "Omok (Gomoku)", "text": "Connect five or more stones on a 19x19 board to win. Double three is forbidden for both colors. Tap once to preview, tap again to place." },
-      { "title": "Go (Baduk)", "text": "9x9, 13x13 and 19x19 boards. Captures, ko, pass, and area scoring with 7.5 komi. Dead stones are estimated automatically at the end, and you can adjust them." },
+      { "title": "Go (Baduk)", "text": "9x9, 13x13 and 19x19 boards. Captures, ko, pass, and area scoring with 7.5 komi. The AI is KataGo Human-SL, a neural network trained on human games, and you can set its strength from 20 kyu to 9 dan. Dead stones are estimated automatically at the end, and the score is shown as stones, territory and komi." },
       { "title": "Janggi (Korean chess)", "text": "Cho faces Han. Diagonal moves inside the palace, check and checkmate, four starting setups, and a material-point decision after 200 moves." },
       { "title": "Alkkagi (stone flicking)", "text": "Pull back and release your stone like a slingshot. Pick a spin point, just like billiards, to curve, follow through or draw back, and knock every opposing stone off the board." },
-      { "title": "Five AI levels", "text": "Beginner, Easy, Normal, Hard and Expert. Undo, resign, restart, and a hint that shows a suggested move when you are stuck. Wins, losses and win rates are recorded for each game and level." },
-      { "title": "Two-player WiFi Match", "text": "Two devices on the same WiFi connect directly, with no internet server in between. If the connection drops, the AI keeps the game going while you reconnect." }
+      { "title": "Play against the AI", "text": "Five levels from Beginner to Expert for Omok, Janggi and Alkkagi, and 20 kyu to 9 dan for Go. Undo, resign, restart, and a hint that shows a suggested move when you are stuck (1 point). Wins, losses and win rates are recorded for each game and level." },
+      { "title": "Two-player WiFi Match", "text": "Two devices on the same WiFi connect directly, with no internet server in between. If the connection drops, the AI keeps the game going while you reconnect." },
+      { "title": "Board view", "text": "Pinch to zoom, and switch between a top-down view and a 3D view with one button." }
     ]
   },
   "note": {
-    "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 처음 20포인트를 받고 게임을 시작할 때 1~2포인트를 쓰며, 보상형 광고를 보면 20포인트가 충전됩니다. 포인트는 구매하거나 현금으로 바꿀 수 없습니다. 계정 가입 없이 바로 시작하고, 기록은 기기에 저장됩니다.",
-    "en": "Available in English and Korean. Contains rewarded ads. You start with 20 points, each game uses 1 or 2 points, and watching a rewarded ad adds 20 points. Points cannot be bought or exchanged for cash. No account needed; your data is saved on your device."
+    "ko": "한국어와 영어를 지원합니다. 보상형 광고가 포함되어 있습니다. 처음 20포인트를 받고, 게임을 시작할 때 게임과 바둑 보드 크기에 따라 1~3포인트를 쓰며, 보상형 광고를 보면 20포인트가 충전됩니다. 포인트는 구매하거나 현금으로 바꿀 수 없습니다. 계정 가입 없이 바로 시작하고, 기록은 기기에 저장됩니다.",
+    "en": "Available in English and Korean. Contains rewarded ads. You start with 20 points, each game uses 1 to 3 points depending on the game and Go board size, and watching a rewarded ad adds 20 points. Points cannot be bought or exchanged for cash. No account needed; your data is saved on your device."
   },
   "credits": {
     "ko": [
