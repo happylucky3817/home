@@ -192,7 +192,8 @@
     // 묶음 안에서는 오래된 것부터, 가장 최근이 마지막. 출시한 앱은 released(출시 연월), 개발 중인 앱은 date(개발 시작일). 같으면 apps.json 의 역순.
     function isLive(a){ return a.status === 'live'; }
     function key(a){ return (isLive(a) && a.released) || a.date || ''; }
-    var ordered = data.apps.map(function(a, i){ return { a: a, i: i }; })
+    // hidden: true 는 메인 목록에만 안 보인다. 소개·개인정보처리방침·version.json 은 그대로 둔다(사용자 2026-10-25).
+    var ordered = data.apps.filter(function(a){ return !a.hidden; }).map(function(a, i){ return { a: a, i: i }; })
       .sort(function(x, y){
         var dx = key(x.a), dy = key(y.a);
         return dx < dy ? -1 : dx > dy ? 1 : y.i - x.i;

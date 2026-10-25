@@ -56,6 +56,7 @@
     },
     {
       "id": "matchandslash",
+      "hidden": true,
       "released": "2026-10",
       "date": "2026-08-29",
       "package": "com.happylucky.matchandslash",
@@ -70,6 +71,7 @@
     },
     {
       "id": "neonplanetsnake",
+      "hidden": true,
       "released": "2026-09",
       "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsnake",
@@ -84,6 +86,7 @@
     },
     {
       "id": "frontierkingdom",
+      "hidden": true,
       "released": "2026-10",
       "date": "2026-08-02",
       "package": "com.happylucky.frontierkingdom",
@@ -98,6 +101,7 @@
     },
     {
       "id": "neonplanetsurvivor",
+      "hidden": true,
       "released": "2026-09",
       "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsurvivor",
@@ -112,6 +116,7 @@
     },
     {
       "id": "randomfronttd",
+      "hidden": true,
       "released": "2026-07",
       "date": "2026-06-30",
       "package": "com.happylucky.randomfronttd",
@@ -126,6 +131,7 @@
     },
     {
       "id": "littleguardian",
+      "hidden": true,
       "released": "2026-10",
       "date": "2026-06-30",
       "package": "com.happylucky.littleguardian",
@@ -140,6 +146,7 @@
     },
     {
       "id": "matchandserve",
+      "hidden": true,
       "released": "2026-07",
       "date": "2026-07-18",
       "package": "com.happylucky.matchandserve",
@@ -154,6 +161,7 @@
     },
     {
       "id": "runelinktd",
+      "hidden": true,
       "released": "2026-07",
       "date": "2026-06-08",
       "package": "com.happylucky.runelinktd",
@@ -168,6 +176,7 @@
     },
     {
       "id": "gwangclub",
+      "hidden": true,
       "released": "2026-10",
       "date": "2026-09-10",
       "package": "com.happylucky.gwangclub",
