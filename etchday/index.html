@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>에치데이 (Etchday) - Coming Soon</title>
+<meta name="description" content="에치데이 — 일정, 할 일, 다이어리, 메모를 기록하고 기록 비서로 찾고 정리하는 업무 다이어리. 출시 준비 중입니다.">
+<meta property="og:title" content="에치데이 (Etchday)">
+<meta property="og:description" content="업무 다이어리와 기록 비서. Coming Soon">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<style>
+  :root{
+    --bg:#f6f8fc; --bg2:#eef2fa; --card:#ffffff; --line:#dde3f0;
+    --txt:#1f2a3c; --muted:#5a6578; --accent:#1e7be0; --sun:#ffc93c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+
+  .hero{background:linear-gradient(180deg, #22406f 0%, #4f74b3 70%, var(--bg) 100%)}
+  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:900px; margin:0 auto}
+  .home{font-size:14px; color:#fff}
+  .lang{display:flex; gap:6px}
+  .lang button{
+    background:rgba(255,255,255,.85); color:var(--muted); border:1px solid transparent; border-radius:6px;
+    padding:6px 12px; font-size:14px; cursor:pointer;
+  }
+  .lang button.on{color:var(--txt); border-color:var(--sun); background:#fff}
+
+  header{text-align:center; padding:40px 0 60px}
+  .icon{width:140px; height:140px; border-radius:30px; box-shadow:0 10px 30px rgba(0,40,90,.3)}
+  h1{font-size:48px; font-weight:800; margin-top:16px; color:#fff; text-shadow:0 3px 12px rgba(0,40,90,.35)}
+  .soon{
+    display:inline-block; margin-top:20px; padding:10px 28px; border-radius:40px;
+    font-size:22px; font-weight:800; letter-spacing:4px; color:var(--txt); background:var(--sun);
+    box-shadow:0 4px 0 #d9a21a;
+  }
+  .tagline{color:var(--txt); font-size:18px; margin-top:22px}
+
+  section{padding:10px 0 50px}
+  h2{font-size:24px; margin-bottom:16px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px}
+  .feat{background:var(--card); border:2px solid var(--line); border-radius:16px; padding:20px 22px}
+  .feat h3{font-size:18px; margin-bottom:6px; color:var(--accent)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:22px}
+
+  footer{border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  @media (max-width:420px){ h1{font-size:38px} }
+  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
+</style>
+</head>
+<body data-lang="ko">
+
+<div class="hero">
+  <div class="top">
+    <a class="home" href="../">&larr; Happy &amp; Lucky Studio</a>
+    <div class="lang">
+      <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+      <button id="b-en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+  <header>
+    <div class="wrap">
+      <img class="icon" src="img/icon.png" alt="">
+      <h1 class="ko">에치데이</h1>
+      <h1 class="en">Etchday</h1>
+      <div class="soon">COMING SOON</div>
+      <p class="tagline ko">일정, 할 일, 다이어리, 메모를 한곳에 기록하고, 기록 비서로 찾고 정리하는 업무 다이어리입니다.</p>
+      <p class="tagline en">A work diary for your schedule, tasks, journal, and notes, with a record assistant that finds and sums them up.</p>
+    </div>
+  </header>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">이렇게 써요</h2>
+    <h2 class="en">How it works</h2>
+    <div class="grid ko">
+      <div class="feat"><h3>달력 하나에 하루를</h3><p>날짜를 누르면 그날의 일정, 할 일, 다이어리를 한 화면에서 봅니다. 공휴일도 달력에 표시합니다.</p></div>
+      <div class="feat"><h3>업무와 개인 나누기</h3><p>위쪽 버튼으로 업무 모드와 개인 모드를 바꿉니다. 기록과 화면 색이 모드마다 따로입니다.</p></div>
+      <div class="feat"><h3>기록 비서</h3><p>오늘 정리, 내일 준비, 밀린 일, 주간 업무 보고를 기록에서 바로 만듭니다. 날짜와 낱말로 지난 기록을 찾습니다.</p></div>
+      <div class="feat"><h3>AI 앱으로 보내기</h3><p>더 다듬은 글이 필요하면 기록을 모아 휴대폰에 있는 AI 앱(Gemini 등)으로 넘깁니다. 사용자가 고를 때만 보냅니다.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>Your day on one calendar</h3><p>Tap a date to see that day's schedule, tasks, and journal on one screen. Public holidays are marked too.</p></div>
+      <div class="feat"><h3>Work and personal</h3><p>Switch between work and personal mode at the top. Each mode keeps its own records and colors.</p></div>
+      <div class="feat"><h3>Record assistant</h3><p>Builds today's summary, tomorrow's prep, overdue tasks, and weekly work reports from your records. Search past records by date and keyword.</p></div>
+      <div class="feat"><h3>Send to an AI app</h3><p>For polished writing, your records are gathered and handed to an AI app on your phone, such as Gemini. Only when you choose to.</p></div>
+    </div>
+    <p class="note ko">계정 가입 없이 사용하며, 기록은 기기 안에 저장합니다. 개발 중인 앱이라 이름과 내용은 출시 전에 바뀔 수 있습니다.</p>
+    <p class="note en">No sign-up needed, and your records stay on your device. This app is in development, and its name and details may change before release.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 <a href="../">Happy &amp; Lucky Studio</a></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
+</body>
+</html>

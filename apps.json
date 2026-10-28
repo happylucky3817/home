@@ -203,6 +203,32 @@
         "ko": "만 6~8세를 위한 학습 앱. 한글, 영어, 수학, 미술 네 과목을 한 앱에서",
         "en": "Learning for ages 6 to 8. Korean, English, math, and art in one app."
       }
+    },
+    {
+      "id": "cubeflash",
+      "date": "2026-10-25",
+      "package": "com.happylucky.cubeflash",
+      "type": "app",
+      "status": "dev",
+      "name": { "ko": "큐브 플래쉬", "en": "Cube Flash" },
+      "genre": { "ko": "큐브 풀이", "en": "Cube Solver" },
+      "summary": {
+        "ko": "섞인 큐브를 카메라로 찍으면 맞추는 순서를 3D 로 알려 주는 큐브 풀이 도우미",
+        "en": "Snap a scrambled cube with your camera and follow the solution in 3D."
+      }
+    },
+    {
+      "id": "etchday",
+      "date": "2026-10-27",
+      "package": "com.happylucky.workmate",
+      "type": "app",
+      "status": "dev",
+      "name": { "ko": "에치데이", "en": "Etchday" },
+      "genre": { "ko": "업무 다이어리", "en": "Work Diary" },
+      "summary": {
+        "ko": "일정, 할 일, 다이어리, 메모를 기록하고 기록 비서로 찾고 정리하는 업무 다이어리",
+        "en": "A work diary for schedule, tasks, journal, and notes, with a record assistant."
+      }
     }
   ]
 }
