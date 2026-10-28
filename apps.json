@@ -192,42 +192,16 @@
       }
     },
     {
-      "id": "ppiyakenglish",
-      "date": "2026-10-07",
-      "package": "com.happylucky.ppiyakenglish",
+      "id": "ppiyakschool",
+      "date": "2026-10-28",
+      "package": "com.happylucky.ppiyakschool",
       "type": "education",
       "status": "dev",
-      "name": { "ko": "삐약 영어", "en": "Ppiyak English" },
-      "genre": { "ko": "어린이 영어", "en": "Kids English" },
+      "name": { "ko": "삐약 스쿨", "en": "Ppiyak School" },
+      "genre": { "ko": "어린이 학습", "en": "Kids Learning" },
       "summary": {
-        "ko": "만 6~8세를 위한 영어 학습. 듣고, 고르고, 따라 말하며 단어에서 회화까지",
-        "en": "English for ages 6 to 8. Listen, choose, and speak, from first words to simple conversation."
-      }
-    },
-    {
-      "id": "ppiyakmath",
-      "date": "2026-10-08",
-      "package": "com.happylucky.ppiyakmath",
-      "type": "education",
-      "status": "dev",
-      "name": { "ko": "삐약 수학", "en": "Ppiyak Math" },
-      "genre": { "ko": "어린이 수학", "en": "Kids Math" },
-      "summary": {
-        "ko": "만 6~8세를 위한 수학 학습. 수 세기부터 덧셈, 뺄셈, 시계, 곱셈 기초까지",
-        "en": "Math for ages 6 to 8. From counting to addition, subtraction, clocks, and early multiplication."
-      }
-    },
-    {
-      "id": "ppiyakart",
-      "date": "2026-10-08",
-      "package": "com.happylucky.ppiyakart",
-      "type": "education",
-      "status": "dev",
-      "name": { "ko": "삐약 미술", "en": "Ppiyak Art" },
-      "genre": { "ko": "어린이 미술", "en": "Kids Art" },
-      "summary": {
-        "ko": "만 6~8세를 위한 미술 놀이. 색 이름과 색 섞기부터 따라 그리기, 색칠하기, 대칭 그리기까지",
-        "en": "Art play for ages 6 to 8. Color names and mixing, tracing, coloring, and symmetry drawing."
+        "ko": "만 6~8세를 위한 학습 앱. 한글, 영어, 수학, 미술 네 과목을 한 앱에서",
+        "en": "Learning for ages 6 to 8. Korean, English, math, and art in one app."
       }
     }
   ]
