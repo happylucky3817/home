@@ -3,100 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy &amp; Lucky Studio</title>
-<meta name="description" content="Happy &amp; Lucky Studio에서 만든 게임과 앱 목록입니다.">
-<meta property="og:title" content="Happy &amp; Lucky Studio">
-<meta property="og:description" content="Happy &amp; Lucky Studio에서 만든 게임과 앱">
+<title>HappyLucky</title>
+<meta name="description" content="HappyLucky에서 만든 게임과 앱 목록입니다.">
+<meta property="og:title" content="HappyLucky">
+<meta property="og:description" content="HappyLucky에서 만든 게임과 앱">
 <meta property="og:image" content="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
+  /* 로고(광택 하트 클로버 엠블럼)에 맞춘 화면: 분홍→민트 파스텔 바탕, 크림 카드, 로고 중간 초록 버튼 줄, 진한 테두리 + 그림자.
+     글꼴은 선명한 Nunito·맑은 고딕만 쓴다(둥근 글꼴은 굵게 하면 번져 보였다). 2026-10-30 */
   :root{
-    --bg:#0c1020; --bg2:#121833; --card:#161d3a; --card2:#1b2346; --line:#2b3561;
-    --txt:#eef1fb; --muted:#a6afcf; --gold:#f0b44a; --gold2:#e6902a; --outline:#381c12;
+    --card:#fff8ef; --ink:#2b2140; --line:#2b2140; --rule:rgba(43,33,64,.18);
+    --txt:#2b2140; --muted:#5e516d; --pink:#ff5f93; --pink2:#ffe3ec; --green:#3cb43c; --green2:#dcf7e5;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
-    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.6;
+    font-family:"Nunito","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+    background:linear-gradient(135deg, #f8bfd0 0%, #f6dcc8 45%, #bfe6cf 100%) fixed;
+    color:var(--txt); line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  a{color:var(--gold); text-decoration:none}
+  a{color:var(--pink); text-decoration:none}
   .wrap{max-width:1040px; margin:0 auto; padding:0 20px}
 
-  .lang{display:flex; justify-content:flex-end; gap:6px; padding:14px 20px 0; max-width:1040px; margin:0 auto}
+  .lang{display:flex; justify-content:flex-end; gap:8px; padding:16px 20px 0; max-width:1040px; margin:0 auto}
   .lang button{
-    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
-    padding:6px 12px; font-size:14px; cursor:pointer;
+    background:var(--card); color:var(--muted); border:2px solid var(--line); border-radius:999px;
+    padding:5px 14px; font-size:14px; cursor:pointer; box-shadow:0 3px 0 var(--line);
   }
-  .lang button.on{color:var(--txt); border-color:var(--gold)}
+  .lang button.on{color:#fff; background:var(--pink)}
 
-  header{text-align:center; padding:36px 0 44px}
+  header{text-align:center; padding:20px 0 40px}
   .logo{margin:0}
-  .logo img{display:block; width:100%; max-width:600px; height:auto; margin:0 auto}
-  .logo .studio{
-    display:flex; align-items:center; justify-content:center; gap:18px; margin:10px auto 0; max-width:460px;
-    font-size:24px; font-weight:800; letter-spacing:12px; text-indent:12px;
-  }
-  .logo .studio b{
-    background:linear-gradient(90deg,#ff7b96 0%,#f6b73c 50%,#2fd08a 100%); -webkit-background-clip:text; background-clip:text;
-    color:transparent; font-weight:800;
-  }
-  .logo .studio::before, .logo .studio::after{content:""; flex:1; height:3px; border-radius:3px}
-  .logo .studio::before{background:linear-gradient(90deg,transparent,#ff7b96)}
-  .logo .studio::after{background:linear-gradient(90deg,#2fd08a,transparent)}
-  .tagline{color:var(--muted); font-size:18px; margin-top:18px}
+  .logo img{display:block; width:100%; max-width:320px; height:auto; margin:0 auto; filter:drop-shadow(0 8px 14px rgba(43,33,64,.18))}
+  .tagline{color:var(--muted); font-size:18px; font-weight:700; margin-top:14px}
 
   section{padding:8px 0 48px}
-  h2{font-size:24px; margin-bottom:18px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:16px}
-  h3.year{display:flex; align-items:center; gap:12px; margin:6px 0 14px; font-size:17px; color:var(--muted); letter-spacing:1px}
-  h3.year::after{content:""; flex:1; height:1px; background:var(--line)}
+  h2{display:inline-block; position:relative; font-size:30px; font-weight:800; margin-bottom:18px; padding-bottom:6px}
+  h2::after{content:""; position:absolute; left:0; right:0; bottom:0; height:7px; border-radius:7px; background:linear-gradient(90deg,#ff5f93,#34c46a)}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px}
+  h3.year{display:flex; align-items:center; gap:12px; margin:6px 0 14px; font-size:17px; font-weight:700; color:var(--muted); letter-spacing:1px}
+  h3.year::after{content:""; flex:1; height:2px; border-radius:2px; background:var(--rule)}
   .grid + h3.year{margin-top:30px}
 
   .app{
-    background:var(--card); border:1px solid var(--line); border-radius:14px;
-    display:flex; flex-direction:column; overflow:hidden; transition:border-color .15s, transform .15s;
+    background:var(--card); border:2.5px solid var(--line); border-radius:22px; box-shadow:0 5px 0 var(--line);
+    display:flex; flex-direction:column; overflow:hidden; transition:transform .15s, box-shadow .15s;
   }
-  .app:hover{border-color:var(--gold); transform:translateY(-2px)}
+  .app:hover{transform:translateY(-3px); box-shadow:0 8px 0 var(--line)}
   .app .main{display:flex; gap:16px; padding:18px 18px 14px; color:var(--txt); flex:1}
   .app .main:hover{text-decoration:none}
-  .app img{width:84px; height:84px; border-radius:18px; flex:none; background:var(--bg2)}
-  .app h3{font-size:18px; line-height:1.3}
+  .app img{width:84px; height:84px; border-radius:20px; flex:none; background:#fff; border:2px solid var(--line)}
+  .app h3{font-size:19px; font-weight:800; line-height:1.3}
   .app .genre{
-    display:inline-block; margin:6px 0 8px; padding:1px 9px; border-radius:20px;
-    font-size:12.5px; color:var(--gold); border:1px solid var(--line); background:var(--bg2);
+    display:inline-block; margin:6px 0 8px; padding:1px 10px; border-radius:20px;
+    font-size:12.5px; font-weight:700; color:#c2185b; background:var(--pink2);
   }
   .app p{color:var(--muted); font-size:14.5px}
   .app .badge{
-    display:inline-block; margin:6px 0 8px 6px; padding:1px 9px; border-radius:20px;
-    font-size:12.5px; color:#9fd8ff; border:1px solid #2f5a7a; background:#132a3d;
+    display:inline-block; margin:6px 0 8px 6px; padding:1px 10px; border-radius:20px;
+    font-size:12.5px; font-weight:700; color:#137a3c; background:var(--green2);
   }
-  .app .badge.note{color:#f3c9a0; border-color:#6a4426; background:#2e1d12}
+  .app .badge.note{color:#8a5a00; background:#fff1c9}
   .app .side{flex:none; width:84px; text-align:center}
-  .app .when{display:block; margin-top:8px; font-size:12px; color:var(--muted); white-space:nowrap}
+  .app .when{display:block; margin-top:8px; font-size:12px; font-weight:700; color:var(--muted); white-space:nowrap}
   [data-lang="en"] .app .when.ko, [data-lang="ko"] .app .when.en{display:none}
-  .app.dev{border-style:dashed}
-  .app.dev:not(:has(a)):hover{border-color:var(--line); transform:none}
-  .app .links{display:flex; border-top:1px solid var(--line)}
-  .app .links > *{flex:1; text-align:center; padding:11px 0; font-size:14px; font-weight:600; color:var(--gold)}
-  .app .links > * + *{border-left:1px solid var(--line)}
+  .app.dev{box-shadow:0 5px 0 var(--line)}
+  .app.dev:not(:has(a)):hover{transform:none; box-shadow:0 5px 0 var(--line)}
+  .app .links{display:flex; border-top:2.5px solid var(--line); background:var(--green)}
+  .app .links > *{flex:1; text-align:center; padding:11px 0; font-size:15px; font-weight:800; color:#fff}
+  .app .links > * + *{border-left:2.5px solid rgba(0,0,0,.18)}
   .app .links .hp, .app .links .gp{display:flex; align-items:center; justify-content:center; gap:7px}
   .app .links .hp svg, .app .links .gp svg{height:16px; width:auto; flex:none}
-  .app .links a:hover{background:var(--card2); text-decoration:none}
-  .app .links .off{cursor:default; user-select:none; color:var(--muted); opacity:.4; filter:grayscale(1)}
+  .app .links a:hover{background:rgba(255,255,255,.18); text-decoration:none}
+  .app .links .off{cursor:default; user-select:none; opacity:.45; filter:grayscale(1)}
 
   .empty{color:var(--muted)}
-  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer{border-top:2.5px solid var(--rule); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
   footer p + p{margin-top:6px}
 
   @media (max-width:420px){
-    .logo img{max-width:100%}
+    .logo img{max-width:240px}
     .grid{grid-template-columns:1fr}
-    .app img{width:68px; height:68px; border-radius:15px}
+    .app img{width:68px; height:68px; border-radius:16px}
   }
   [data-lang="en"] .ko, [data-lang="ko"] .en{display:none !important}
+
+  /* 바탕 별: 몇 개만 무작위 위치에 두고 천천히 반짝이며 떠다닌다(아래 스크립트가 만든다) */
+  .lang, header, main, footer{position:relative; z-index:1}
+  #stars{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+  #stars i{position:absolute; display:block; animation:twinkle var(--t) ease-in-out var(--d) infinite, drift var(--m) ease-in-out var(--d) infinite alternate}
+  #stars i::before{content:""; display:block; width:100%; height:100%; background:#fff;
+    clip-path:polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%)}
+  #stars i.dot::before{clip-path:none; border-radius:50%}
+  @keyframes twinkle{0%,100%{opacity:.25; transform:scale(.7)} 50%{opacity:.9; transform:scale(1)}}
+  @keyframes drift{from{translate:0 0} to{translate:var(--x) var(--y)}}
+  @media (prefers-reduced-motion:reduce){ #stars i{animation:none; opacity:.6} }
 </style>
 </head>
 <body data-lang="ko">
+<div id="stars" aria-hidden="true"></div>
 
 <div class="lang">
   <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
@@ -105,7 +113,7 @@
 
 <header>
   <div class="wrap">
-    <h1 class="logo"><img src="img/logo.png" alt="Happy &amp; Lucky" width="1200" height="328"><span class="studio"><b>STUDIO</b></span></h1>
+    <h1 class="logo"><img src="img/logo.png" alt="HappyLucky" width="1014" height="824"></h1>
     <p class="tagline ko">행복과 행운을 담아 게임과 앱을 만듭니다.</p>
     <p class="tagline en">Games and apps made with happiness and a little luck.</p>
   </div>
@@ -119,7 +127,7 @@
   <div class="wrap">
     <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
     <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
-    <p>&copy; 2026 Happy &amp; Lucky Studio</p>
+    <p>&copy; 2026 HappyLucky</p>
   </div>
 </footer>
 
@@ -234,6 +242,21 @@
     try { l = localStorage.getItem('lang'); } catch(e){}
     if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
     setLang(l);
+  })();
+
+  // 바탕 별: 열 때마다 위치·크기·속도가 달라진다. 별 모양 18개 + 작은 점 12개.
+  // 제자리에서 위아래로 살짝 오르내린다(두둥실).
+  (function(){
+    var box = document.getElementById('stars'), html = '';
+    function r(a, b){ return a + Math.random() * (b - a); }
+    for (var i = 0; i < 30; i++) {
+      var dot = i >= 18, s = dot ? r(4, 8) : r(12, 28);
+      html += '<i class="' + (dot ? 'dot' : '') + '" style="left:' + r(1, 97).toFixed(1) + '%;top:' + r(1, 97).toFixed(1) + '%;' +
+        'width:' + s.toFixed(0) + 'px;height:' + s.toFixed(0) + 'px;' +
+        '--t:' + r(4, 8).toFixed(1) + 's;--m:' + r(5, 8).toFixed(1) + 's;--d:-' + r(0, 8).toFixed(1) + 's;' +
+        '--x:' + r(-3, 3).toFixed(0) + 'px;--y:-' + r(8, 14).toFixed(0) + 'px"></i>';
+    }
+    box.innerHTML = html;
   })();
 
   fetch('apps.json', { cache: 'no-cache' })
