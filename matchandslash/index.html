@@ -10,54 +10,40 @@
 <meta property="og:image" content="img/feature_ko.jpg">
 <link rel="icon" href="img/icon.png">
 <!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../theme.css">
 <style>
-  :root{ --bg:#0e0f17; --bg2:#151722; --card:#1b1e2c; --line:#4a4334; --txt:#eef1fb; --muted:#a6afcf; --accent:#f2c94c; --btn:#dc8022; --outline:#3a2408; }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{
-    font-family:"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
-    background:var(--bg); color:var(--txt); line-height:1.7; -webkit-font-smoothing:antialiased;
-  }
-  a{color:var(--accent); text-decoration:none}
-  a:hover{text-decoration:underline}
+  /* 공통 테마는 ../theme.css. 여기는 소개 페이지에만 있는 것 */
   .wrap{max-width:960px; margin:0 auto; padding:0 20px}
   img.pixel{image-rendering:pixelated}
 
-  .top{display:flex; justify-content:space-between; align-items:center; gap:6px; padding:14px 20px 0; max-width:960px; margin:0 auto}
-  .home{font-size:14px; color:var(--muted)}
-  .lang{display:flex; gap:6px}
-  .lang button{
-    background:var(--card); color:var(--muted); border:1px solid var(--line); border-radius:6px;
-    padding:6px 12px; font-size:14px; cursor:pointer;
-  }
-  .lang button.on{color:var(--txt); border-color:var(--accent)}
+  .notice{max-width:960px; margin:16px auto 0; padding:0 20px}
+  .notice p{background:var(--card); border:2.5px solid var(--line); border-radius:14px; box-shadow:0 4px 0 var(--line); padding:10px 16px; font-size:15px; font-weight:700; text-align:center}
 
-  .notice{max-width:960px; margin:14px auto 0; padding:0 20px}
-  .notice p{background:var(--bg2); border:1px solid var(--accent); border-radius:8px; padding:10px 16px; font-size:15px; text-align:center}
-
-  header{text-align:center; padding:18px 0 40px}
-  .feature{width:100%; max-width:960px; border-radius:10px; border:3px solid var(--line); display:block; margin:0 auto}
-  .tagline{color:var(--muted); font-size:18px; margin-top:22px}
+  header{text-align:center; padding:20px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:20px; border:2.5px solid var(--line); box-shadow:0 6px 0 var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; font-weight:700; margin-top:24px}
   .btn{
-    display:inline-flex; align-items:center; gap:10px; margin-top:24px; padding:13px 28px; border-radius:6px; font-weight:700; font-size:18px;
-    background:var(--btn); color:#fff; border:4px solid var(--outline); border-bottom-width:8px;
-    text-shadow:0 2px 0 var(--outline);
+    display:inline-flex; align-items:center; gap:10px; margin-top:22px; padding:11px 26px 11px 14px; border-radius:999px; font-weight:800; font-size:18px;
+    background:var(--green); color:#fff; border:2.5px solid var(--line); box-shadow:0 5px 0 var(--line); transition:transform .15s, box-shadow .15s;
   }
-  .btn:hover{text-decoration:none; filter:brightness(1.07)}
-  .btn svg{width:24px; height:26px; flex:none; filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
-  .btn.off{cursor:default; user-select:none; opacity:.4; filter:grayscale(1)}
-  .btn.off:hover{filter:grayscale(1)}
-  .btn-note{color:var(--muted); font-size:13px; margin-top:10px}
+  .btn:hover{text-decoration:none; transform:translateY(-2px); box-shadow:0 7px 0 var(--line)}
+  .btn svg{width:34px; height:34px; flex:none; padding:6px 6px 6px 8px; background:#fff; border-radius:50%}
+  .btn.off{cursor:default; user-select:none; opacity:.45; filter:grayscale(1)}
+  .btn.off:hover{transform:none; box-shadow:0 5px 0 var(--line)}
+  .btn-note{color:var(--muted); font-size:13px; font-weight:700; margin-top:12px}
 
-  section{padding:46px 0}
-  h2{font-size:26px; margin-bottom:10px}
-  .lead{color:var(--muted); margin-bottom:26px}
-  .story{background:var(--bg2); border:1px solid var(--line); border-radius:10px; padding:24px 26px; font-size:16.5px}
-  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:14px}
-  .shots img{width:100%; border-radius:8px; border:2px solid var(--line); display:block; cursor:zoom-in; transition:border-color .15s}
-  .shots img:hover{border-color:var(--accent)}
+  section{padding:40px 0}
+  .lead{color:var(--muted); margin-bottom:24px}
+  .story{padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:16px}
+  .shots img{width:100%; border-radius:14px; border:2.5px solid var(--line); box-shadow:0 4px 0 var(--line); display:block; cursor:zoom-in; transition:transform .15s}
+  .shots img:hover{transform:translateY(-2px)}
   .shots figure{margin:0}
-  .shots figcaption{margin-top:8px; font-size:13.5px; line-height:1.5; color:var(--muted)}
-  .shots figcaption b{display:block; color:var(--txt); font-size:14px; margin-bottom:2px}
+  .shots figcaption{margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; font-weight:800; margin-bottom:2px}
   .shots figcaption span{display:block}
 
   /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
@@ -70,27 +56,26 @@
   .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
   .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
   .viewer .close{right:20px; top:20px; font-size:22px}
-  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:var(--muted); font-size:14px; padding:0 70px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:#c9c2d6; font-size:14px; padding:0 70px}
   .viewer .count b{color:#fff; margin-right:8px}
   @media (max-width:600px){
     .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
     .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
     .viewer .close{top:12px; right:12px}
   }
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
-  .feat{background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px}
-  .feat h3{font-size:17px; margin-bottom:6px; color:var(--accent)}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
+  .feat{padding:20px 22px}
+  .feat h3{font-size:17px; font-weight:800; margin-bottom:6px; color:var(--link)}
   .feat p{color:var(--muted); font-size:15px}
-  .note{color:var(--muted); font-size:14px; margin-top:24px}
-  .credits{color:var(--muted); font-size:12px; margin-top:16px; border-top:1px solid var(--line); padding-top:12px}
+  .note{color:var(--muted); font-size:14px; margin-top:26px}
+  .credits{color:var(--muted); font-size:12px; margin-top:16px; border-top:2px solid var(--rule); padding-top:12px}
   .credits p + p{margin-top:4px}
 
-  footer{border-top:1px solid var(--line); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer{border-top:2.5px solid var(--rule); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
   footer p + p{margin-top:6px}
-  footer .links a{margin:0 8px}
-  .divider{height:1px; background:var(--line); max-width:960px; margin:0 auto}
+  footer .links a{margin:0 8px; font-weight:700}
+  .divider{display:none}
   @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
-  [data-lang="en"] .ko, [data-lang="ko"] .en{display:none}
 </style>
 </head>
 <body data-lang="ko">
@@ -231,5 +216,6 @@
     setLang(l);
   })();
 </script>
+<script src="../stars.js"></script>
 </body>
 </html>
