@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>스윗 라켓 (Sweet Racket) - Coming Soon</title>
+<meta name="description" content="스윗 라켓 — 테니스 공을 쳐서 과자 블록 속 동굴을 부수는 벽돌 깨기 게임. 출시 준비 중입니다.">
+<meta property="og:title" content="스윗 라켓 (Sweet Racket)">
+<meta property="og:description" content="과자 블록을 부수는 테니스 벽돌 깨기. Coming Soon">
+<meta property="og:image" content="img/icon.png">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../theme.css">
+<style>
+  /* 공통 테마는 ../theme.css. 여기는 Coming Soon 페이지에만 있는 것 */
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+  .top{max-width:900px}
+
+  header{text-align:center; padding:30px 0 50px}
+  .icon{width:140px; height:140px; border-radius:32px; border:2.5px solid var(--line); box-shadow:0 6px 0 var(--line); background:#fff}
+  h1{font-size:46px; font-weight:800; margin-top:18px; line-height:1.3}
+  .soon{
+    display:inline-block; margin-top:18px; padding:8px 26px; border-radius:999px;
+    font-size:20px; font-weight:800; letter-spacing:4px; color:var(--ink); background:#ffd84d;
+    border:2.5px solid var(--line); box-shadow:0 4px 0 var(--line);
+  }
+  .tagline{color:var(--muted); font-size:18px; font-weight:700; margin-top:22px}
+
+  section{padding:10px 0 50px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px}
+  .feat{padding:20px 22px}
+  .feat h3{font-size:18px; font-weight:800; margin-bottom:6px; color:var(--link)}
+  .feat p{color:var(--muted); font-size:15px}
+  .note{color:var(--muted); font-size:14px; margin-top:24px}
+
+  footer{border-top:2.5px solid var(--rule); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer p + p{margin-top:6px}
+  @media (max-width:420px){ h1{font-size:36px} }
+</style>
+</head>
+<body data-lang="ko">
+
+<div>
+  <div class="top">
+    <a class="home" href="../">&larr; HappyLucky</a>
+    <div class="lang">
+      <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+      <button id="b-en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+  <header>
+    <div class="wrap">
+      <img class="icon" src="img/icon.png" alt="">
+      <h1 class="ko">스윗 라켓</h1>
+      <h1 class="en">Sweet Racket</h1>
+      <div class="soon">COMING SOON</div>
+      <p class="tagline ko">테니스 공을 쳐서 과자 블록 속 동굴을 부수는 벽돌 깨기 게임입니다.</p>
+      <p class="tagline en">Swing your racket and smash through tunnels of cookie blocks.</p>
+    </div>
+  </header>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">게임 소개</h2>
+    <h2 class="en">Features</h2>
+    <div class="grid ko">
+      <div class="feat"><h3>동굴 속으로 한 번에</h3><p>공이 블록 덩어리 안쪽 터널로 들어가면 벽을 따라 튀며 안쪽 블록을 한꺼번에 부숩니다.</p></div>
+      <div class="feat"><h3>이동만 하면 치기는 자동</h3><p>선수를 좌우로 움직이기만 하면 알아서 칩니다. 공이 맞은 자리에 따라 날아가는 각도가 바뀝니다.</p></div>
+      <div class="feat"><h3>떨어지는 아이템</h3><p>블록에서 떨어지는 아이템을 받으면 멀티볼, 공 추가, 넓은 코트, 느린 공, 큰 공, 목숨 추가 효과를 얻습니다.</p></div>
+      <div class="feat"><h3>과자 나라 스테이지</h3><p>챕터마다 다른 과자 블록과 여러 모양의 터널이 기다립니다. 블록을 전부 부수면 스테이지 클리어입니다.</p></div>
+    </div>
+    <div class="grid en">
+      <div class="feat"><h3>Into the tunnel</h3><p>Send the ball into the tunnel inside the block pile and watch it bounce along the walls, smashing the blocks within.</p></div>
+      <div class="feat"><h3>Move, and the swing is automatic</h3><p>Just slide your player left and right. Where the ball lands on your court decides its angle.</p></div>
+      <div class="feat"><h3>Falling items</h3><p>Catch items dropped by blocks: multiball, extra ball, wide court, slow ball, big ball and extra life.</p></div>
+      <div class="feat"><h3>Sweet stages</h3><p>Each chapter brings new treat blocks and tunnels of many shapes. Clear every block to clear the stage.</p></div>
+    </div>
+    <p class="note ko">개발 중인 게임이라 내용은 출시 전에 바뀔 수 있습니다.</p>
+    <p class="note en">This game is in development, and details may change before release.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p>&copy; 2026 <a href="../">HappyLucky</a></p>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.lang = l;
+    document.getElementById('b-ko').classList.toggle('on', l === 'ko');
+    document.getElementById('b-en').classList.toggle('on', l === 'en');
+    try { localStorage.setItem('lang', l); } catch(e){}
+  }
+  (function(){
+    var l = null;
+    try { l = localStorage.getItem('lang'); } catch(e){}
+    if (!l) l = /^ko/i.test(navigator.language || '') ? 'ko' : 'en';
+    setLang(l);
+  })();
+</script>
+<script src="../stars.js"></script>
+</body>
+</html>

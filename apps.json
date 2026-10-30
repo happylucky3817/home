@@ -229,6 +229,19 @@
         "ko": "일정, 할 일, 다이어리, 메모를 기록하고 기록 비서로 찾고 정리하는 업무 다이어리",
         "en": "A work diary for schedule, tasks, journal, and notes, with a record assistant."
       }
+    },
+    {
+      "id": "sweetracket",
+      "date": "2026-10-31",
+      "package": "com.happylucky.sweetracket",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "스윗 라켓", "en": "Sweet Racket" },
+      "genre": { "ko": "벽돌 깨기", "en": "Brick Breaker" },
+      "summary": {
+        "ko": "테니스 공을 쳐서 과자 블록 속 동굴을 부수는 벽돌 깨기",
+        "en": "Swing your racket and smash through tunnels of cookie blocks."
+      }
     }
   ]
 }
