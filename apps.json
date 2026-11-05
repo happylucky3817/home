@@ -71,7 +71,6 @@
     },
     {
       "id": "neonplanetsnake",
-      "hidden": true,
       "released": "2026-09",
       "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsnake",
@@ -101,7 +100,6 @@
     },
     {
       "id": "neonplanetsurvivor",
-      "hidden": true,
       "released": "2026-09",
       "date": "2026-07-18",
       "package": "com.happylucky.neonplanetsurvivor",
