@@ -1,0 +1,176 @@
+{
+  "name": {
+    "ko": "스윗 라켓",
+    "en": "Sweet Racket"
+  },
+  "description": {
+    "ko": "스윗 라켓. 테니스 공으로 하늘의 과자 덩어리를 부수는 벽돌 깨기. 10개 지역, 200개 스테이지, 6가지 모드.",
+    "en": "Sweet Racket. Swing your racket to smash candy clouds. A brick breaker with 10 regions, 200 stages and 6 modes."
+  },
+  "notice": {
+    "ko": "출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.",
+    "en": "Coming soon. Details may change before release."
+  },
+  "tagline": {
+    "ko": "테니스 공으로 하늘의 과자 덩어리를 부수는 벽돌 깨기입니다.",
+    "en": "Swing your racket to smash candy clouds in a sweet brick breaker."
+  },
+  "lead": {
+    "ko": "테니스 선수 리나가 공을 쳐서 하늘에 굳은 과자 덩어리를 부수는 벽돌 깨기 게임입니다. 선수를 좌우로 움직이기만 하면 공은 자동으로 칩니다. 라켓의 어느 쪽에 맞느냐에 따라 공이 날아가는 각도가 바뀝니다. 과자 나라 10개 지역, 200개 스테이지를 지나며 6가지 모드와 보스 쿠키에 도전합니다.",
+    "en": "Sweet Racket is a brick breaker where a young tennis player smashes giant clumps of sweets floating in the sky. Just slide left and right. Rina swings automatically, and where the ball meets the racket decides the angle of every shot. Travel through 10 candy regions and 200 stages, master 6 game modes, and take down the boss cookies."
+  },
+  "story": {
+    "ko": [
+      "큰 시합을 앞두고 슬럼프에 빠진 주니어 테니스 선수 리나는 결승 전날 밤 과자 나라에 떨어집니다.",
+      "쓴맛 구름이 마을의 과자와 단맛을 빨아올려 하늘에 덩어리로 굳혀 버렸고, 그 덩어리를 뚫을 수 있는 것은 리나의 공뿐입니다. 덩어리를 부수면 단맛이 쏟아져 마을이 되살아납니다. 지역마다 새 주민과 만나고, 3년 전 사라진 코치의 흔적을 따라갑니다."
+    ],
+    "en": [
+      "Rina is a junior tennis player who freezes up in big matches. On the night before her final, she falls through a crack of light into a land of sweets.",
+      "A bitter cloud has sucked up the town's treats and baked them into hard clumps in the sky, and only Rina's ball can break through. Every clump you shatter rains sweetness back down and brings the town back to life. Meet new friends in every region and follow the trail of a coach who vanished three years ago."
+    ]
+  },
+  "features": {
+    "ko": [
+      {
+        "title": "6가지 모드",
+        "text": "과자 덩어리를 모두 부수는 보통 모드, 흡입구로 공을 넣는 흡입구 모드, 부순 쿠키가 다시 생기는 재생 모드, 빨간 선에 닿기 전에 부수는 내려오는 덩어리 모드, 제한 시간 모드, 챕터 마지막의 보스 모드가 있습니다."
+      },
+      {
+        "title": "아이템 12종",
+        "text": "멀티볼, 공 추가, 붙잡기, 넓은 코트, 느린 공, 큰 공, 바닥 보호막, 유도 공, 목숨 추가와 모드 전용 아이템이 있습니다. 멀티볼, 공 추가, 바닥 보호막은 아이템 칸에 보관했다가 원하는 때 씁니다."
+      },
+      {
+        "title": "다양한 과자 덩어리",
+        "text": "하트, 별, 고양이, 왕관, 아이스크림, 물고기 등 스테이지마다 모양이 다릅니다. 단단한 쿠키, 깨지지 않는 블록, 방향 블록이 섞여 나옵니다."
+      },
+      {
+        "title": "10개 지역",
+        "text": "쿠키 마을, 초콜릿 공장, 딸기 케이크 언덕, 사탕 성, 아이스크림 빙하 등 지역마다 배경과 쿠키 모양이 다르고, 챕터 시작과 끝에 이야기 장면이 있습니다."
+      },
+      {
+        "title": "별 목표와 기록",
+        "text": "스테이지마다 클리어, 목숨을 잃지 않고 클리어, 기준 시간 안에 클리어의 별 3개가 있습니다. 결과 창에서 클리어 시간, 최대 콤보, 부순 블록 수를 확인합니다."
+      },
+      {
+        "title": "간단한 조작",
+        "text": "한 손으로 좌우 이동만 하면 됩니다. 공이 라켓의 어디에 맞는지로 각도를 조절합니다."
+      }
+    ],
+    "en": [
+      {
+        "title": "6 game modes",
+        "text": "Normal, Inlet, Regrow, Falling Cookies, Time Limit and Boss. Clear every cookie, send the ball through the inlet, beat the regrowth, stop the clump before the red line, race the clock, or break the big boss cookie."
+      },
+      {
+        "title": "12 power-ups",
+        "text": "Multi Ball, Extra Balls, Catch, Wide Court, Slow Ball, Big Ball, Floor Shield, Homing Ball, Extra Life and mode power-ups. Store a Multi Ball, Extra Balls or Floor Shield in your item slot and use it whenever you like."
+      },
+      {
+        "title": "Shapes and blocks",
+        "text": "Hearts, stars, cats, crowns, ice cream cones, fish and more. Tough cookies, unbreakable blocks and arrow blocks keep each stage fresh."
+      },
+      {
+        "title": "10 candy regions",
+        "text": "Cookie Village, Chocolate Factory, Strawberry Cake Hill, Candy Castle, Ice Cream Glacier and more, each with its own backdrop and story scenes."
+      },
+      {
+        "title": "Stars and records",
+        "text": "Earn up to 3 stars per stage: clear it, clear it without losing a life, and clear it within the target time. Check your time, best combo and blocks broken."
+      },
+      {
+        "title": "Simple controls",
+        "text": "Play with one hand by sliding left and right. Where the ball hits the racket sets its angle."
+      }
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      {
+        "file": "img/ss_ko_01.jpg",
+        "alt": "멀티볼",
+        "desc": "멀티볼로 공을 여러 개 띄워 덩어리를 한꺼번에 부숩니다."
+      },
+      {
+        "file": "img/ss_ko_02.jpg",
+        "alt": "보스",
+        "desc": "챕터 마지막 스테이지에서 큰 보스 쿠키를 부숩니다."
+      },
+      {
+        "file": "img/ss_ko_03.jpg",
+        "alt": "흡입구",
+        "desc": "흡입구로 공을 넣어 안쪽 쿠키를 부숩니다."
+      },
+      {
+        "file": "img/ss_ko_04.jpg",
+        "alt": "내려오는 덩어리",
+        "desc": "덩어리가 빨간 선에 닿기 전에 모두 부숩니다."
+      },
+      {
+        "file": "img/ss_ko_05.jpg",
+        "alt": "제한 시간",
+        "desc": "정해진 시간 안에 쿠키를 모두 부숩니다."
+      },
+      {
+        "file": "img/ss_ko_06.jpg",
+        "alt": "클리어",
+        "desc": "별 3개와 기록을 결과 창에서 확인합니다."
+      },
+      {
+        "file": "img/ss_ko_07.jpg",
+        "alt": "이야기",
+        "desc": "챕터마다 리나의 이야기가 이어집니다."
+      },
+      {
+        "file": "img/ss_ko_08.jpg",
+        "alt": "스테이지 지도",
+        "desc": "과자 나라 지도에서 스테이지를 고릅니다."
+      }
+    ],
+    "en": [
+      {
+        "file": "img/ss_en_01.jpg",
+        "alt": "Multi Ball",
+        "desc": "Launch several balls with Multi Ball and smash the clump at once."
+      },
+      {
+        "file": "img/ss_en_02.jpg",
+        "alt": "Boss",
+        "desc": "Break the big boss cookie on the last stage of each chapter."
+      },
+      {
+        "file": "img/ss_en_03.jpg",
+        "alt": "Inlet",
+        "desc": "Send the ball through the inlet to reach the cookies inside."
+      },
+      {
+        "file": "img/ss_en_04.jpg",
+        "alt": "Falling Cookies",
+        "desc": "Break the descending clump before it touches the red line."
+      },
+      {
+        "file": "img/ss_en_05.jpg",
+        "alt": "Time Limit",
+        "desc": "Clear every cookie before time runs out."
+      },
+      {
+        "file": "img/ss_en_06.jpg",
+        "alt": "Stage clear",
+        "desc": "See your stars and records on the results screen."
+      },
+      {
+        "file": "img/ss_en_07.jpg",
+        "alt": "Story",
+        "desc": "Rina's story continues chapter by chapter."
+      },
+      {
+        "file": "img/ss_en_08.jpg",
+        "alt": "Stage map",
+        "desc": "Pick a stage on the map of the candy land."
+      }
+    ]
+  },
+  "note": {
+    "ko": "한국어, 영어를 지원합니다. 광고가 포함되어 있으며, 광고 제거 상품을 구매할 수 있습니다.",
+    "en": "Available in English and Korean. Contains ads, and a Remove Ads purchase is available."
+  }
+}

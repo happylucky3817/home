@@ -1,0 +1,158 @@
+{
+  "name": {
+    "ko": "포토 퍼즐 플러스",
+    "en": "Photo Puzzle Plus"
+  },
+  "description": {
+    "ko": "포토 퍼즐 플러스. 동물, 디저트, 장난감 사진 36장으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐.",
+    "en": "Photo Puzzle Plus. Sliding and jigsaw puzzles made from 36 photos of animals, desserts and toys."
+  },
+  "notice": {
+    "ko": "출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.",
+    "en": "Coming soon. Details may change before release."
+  },
+  "tagline": {
+    "ko": "동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐입니다.",
+    "en": "Sliding and jigsaw puzzles made from photos of animals, desserts and toys."
+  },
+  "lead": {
+    "ko": "동물, 디저트, 장난감 사진으로 푸는 슬라이딩 퍼즐과 직소 퍼즐입니다. 조각을 밀어 맞추는 슬라이딩 퍼즐과 조각을 끼워 맞추는 직소 퍼즐, 두 가지 방식으로 같은 사진을 완성합니다. 사진 하나를 완성하면 같은 테마의 다음 사진이 열립니다.",
+    "en": "Solve sliding puzzles and jigsaw puzzles made from photos of animals, desserts and toys. Every photo can be finished two ways: slide the tiles into place, or fit the pieces together. Complete a photo to unlock the next one in the same theme."
+  },
+  "features": {
+    "ko": [
+      {
+        "title": "슬라이딩 퍼즐",
+        "text": "흰 퍼즐 보드 위에서 빈칸 옆 조각을 밀어 사진을 맞춥니다. 같은 줄의 조각 여러 개를 한 번에 밀 수 있고, 번호 보기와 다시 섞기를 지원합니다. 섞인 배치는 언제나 풀 수 있습니다. 난이도는 3×3, 4×4, 5×5입니다."
+      },
+      {
+        "title": "직소 퍼즐",
+        "text": "아래 조각 상자에서 조각을 들어 보드 위 제자리에 끼웁니다. 보드의 옅은 밑그림과 조각 모양 선을 보며 위치를 찾습니다. 난이도는 3×3, 4×4, 6×6입니다."
+      },
+      {
+        "title": "사진 테마 3종, 36장",
+        "text": "동물 사진, 달콤한 디저트, 장난감 상자 테마마다 사진 12장이 있습니다. 슬라이딩 퍼즐과 직소 퍼즐의 진행은 따로 저장됩니다."
+      },
+      {
+        "title": "미리보기와 기록",
+        "text": "퍼즐 중에 보드 위쪽의 작은 사진을 누르면 완성 사진을 크게 봅니다. 난이도마다 최고 기록(시간, 이동 수)을 저장하고 완성한 난이도는 별로 표시합니다."
+      },
+      {
+        "title": "오프라인 플레이",
+        "text": "인터넷 연결 없이 플레이할 수 있습니다."
+      }
+    ],
+    "en": [
+      {
+        "title": "Sliding puzzle",
+        "text": "Slide the tiles next to the empty space to rebuild the photo on a white puzzle board. Push a whole row in one move, show tile numbers, or shuffle again. Every shuffle is solvable. Sizes: 3×3, 4×4 and 5×5."
+      },
+      {
+        "title": "Jigsaw puzzle",
+        "text": "Pick up pieces from the tray and drop them into place. A faint outline and the piece shapes on the board help you find each spot. Sizes: 3×3, 4×4 and 6×6."
+      },
+      {
+        "title": "3 themes, 36 photos",
+        "text": "Animal Photos, Sweet Desserts and Toy Box, with 12 photos each. Sliding and jigsaw progress are saved separately."
+      },
+      {
+        "title": "Preview and records",
+        "text": "Tap the small photo at the top of the board to see the finished picture full size. Your best time and move count are saved for every size, and finished sizes earn a star."
+      },
+      {
+        "title": "Play offline",
+        "text": "No internet connection needed to play."
+      }
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      {
+        "file": "img/ss_ko_01.jpg",
+        "alt": "슬라이딩 퍼즐",
+        "desc": "빈칸 옆 조각을 밀어 고양이 사진을 맞춥니다."
+      },
+      {
+        "file": "img/ss_ko_02.jpg",
+        "alt": "직소 퍼즐",
+        "desc": "조각 상자에서 조각을 들어 케이크 사진을 완성합니다."
+      },
+      {
+        "file": "img/ss_ko_03.jpg",
+        "alt": "번호 보기",
+        "desc": "5×5 슬라이딩 퍼즐에서 조각 번호를 켜고 맞춥니다."
+      },
+      {
+        "file": "img/ss_ko_04.jpg",
+        "alt": "난이도 선택",
+        "desc": "퍼즐을 시작하기 전에 난이도를 고릅니다."
+      },
+      {
+        "file": "img/ss_ko_05.jpg",
+        "alt": "완성 사진 미리보기",
+        "desc": "퍼즐 중에 완성 사진을 크게 봅니다."
+      },
+      {
+        "file": "img/ss_ko_06.jpg",
+        "alt": "테마 고르기",
+        "desc": "동물 사진, 디저트, 장난감 상자 테마를 고릅니다."
+      },
+      {
+        "file": "img/ss_ko_07.jpg",
+        "alt": "사진 고르기",
+        "desc": "사진을 완성하면 다음 사진이 열립니다."
+      },
+      {
+        "file": "img/ss_ko_08.jpg",
+        "alt": "메인 화면",
+        "desc": "슬라이딩 퍼즐과 직소 퍼즐 중 하나를 고릅니다."
+      }
+    ],
+    "en": [
+      {
+        "file": "img/ss_en_01.jpg",
+        "alt": "Sliding puzzle",
+        "desc": "Slide the tiles next to the empty space to rebuild a cat photo."
+      },
+      {
+        "file": "img/ss_en_02.jpg",
+        "alt": "Jigsaw puzzle",
+        "desc": "Pick up pieces from the tray to finish a cake photo."
+      },
+      {
+        "file": "img/ss_en_03.jpg",
+        "alt": "Show numbers",
+        "desc": "Turn on tile numbers in a 5×5 sliding puzzle."
+      },
+      {
+        "file": "img/ss_en_04.jpg",
+        "alt": "Choose a size",
+        "desc": "Pick a difficulty before you start."
+      },
+      {
+        "file": "img/ss_en_05.jpg",
+        "alt": "Photo preview",
+        "desc": "See the finished photo full size during play."
+      },
+      {
+        "file": "img/ss_en_06.jpg",
+        "alt": "Themes",
+        "desc": "Choose Animal Photos, Sweet Desserts or Toy Box."
+      },
+      {
+        "file": "img/ss_en_07.jpg",
+        "alt": "Photos",
+        "desc": "Finish a photo to unlock the next one."
+      },
+      {
+        "file": "img/ss_en_08.jpg",
+        "alt": "Main screen",
+        "desc": "Choose sliding puzzle or jigsaw puzzle."
+      }
+    ]
+  },
+  "note": {
+    "ko": "한국어, 영어를 지원합니다. 광고가 포함되어 있으며, 광고 제거 상품을 구매할 수 있습니다.",
+    "en": "Available in English and Korean. Contains ads, and a Remove Ads purchase is available."
+  }
+}

@@ -3,95 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>포토 퍼즐 플러스 (Photo Puzzle Plus) - Coming Soon</title>
-<meta name="description" content="포토 퍼즐 플러스 — 동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐. 출시 준비 중입니다.">
+<title>포토 퍼즐 플러스 (Photo Puzzle Plus)</title>
+<meta name="description" content="포토 퍼즐 플러스. 동물, 디저트, 장난감 사진 36장으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐.">
 <meta property="og:title" content="포토 퍼즐 플러스 (Photo Puzzle Plus)">
-<meta property="og:description" content="사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐. Coming Soon">
-<meta property="og:image" content="img/icon.png">
+<meta property="og:description" content="동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐입니다.">
+<meta property="og:image" content="img/feature_ko.jpg">
 <link rel="icon" href="img/icon.png">
+<!-- 이 파일은 tools/build_pages.ps1 이 page.json 으로 만든다. 직접 고치지 말고 page.json 을 고친다. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../theme.css">
 <style>
-  /* 공통 테마는 ../theme.css. 여기는 Coming Soon 페이지에만 있는 것 */
-  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
-  .top{max-width:900px}
+  /* 공통 테마는 ../theme.css. 여기는 소개 페이지에만 있는 것 */
+  .wrap{max-width:960px; margin:0 auto; padding:0 20px}
+  img.pixel{image-rendering:pixelated}
 
-  header{text-align:center; padding:30px 0 50px}
-  .icon{width:140px; height:140px; border-radius:32px; border:2.5px solid var(--line); box-shadow:0 6px 0 var(--line); background:#fff}
-  h1{font-size:46px; font-weight:800; margin-top:18px; line-height:1.3}
-  .soon{
-    display:inline-block; margin-top:18px; padding:8px 26px; border-radius:999px;
-    font-size:20px; font-weight:800; letter-spacing:4px; color:var(--ink); background:#ffd84d;
-    border:2.5px solid var(--line); box-shadow:0 4px 0 var(--line);
+  .notice{max-width:960px; margin:16px auto 0; padding:0 20px}
+  .notice p{background:var(--card); border:2.5px solid var(--line); border-radius:14px; box-shadow:0 4px 0 var(--line); padding:10px 16px; font-size:15px; font-weight:700; text-align:center}
+
+  header{text-align:center; padding:20px 0 40px}
+  .feature{width:100%; max-width:960px; border-radius:20px; border:2.5px solid var(--line); box-shadow:0 6px 0 var(--line); display:block; margin:0 auto}
+  .tagline{color:var(--muted); font-size:18px; font-weight:700; margin-top:24px}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; margin-top:22px; padding:11px 26px 11px 14px; border-radius:999px; font-weight:800; font-size:18px;
+    background:var(--green); color:#fff; border:2.5px solid var(--line); box-shadow:0 5px 0 var(--line); transition:transform .15s, box-shadow .15s;
   }
-  .tagline{color:var(--muted); font-size:18px; font-weight:700; margin-top:22px}
+  .btn:hover{text-decoration:none; transform:translateY(-2px); box-shadow:0 7px 0 var(--line)}
+  .btn svg{width:34px; height:34px; flex:none; padding:6px 6px 6px 8px; background:#fff; border-radius:50%}
+  .btn.off{cursor:default; user-select:none; opacity:.45; filter:grayscale(1)}
+  .btn.off:hover{transform:none; box-shadow:0 5px 0 var(--line)}
+  .btn-note{color:var(--muted); font-size:13px; font-weight:700; margin-top:12px}
 
-  section{padding:10px 0 50px}
-  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px}
+  section{padding:40px 0}
+  .lead{color:var(--muted); margin-bottom:24px}
+  .story{padding:24px 26px; font-size:16.5px}
+  .shots{display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:16px}
+  .shots img{width:100%; border-radius:14px; border:2.5px solid var(--line); box-shadow:0 4px 0 var(--line); display:block; cursor:zoom-in; transition:transform .15s}
+  .shots img:hover{transform:translateY(-2px)}
+  .shots figure{margin:0}
+  .shots figcaption{margin-top:10px; font-size:13.5px; line-height:1.5; color:var(--muted)}
+  .shots figcaption b{display:block; color:var(--txt); font-size:14px; font-weight:800; margin-bottom:2px}
+  .shots figcaption span{display:block}
+
+  /* 스크린샷 확대 보기: 누르면 열리고, 좌우 버튼·화살표 키·밀기로 넘기고, 바깥·닫기·Esc 로 닫는다 */
+  .viewer{position:fixed; inset:0; z-index:100; background:rgba(4,6,14,.94); display:none; align-items:center; justify-content:center; touch-action:pan-y}
+  .viewer.on{display:flex}
+  .viewer img{max-width:calc(100vw - 140px); max-height:calc(100vh - 80px); border-radius:8px; box-shadow:0 10px 50px rgba(0,0,0,.7); user-select:none}
+  .viewer img.pixel{image-rendering:pixelated}
+  .viewer button{position:absolute; background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.18); border-radius:50%; width:48px; height:48px; font-size:24px; line-height:1; cursor:pointer}
+  .viewer button:hover{background:rgba(255,255,255,.18)}
+  .viewer .prev{left:20px; top:50%; transform:translateY(-50%)}
+  .viewer .next{right:20px; top:50%; transform:translateY(-50%)}
+  .viewer .close{right:20px; top:20px; font-size:22px}
+  .viewer .count{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:#c9c2d6; font-size:14px; padding:0 70px}
+  .viewer .count b{color:#fff; margin-right:8px}
+  @media (max-width:600px){
+    .viewer img{max-width:100vw; max-height:calc(100vh - 110px); border-radius:0}
+    .viewer .prev, .viewer .next{top:auto; bottom:8px; transform:none; width:44px; height:44px}
+    .viewer .close{top:12px; right:12px}
+  }
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px}
   .feat{padding:20px 22px}
-  .feat h3{font-size:18px; font-weight:800; margin-bottom:6px; color:var(--link)}
+  .feat h3{font-size:17px; font-weight:800; margin-bottom:6px; color:var(--link)}
   .feat p{color:var(--muted); font-size:15px}
-  .note{color:var(--muted); font-size:14px; margin-top:24px}
+  .note{color:var(--muted); font-size:14px; margin-top:26px}
+  .credits{color:var(--muted); font-size:12px; margin-top:16px; border-top:2px solid var(--rule); padding-top:12px}
+  .credits p + p{margin-top:4px}
 
-  footer{border-top:2.5px solid var(--rule); padding:30px 0; color:var(--muted); font-size:14px; text-align:center}
+  footer{border-top:2.5px solid var(--rule); padding:34px 0; color:var(--muted); font-size:14px; text-align:center}
   footer p + p{margin-top:6px}
-  @media (max-width:420px){ h1{font-size:36px} }
+  footer .links a{margin:0 8px; font-weight:700}
+  .divider{display:none}
+  @media (max-width:420px){ .shots{grid-template-columns:repeat(2,1fr)} }
 </style>
 </head>
 <body data-lang="ko">
 
-<div>
-  <div class="top">
-    <a class="home" href="../">&larr; HappyLucky</a>
-    <div class="lang">
-      <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
-      <button id="b-en" onclick="setLang('en')">English</button>
+<div class="top">
+  <a class="home" href="../">&larr; HappyLucky</a>
+  <div class="lang">
+    <button id="b-ko" class="on" onclick="setLang('ko')">한국어</button>
+    <button id="b-en" onclick="setLang('en')">English</button>
+  </div>
+</div>
+<div class="notice">
+  <p class="ko">출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.</p>
+  <p class="en">Coming soon. Details may change before release.</p>
+</div>
+
+<header>
+  <div class="wrap">
+    <img class="feature ko" src="img/feature_ko.jpg" alt="포토 퍼즐 플러스">
+    <img class="feature en" src="img/feature_en.jpg" alt="Photo Puzzle Plus">
+    <p class="tagline ko">동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐입니다.</p>
+    <p class="tagline en">Sliding and jigsaw puzzles made from photos of animals, desserts and toys.</p>
+    <span class="btn off"><svg viewBox="0 0 24 26" aria-hidden="true"><path fill="#34A853" d="M1.2 .6 13.6 13l4-4L3.3.8C2.5.3 1.7.3 1.2.6z"/><path fill="#4285F4" d="M1.2.6C.9.9.7 1.4.7 2v22c0 .6.2 1.1.5 1.4L13.6 13z"/><path fill="#EA4335" d="M1.2 25.4 13.6 13l4 4-14.3 8.2c-.8.5-1.6.5-2.1.2z"/><path fill="#FBBC04" d="m17.6 9-4 4 4 4 4.6-2.6c1.1-.6 1.1-2.2 0-2.8z"/></svg>Coming Soon</span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2 class="ko">스크린샷</h2>
+    <h2 class="en">Screenshots</h2>
+    <div class="shots ko">
+      <figure><img class="" src="img/ss_ko_01.jpg" alt="슬라이딩 퍼즐" data-desc="빈칸 옆 조각을 밀어 고양이 사진을 맞춥니다." loading="lazy"><figcaption><b>슬라이딩 퍼즐</b><span>빈칸 옆 조각을 밀어 고양이 사진을 맞춥니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_02.jpg" alt="직소 퍼즐" data-desc="조각 상자에서 조각을 들어 케이크 사진을 완성합니다." loading="lazy"><figcaption><b>직소 퍼즐</b><span>조각 상자에서 조각을 들어 케이크 사진을 완성합니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_03.jpg" alt="번호 보기" data-desc="5&#215;5 슬라이딩 퍼즐에서 조각 번호를 켜고 맞춥니다." loading="lazy"><figcaption><b>번호 보기</b><span>5&#215;5 슬라이딩 퍼즐에서 조각 번호를 켜고 맞춥니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_04.jpg" alt="난이도 선택" data-desc="퍼즐을 시작하기 전에 난이도를 고릅니다." loading="lazy"><figcaption><b>난이도 선택</b><span>퍼즐을 시작하기 전에 난이도를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_05.jpg" alt="완성 사진 미리보기" data-desc="퍼즐 중에 완성 사진을 크게 봅니다." loading="lazy"><figcaption><b>완성 사진 미리보기</b><span>퍼즐 중에 완성 사진을 크게 봅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_06.jpg" alt="테마 고르기" data-desc="동물 사진, 디저트, 장난감 상자 테마를 고릅니다." loading="lazy"><figcaption><b>테마 고르기</b><span>동물 사진, 디저트, 장난감 상자 테마를 고릅니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_07.jpg" alt="사진 고르기" data-desc="사진을 완성하면 다음 사진이 열립니다." loading="lazy"><figcaption><b>사진 고르기</b><span>사진을 완성하면 다음 사진이 열립니다.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_ko_08.jpg" alt="메인 화면" data-desc="슬라이딩 퍼즐과 직소 퍼즐 중 하나를 고릅니다." loading="lazy"><figcaption><b>메인 화면</b><span>슬라이딩 퍼즐과 직소 퍼즐 중 하나를 고릅니다.</span></figcaption></figure>
+    </div>
+    <div class="shots en">
+      <figure><img class="" src="img/ss_en_01.jpg" alt="Sliding puzzle" data-desc="Slide the tiles next to the empty space to rebuild a cat photo." loading="lazy"><figcaption><b>Sliding puzzle</b><span>Slide the tiles next to the empty space to rebuild a cat photo.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_02.jpg" alt="Jigsaw puzzle" data-desc="Pick up pieces from the tray to finish a cake photo." loading="lazy"><figcaption><b>Jigsaw puzzle</b><span>Pick up pieces from the tray to finish a cake photo.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_03.jpg" alt="Show numbers" data-desc="Turn on tile numbers in a 5&#215;5 sliding puzzle." loading="lazy"><figcaption><b>Show numbers</b><span>Turn on tile numbers in a 5&#215;5 sliding puzzle.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_04.jpg" alt="Choose a size" data-desc="Pick a difficulty before you start." loading="lazy"><figcaption><b>Choose a size</b><span>Pick a difficulty before you start.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_05.jpg" alt="Photo preview" data-desc="See the finished photo full size during play." loading="lazy"><figcaption><b>Photo preview</b><span>See the finished photo full size during play.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_06.jpg" alt="Themes" data-desc="Choose Animal Photos, Sweet Desserts or Toy Box." loading="lazy"><figcaption><b>Themes</b><span>Choose Animal Photos, Sweet Desserts or Toy Box.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_07.jpg" alt="Photos" data-desc="Finish a photo to unlock the next one." loading="lazy"><figcaption><b>Photos</b><span>Finish a photo to unlock the next one.</span></figcaption></figure>
+      <figure><img class="" src="img/ss_en_08.jpg" alt="Main screen" data-desc="Choose sliding puzzle or jigsaw puzzle." loading="lazy"><figcaption><b>Main screen</b><span>Choose sliding puzzle or jigsaw puzzle.</span></figcaption></figure>
     </div>
   </div>
-  <header>
-    <div class="wrap">
-      <img class="icon" src="img/icon.png" alt="">
-      <h1 class="ko">포토 퍼즐 플러스</h1>
-      <h1 class="en">Photo Puzzle Plus</h1>
-      <div class="soon">COMING SOON</div>
-      <p class="tagline ko">동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐입니다.</p>
-      <p class="tagline en">Sliding and jigsaw puzzles made from photos of animals, desserts and toys.</p>
-    </div>
-  </header>
-</div>
+</section>
+
+<div class="divider"></div>
 
 <section>
   <div class="wrap">
     <h2 class="ko">게임 소개</h2>
     <h2 class="en">Features</h2>
+    <p class="lead ko">동물, 디저트, 장난감 사진으로 푸는 슬라이딩 퍼즐과 직소 퍼즐입니다. 조각을 밀어 맞추는 슬라이딩 퍼즐과 조각을 끼워 맞추는 직소 퍼즐, 두 가지 방식으로 같은 사진을 완성합니다. 사진 하나를 완성하면 같은 테마의 다음 사진이 열립니다.</p>
+    <p class="lead en">Solve sliding puzzles and jigsaw puzzles made from photos of animals, desserts and toys. Every photo can be finished two ways: slide the tiles into place, or fit the pieces together. Complete a photo to unlock the next one in the same theme.</p>
     <div class="grid ko">
-      <div class="feat"><h3>두 가지 퍼즐</h3><p>칸을 밀어 그림을 맞추는 슬라이딩 퍼즐과 조각을 끼워 맞추는 직소 퍼즐을 따로 즐길 수 있습니다.</p></div>
-      <div class="feat"><h3>사진 테마</h3><p>동물 사진, 달콤한 디저트, 장난감 상자 테마마다 사진 12장이 들어 있습니다. 그림을 완성하면 다음 그림이 열립니다.</p></div>
-      <div class="feat"><h3>난이도 선택</h3><p>슬라이딩은 3×3부터 5×5까지, 직소는 3×3부터 6×6까지 고를 수 있습니다. 난이도마다 최고 기록이 남습니다.</p></div>
-      <div class="feat"><h3>플라스틱 퍼즐판</h3><p>플라스틱 퍼즐판처럼 만든 3D 판에서 칸을 밀고 조각을 맞춥니다. 언제든 완성 그림을 크게 볼 수 있습니다.</p></div>
+      <div class="feat"><h3>슬라이딩 퍼즐</h3><p>흰 퍼즐 보드 위에서 빈칸 옆 조각을 밀어 사진을 맞춥니다. 같은 줄의 조각 여러 개를 한 번에 밀 수 있고, 번호 보기와 다시 섞기를 지원합니다. 섞인 배치는 언제나 풀 수 있습니다. 난이도는 3&#215;3, 4&#215;4, 5&#215;5입니다.</p></div>
+      <div class="feat"><h3>직소 퍼즐</h3><p>아래 조각 상자에서 조각을 들어 보드 위 제자리에 끼웁니다. 보드의 옅은 밑그림과 조각 모양 선을 보며 위치를 찾습니다. 난이도는 3&#215;3, 4&#215;4, 6&#215;6입니다.</p></div>
+      <div class="feat"><h3>사진 테마 3종, 36장</h3><p>동물 사진, 달콤한 디저트, 장난감 상자 테마마다 사진 12장이 있습니다. 슬라이딩 퍼즐과 직소 퍼즐의 진행은 따로 저장됩니다.</p></div>
+      <div class="feat"><h3>미리보기와 기록</h3><p>퍼즐 중에 보드 위쪽의 작은 사진을 누르면 완성 사진을 크게 봅니다. 난이도마다 최고 기록(시간, 이동 수)을 저장하고 완성한 난이도는 별로 표시합니다.</p></div>
+      <div class="feat"><h3>오프라인 플레이</h3><p>인터넷 연결 없이 플레이할 수 있습니다.</p></div>
     </div>
     <div class="grid en">
-      <div class="feat"><h3>Two kinds of puzzles</h3><p>Slide tiles to rebuild the picture, or fit pieces together in a jigsaw. Each mode has its own progress.</p></div>
-      <div class="feat"><h3>Photo themes</h3><p>Animals, sweet desserts and a toy box, with 12 photos in each theme. Finish a picture to unlock the next one.</p></div>
-      <div class="feat"><h3>Pick your challenge</h3><p>Sliding puzzles from 3×3 to 5×5 and jigsaws from 3×3 to 6×6, with your best record saved for each size.</p></div>
-      <div class="feat"><h3>A real puzzle board</h3><p>Slide tiles and place pieces on a 3D plastic board, just like a classic toy puzzle. Peek at the finished picture any time.</p></div>
+      <div class="feat"><h3>Sliding puzzle</h3><p>Slide the tiles next to the empty space to rebuild the photo on a white puzzle board. Push a whole row in one move, show tile numbers, or shuffle again. Every shuffle is solvable. Sizes: 3&#215;3, 4&#215;4 and 5&#215;5.</p></div>
+      <div class="feat"><h3>Jigsaw puzzle</h3><p>Pick up pieces from the tray and drop them into place. A faint outline and the piece shapes on the board help you find each spot. Sizes: 3&#215;3, 4&#215;4 and 6&#215;6.</p></div>
+      <div class="feat"><h3>3 themes, 36 photos</h3><p>Animal Photos, Sweet Desserts and Toy Box, with 12 photos each. Sliding and jigsaw progress are saved separately.</p></div>
+      <div class="feat"><h3>Preview and records</h3><p>Tap the small photo at the top of the board to see the finished picture full size. Your best time and move count are saved for every size, and finished sizes earn a star.</p></div>
+      <div class="feat"><h3>Play offline</h3><p>No internet connection needed to play.</p></div>
     </div>
-    <p class="note ko">개발 중인 게임이라 내용은 출시 전에 바뀔 수 있습니다.</p>
-    <p class="note en">This game is in development, and details may change before release.</p>
+    <p class="note ko">한국어, 영어를 지원합니다. 광고가 포함되어 있으며, 광고 제거 상품을 구매할 수 있습니다.</p>
+    <p class="note en">Available in English and Korean. Contains ads, and a Remove Ads purchase is available.</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <p class="ko">문의: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
-    <p class="en">Contact: <a href="mailto:happylucky3817@gmail.com">happylucky3817@gmail.com</a></p>
+    <p class="links ko"><a href="privacy.html">개인정보처리방침</a> <a href="terms.html">이용약관</a> <a href="mailto:happylucky3817@gmail.com">문의</a> <a href="../">다른 게임</a></p>
+    <p class="links en"><a href="privacy.html">Privacy Policy</a> <a href="terms.html">Terms of Service</a> <a href="mailto:happylucky3817@gmail.com">Contact</a> <a href="../">More games</a></p>
     <p>&copy; 2026 <a href="../">HappyLucky</a></p>
   </div>
 </footer>
 
+<div class="viewer" id="viewer" role="dialog" aria-modal="true">
+  <img id="v-img" alt="">
+  <button class="prev" id="v-prev" aria-label="Previous">&lsaquo;</button>
+  <button class="next" id="v-next" aria-label="Next">&rsaquo;</button>
+  <button class="close" id="v-close" aria-label="Close">&times;</button>
+  <div class="count" id="v-count"></div>
+</div>
+
 <script>
+  // 스크린샷 확대 보기. 지금 언어의 스크린샷 묶음 안에서 넘긴다.
+  (function(){
+    var v = document.getElementById('viewer'), img = document.getElementById('v-img'), count = document.getElementById('v-count');
+    var list = [], at = 0, sx = null;
+    function show(i){
+      at = (i + list.length) % list.length;
+      img.src = list[at].src; img.alt = list[at].alt; img.className = list[at].className;
+      var d = list[at].getAttribute('data-desc') || '';
+      count.innerHTML = '<b></b><span></span> <small></small>';
+      count.querySelector('b').textContent = list[at].alt; count.querySelector('span').textContent = d; count.querySelector('small').textContent = '  ' + (at + 1) + ' / ' + list.length;
+    }
+    function open(el){
+      list = Array.prototype.slice.call(el.closest('.shots').querySelectorAll('img'));
+      show(list.indexOf(el)); v.classList.add('on'); document.body.style.overflow = 'hidden';
+    }
+    function close(){ v.classList.remove('on'); document.body.style.overflow = ''; }
+    document.querySelectorAll('.shots img').forEach(function(el){ el.addEventListener('click', function(){ open(el); }); });
+    document.getElementById('v-prev').addEventListener('click', function(e){ e.stopPropagation(); show(at - 1); });
+    document.getElementById('v-next').addEventListener('click', function(e){ e.stopPropagation(); show(at + 1); });
+    document.getElementById('v-close').addEventListener('click', close);
+    v.addEventListener('click', function(e){ if (e.target === v) close(); });
+    document.addEventListener('keydown', function(e){
+      if (!v.classList.contains('on')) return;
+      if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(at - 1); else if (e.key === 'ArrowRight') show(at + 1);
+    });
+    v.addEventListener('touchstart', function(e){ sx = e.touches[0].clientX; }, { passive: true });
+    v.addEventListener('touchend', function(e){
+      if (sx === null) return;
+      var dx = e.changedTouches[0].clientX - sx; sx = null;
+      if (Math.abs(dx) > 40) show(at + (dx < 0 ? 1 : -1));
+    });
+  })();
+
+
   function setLang(l){
     document.body.setAttribute('data-lang', l);
     document.documentElement.lang = l;

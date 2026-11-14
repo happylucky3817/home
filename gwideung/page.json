@@ -1,0 +1,166 @@
+{
+  "name": {
+    "ko": "귀등",
+    "en": "Ghost Lantern"
+  },
+  "description": {
+    "ko": "귀등. 조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG. 마을 3곳, 던전 9곳, 무기 8종.",
+    "en": "Ghost Lantern. Slash through hordes of Korean ghosts and yokai as a royal exorcist. 3 villages, 9 dungeons and 8 weapons."
+  },
+  "notice": {
+    "ko": "출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.",
+    "en": "Coming soon. Details may change before release."
+  },
+  "tagline": {
+    "ko": "조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG입니다.",
+    "en": "Slash through hordes of Korean ghosts and yokai as a royal exorcist."
+  },
+  "lead": {
+    "ko": "밤마다 도깨비불이 번지고 요괴가 마을을 덮칩니다. 마패를 찬 암행 퇴마사가 되어 던전 깊은 곳의 요괴를 봉인합니다. 수십, 수백 마리의 요괴 떼를 무기 하나로 쓸어 내는 핵앤슬래시 액션 RPG입니다. 던전을 내려가며 무기를 줍고, 도력을 올리고, 층마다 기다리는 우두머리와 던전 보스를 쓰러뜨립니다.",
+    "en": "Ghost lights flicker every night, and yokai are creeping into the villages. Take up the royal tablet of a secret exorcist and seal the evil deep below. Ghost Lantern is a hack-and-slash action RPG where one weapon carves through dozens, even hundreds, of monsters at once. Dive floor by floor, grab new weapons, grow your power, and defeat the chieftain on every floor and the boss waiting at the bottom."
+  },
+  "features": {
+    "ko": [
+      {
+        "title": "던전과 마을",
+        "text": "마을 3곳과 던전 9곳. 폐사찰 아래 요괴 소굴부터 저승 문까지, 던전마다 요괴와 지형이 다르고 층마다 우두머리, 마지막 층에는 던전 보스가 있습니다. 지도는 들어갈 때마다 새로 만들어집니다."
+      },
+      {
+        "title": "요괴 보스",
+        "text": "구미호, 도깨비 대왕, 이무기, 저승 대차사 등 보스마다 고유 공격 패턴과 분노 단계가 있습니다."
+      },
+      {
+        "title": "무기 8종",
+        "text": "환도, 사인검, 참마도, 월도, 당파창, 벽력 철퇴, 도깨비 방망이, 각궁. 무기마다 기본 공격 2종과 고유 스킬 2종이 있습니다."
+      },
+      {
+        "title": "등급과 옵션",
+        "text": "일반부터 전설까지 5등급과 무작위 옵션이 있습니다. 전설 무기는 불꽃, 번개, 냉기, 흡수, 검기 중 고유 효과 하나를 가집니다."
+      },
+      {
+        "title": "성장",
+        "text": "던전 안에서는 도력과 탐사 강화로 강해지고, 모은 유물로 산신 사당에서 영구 강화합니다. 죽어도 영구 강화는 남습니다."
+      },
+      {
+        "title": "마을과 의뢰",
+        "text": "마을 사람들의 봉인 의뢰와 사냥 의뢰를 마치고 보상을 받습니다. 상인에게 산삼을 사고, 무녀에게 엽전을 내고 무기 옵션을 다시 뽑습니다."
+      }
+    ],
+    "en": [
+      {
+        "title": "Dungeons and villages",
+        "text": "3 villages and 9 dungeons, from the Yokai Den Beneath the Ruined Temple to the Gate of the Underworld. Each dungeon has its own monsters and terrain, a chieftain on every floor, and a boss on the last floor. A new map is generated every time you enter."
+      },
+      {
+        "title": "Folklore bosses",
+        "text": "The Gumiho, the Goblin King, the Imugi Serpent, the Grand Reaper and more, each with unique attacks and an enraged phase."
+      },
+      {
+        "title": "8 weapons",
+        "text": "Hwando Saber, Saingeom Star Sword, Chammado Greatblade, Moon Glaive, Dangpa Trident, Thunder Hammer, Dokkaebi Club and Horn Bow, each with 2 basic attacks and 2 unique skills."
+      },
+      {
+        "title": "Rarities and options",
+        "text": "5 rarities from Common to Legendary with random options. Legendary weapons carry a special effect: fire, lightning, frost, life drain or blade waves."
+      },
+      {
+        "title": "Growth",
+        "text": "Grow stronger during a run, then spend relics at the Mountain Shrine on permanent upgrades that stay even when you fall."
+      },
+      {
+        "title": "Villages and quests",
+        "text": "Take seal and hunt quests for rewards, buy wild ginseng from the merchant, and pay the shaman coins to reroll weapon options."
+      }
+    ]
+  },
+  "screenshots": {
+    "ko": [
+      {
+        "file": "img/ss_ko_01.jpg",
+        "alt": "요괴 떼",
+        "desc": "몰려드는 요괴 떼를 무기 하나로 쓸어 냅니다."
+      },
+      {
+        "file": "img/ss_ko_02.jpg",
+        "alt": "도깨비 대왕",
+        "desc": "던전 보스 도깨비 대왕과 싸웁니다."
+      },
+      {
+        "file": "img/ss_ko_03.jpg",
+        "alt": "물길 동굴",
+        "desc": "우물 아래 물길 동굴에서 요괴를 물리칩니다."
+      },
+      {
+        "file": "img/ss_ko_04.jpg",
+        "alt": "무기 획득",
+        "desc": "등급과 옵션이 다른 무기를 줍습니다."
+      },
+      {
+        "file": "img/ss_ko_05.jpg",
+        "alt": "구미호",
+        "desc": "구미호 보스와 마주합니다."
+      },
+      {
+        "file": "img/ss_ko_06.jpg",
+        "alt": "마을",
+        "desc": "마을 사람들에게 의뢰를 받습니다."
+      },
+      {
+        "file": "img/ss_ko_07.jpg",
+        "alt": "산신 사당",
+        "desc": "모은 유물로 영구 강화를 합니다."
+      },
+      {
+        "file": "img/ss_ko_08.jpg",
+        "alt": "메인 화면",
+        "desc": "귀등의 메인 화면입니다."
+      }
+    ],
+    "en": [
+      {
+        "file": "img/ss_en_01.jpg",
+        "alt": "Yokai horde",
+        "desc": "Sweep through a horde of yokai with a single weapon."
+      },
+      {
+        "file": "img/ss_en_02.jpg",
+        "alt": "Goblin King",
+        "desc": "Face the Goblin King, a dungeon boss."
+      },
+      {
+        "file": "img/ss_en_03.jpg",
+        "alt": "Waterway cave",
+        "desc": "Fight yokai in the waterway cave beneath the well."
+      },
+      {
+        "file": "img/ss_en_04.jpg",
+        "alt": "Weapon drop",
+        "desc": "Pick up weapons with different rarities and options."
+      },
+      {
+        "file": "img/ss_en_05.jpg",
+        "alt": "Gumiho",
+        "desc": "Come face to face with the Gumiho boss."
+      },
+      {
+        "file": "img/ss_en_06.jpg",
+        "alt": "Village",
+        "desc": "Take quests from the villagers."
+      },
+      {
+        "file": "img/ss_en_07.jpg",
+        "alt": "Mountain Shrine",
+        "desc": "Spend relics on permanent upgrades."
+      },
+      {
+        "file": "img/ss_en_08.jpg",
+        "alt": "Main screen",
+        "desc": "The Ghost Lantern main screen."
+      }
+    ]
+  },
+  "note": {
+    "ko": "한국어, 영어를 지원합니다. 가로 화면 전용입니다. 광고가 포함되어 있으며, 프리미엄 패키지를 구매할 수 있습니다.",
+    "en": "Available in English and Korean. Landscape only. Contains ads, and a Premium Pack purchase is available."
+  }
+}
