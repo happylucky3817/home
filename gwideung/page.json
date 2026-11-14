@@ -78,22 +78,22 @@
       {
         "file": "img/ss_ko_01.jpg",
         "alt": "요괴 떼",
-        "desc": "몰려드는 요괴 떼를 무기 하나로 쓸어 냅니다."
+        "desc": "환도 스킬 검기 난무로 몰려드는 요괴 떼를 쓸어 냅니다."
       },
       {
         "file": "img/ss_ko_02.jpg",
         "alt": "도깨비 대왕",
-        "desc": "던전 보스 도깨비 대왕과 싸웁니다."
+        "desc": "대나무숲 고분에서 던전 보스 도깨비 대왕과 맞섭니다."
       },
       {
         "file": "img/ss_ko_03.jpg",
-        "alt": "물길 동굴",
-        "desc": "우물 아래 물길 동굴에서 요괴를 물리칩니다."
+        "alt": "무너진 산성",
+        "desc": "벽력 철퇴 스킬로 산성의 원귀들을 물리칩니다."
       },
       {
         "file": "img/ss_ko_04.jpg",
         "alt": "무기 획득",
-        "desc": "등급과 옵션이 다른 무기를 줍습니다."
+        "desc": "희귀, 영웅, 전설 등급의 무기를 골라 줍습니다."
       },
       {
         "file": "img/ss_ko_05.jpg",
@@ -120,22 +120,22 @@
       {
         "file": "img/ss_en_01.jpg",
         "alt": "Yokai horde",
-        "desc": "Sweep through a horde of yokai with a single weapon."
+        "desc": "Sweep through a horde of yokai with the Hwando Saber's Blade Storm."
       },
       {
         "file": "img/ss_en_02.jpg",
         "alt": "Goblin King",
-        "desc": "Face the Goblin King, a dungeon boss."
+        "desc": "Face the Goblin King, a dungeon boss, in the bamboo grove tomb."
       },
       {
         "file": "img/ss_en_03.jpg",
-        "alt": "Waterway cave",
-        "desc": "Fight yokai in the waterway cave beneath the well."
+        "alt": "Ruined fortress",
+        "desc": "Smash the vengeful spirits of the ruined fortress with the Thunder Hammer."
       },
       {
         "file": "img/ss_en_04.jpg",
-        "alt": "Weapon drop",
-        "desc": "Pick up weapons with different rarities and options."
+        "alt": "Weapon drops",
+        "desc": "Choose from Rare, Epic and Legendary weapons."
       },
       {
         "file": "img/ss_en_05.jpg",
