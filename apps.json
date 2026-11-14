@@ -240,6 +240,32 @@
         "ko": "테니스 공을 쳐서 과자 블록 속 동굴을 부수는 벽돌 깨기",
         "en": "Swing your racket and smash through tunnels of cookie blocks."
       }
+    },
+    {
+      "id": "photopuzzleplus",
+      "date": "2026-11-14",
+      "package": "com.happylucky.photopuzzleplus",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "포토 퍼즐 플러스", "en": "Photo Puzzle Plus" },
+      "genre": { "ko": "퍼즐", "en": "Puzzle" },
+      "summary": {
+        "ko": "동물, 디저트, 장난감 사진으로 즐기는 슬라이딩 퍼즐과 직소 퍼즐",
+        "en": "Sliding and jigsaw puzzles made from photos of animals, desserts and toys."
+      }
+    },
+    {
+      "id": "gwideung",
+      "date": "2026-11-14",
+      "package": "com.happylucky.gwideung",
+      "type": "game",
+      "status": "dev",
+      "name": { "ko": "귀등", "en": "Ghost Lantern" },
+      "genre": { "ko": "액션 RPG", "en": "Action RPG" },
+      "summary": {
+        "ko": "퇴마사가 마을을 돌며 요괴 던전을 봉인하는 한국풍 액션 RPG",
+        "en": "A Korean folklore action RPG. Seal haunted dungeons as a wandering exorcist."
+      }
     }
   ]
 }

@@ -1,0 +1,59 @@
+{
+  "effective": "2026-11-14",
+  "updated": "2026-11-14",
+  "local_data": {
+    "ko": [
+      "퍼즐 진행: 모드(슬라이딩, 직소)마다 완성한 사진과 완성한 난이도",
+      "최고 기록: 사진과 난이도마다 가장 빠른 시간과 그때의 이동 수",
+      "광고를 보고 먼저 연 사진 목록",
+      "설정: 언어, 효과음 켜기/끄기, 진동 켜기/끄기",
+      "조작 안내를 봤는지와 모드별 완성 횟수",
+      "광고 제거 구매 여부(앱을 켤 때마다 Google Play 구매 내역으로 다시 확인합니다)",
+      "개발자용 운영자 모드 설정(일반 사용자는 쓰지 않습니다)"
+    ],
+    "en": [
+      "Puzzle progress: which photos you completed and at which sizes, for each mode (sliding and jigsaw)",
+      "Best records: fastest time and move count for each photo and size",
+      "Photos you unlocked early by watching an ad",
+      "Settings: language, sound effects on or off, vibration on or off",
+      "Whether you have seen the controls guide, and how many puzzles you completed in each mode",
+      "Whether you bought Remove Ads (checked again against your Google Play purchases each time the app starts)",
+      "Developer-only operator mode settings (not used by players)"
+    ]
+  },
+  "purchase": {
+    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 퍼즐을 완성한 뒤 나오는 광고가 사라지고, 잠긴 사진을 광고 없이 바로 열 수 있습니다.",
+    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). It removes the ads shown after completed puzzles and lets you unlock locked photos right away without ads."
+  },
+  "ads": {
+    "banner": false,
+    "interstitial": true,
+    "rewarded": true,
+    "detail": {
+      "ko": "배너 광고는 없습니다. 퍼즐을 2번 완성할 때마다 완성 화면을 나갈 때 전면 광고가 한 번 나올 수 있으며, 직전 광고 뒤 2분 안에는 나오지 않습니다. 보상형 광고는 잠긴 사진을 바로 열려고 사용자가 직접 선택했을 때만 재생됩니다. 광고 제거를 구매하면 광고가 나오지 않습니다.",
+      "en": "There are no banner ads. An interstitial ad may appear once when you leave the results screen after every 2 completed puzzles, and never within 2 minutes of the previous one. A rewarded ad plays only when you choose to watch it to unlock a locked photo right away. If you buy Remove Ads, no ads are shown."
+    }
+  },
+  "ump": {
+    "ko": "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+    "en": "the Ad Privacy Settings button in the app's Settings (shown only in regions where the consent form applies)"
+  },
+  "version_check": true,
+  "network_extra": {
+    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다. 퍼즐 사진은 모두 앱 안에 들어 있으며, 본 앱은 기기의 사진이나 파일에 접근하지 않습니다.",
+    "en": "The app has no features for chatting or exchanging data with other users. All puzzle photos are built into the app, and the app does not access the photos or files on your device."
+  },
+  "permissions": [
+    { "name": "INTERNET", "ko": "광고를 불러오고, 구매를 확인하고, 새 버전이 있는지 확인합니다.", "en": "To load ads, confirm purchases, and check for a newer version." },
+    { "name": "VIBRATE", "ko": "퍼즐 조작과 완성 때 진동 효과를 냅니다. 설정에서 끌 수 있습니다.", "en": "For vibration feedback when you play and complete puzzles. You can turn it off in Settings." },
+    { "name": "com.android.vending.BILLING", "ko": "Google Play 결제 시스템으로 인앱 상품을 구매하고 복원합니다.", "en": "To buy and restore in-app items through Google Play's billing system." },
+    { "name": "ACCESS_NETWORK_STATE", "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).", "en": "To check the network connection before requesting ads (Google AdMob)." },
+    { "name": "AD_ID", "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).", "en": "To use the advertising ID to serve and measure ads (Google AdMob)." },
+    { "name": "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS", "ko": "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).", "en": "To use Android's privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)." },
+    { "name": "WAKE_LOCK, FOREGROUND_SERVICE", "ko": "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).", "en": "Used by the advertising SDK for its internal background work (Google AdMob)." }
+  ],
+  "children": {
+    "ko": "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+    "en": "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child's information has been processed, please contact us at the email below."
+  }
+}

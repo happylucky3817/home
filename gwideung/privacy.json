@@ -1,0 +1,87 @@
+{
+  "effective": "2026-11-14",
+  "updated": "2026-11-14",
+  "local_data": {
+    "ko": [
+      "게임 진행: 엽전, 포인트, 유물, 도력과 경험치, 들고 있는 무기, 영구 강화 단계, 깬 던전, 의뢰 진행과 봉인 인장, 상인에게 산 물건, 마을에서 마지막으로 있던 위치, 최고 기록과 누적 기록",
+      "광고 보상 기록: 광고로 포인트를 받은 날짜, 횟수, 마지막 시각",
+      "설정: 언어, 음악·효과음·진동 켜기/끄기, 조작 안내를 봤는지, 고른 주인공",
+      "프리미엄 패키지 구매 여부(앱을 켤 때마다 Google Play 구매 내역으로 다시 확인합니다)",
+      "개발자용 운영자 모드 설정(일반 사용자는 쓰지 않습니다)"
+    ],
+    "en": [
+      "Game progress: coins, points, relics, power level and experience, equipped weapon, permanent upgrade levels, cleared dungeons, quest progress and seals, items bought from the merchant, last position in the village, best records and play statistics",
+      "Ad reward history: the date, count, and last time you earned points from ads",
+      "Settings: language, music, sound effects and vibration on or off, whether you have seen the controls guide, and your selected hero",
+      "Whether you bought the Premium Pack (checked again against your Google Play purchases each time the app starts)",
+      "Developer-only operator mode settings (not used by players)"
+    ]
+  },
+  "currency": {
+    "ko": "본 앱의 엽전과 포인트는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 돈으로 구매할 수도 없습니다.",
+    "en": "Coins and points in the app are numbers used only inside the game. They cannot be bought with money or exchanged for cash or prizes."
+  },
+  "purchase": {
+    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 광고를 보지 않고 포인트와 부활 보상을 받을 수 있습니다.",
+    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). It lets you claim points and revives without watching ads."
+  },
+  "ads": {
+    "banner": false,
+    "interstitial": false,
+    "rewarded": true,
+    "detail": {
+      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 포인트 받기(광고 1회에 9포인트)는 하루 15회까지이며 한 번 본 뒤 3분을 기다립니다. 던전에서 쓰러졌을 때 광고를 보고 부활하는 것은 탐사 한 번에 한 번입니다. 프리미엄 패키지를 구매하면 광고가 나오지 않습니다.",
+      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you choose to watch it: to earn points (9 points per ad, up to 15 times a day with a 3-minute wait between ads), or to revive after falling in a dungeon (once per run). If you buy the Premium Pack, no ads are shown."
+    }
+  },
+  "ump": {
+    "ko": "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+    "en": "the Ad Privacy Settings button in the app's Settings (shown only in regions where the consent form applies)"
+  },
+  "version_check": true,
+  "network_extra": {
+    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다.",
+    "en": "The app has no features for chatting or exchanging data with other users."
+  },
+  "permissions": [
+    {
+      "name": "INTERNET",
+      "ko": "광고를 불러오고, 구매를 확인하고, 새 버전이 있는지 확인합니다.",
+      "en": "To load ads, confirm purchases, and check for a newer version."
+    },
+    {
+      "name": "VIBRATE",
+      "ko": "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.",
+      "en": "For vibration feedback during play. You can turn it off in Settings."
+    },
+    {
+      "name": "com.android.vending.BILLING",
+      "ko": "Google Play 결제 시스템으로 인앱 상품을 구매하고 복원합니다.",
+      "en": "To buy and restore in-app items through Google Play's billing system."
+    },
+    {
+      "name": "ACCESS_NETWORK_STATE",
+      "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+      "en": "To check the network connection before requesting ads (Google AdMob)."
+    },
+    {
+      "name": "AD_ID",
+      "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+      "en": "To use the advertising ID to serve and measure ads (Google AdMob)."
+    },
+    {
+      "name": "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+      "ko": "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+      "en": "To use Android's privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+    },
+    {
+      "name": "WAKE_LOCK, FOREGROUND_SERVICE",
+      "ko": "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+      "en": "Used by the advertising SDK for its internal background work (Google AdMob)."
+    }
+  ],
+  "children": {
+    "ko": "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+    "en": "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child's information has been processed, please contact us at the email below."
+  }
+}

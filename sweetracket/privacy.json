@@ -1,0 +1,89 @@
+{
+  "effective": "2026-11-14",
+  "updated": "2026-11-14",
+  "local_data": {
+    "ko": [
+      "클리어한 스테이지, 스테이지별 별과 최고 기록",
+      "보유 포인트와 광고로 포인트를 받은 기록(날짜, 횟수, 시각)",
+      "이미 본 이야기 장면",
+      "언어, 배경 음악, 효과음, 진동 설정",
+      "광고 제거 구매 여부(앱을 켤 때마다 Google Play 구매 내역으로 다시 확인합니다)",
+      "개발자용 운영자 모드 설정(일반 사용자는 쓰지 않습니다)"
+    ],
+    "en": [
+      "Stages cleared, and stars and best records per stage",
+      "Your points balance and a record of points earned from ads (date, count, and time)",
+      "Story scenes you have already seen",
+      "Language, music, sound effect, and vibration settings",
+      "Whether you bought Remove Ads (checked again against your Google Play purchases each time the app starts)",
+      "Developer-only operator mode settings (not used by players)"
+    ]
+  },
+  "currency": {
+    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 돈으로 구매할 수도 없습니다.",
+    "en": "Points in the app are numbers used only inside the game. They cannot be bought with money or exchanged for cash or prizes."
+  },
+  "purchase": {
+    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 광고를 보지 않고 포인트를 받을 수 있습니다.",
+    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). It lets you claim points without watching ads."
+  },
+  "ads": {
+    "banner": false,
+    "interstitial": false,
+    "rewarded": true,
+    "detail": {
+      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 포인트 창에서 사용자가 [광고 보고 20포인트 받기]를 직접 누를 때만 재생됩니다. 1회에 20포인트를 받고 하루 15회까지 볼 수 있으며, 한 번 본 뒤 3분이 지나야 다시 볼 수 있습니다. 광고 제거를 구매하면 광고가 나오지 않습니다.",
+      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you tap [Watch an ad for 20 points] in the Points window. Each ad gives 20 points, up to 15 times a day, with a 3-minute wait between ads. If you buy Remove Ads, no ads are shown."
+    }
+  },
+  "ump": {
+    "ko": "앱 설정의 광고 개인정보 설정 버튼(동의 창이 적용되는 지역에서만 보입니다)",
+    "en": "the Ad Privacy Settings button in the app's Settings (shown only in regions where the consent form applies)"
+  },
+  "version_check": true,
+  "network_extra": {
+    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다.",
+    "en": "The app has no features for chatting or exchanging data with other users."
+  },
+  "permissions": [
+    {
+      "name": "INTERNET",
+      "ko": "광고를 불러오고, 구매를 확인하고, 새 버전이 있는지 확인합니다.",
+      "en": "To load ads, confirm purchases, and check for a newer version."
+    },
+    {
+      "name": "VIBRATE",
+      "ko": "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.",
+      "en": "For vibration feedback during play. You can turn it off in Settings."
+    },
+    {
+      "name": "com.android.vending.BILLING",
+      "ko": "Google Play 결제 시스템으로 인앱 상품을 구매하고 복원합니다.",
+      "en": "To buy and restore in-app items through Google Play's billing system."
+    },
+    {
+      "name": "ACCESS_NETWORK_STATE",
+      "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).",
+      "en": "To check the network connection before requesting ads (Google AdMob)."
+    },
+    {
+      "name": "AD_ID",
+      "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).",
+      "en": "To use the advertising ID to serve and measure ads (Google AdMob)."
+    },
+    {
+      "name": "ACCESS_ADSERVICES_AD_ID, ACCESS_ADSERVICES_ATTRIBUTION, ACCESS_ADSERVICES_TOPICS",
+      "ko": "Android 의 광고 개인정보 보호 기능(Privacy Sandbox)을 사용합니다(Google AdMob).",
+      "en": "To use Android's privacy-preserving advertising features (Privacy Sandbox) (Google AdMob)."
+    },
+    {
+      "name": "WAKE_LOCK, FOREGROUND_SERVICE",
+      "ko": "광고 SDK 가 내부 작업을 처리하는 데 사용합니다(Google AdMob).",
+      "en": "Used by the advertising SDK for its internal background work (Google AdMob)."
+    }
+  ],
+  "children": {
+    "ko": "본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 개발자는 13세 미만 아동의 개인정보를 알면서 수집하지 않으며, 본 앱은 개발자에게 어떤 개인정보도 전송하지 않습니다. 자녀의 정보가 처리되었다고 생각되는 보호자께서는 아래 이메일로 알려 주십시오.",
+    "en": "The app is not directed at children under 13. The developer does not knowingly collect personal information from children under 13, and the app does not send any personal information to the developer. If you are a parent or guardian and believe your child's information has been processed, please contact us at the email below."
+  }
+}
