@@ -22,16 +22,16 @@
     "en": "Coins and points in the app are numbers used only inside the game. They cannot be bought with money or exchanged for cash or prizes."
   },
   "purchase": {
-    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 두 번째 주인공 연화를 쓸 수 있고, 광고를 보지 않고 포인트와 부활 보상을 받을 수 있습니다.",
-    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). It unlocks the second hero, Yeonhwa, and lets you claim points and revives without watching ads."
+    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 두 번째 주인공 연화를 쓸 수 있고, 광고를 보지 않고 포인트를 받을 수 있습니다.",
+    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). It unlocks the second hero, Yeonhwa, and lets you claim points without watching ads."
   },
   "ads": {
     "banner": false,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 포인트 받기(광고 1회에 9포인트)는 하루 15회까지이며 한 번 본 뒤 3분을 기다립니다. 던전에서 쓰러졌을 때 광고를 보고 부활하는 것은 탐사 한 번에 한 번입니다. 프리미엄 패키지를 구매하면 광고가 나오지 않습니다.",
-      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you choose to watch it: to earn points (9 points per ad, up to 15 times a day with a 3-minute wait between ads), or to revive after falling in a dungeon (once per run). If you buy the Premium Pack, no ads are shown."
+      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 포인트 받기(광고 1회에 9포인트)는 하루 15회까지이며 한 번 본 뒤 3분을 기다립니다. 프리미엄 패키지를 구매하면 광고가 나오지 않습니다.",
+      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you choose to watch it: to earn points (9 points per ad, up to 15 times a day with a 3-minute wait between ads). If you buy the Premium Pack, no ads are shown."
     }
   },
   "ump": {
