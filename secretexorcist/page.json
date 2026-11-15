@@ -1,11 +1,11 @@
 {
   "name": {
-    "ko": "귀등",
-    "en": "Ghost Lantern"
+    "ko": "암행 퇴마사",
+    "en": "Secret Exorcist"
   },
   "description": {
-    "ko": "귀등. 조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG. 마을 3곳, 던전 9곳, 무기 8종.",
-    "en": "Ghost Lantern. Slash through hordes of Korean ghosts and yokai as a royal exorcist. 3 villages, 9 dungeons and 8 weapons."
+    "ko": "암행 퇴마사. 조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG. 마을 3곳, 던전 9곳, 무기 8종.",
+    "en": "Secret Exorcist. Slash through hordes of Korean ghosts and yokai as a secret royal exorcist. 3 villages, 9 dungeons and 8 weapons."
   },
   "notice": {
     "ko": "출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.",
@@ -13,11 +13,11 @@
   },
   "tagline": {
     "ko": "조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG입니다.",
-    "en": "Slash through hordes of Korean ghosts and yokai as a royal exorcist."
+    "en": "Slash through hordes of Korean ghosts and yokai as a secret royal exorcist."
   },
   "lead": {
-    "ko": "밤마다 도깨비불이 번지고 요괴가 마을을 덮칩니다. 마패를 찬 암행 퇴마사가 되어 던전 깊은 곳의 요괴를 봉인합니다. 수십, 수백 마리의 요괴 떼를 무기 하나로 쓸어 내는 핵앤슬래시 액션 RPG입니다. 던전을 내려가며 무기를 줍고, 도력을 올리고, 층마다 기다리는 우두머리와 던전 보스를 쓰러뜨립니다.",
-    "en": "Ghost lights flicker every night, and yokai are creeping into the villages. Take up the royal tablet of a secret exorcist and seal the evil deep below. Ghost Lantern is a hack-and-slash action RPG where one weapon carves through dozens, even hundreds, of monsters at once. Dive floor by floor, grab new weapons, grow your power, and defeat the chieftain on every floor and the boss waiting at the bottom."
+    "ko": "조선 팔도에 밤마다 귀신이 나타나 마을을 덮칩니다. 조정은 이 일을 백성들에게 알리지 않고, 은밀히 퇴마사들을 모아 암행 조직을 꾸렸습니다. 마패를 찬 암행 퇴마사가 되어 던전 깊은 곳의 요괴를 봉인합니다. 수십, 수백 마리의 요괴 떼를 무기 하나로 쓸어 내는 핵앤슬래시 액션 RPG입니다. 던전을 내려가며 쓰러뜨린 귀신의 혼으로 무기를 소환하고, 도력을 올리고, 층마다 기다리는 우두머리와 던전 보스를 쓰러뜨립니다.",
+    "en": "Night after night, ghosts rise across Joseon and fall upon its villages. The royal court keeps it hidden from the people and sends a secret order of exorcists instead. Take up the royal horse tablet of a secret exorcist and seal the evil deep below. Secret Exorcist is a hack-and-slash action RPG where one weapon carves through dozens, even hundreds, of monsters at once. Dive floor by floor, offer the souls of slain ghosts to summon new weapons, grow your power, and defeat the chieftain on every floor and the boss waiting at the bottom."
   },
   "features": {
     "ko": [
@@ -42,8 +42,8 @@
         "text": "던전 안에서는 도력과 탐사 강화로 강해지고, 모은 유물로 산신 사당에서 영구 강화합니다. 죽어도 영구 강화는 남습니다."
       },
       {
-        "title": "마을과 의뢰",
-        "text": "마을 사람들의 봉인 의뢰와 사냥 의뢰를 마치고 보상을 받습니다. 상인에게 산삼을 사고, 무녀에게 엽전을 내고 무기 옵션을 다시 뽑습니다."
+        "title": "마을과 조사",
+        "text": "마을 사람들에게 소문을 듣고 던전 입구를 조사해 봉인 퀘스트를 시작합니다. 상인에게 산삼을 사고, 무당에게 엽전을 내고 무기 옵션을 다시 뽑습니다."
       }
     ],
     "en": [
@@ -68,8 +68,8 @@
         "text": "Grow stronger during a run, then spend relics at the Mountain Shrine on permanent upgrades that stay even when you fall."
       },
       {
-        "title": "Villages and quests",
-        "text": "Take seal and hunt quests for rewards, buy wild ginseng from the merchant, and pay the shaman coins to reroll weapon options."
+        "title": "Villages and investigation",
+        "text": "Hear rumors from villagers and investigate dungeon entrances to start seal quests. Buy wild ginseng from the merchant, and pay the shaman coins to reroll weapon options."
       }
     ]
   },
@@ -103,7 +103,7 @@
       {
         "file": "img/ss_ko_06.jpg",
         "alt": "마을",
-        "desc": "마을 사람들에게 의뢰를 받습니다."
+        "desc": "마을 사람들에게 소문을 듣고 던전 입구를 조사합니다."
       },
       {
         "file": "img/ss_ko_07.jpg",
@@ -113,7 +113,7 @@
       {
         "file": "img/ss_ko_08.jpg",
         "alt": "메인 화면",
-        "desc": "귀등의 메인 화면입니다."
+        "desc": "암행 퇴마사의 메인 화면입니다."
       }
     ],
     "en": [
@@ -145,7 +145,7 @@
       {
         "file": "img/ss_en_06.jpg",
         "alt": "Village",
-        "desc": "Take quests from the villagers."
+        "desc": "Hear rumors from the villagers and investigate the dungeon entrance."
       },
       {
         "file": "img/ss_en_07.jpg",
@@ -155,12 +155,12 @@
       {
         "file": "img/ss_en_08.jpg",
         "alt": "Main screen",
-        "desc": "The Ghost Lantern main screen."
+        "desc": "The Secret Exorcist main screen."
       }
     ]
   },
   "note": {
-    "ko": "한국어, 영어를 지원합니다. 가로 화면 전용입니다. 광고가 포함되어 있으며, 프리미엄 패키지를 구매할 수 있습니다.",
-    "en": "Available in English and Korean. Landscape only. Contains ads, and a Premium Pack purchase is available."
+    "ko": "한국어, 영어를 지원합니다. 가로 화면 전용입니다. 광고가 포함되어 있으며, 프리미엄 패키지(두 번째 주인공 연화, 광고 없이 보상)를 구매할 수 있습니다.",
+    "en": "Available in English and Korean. Landscape only. Contains ads, and a Premium Pack purchase is available (the second hero Yeonhwa, rewards without ads)."
   }
 }

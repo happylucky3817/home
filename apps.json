@@ -255,16 +255,16 @@
       }
     },
     {
-      "id": "gwideung",
+      "id": "secretexorcist",
       "date": "2026-11-14",
-      "package": "com.happylucky.gwideung",
+      "package": "com.happylucky.secretexorcist",
       "type": "game",
       "status": "dev",
-      "name": { "ko": "귀등", "en": "Ghost Lantern" },
+      "name": { "ko": "암행 퇴마사", "en": "Secret Exorcist" },
       "genre": { "ko": "액션 RPG", "en": "Action RPG" },
       "summary": {
-        "ko": "퇴마사가 마을을 돌며 요괴 던전을 봉인하는 한국풍 액션 RPG",
-        "en": "A Korean folklore action RPG. Seal haunted dungeons as a wandering exorcist."
+        "ko": "조선의 암행 퇴마사가 되어 요괴 던전을 봉인하는 한국풍 액션 RPG",
+        "en": "A Korean folklore action RPG. Seal haunted dungeons as a secret royal exorcist."
       }
     }
   ]

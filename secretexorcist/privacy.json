@@ -1,6 +1,6 @@
 {
   "effective": "2026-11-14",
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "local_data": {
     "ko": [
       "게임 진행: 엽전, 포인트, 유물, 도력과 경험치, 들고 있는 무기, 영구 강화 단계, 깬 던전, 의뢰 진행과 봉인 인장, 상인에게 산 물건, 마을에서 마지막으로 있던 위치, 최고 기록과 누적 기록",
@@ -22,8 +22,8 @@
     "en": "Coins and points in the app are numbers used only inside the game. They cannot be bought with money or exchanged for cash or prizes."
   },
   "purchase": {
-    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 광고를 보지 않고 포인트와 부활 보상을 받을 수 있습니다.",
-    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). It lets you claim points and revives without watching ads."
+    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 두 번째 주인공 연화를 쓸 수 있고, 광고를 보지 않고 포인트와 부활 보상을 받을 수 있습니다.",
+    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). It unlocks the second hero, Yeonhwa, and lets you claim points and revives without watching ads."
   },
   "ads": {
     "banner": false,
