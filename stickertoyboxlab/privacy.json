@@ -1,11 +1,12 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-25",
+  "updated": "2026-11-16",
   "local_data": {
     "ko": [
       "테마별 클리어한 스테이지",
       "포인트(게임 안 재화)",
-      "출석 보상을 받은 날짜",
+      "보상형 광고를 본 날짜, 그날 본 횟수, 마지막으로 본 시각",
+      "광고 제거 상품 구매 여부",
       "효과음, 배경음악, 진동, 언어 설정",
       "저장하고 나간 스테이지의 이어하기 데이터(뗀 스티커와 상자 상태)",
       "이미 본 안내 목록",
@@ -14,7 +15,8 @@
     "en": [
       "Stages cleared in each theme",
       "Points (in-game currency)",
-      "The date you last received the daily reward",
+      "The date you watched rewarded ads, how many you watched that day, and when you last watched one",
+      "Whether you have bought Remove Ads",
       "Sound effect, music, vibration, and language settings",
       "Data to resume a stage you saved and left (peeled stickers and box state)",
       "A list of tips you have already seen",
@@ -22,16 +24,20 @@
     ]
   },
   "currency": {
-    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자이며, 스테이지 시작과 도움 도구에 씁니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 본 앱에는 인앱 결제가 없으며, 개발자는 결제 정보를 수집하지 않습니다.",
-    "en": "Points in the app are numbers used only inside the game, spent to start stages and use tools. They cannot be bought or exchanged for cash or prizes. The app has no in-app purchases, and the developer does not collect any payment information."
+    "ko": "본 앱의 포인트는 게임 안에서만 쓰는 숫자이며, 스테이지 시작과 도움 도구에 씁니다. 포인트 자체를 파는 상품은 없으며, 광고 제거 상품을 구매하면 포인트를 쓰지 않고 플레이할 수 있습니다. 포인트는 현금이나 경품으로 바꿀 수 없습니다.",
+    "en": "Points in the app are numbers used only inside the game, spent to start stages and use tools. Points themselves are not sold, but if you buy Remove Ads, you can play without using points. Points cannot be exchanged for cash or prizes."
+  },
+  "purchase": {
+    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 보상형 광고를 보지 않고 바로 보상을 받고, 포인트를 쓰지 않으며, 하루 횟수와 대기 시간 제한도 없습니다.",
+    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). Once bought, you receive rewards right away without watching rewarded ads, points are no longer used, and there is no daily limit or waiting time."
   },
   "ads": {
     "banner": false,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "본 앱의 광고는 보상형 광고뿐이며, 사용자가 광고 버튼을 직접 눌렀을 때만 재생됩니다. 포인트 충전, 잠긴 대기 칸 열기, 대기 칸이 가득 찼을 때 이어하기, 저장하고 나가기에 쓰입니다. 배너 광고와 전면 광고는 사용하지 않습니다.",
-      "en": "The only ads in the app are rewarded ads, and they play only when you tap an ad button yourself. They are used to refill points, open a locked holding slot, continue when the holding slots are full, and save and quit. The app does not use banner or interstitial (full-screen) ads."
+      "ko": "본 앱의 광고는 보상형 광고뿐이며, 사용자가 광고 버튼을 직접 눌렀을 때만 재생됩니다. 포인트 충전, 잠긴 대기 칸 열기, 대기 칸이 가득 찼을 때 이어하기, 저장하고 나가기에 쓰입니다. 모든 보상형 광고를 합쳐 하루 15번까지 볼 수 있고, 한 번 본 뒤 60초가 지나야 다시 볼 수 있습니다. 배너 광고와 전면 광고는 사용하지 않습니다. 광고 제거 상품을 구매하면 광고가 나오지 않습니다.",
+      "en": "The only ads in the app are rewarded ads, and they play only when you tap an ad button yourself. They are used to refill points, open a locked holding slot, continue when the holding slots are full, and save and quit. You can watch up to 15 rewarded ads a day in total, with a 60-second wait after each one. The app does not use banner or interstitial (full-screen) ads. If you buy Remove Ads, no ads are shown."
     }
   },
   "ump": {
@@ -41,6 +47,7 @@
   "version_check": true,
   "permissions": [
     { "name": "INTERNET", "ko": "광고를 불러오고 새 버전이 있는지 확인합니다.", "en": "To load ads and check for a newer version." },
+    { "name": "com.android.vending.BILLING", "ko": "Google Play 결제로 광고 제거 상품을 구매하고 구매 내역을 확인합니다.", "en": "To buy Remove Ads through Google Play billing and check your purchases." },
     { "name": "VIBRATE", "ko": "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.", "en": "For vibration feedback during play. You can turn it off in Settings." },
     { "name": "ACCESS_NETWORK_STATE", "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).", "en": "To check the network connection before requesting ads (Google AdMob)." },
     { "name": "AD_ID", "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).", "en": "To use the advertising ID to serve and measure ads (Google AdMob)." },

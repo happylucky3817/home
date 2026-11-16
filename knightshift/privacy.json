@@ -1,6 +1,6 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-25",
+  "updated": "2026-11-16",
   "local_data": {
     "ko": [
       "스테이지 진행, 회차, 골드와 강화석",
@@ -9,7 +9,8 @@
       "상점 보상의 다음 이용 가능 시각, 광고 효과 남은 시간, 오늘 본 광고 횟수",
       "게임 안 영웅 이름과 외형",
       "명예의 전당 기록(영웅 이름, 외형, 도달한 회차와 스테이지)",
-      "배경음악과 효과음 크기, 진동, 언어 설정"
+      "배경음악과 효과음 크기, 진동, 언어 설정",
+      "광고 제거 상품 구매 여부"
     ],
     "en": [
       "Stage progress, loop, gold, and upgrade ore",
@@ -18,16 +19,21 @@
       "Next available times for shop rewards, remaining ad boost time, and the number of ads watched today",
       "Your in-game hero name and appearance",
       "Hall of Fame records (hero name, appearance, and the loop and stage reached)",
-      "Music and sound effect volume, vibration, and language settings"
+      "Music and sound effect volume, vibration, and language settings",
+      "Whether you have bought Remove Ads"
     ]
   },
+  "purchase": {
+    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 보상형 광고를 보지 않고 그 자리에서 보상을 받습니다. 하루 횟수와 다시 받기까지의 대기 시간은 그대로 적용됩니다.",
+    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). Once bought, you receive rewards right away without watching rewarded ads. The daily limit and the waiting time between rewards still apply."
+  },
   "ads": {
-    "banner": true,
+    "banner": false,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고는 휴대폰 비율 화면에서만 화면 아래에 표시됩니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다(쓰러졌을 때 이어 하기, 지역 첫 클리어 보상 한 번 더, 상점의 골드 주머니, 장비 상자, 30분 동안 골드 1.5배와 공격 속도·이동 1.2배). 광고 보상은 모두 합쳐 하루 15번까지 받을 수 있습니다. 전면 광고는 사용하지 않습니다. 게임 안 영웅 이름은 기기에만 저장되며 다른 사람에게 전송되지 않습니다.",
-      "en": "A banner ad is shown at the bottom of the screen, only on phone-shaped screens. Rewarded ads play only when you choose them yourself (reviving after a defeat, a second first-clear reward for an area, and the gold pouch, gear box, and a 30-minute boost of 1.5x gold and 1.2x attack and move speed in the shop). Ad rewards are limited to 15 per day in total. The app does not use interstitial (full-screen) ads. Your hero name is stored only on your device and is never sent to anyone."
+      "ko": "보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다(쓰러졌을 때 이어 하기, 지역 첫 클리어 보상 한 번 더, 상점의 골드 주머니, 장비 상자, 30분 동안 골드 1.5배와 공격 속도·이동 1.2배). 광고 보상은 모두 합쳐 하루 15번까지 받을 수 있습니다. 배너 광고와 전면 광고는 사용하지 않습니다. 광고 제거 상품을 구매하면 광고가 나오지 않습니다. 게임 안 영웅 이름은 기기에만 저장되며 다른 사람에게 전송되지 않습니다.",
+      "en": "Rewarded ads play only when you choose them yourself (reviving after a defeat, a second first-clear reward for an area, and the gold pouch, gear box, and a 30-minute boost of 1.5x gold and 1.2x attack and move speed in the shop). Ad rewards are limited to 15 per day in total. The app does not use banner or interstitial (full-screen) ads. If you buy Remove Ads, no ads are shown. Your hero name is stored only on your device and is never sent to anyone."
     }
   },
   "ump": {
@@ -37,6 +43,7 @@
   "version_check": true,
   "permissions": [
     { "name": "INTERNET", "ko": "광고를 불러오고 새 버전이 있는지 확인합니다.", "en": "To load ads and check for a newer version." },
+    { "name": "com.android.vending.BILLING", "ko": "Google Play 결제로 광고 제거 상품을 구매하고 구매 내역을 확인합니다.", "en": "To buy Remove Ads through Google Play billing and check your purchases." },
     { "name": "VIBRATE", "ko": "게임 중 진동 효과를 냅니다. 설정에서 끌 수 있습니다.", "en": "For vibration feedback during play. You can turn it off in Settings." },
     { "name": "ACCESS_NETWORK_STATE", "ko": "광고를 요청하기 전에 인터넷 연결 상태를 확인합니다(Google AdMob).", "en": "To check the network connection before requesting ads (Google AdMob)." },
     { "name": "AD_ID", "ko": "광고 ID 를 광고 제공과 측정에 사용합니다(Google AdMob).", "en": "To use the advertising ID to serve and measure ads (Google AdMob)." },
