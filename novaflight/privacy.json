@@ -1,49 +1,53 @@
 {
   "effective": "2026-10-11",
-  "updated": "2026-10-25",
+  "updated": "2026-11-18",
   "local_data": {
     "ko": [
       "골드(게임 안 재화)",
       "포인트(게임 안 재화), 광고로 포인트를 받은 날짜·횟수·마지막 시각",
-      "스테이지 클리어 진행, 무한 모드 최고 점수와 생존 시간",
+      "스테이지 클리어 진행",
       "격납고 영구 강화 단계",
-      "스테이지별 별 목표, 선택한 전투기와 윙맨",
+      "스테이지별 별 목표, 별로 산 윙맨과 쓴 별 수, 선택한 전투기와 윙맨",
       "이미 본 스토리 장면",
-      "일일 도전 날짜, 스테이지, 보상 수령 여부",
-      "출석 보상을 받은 날짜와 횟수",
       "누적 기록(격추 수 등)과 업적 보상 수령 여부",
       "산 도색과 기체별 도색 선택",
       "스테이지별 최고 점수와 최단 클리어 시간",
-      "진동 설정, 조작 안내를 봤는지, 탄막 소거 버튼 위치",
-      "언어, 배경 음악, 효과음 설정"
+      "진동 설정, 조작 안내를 봤는지",
+      "이전 버전의 무한 모드 기록, 일일 도전 기록, 탄막 소거 버튼 위치(지금은 쓰이지 않습니다)",
+      "언어, 배경 음악, 효과음 설정",
+      "프리미엄 패키지 구매 여부"
     ],
     "en": [
       "Gold (in-game currency)",
       "Points (in-game currency), and the day, count, and last time you earned points from ads",
-      "Stage clear progress, and your best Endless Mode score and survival time",
+      "Stage clear progress",
       "Permanent hangar upgrade levels",
-      "Star goals per stage, and your selected fighter and wingman",
+      "Star goals per stage, wingmen bought with stars and stars spent, and your selected fighter and wingman",
       "Story scenes you have already seen",
-      "Daily Challenge date, stage, and whether the reward was claimed",
-      "The date and count of daily login rewards you claimed",
       "Lifetime stats (such as enemies destroyed) and which achievement rewards you claimed",
       "Paint jobs you bought and the paint selected for each fighter",
       "Best score and fastest clear time per stage",
-      "Vibration setting, whether you have seen the controls guide, and the Clear Shot button position",
-      "Language, music, and sound effect settings"
+      "Vibration setting and whether you have seen the controls guide",
+      "Endless Mode records, Daily Challenge records, and the Clear Shot button position from earlier versions (no longer used)",
+      "Language, music, and sound effect settings",
+      "Whether you have bought the Premium Pack"
     ]
   },
   "currency": {
-    "ko": "본 앱의 골드와 포인트는 게임 안에서만 쓰는 숫자입니다. 현금이나 경품으로 바꿀 수 없고 구매할 수도 없습니다. 본 앱에는 인앱 결제가 없으며, 개발자는 결제 정보를 수집하지 않습니다.",
-    "en": "Gold and points in the app are numbers used only inside the game. They cannot be bought or exchanged for cash or prizes. The app has no in-app purchases, and the developer does not collect any payment information."
+    "ko": "본 앱의 골드와 포인트는 게임 안에서만 쓰는 숫자입니다. 골드나 포인트 자체를 파는 상품은 없으며, 현금이나 경품으로 바꿀 수 없습니다.",
+    "en": "Gold and points in the app are numbers used only inside the game. Gold and points themselves are not sold, and they cannot be exchanged for cash or prizes."
+  },
+  "purchase": {
+    "ko": "본 앱은 프리미엄 패키지(일회성 구매, 정기 결제 아님)를 판매합니다. 구매하면 광고를 보지 않고 바로 보상을 받고, 포인트 없이 스테이지를 시작할 수 있으며, 모든 윙맨과 도색이 열립니다. 구매 여부는 기기에 저장하고, 앱을 켤 때마다 Google Play 의 구매 내역과 맞춰 앱을 다시 설치해도 복원되며 환불되면 해제됩니다.",
+    "en": "The app sells a Premium Pack (a one-time purchase, not a subscription). Once bought, you receive ad rewards right away without watching ads, can start stages without points, and unlock all wingmen and paint jobs. Your purchase status is saved on your device and checked against your Google Play purchases each time the app starts, so it is restored after reinstalling and removed if the purchase is refunded."
   },
   "ads": {
-    "banner": true,
+    "banner": false,
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고는 화면 위쪽에 표시됩니다. 전면 광고는 없습니다. 보상형 광고는 사용자가 직접 선택했을 때만 재생됩니다. 부활이나 획득 골드 2배는 각각 한 게임에 한 번, 포인트 받기(도전 1회에 3포인트, 광고 1회에 20포인트)는 하루 15회까지이며 한 번 본 뒤 3분을 기다립니다.",
-      "en": "A banner ad is shown at the top of the screen. There are no interstitial ads. A rewarded ad plays only when you choose to watch it: to revive or to double the gold you earned (each at most once per run), or to earn points (20 points per ad, up to 15 times a day with a 3-minute wait between ads; each play costs 3 points)."
+      "ko": "본 앱의 광고는 보상형 광고뿐이며, 사용자가 직접 선택했을 때만 재생됩니다. 부활, 획득 골드 2배, 포인트 받기에 쓰입니다. 배너 광고와 전면 광고는 사용하지 않습니다. 프리미엄 패키지를 구매하면 광고가 나오지 않습니다.",
+      "en": "The only ads in the app are rewarded ads, and they play only when you choose to watch them: to revive, to double the gold you earned, or to earn points. The app does not use banner or interstitial (full-screen) ads. If you buy the Premium Pack, no ads are shown."
     }
   },
   "ump": {
@@ -52,14 +56,19 @@
   },
   "version_check": true,
   "network_extra": {
-    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다. 일일 도전은 기기의 날짜만 사용하며 서버와 통신하지 않습니다.",
-    "en": "The app has no features for chatting or exchanging data with other users. The Daily Challenge uses only your device's date and does not contact any server."
+    "ko": "본 앱에는 다른 사용자와 대화하거나 데이터를 주고받는 기능이 없습니다.",
+    "en": "The app has no features for chatting or exchanging data with other users."
   },
   "permissions": [
     {
       "name": "INTERNET",
-      "ko": "광고를 불러오고 새 버전이 있는지 확인합니다.",
-      "en": "To load ads and check for a newer version."
+      "ko": "광고를 불러오고, 새 버전을 확인하고, 구매 내역을 확인합니다.",
+      "en": "To load ads, check for a newer version, and check your purchases."
+    },
+    {
+      "name": "com.android.vending.BILLING",
+      "ko": "Google Play 결제로 프리미엄 패키지를 구매하고 구매 내역을 확인합니다.",
+      "en": "To buy the Premium Pack with Google Play billing and check your purchases."
     },
     {
       "name": "VIBRATE",
