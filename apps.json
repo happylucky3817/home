@@ -4,6 +4,7 @@
   "apps": [
     {
       "id": "novaflight",
+      "released": "2026-11",
       "date": "2026-10-09",
       "package": "com.happylucky.novaflight",
       "type": "game",
@@ -17,6 +18,7 @@
     },
     {
       "id": "stickertoyboxlab",
+      "released": "2026-11",
       "date": "2026-10-09",
       "package": "com.happylucky.stickertoyboxlab",
       "type": "game",
@@ -30,6 +32,7 @@
     },
     {
       "id": "knightshift",
+      "released": "2026-11",
       "date": "2026-10-01",
       "package": "com.happylucky.knightshift",
       "type": "game",
@@ -43,6 +46,7 @@
     },
     {
       "id": "dolsori",
+      "released": "2026-11",
       "date": "2026-09-29",
       "package": "com.happylucky.dolsori",
       "type": "game",
