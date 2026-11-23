@@ -233,7 +233,7 @@
       "date": "2026-10-31",
       "package": "com.happylucky.sweetracket",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "스윗 라켓", "en": "Sweet Racket" },
       "genre": { "ko": "벽돌 깨기", "en": "Brick Breaker" },
       "summary": {
@@ -246,7 +246,7 @@
       "date": "2026-11-14",
       "package": "com.happylucky.photopuzzleplus",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "포토 퍼즐 플러스", "en": "Photo Puzzle Plus" },
       "genre": { "ko": "퍼즐", "en": "Puzzle" },
       "summary": {
@@ -259,7 +259,7 @@
       "date": "2026-11-14",
       "package": "com.happylucky.secretexorcist",
       "type": "game",
-      "status": "dev",
+      "status": "test",
       "name": { "ko": "암행 퇴마사", "en": "Secret Exorcist" },
       "genre": { "ko": "액션 RPG", "en": "Action RPG" },
       "summary": {
