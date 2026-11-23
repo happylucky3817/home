@@ -32,8 +32,8 @@
     "interstitial": false,
     "rewarded": true,
     "detail": {
-      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 포인트 창에서 사용자가 [광고 보고 20포인트 받기]를 직접 누를 때만 재생됩니다. 1회에 20포인트를 받고 하루 15회까지 볼 수 있으며, 한 번 본 뒤 3분이 지나야 다시 볼 수 있습니다. 광고 제거를 구매하면 광고가 나오지 않습니다.",
-      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you tap [Watch an ad for 20 points] in the Points window. Each ad gives 20 points, up to 15 times a day, with a 3-minute wait between ads. If you buy Remove Ads, no ads are shown."
+      "ko": "배너 광고와 전면 광고는 없습니다. 보상형 광고는 포인트 창에서 사용자가 [광고 보고 9포인트 받기]를 직접 누를 때만 재생됩니다. 1회에 9포인트를 받고 하루 15회까지 볼 수 있으며, 한 번 본 뒤 3분이 지나야 다시 볼 수 있습니다. 광고 제거를 구매하면 광고가 나오지 않습니다.",
+      "en": "There are no banner or interstitial ads. A rewarded ad plays only when you tap [Watch an ad for 9 points] in the Points window. Each ad gives 9 points, up to 15 times a day, with a 3-minute wait between ads. If you buy Remove Ads, no ads are shown."
     }
   },
   "ump": {
