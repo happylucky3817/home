@@ -1,6 +1,6 @@
 {
   "effective": "2026-11-14",
-  "updated": "2026-11-14",
+  "updated": "2026-11-25",
   "local_data": {
     "ko": [
       "클리어한 스테이지, 스테이지별 별과 최고 기록",
@@ -24,8 +24,8 @@
     "en": "Points in the app are numbers used only inside the game. They cannot be bought with money or exchanged for cash or prizes."
   },
   "purchase": {
-    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 광고를 보지 않고 포인트를 받을 수 있습니다.",
-    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). It lets you claim points without watching ads."
+    "ko": "본 앱은 광고 제거 상품(일회성 구매, 정기 결제 아님)을 판매합니다. 구매하면 광고를 보지 않고 포인트 없이 무제한으로 플레이할 수 있습니다.",
+    "en": "The app sells a Remove Ads item (a one-time purchase, not a subscription). It lets you play unlimited without points and without watching ads."
   },
   "ads": {
     "banner": false,

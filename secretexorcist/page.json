@@ -4,8 +4,8 @@
     "en": "Secret Exorcist"
   },
   "description": {
-    "ko": "암행 퇴마사. 조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG. 마을 3곳, 던전 9곳, 무기 8종.",
-    "en": "Secret Exorcist. Slash through hordes of Korean ghosts and yokai as a secret royal exorcist. 3 villages, 9 dungeons and 8 weapons."
+    "ko": "암행 퇴마사. 조선의 암행 퇴마사가 되어 요괴 소굴의 귀신 떼를 베어 내는 핵앤슬래시 액션 RPG. 마을 5곳, 던전 15곳, 무기 8종.",
+    "en": "Secret Exorcist. Slash through hordes of Korean ghosts and yokai as a secret royal exorcist. 5 villages, 15 dungeons and 8 weapons."
   },
   "notice": {
     "ko": "출시 준비 중입니다. 내용은 출시 전에 바뀔 수 있습니다.",
@@ -23,7 +23,7 @@
     "ko": [
       {
         "title": "던전과 마을",
-        "text": "마을 3곳과 던전 9곳. 폐사찰 아래 요괴 소굴부터 저승 문까지, 던전마다 요괴와 지형이 다르고 층마다 우두머리, 마지막 층에는 던전 보스가 있습니다. 지도는 들어갈 때마다 새로 만들어집니다."
+        "text": "마을 5곳과 던전 15곳. 폐사찰 아래 요괴 소굴부터 저승 문까지, 던전마다 요괴와 지형이 다르고 층마다 우두머리, 마지막 층에는 던전 보스가 있습니다. 지도는 들어갈 때마다 새로 만들어집니다."
       },
       {
         "title": "요괴 보스",
@@ -49,7 +49,7 @@
     "en": [
       {
         "title": "Dungeons and villages",
-        "text": "3 villages and 9 dungeons, from the Yokai Den Beneath the Ruined Temple to the Gate of the Underworld. Each dungeon has its own monsters and terrain, a chieftain on every floor, and a boss on the last floor. A new map is generated every time you enter."
+        "text": "5 villages and 15 dungeons, from the Yokai Den Beneath the Ruined Temple to the Gate of the Underworld. Each dungeon has its own monsters and terrain, a chieftain on every floor, and a boss on the last floor. A new map is generated every time you enter."
       },
       {
         "title": "Folklore bosses",

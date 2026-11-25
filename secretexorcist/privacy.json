@@ -1,16 +1,16 @@
 {
   "effective": "2026-11-14",
-  "updated": "2026-11-15",
+  "updated": "2026-11-25",
   "local_data": {
     "ko": [
-      "게임 진행: 엽전, 포인트, 유물, 도력과 경험치, 들고 있는 무기, 영구 강화 단계, 깬 던전, 의뢰 진행과 봉인 인장, 상인에게 산 물건, 마을에서 마지막으로 있던 위치, 최고 기록과 누적 기록",
+      "게임 진행: 엽전, 포인트, 유물, 도력과 경험치, 들고 있는 무기, 영구 강화 단계, 깬 던전, 의뢰 진행과 봉인 인장, 귀환 부적, 상인에게 산 물건, 마을에서 마지막으로 있던 위치, 최고 기록과 누적 기록",
       "광고 보상 기록: 광고로 포인트를 받은 날짜, 횟수, 마지막 시각",
       "설정: 언어, 음악·효과음·진동 켜기/끄기, 조작 안내를 봤는지, 고른 주인공",
       "프리미엄 패키지 구매 여부(앱을 켤 때마다 Google Play 구매 내역으로 다시 확인합니다)",
       "개발자용 운영자 모드 설정(일반 사용자는 쓰지 않습니다)"
     ],
     "en": [
-      "Game progress: coins, points, relics, power level and experience, equipped weapon, permanent upgrade levels, cleared dungeons, quest progress and seals, items bought from the merchant, last position in the village, best records and play statistics",
+      "Game progress: coins, points, relics, power level and experience, equipped weapon, permanent upgrade levels, cleared dungeons, quest progress and seals, return charms, items bought from the merchant, last position in the village, best records and play statistics",
       "Ad reward history: the date, count, and last time you earned points from ads",
       "Settings: language, music, sound effects and vibration on or off, whether you have seen the controls guide, and your selected hero",
       "Whether you bought the Premium Pack (checked again against your Google Play purchases each time the app starts)",
