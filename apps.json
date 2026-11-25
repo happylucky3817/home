@@ -60,12 +60,11 @@
     },
     {
       "id": "matchandslash",
-      "hidden": true,
       "released": "2026-10",
       "date": "2026-08-29",
       "package": "com.happylucky.matchandslash",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "매치앤슬래시", "en": "Match & Slash" },
       "genre": { "ko": "퍼즐 RPG", "en": "Puzzle RPG" },
       "summary": {
@@ -89,12 +88,11 @@
     },
     {
       "id": "frontierkingdom",
-      "hidden": true,
       "released": "2026-10",
       "date": "2026-08-02",
       "package": "com.happylucky.frontierkingdom",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "프론티어 킹덤", "en": "Frontier Kingdom" },
       "genre": { "ko": "시뮬레이션", "en": "Simulation" },
       "summary": {
@@ -118,12 +116,11 @@
     },
     {
       "id": "randomfronttd",
-      "hidden": true,
       "released": "2026-07",
       "date": "2026-06-30",
       "package": "com.happylucky.randomfronttd",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "랜덤전선 TD", "en": "RandomFront TD" },
       "genre": { "ko": "타워 디펜스", "en": "Tower Defense" },
       "summary": {
@@ -133,12 +130,11 @@
     },
     {
       "id": "littleguardian",
-      "hidden": true,
       "released": "2026-10",
       "date": "2026-06-30",
       "package": "com.happylucky.littleguardian",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "리틀 가디언", "en": "Little Guardian" },
       "genre": { "ko": "방치형 RPG", "en": "Idle RPG" },
       "summary": {
@@ -148,12 +144,11 @@
     },
     {
       "id": "matchandserve",
-      "hidden": true,
       "released": "2026-07",
       "date": "2026-07-18",
       "package": "com.happylucky.matchandserve",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "매치엔서브", "en": "Match & Serve" },
       "genre": { "ko": "퍼즐", "en": "Puzzle" },
       "summary": {
@@ -163,12 +158,11 @@
     },
     {
       "id": "runelinktd",
-      "hidden": true,
       "released": "2026-07",
       "date": "2026-06-08",
       "package": "com.happylucky.runelinktd",
       "type": "game",
-      "status": "removed",
+      "status": "live",
       "name": { "ko": "룬링크 TD", "en": "RuneLink TD" },
       "genre": { "ko": "타워 디펜스", "en": "Tower Defense" },
       "summary": {
